@@ -126,7 +126,7 @@ const filmsData = [
     { year: 2017, type: 'nolan', title: "ダンケルク", context: "映像と音響で描く「生」の体験。" },
     { year: 2020, type: 'nolan', title: "TENET テネット", context: "時間の逆転と世界の救済。" },
     { year: 2023, type: 'nolan', title: "オッペンハイマー", context: "科学者の苦悩と原子の爆発。" },
-    { year: 2026, type: 'nolan', title: "The Odyssey", context: "ホメロスの叙事詩『オデュッセイア』を基にしたSFアクション大作。新型IMAXフィルムで撮影。" },
+    { year: 2026, type: 'nolan', title: "The Odyssey", context: "公開予定。ホメロスの叙事詩を基にした神話的アクション大作。IMAXフィルムカメラで撮影。" },
 
     // Denis Villeneuve
     { year: 1998, type: 'villeneuve', title: "8月32日、地球。", context: "交通事故を機に運命を模索する女性。" },
@@ -140,7 +140,7 @@ const filmsData = [
     { year: 2017, type: 'villeneuve', title: "ブレードランナー 2049", context: "魂の所在を問うSFの金字塔の続編。" },
     { year: 2021, type: 'villeneuve', title: "DUNE/デューン 砂の惑星", context: "宇宙の運命を懸けた壮大な序章。" },
     { year: 2024, type: 'villeneuve', title: "DUNE/デューン 砂の惑星 PART2", context: "運命の覚醒と復讐の決戦。" },
-    { year: 2026, type: 'villeneuve', title: "DUNE/デューン 砂の惑星 PART3", context: "フランク・ハーバートの小説『砂の惑星救世主』を基にした三部作の完結編。" },
+    { year: 2026, type: 'villeneuve', title: "DUNE/デューン 砂の惑星 PART3", context: "公開予定。『砂の惑星救世主』を基に、ヴィルヌーヴ版三部作を締めくくる。" },
 
     // Steven Spielberg
     { year: 1971, type: 'spielberg', title: "激突！", context: "姿なき怪物（トラック）との極限のチェイス。" },
@@ -178,7 +178,7 @@ const filmsData = [
     { year: 2018, type: 'spielberg', title: "レディ・プレイヤー1", context: "ポップカルチャーへの愛とバーチャル世界の祝祭。" },
     { year: 2021, type: 'spielberg', title: "ウエスト・サイド・ストーリー", context: "不朽の名作ミュージカルを、現代の視点で見事に再構築。" },
     { year: 2022, type: 'spielberg', title: "フェイブルマンズ", context: "映画に魅せられた少年の、自伝的かつ残酷な家族の物語。" },
-    { year: 2026, type: 'spielberg', title: "Disclosure Day", context: "UFO情報の開示がもたらす社会的・心理的衝撃を描くSFスリラー。" },
+    { year: 2026, type: 'spielberg', title: "Disclosure Day", context: "公開予定。空の秘密と真実の開示をめぐる、スピルバーグのSFスリラー。" },
 
     // Martin Scorsese
     { year: 1967, type: 'scorsese', title: "ストリート・オブ・ノー・リターン", context: "スコセッシの長編デビュー作。ニューヨークの若者たち。" },
@@ -237,7 +237,7 @@ const filmsData = [
     { year: 2014, type: 'fincher', title: "ゴーン・ガール", context: "完璧な夫婦の裏に潜む、戦慄のメディア戦と狂気。" },
     { year: 2020, type: 'fincher', title: "MANK/マンク", context: "『市民ケーン』誕生の舞台裏。白黒で描く黄金期への愛憎。" },
     { year: 2023, type: 'fincher', title: "ザ・キラー", context: "緻密で非情な殺し屋の、ストイックな復讐劇。" },
-    { year: 2026, type: 'fincher', title: "The Adventures of Cliff Booth", context: "『ワンス・アポン・ア・タイム・イン・ハリウッド』のキャラクター、クリフ・ブースを主人公にした続編。" },
+    { year: 2026, type: 'fincher', title: "The Adventures of Cliff Booth", context: "公開予定。クリフ・ブースを主人公に、タランティーノ脚本をフィンチャーが監督するスピンオフ。" },
 
     // Wes Anderson
     { year: 1996, type: 'anderson', title: "アンソニーのハッピー・モーメント", context: "オフビートなユーモアと、愛すべきはみ出し者たち。" },
@@ -378,14 +378,21 @@ const episodesData = {
     2023: "ハリウッド大規模スト",
     2024: "Apple Vision Pro発売",
     2025: "『エディントンへようこそ』等公開 配信と劇場の多様化",
-    2026: "ノーラン『The Odyssey』、スピルバーグ『Disclosure Day』などのIMAX大作の競演"
+    2026: "ノーラン『The Odyssey』、スピルバーグ『Disclosure Day』など注目作の公開予定"
 };
+
+function normalizeDirectorId(id, fallback = 'nolan') {
+    return Object.prototype.hasOwnProperty.call(directorsInfo, id) ? id : fallback;
+}
 
 function getUrlParams() {
     const params = new URLSearchParams(window.location.search);
+    const d1 = normalizeDirectorId(params.get('d1'));
+    const d2Param = params.get('d2');
+
     return {
-        d1: params.get('d1') || 'nolan',
-        d2: params.get('d2') || null // Allow null for single view
+        d1,
+        d2: d2Param ? normalizeDirectorId(d2Param, null) : null
     };
 }
 
@@ -415,7 +422,8 @@ function jumpTo(year) {
     let el = document.getElementById(`year-${year}`);
     // If specific year not found, find the first available year after it
     if (!el) {
-        for (let y = year; y <= 2026; y++) {
+        const latestDataYear = Math.max(...filmsData.map(f => f.year));
+        for (let y = year; y <= latestDataYear; y++) {
             el = document.getElementById(`year-${y}`);
             if (el) break;
         }
@@ -433,6 +441,12 @@ function jumpTo(year) {
             behavior: 'smooth'
         });
     }
+}
+
+function setupJumpNav() {
+    document.querySelectorAll('.jump-nav button[data-jump-year]').forEach(btn => {
+        btn.addEventListener('click', () => jumpTo(Number(btn.dataset.jumpYear)));
+    });
 }
 
 function renderTimeline() {
@@ -458,22 +472,17 @@ function renderTimeline() {
 
     // Set start year to debut year, but not earlier than our absolute floor
     const startYear = Math.max(1953, debutYear);
-    const endYear = 2026;
-    const currentYear = 2026;
+    const latestDataYear = Math.max(...filmsData.map(f => f.year));
+    const currentYear = new Date().getFullYear();
+    const endYear = Math.max(currentYear, latestDataYear);
 
     // Update jump nav visibility based on start year
-    document.querySelectorAll('.jump-nav button').forEach(btn => {
-        const onclickAttr = btn.getAttribute('onclick');
-        if (onclickAttr) {
-            const match = onclickAttr.match(/\d+/);
-            if (match) {
-                const jumpYear = parseInt(match[0]);
-                if (jumpYear < Math.floor(startYear / 10) * 10) {
-                    btn.style.display = 'none';
-                } else {
-                    btn.style.display = 'inline-block';
-                }
-            }
+    document.querySelectorAll('.jump-nav button[data-jump-year]').forEach(btn => {
+        const jumpYear = Number(btn.dataset.jumpYear);
+        if (jumpYear < Math.floor(startYear / 10) * 10) {
+            btn.style.display = 'none';
+        } else {
+            btn.style.display = 'inline-block';
         }
     });
 
@@ -483,14 +492,16 @@ function renderTimeline() {
         const btn50 = document.createElement('button');
         btn50.id = 'jump-1950';
         btn50.textContent = '50s';
-        btn50.onclick = () => jumpTo(1950);
+        btn50.dataset.jumpYear = '1950';
+        btn50.addEventListener('click', () => jumpTo(1950));
         jumpNav.prepend(btn50);
     }
     if (startYear < 1970 && !document.getElementById('jump-1960')) {
         const btn60 = document.createElement('button');
         btn60.id = 'jump-1960';
         btn60.textContent = '60s';
-        btn60.onclick = () => jumpTo(1960);
+        btn60.dataset.jumpYear = '1960';
+        btn60.addEventListener('click', () => jumpTo(1960));
         // Insert after 50s if it exists
         const btn50 = document.getElementById('jump-1950');
         if (btn50) {
@@ -501,7 +512,7 @@ function renderTimeline() {
     }
 
     // Add future/now highlight
-    for (let year = startYear; year <= currentYear; year++) {
+    for (let year = startYear; year <= endYear; year++) {
         const row = document.createElement('div');
         const isNow = year === currentYear;
         row.className = `timeline-row ${isNow ? 'is-current' : ''}`;
@@ -554,7 +565,7 @@ function renderTimeline() {
                 ` : (otherFilms.length > 0 ? `
                     <div class="other-films-container">
                         ${otherFilms.map(f => `
-                            <div class="other-film-item" onclick="window.location.href='timeline.html?d1=${d1}&d2=${f.type}'">
+                            <div class="other-film-item" data-director-id="${f.type}" role="button" tabindex="0">
                                 <span class="other-film-director">${directorsInfo[f.type].surname}</span>
                                 <span class="other-film-title">『${f.title}』</span>
                             </div>
@@ -563,7 +574,21 @@ function renderTimeline() {
                 ` : '')}
             </div>
         `;
+        row.querySelectorAll('.other-film-item').forEach(item => {
+            const openComparison = () => {
+                window.location.href = `timeline.html?d1=${d1}&d2=${item.dataset.directorId}`;
+            };
+
+            item.addEventListener('click', openComparison);
+            item.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openComparison();
+                }
+            });
+        });
         container.appendChild(row);
     }
 }
+setupJumpNav();
 renderTimeline();
