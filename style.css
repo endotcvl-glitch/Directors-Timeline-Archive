@@ -158,6 +158,7 @@ header {
 }
 
 .film-context {
+    display: none;
     font-size: 0.85rem;
     color: var(--secondary-text);
     line-height: 1.7;
@@ -770,24 +771,22 @@ header {
         max-width: none;
         margin: 0;
         padding: 190px 0 calc(7rem + env(safe-area-inset-bottom));
-        overflow-x: auto;
+        overflow-x: hidden;
         overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
     }
 
     .timeline-container::before {
-        left: 290px;
-        transform: none;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .timeline-row,
     .timeline-container.single-mode .timeline-row {
-        grid-template-columns: 250px 48px 250px;
-        column-gap: 16px;
-        min-width: 620px;
-        width: 620px;
+        grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+        column-gap: 6px;
+        width: 100%;
         min-height: 0;
-        padding: 1.2rem 0;
+        padding: 1rem 0;
         margin-bottom: 0.5rem;
     }
 
@@ -807,7 +806,7 @@ header {
     }
 
     .side {
-        padding: 0 0.75rem;
+        padding: 0 0.45rem;
     }
 
     .nolan-side .card-content {
@@ -819,7 +818,7 @@ header {
     }
 
     .film-title {
-        font-size: 0.98rem;
+        font-size: 0.82rem;
         line-height: 1.35;
         margin-bottom: 0.35rem;
     }
@@ -831,14 +830,14 @@ header {
     }
 
     .year-label {
-        font-size: 0.78rem;
-        padding: 3px 7px;
+        font-size: 0.7rem;
+        padding: 3px 5px;
     }
 
     .episode-label {
-        width: 48px;
+        width: 40px;
         margin-top: 0.45rem;
-        font-size: 0.5rem;
+        font-size: 0.46rem;
         line-height: 1.35;
         max-height: 2.8em;
         overflow: hidden;
@@ -958,24 +957,23 @@ header {
 
 @media (max-width: 430px) {
     .timeline-container::before {
-        left: 259px;
+        left: 50%;
     }
 
     .timeline-row,
     .timeline-container.single-mode .timeline-row {
-        grid-template-columns: 225px 44px 225px;
-        column-gap: 12px;
-        min-width: 560px;
-        width: 560px;
-        padding: 1rem 0;
+        grid-template-columns: minmax(0, 1fr) 36px minmax(0, 1fr);
+        column-gap: 4px;
+        width: 100%;
+        padding: 0.9rem 0;
     }
 
     .side {
-        padding: 0 0.6rem;
+        padding: 0 0.35rem;
     }
 
     .film-title {
-        font-size: 0.88rem;
+        font-size: 0.74rem;
     }
 
     .film-context {
@@ -984,12 +982,12 @@ header {
     }
 
     .year-label {
-        font-size: 0.72rem;
-        padding: 3px 6px;
+        font-size: 0.66rem;
+        padding: 2px 4px;
     }
 
     .episode-label {
-        width: 44px;
-        font-size: 0.48rem;
+        width: 36px;
+        font-size: 0.44rem;
     }
 }
