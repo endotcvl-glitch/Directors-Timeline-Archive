@@ -566,8 +566,9 @@ function renderTimeline() {
                     <div class="other-films-container">
                         ${otherFilms.map(f => `
                             <div class="other-film-item" data-director-id="${f.type}" role="button" tabindex="0">
-                                <span class="other-film-director">${directorsInfo[f.type].surname}</span>
                                 <span class="other-film-title">『${f.title}』</span>
+                                <span class="other-film-separator">/</span>
+                                <span class="other-film-director">${directorsInfo[f.type].surname}</span>
                             </div>
                         `).join('')}
                     </div>

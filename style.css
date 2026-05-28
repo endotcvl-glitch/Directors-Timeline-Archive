@@ -301,13 +301,17 @@ header {
 }
 
 .other-film-director {
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.05em;
-    margin-right: 0.5rem;
 }
 
 .other-film-title {
-    font-style: italic;
+    font-weight: 700;
+}
+
+.other-film-separator {
+    margin: 0 0.35rem;
+    opacity: 0.6;
 }
 
 /* Responsive */
