@@ -413,7 +413,7 @@ function updateHeaderLabels(d1Id, d2Id) {
             labels[1].innerHTML = `<div class="label-surname">${d2Info.surname || d2Info.fullNameEn}</div><div class="label-ja">${d2Info.nameJa}</div>`;
         } else {
             labels[1].style.display = 'block';
-            labels[1].innerHTML = `<div class="label-en">CONTEMPORARIES</div><div class="label-ja">同時代の作家たち</div>`;
+            labels[1].innerHTML = `<div class="label-en">CONTEMPORARY WORKS</div><div class="label-ja">同時代の作品</div>`;
         }
     }
 }
@@ -567,8 +567,6 @@ function renderTimeline() {
                         ${otherFilms.map(f => `
                             <div class="other-film-item" data-director-id="${f.type}" role="button" tabindex="0">
                                 <span class="other-film-title">『${f.title}』</span>
-                                <span class="other-film-separator">/</span>
-                                <span class="other-film-director">${directorsInfo[f.type].surname}</span>
                             </div>
                         `).join('')}
                     </div>
