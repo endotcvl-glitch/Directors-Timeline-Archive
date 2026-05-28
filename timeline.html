@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directors' Timeline Archive | Timeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-nav">← SELECT DIRECTORS</a>
+        <div class="site-title">DIRECTORS' TIMELINE ARCHIVE</div>
+    </header>
+
+    <nav class="jump-nav">
+        <button onclick="jumpTo(1970)">70s</button>
+        <button onclick="jumpTo(1980)">80s</button>
+        <button onclick="jumpTo(1990)">90s</button>
+        <button onclick="jumpTo(2000)">00s</button>
+        <button onclick="jumpTo(2010)">10s</button>
+        <button onclick="jumpTo(2020)">20s</button>
+    </nav>
+
+    <div class="director-labels">
+        <div class="label label-l">
+            <div class="label-surname">NOLAN</div>
+            <div class="label-ja">クリストファー・ノーラン</div>
+        </div>
+        <div></div>
+        <div class="label label-r">
+            <div class="label-surname">VILLENEUVE</div>
+            <div class="label-ja">ドゥニ・ヴィルヌーヴ</div>
+        </div>
+    </div>
+
+    <main class="timeline-container" id="timeline-container">
+        <!-- Unified timeline will be injected here -->
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
