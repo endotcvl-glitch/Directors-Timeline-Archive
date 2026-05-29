@@ -3,26 +3,26 @@ const directorsInfo = {
     'kubrick': { fullNameEn: 'STANLEY KUBRICK', nameJa: 'スタンリー・キューブリック', surname: 'KUBRICK', keywords: '完璧主義 / 徹底した構図 / 哲学的' },
     'lucas': { fullNameEn: 'GEORGE LUCAS', nameJa: 'ジョージ・ルーカス', surname: 'LUCAS', keywords: 'スペースオペラ / デジタル革命 / 冒険の神話' },
     'spielberg': { fullNameEn: 'STEVEN SPIELBERG', nameJa: 'スティーヴン・スピルバーグ', surname: 'SPIELBERG', keywords: '驚異の物語 / 圧倒的映画術 / ヒューマニズム' },
-    'scorsese': { fullNameEn: 'MARTIN SCORSESE', nameJa: 'マーティン・スコセッシ', surname: 'SCORSESE', keywords: 'マフィアと信仰 / 移動撮影 / 魂の救済' },
+    'scorsese': { fullNameEn: 'MARTIN SCORSESE', nameJa: 'マーティン・スコセッシ', surname: 'SCORSESE', keywords: '犯罪と贖罪 / アメリカ社会 / 人間の情熱' },
     'lynch': { fullNameEn: 'DAVID LYNCH', nameJa: 'デヴィッド・リンチ', surname: 'LYNCH', keywords: '悪夢と不条理 / サウンドデザイン / 超現実主義' },
     'coen': { fullNameEn: 'JOEL & ETHAN COEN', nameJa: 'ジョエル＆イーサン・コーエン', surname: 'COENS', keywords: 'ブラックユーモア / 皮肉な運命 / 緻密な脚本' },
-    'burton': { fullNameEn: 'TIM BURTON', nameJa: 'ティム・バートン', surname: 'BURTON', keywords: 'ゴシック・ファンタジー / 異形の愛 / 独創的ビジュアル' },
+    'burton': { fullNameEn: 'TIM BURTON', nameJa: 'ティム・バートン', surname: 'BURTON', keywords: 'ゴシック幻想 / 異形の愛 / ダークファンタジー' },
     'bigelow': { fullNameEn: 'KATHRYN BIGELOW', nameJa: 'キャスリン・ビグロー', surname: 'BIGELOW', keywords: '緊迫のリアリズム / 極限の暴力 / 骨太な演出' },
     'pta': { fullNameEn: 'PAUL THOMAS ANDERSON', nameJa: 'ポール・トーマス・アンダーソン', surname: 'PTA', keywords: '重厚な人間ドラマ / 狂気と愛 / 圧倒的演出力' },
     'miller': { fullNameEn: 'GEORGE MILLER', nameJa: 'ジョージ・ミラー', surname: 'MILLER', keywords: '荒野のバイオレンス / 怒涛のアクション / 視覚的物語' },
     'wright': { fullNameEn: 'EDGAR WRIGHT', nameJa: 'エドガー・ライト', surname: 'WRIGHT', keywords: '音楽との同期 / 高速カット割 / 究極のジャンル愛' },
     'coogler': { fullNameEn: 'RYAN COOGLER', nameJa: 'ライアン・クーグラー', surname: 'COOGLER', keywords: 'アイデンティティ / 魂の継承 / 圧倒的躍動感' },
-    'fincher': { fullNameEn: 'DAVID FINCHER', nameJa: 'デイヴィッド・フィンチャー', surname: 'FINCHER', keywords: '完璧なデジタル美 / 徹底した情報量 / 冷徹な視点' },
+    'fincher': { fullNameEn: 'DAVID FINCHER', nameJa: 'デイヴィッド・フィンチャー', surname: 'FINCHER', keywords: '精密演出 / 執着と狂気 / 冷徹な世界観' },
     'tarantino': { fullNameEn: 'QUENTIN TARANTINO', nameJa: 'クエンティン・タランティーノ', surname: 'TARANTINO', keywords: '饒舌な会話劇 / 映画へのオマージュ / 鮮烈な暴力' },
     'anderson': { fullNameEn: 'WES ANDERSON', nameJa: 'ウェス・アンダーソン', surname: 'ANDERSON', keywords: 'シンメトリー構図 / 色彩設計 / 独自世界観' },
-    'nolan': { fullNameEn: 'CHRISTOPHER NOLAN', nameJa: 'クリストファー・ノーラン', surname: 'NOLAN', keywords: '非線形な時間軸 / 実写至上主義 / 究極の没入体験' },
+    'nolan': { fullNameEn: 'CHRISTOPHER NOLAN', nameJa: 'クリストファー・ノーラン', surname: 'NOLAN', keywords: '時間構造/ 実写至上主義 / 究極の没入体験' },
     'villeneuve': { fullNameEn: 'DENIS VILLENEUVE', nameJa: 'ドゥニ・ヴィルヌーヴ', surname: 'VILLENEUVE', keywords: '壮大な静謐 / 映像美の極致 / 深遠なテーマ' },
-    'wachowskis': { fullNameEn: 'THE WACHOWSKIS', nameJa: 'ラナ＆リリー・ウォシャウスキー', surname: 'WACHOWSKIS', keywords: '革新的ビジュアル / サイバーパンク / 運命と解放' },
+    'wachowskis': { fullNameEn: 'THE WACHOWSKIS', nameJa: 'ラナ＆リリー・ウォシャウスキー', surname: 'WACHOWSKIS', keywords: '革新的ビジュアル / 仮想現実 / 運命と解放' },
     'gerwig': { fullNameEn: 'GRETA GERWIG', nameJa: 'グレタ・ガーウィグ', surname: 'GERWIG', keywords: '現代女性の肖像 / 知的なユーモア / 瑞々しい感性' },
     'chazelle': { fullNameEn: 'DAMIEN CHAZELLE', nameJa: 'デイミアン・チャゼル', surname: 'CHAZELLE', keywords: '音楽と情熱 / 完璧なリズム / 夢と現実の交差' },
     'peele': { fullNameEn: 'JORDAN PEELE', nameJa: 'ジョーダン・ピール', surname: 'PEELE', keywords: '社会派ホラー / 緻密な伏線 / 異質な恐怖' },
-    'aster': { fullNameEn: 'ARI ASTER', nameJa: 'アリ・アスター', surname: 'ASTER', keywords: '家族の崩壊 / 逃れられない呪い / 圧倒的不安感' },
-    'wan': { fullNameEn: 'JAMES WAN', nameJa: 'ジェームズ・ワン', surname: 'WAN', keywords: 'ホラーの帝王 / 恐怖の視覚化 / スリラーの極致' }
+    'aster': { fullNameEn: 'ARI ASTER', nameJa: 'アリ・アスター', surname: 'ASTER', keywords: '家族の崩壊 / 不安と喪失 / 現代神話' },
+    'wan': { fullNameEn: 'JAMES WAN', nameJa: 'ジェームズ・ワン', surname: 'WAN', keywords: 'ホラーの新帝王 / 恐怖の視覚化 / スリラーの極致' },
 };
 
 const filmsData = [
@@ -347,15 +347,13 @@ const filmsData = [
 ];
 
 const episodesData = {
-    1954: "『ゴジラ』公開 特撮映画の金字塔",
+    1954: "『ゴジラ』公開 ",
     1957: "スプートニク1号打ち上げ 宇宙時代の幕開け",
-    1961: "ガガーリン 世界初の有人宇宙飛行",
     1963: "ケネディ大統領暗殺事件",
-    1964: "東京オリンピック開催",
     1969: "アポロ11号月面着陸",
     1973: "第1次オイルショック",
     1975: "『ジョーズ』公開 ブロックバスター映画の誕生",
-    1977: "ILM設立 / 『スター・ウォーズ』公開",
+    1977: "ILM設立",
     1979: "ウォークマン発売",
     1981: "MTV放送開始",
     1985: "レンタルビデオ普及",
@@ -370,15 +368,11 @@ const episodesData = {
     2007: "iPhone発売 / Netflix配信開始",
     2008: "リーマン・ショック / MCUスタート",
     2009: "『アバター』公開 3D映画の再定義",
-    2011: "東日本大震災",
     2013: "Netflix自社制作開始",
     2017: "#MeToo運動",
     2020: "COVID-19パンデミック",
     2022: "生成AIの爆発的普及",
     2023: "ハリウッド大規模スト",
-    2024: "Apple Vision Pro発売",
-    2025: "『エディントンへようこそ』等公開 配信と劇場の多様化",
-    2026: "ノーラン『The Odyssey』、スピルバーグ『Disclosure Day』など注目作の公開予定"
 };
 
 function normalizeDirectorId(id, fallback = 'nolan') {
@@ -404,13 +398,13 @@ function updateHeaderLabels(d1Id, d2Id) {
     if (labels.length < 1) return;
 
     // Left Label
-    labels[0].innerHTML = `<div class="label-surname">${d1Info.surname || d1Info.fullNameEn}</div><div class="label-ja">${d1Info.nameJa}</div>`;
+    labels[0].innerHTML = `<div class="label-surname">${d1Info.nameJa}</div><div class="label-ja">${d1Info.fullNameEn}</div>`;
 
     // Right Label
     if (labels.length > 1) {
         if (d2Info) {
             labels[1].style.display = 'block';
-            labels[1].innerHTML = `<div class="label-surname">${d2Info.surname || d2Info.fullNameEn}</div><div class="label-ja">${d2Info.nameJa}</div>`;
+            labels[1].innerHTML = `<div class="label-surname">${d2Info.nameJa}</div><div class="label-ja">${d2Info.fullNameEn}</div>`;
         } else {
             labels[1].style.display = 'block';
             labels[1].innerHTML = `<div class="label-en">CONTEMPORARY WORKS</div><div class="label-ja">同時代の作品</div>`;

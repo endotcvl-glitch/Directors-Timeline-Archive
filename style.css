@@ -104,7 +104,7 @@ header {
 
 .year-label {
     font-family: var(--font-serif);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--accent-color);
     background: var(--bg-color);
@@ -251,11 +251,11 @@ header {
 }
 
 .label-surname {
-    font-size: 1.6rem;
+    font-family: var(--font-sans);
+    font-size: 1.35rem;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.25;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
     overflow-wrap: anywhere;
 }
 
@@ -269,14 +269,22 @@ header {
 }
 
 .label-ja {
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
+    font-family: var(--font-serif);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
     font-weight: 400;
     opacity: 0.5;
+    text-transform: uppercase;
 }
 
-.label-l { text-align: right; padding-right: clamp(1.5rem, 4vw, 4rem); }
+.label-l,
+.label-r {
+    text-align: center;
+}
+
+.label-l {
+    padding-right: 0;
+}
 /* Other Films (Single Mode Context) */
 .other-films-container {
     display: flex;
@@ -465,7 +473,7 @@ header {
 
 .director-item {
     display: grid;
-    grid-template-columns: 80px minmax(220px, 1.5fr) minmax(220px, 2fr);
+    grid-template-columns: minmax(220px, 1.5fr) minmax(220px, 2fr);
     align-items: center;
     padding: 1.5rem 0;
     border-bottom: 1px solid var(--line-color);
@@ -488,12 +496,6 @@ header {
     background-color: var(--accent-color);
     color: var(--bg-color);
     padding-left: 2rem;
-}
-
-.item-index {
-    font-family: var(--font-serif);
-    font-size: 0.9rem;
-    opacity: 0.4;
 }
 
 .item-name-ja {
@@ -529,14 +531,9 @@ header {
     opacity: 0.8;
 }
 
-
-.director-item.selected .item-index {
-    opacity: 0.8;
-}
-
 @media (max-width: 899px) {
     .director-item {
-        grid-template-columns: 40px 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
@@ -561,10 +558,6 @@ header {
         grid-template-columns: 40px 1fr;
         gap: 0.5rem;
         padding: 1.2rem 0;
-    }
-    .item-index {
-        grid-row: span 2;
-        padding-top: 5px;
     }
     .item-name-ja {
         font-size: 1.2rem;
@@ -606,7 +599,7 @@ header {
     }
 
     .label-l {
-        padding-right: 1.25rem;
+        padding-right: 0;
     }
 
     .label-surname,
@@ -649,7 +642,7 @@ header {
     }
 
     .year-label {
-        font-size: 1rem;
+        font-size: 1.12rem;
         padding: 5px 12px;
     }
 
@@ -671,7 +664,7 @@ header {
     }
 
     .director-item {
-        grid-template-columns: 52px minmax(0, 1.2fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
         padding: 1.35rem 0;
     }
 
@@ -737,12 +730,12 @@ header {
     }
 
     .label-l {
-        text-align: right;
+        text-align: center;
         padding-right: 0;
     }
 
     .label-r {
-        text-align: right;
+        text-align: center;
     }
 
     .label-surname,
@@ -834,7 +827,7 @@ header {
     }
 
     .year-label {
-        font-size: 0.7rem;
+        font-size: 0.82rem;
         padding: 3px 5px;
     }
 
@@ -897,7 +890,7 @@ header {
     }
 
     .director-item {
-        grid-template-columns: 34px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         gap: 0.45rem 0.7rem;
         padding: 1rem 0.25rem;
     }
@@ -912,12 +905,6 @@ header {
         padding-right: 0.75rem;
     }
 
-    .item-index {
-        grid-row: span 2;
-        padding-top: 0.2rem;
-        font-size: 0.78rem;
-    }
-
     .item-name-ja {
         font-size: 1.05rem;
         line-height: 1.45;
@@ -925,7 +912,6 @@ header {
     }
 
     .item-name-en {
-        grid-column: 2;
         font-size: 0.78rem;
         line-height: 1.35;
         letter-spacing: 0.06em;
@@ -986,7 +972,7 @@ header {
     }
 
     .year-label {
-        font-size: 0.66rem;
+        font-size: 0.74rem;
         padding: 2px 4px;
     }
 

@@ -39,8 +39,6 @@ function renderList() {
     container.className = 'director-list';
     container.innerHTML = '';
 
-    let globalIndex = 1;
-
     directors.forEach(group => {
         // Render Category Header
         const header = document.createElement('div');
@@ -51,10 +49,8 @@ function renderList() {
         // Render Directors in Group
         group.items.forEach(dir => {
             const item = document.createElement('div');
-            const displayIndex = globalIndex.toString().padStart(2, '0');
             item.className = `director-item ${selectedDirectors.includes(dir.id) ? 'selected' : ''}`;
             item.innerHTML = `
-                <div class="item-index">${displayIndex}</div>
                 <div class="item-name-ja">
                     ${dir.nameJa}
                     ${dir.keywords ? `<div class="item-keywords">${dir.keywords}</div>` : ''}
@@ -63,7 +59,6 @@ function renderList() {
             `;
             item.onclick = () => toggleSelection(dir.id);
             container.appendChild(item);
-            globalIndex++;
         });
     });
 }
