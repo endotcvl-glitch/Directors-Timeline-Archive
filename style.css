@@ -543,14 +543,18 @@ header {
 
 .director-category-title {
     font-family: var(--font-serif);
-    font-size: 0.8rem;
+    font-size: 1.15rem;
     color: var(--secondary-text);
     text-align: left;
-    padding: 2rem 0 1rem 0;
+    padding: 0 0 0.8rem 0;
     letter-spacing: 0.3em;
     border-bottom: 2px solid var(--line-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
     text-transform: uppercase;
+}
+
+.director-item + .director-category-title {
+    margin-top: 4rem;
 }
 
 @media (max-width: 599px) {
@@ -884,9 +888,14 @@ header {
     }
 
     .director-category-title {
-        padding: 1.6rem 0 0.75rem;
-        font-size: 0.72rem;
+        padding: 0 0 0.7rem;
+        font-size: 0.95rem;
         letter-spacing: 0.22em;
+        margin-bottom: 1.25rem;
+    }
+
+    .director-item + .director-category-title {
+        margin-top: 3rem;
     }
 
     .director-item {
