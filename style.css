@@ -367,6 +367,36 @@ header {
     margin-bottom: 10vh;
 }
 
+.director-search {
+    width: min(100%, 560px);
+    margin: 0 auto 4vh;
+    text-align: left;
+}
+
+.director-search input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--line-color);
+    border-radius: 0;
+    background: transparent;
+    padding: 0.85rem 0;
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.director-search input::placeholder {
+    color: var(--secondary-text);
+    opacity: 0.55;
+}
+
+.director-search input:focus {
+    border-bottom-color: var(--accent-color);
+}
+
 .director-card {
     background: var(--card-bg);
     border: 1px solid var(--line-color);
@@ -498,6 +528,14 @@ header {
     padding-left: 2rem;
 }
 
+.director-item.search-dimmed {
+    opacity: 0.28;
+}
+
+.director-item.search-dimmed:hover {
+    opacity: 0.55;
+}
+
 .item-name-ja {
     font-family: var(--font-sans);
     font-size: 1.4rem;
@@ -555,6 +593,16 @@ header {
 
 .director-item + .director-category-title {
     margin-top: 4rem;
+}
+
+.director-search-note {
+    padding: 0 0 1.4rem;
+    color: var(--secondary-text);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    opacity: 0.55;
 }
 
 @media (max-width: 599px) {
@@ -665,6 +713,10 @@ header {
 
     .home-hero p {
         font-size: 1rem;
+    }
+
+    .director-search {
+        margin-bottom: 3rem;
     }
 
     .director-item {
@@ -881,6 +933,15 @@ header {
         line-height: 1.85;
         letter-spacing: 0.05em;
         text-align: center;
+    }
+
+    .director-search {
+        margin-bottom: 2.25rem;
+    }
+
+    .director-search input {
+        padding: 0.75rem 0;
+        font-size: 0.9rem;
     }
 
     .director-list {

@@ -43,11 +43,52 @@ const directors = [
 ];
 
 let selectedDirectors = [];
+let searchQuery = '';
+
+function normalizeText(value) {
+    return String(value || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+}
+
+function matchesSearch(dir) {
+    const query = normalizeText(searchQuery.trim());
+
+    if (!query) {
+        return true;
+    }
+
+    return [
+        dir.nameEn,
+        dir.nameJa,
+        dir.keywords
+    ].some(value => normalizeText(value).includes(query));
+}
+
+function hasExactMatch() {
+    const query = searchQuery.trim();
+
+    if (!query) {
+        return true;
+    }
+
+    return directors.some(group => group.items.some(matchesSearch));
+}
 
 function renderList() {
     const container = document.getElementById('director-grid');
+    const isSearching = searchQuery.trim().length > 0;
+    const hasMatch = hasExactMatch();
     container.className = 'director-list';
     container.innerHTML = '';
+
+    if (isSearching && !hasMatch) {
+        const empty = document.createElement('div');
+        empty.className = 'director-search-note';
+        empty.textContent = 'No exact match';
+        container.appendChild(empty);
+    }
 
     directors.forEach(group => {
         // Render Category Header
@@ -58,8 +99,14 @@ function renderList() {
 
         // Render Directors in Group
         group.items.forEach(dir => {
+            const isSelected = selectedDirectors.includes(dir.id);
+            const isMatch = matchesSearch(dir);
             const item = document.createElement('div');
-            item.className = `director-item ${selectedDirectors.includes(dir.id) ? 'selected' : ''}`;
+            item.className = [
+                'director-item',
+                isSelected ? 'selected' : '',
+                isSearching && !isMatch && !isSelected ? 'search-dimmed' : ''
+            ].filter(Boolean).join(' ');
             item.innerHTML = `
                 <div class="item-name-ja">
                     ${dir.nameJa}
@@ -115,6 +162,11 @@ document.getElementById('compare-btn').onclick = () => {
         window.location.href = `timeline.html?d1=${d1}${d2 ? `&d2=${d2}` : ''}`;
     }
 };
+
+document.getElementById('director-search').addEventListener('input', (event) => {
+    searchQuery = event.target.value;
+    renderList();
+});
 
 // Initial Render
 renderList();
