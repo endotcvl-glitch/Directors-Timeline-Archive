@@ -9,6 +9,7 @@
     --card-bg: #ffffff;
     --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
     --font-serif: 'Playfair Display', serif;
+    --title-letter-spacing: 0.12em;
 }
 
 *,
@@ -43,7 +44,7 @@ header {
 .site-title {
     font-family: var(--font-serif);
     font-size: 1.1rem;
-    letter-spacing: 0.46em;
+    letter-spacing: var(--title-letter-spacing);
     font-weight: 700;
     text-transform: uppercase;
     overflow-wrap: anywhere;
@@ -346,7 +347,7 @@ header {
     font-size: clamp(2.4rem, 6vw, 3.5rem);
     font-weight: 700;
     margin-bottom: 1rem;
-    letter-spacing: 0;
+    letter-spacing: var(--title-letter-spacing);
     line-height: 1.05;
     overflow-wrap: anywhere;
 }
@@ -635,7 +636,7 @@ header {
 
     .site-title {
         font-size: 0.95rem;
-        letter-spacing: 0.3em;
+        letter-spacing: var(--title-letter-spacing);
         line-height: 1.35;
     }
 
@@ -769,7 +770,7 @@ header {
 
     .site-title {
         font-size: 0.78rem;
-        letter-spacing: 0.18em;
+        letter-spacing: var(--title-letter-spacing);
         line-height: 1.35;
         max-width: 100%;
     }
