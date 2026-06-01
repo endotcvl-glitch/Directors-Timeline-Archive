@@ -80,6 +80,7 @@ function renderList() {
     const container = document.getElementById('director-grid');
     const isSearching = searchQuery.trim().length > 0;
     const hasMatch = hasExactMatch();
+    let firstMatchItem = null;
     container.className = 'director-list';
     container.innerHTML = '';
 
@@ -116,8 +117,21 @@ function renderList() {
             `;
             item.onclick = () => toggleSelection(dir.id);
             container.appendChild(item);
+
+            if (isSearching && isMatch && !firstMatchItem) {
+                firstMatchItem = item;
+            }
         });
     });
+
+    if (firstMatchItem) {
+        requestAnimationFrame(() => {
+            firstMatchItem.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        });
+    }
 }
 
 function toggleSelection(id) {

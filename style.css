@@ -327,7 +327,7 @@ header {
 
 .home-container {
     width: min(100%, 1200px);
-    padding: clamp(5rem, 15vh, 9rem) clamp(1.25rem, 5vw, 4rem) calc(8rem + env(safe-area-inset-bottom));
+    padding: clamp(2rem, 5vh, 3rem) clamp(1.25rem, 5vw, 4rem) calc(8rem + env(safe-area-inset-bottom));
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -352,7 +352,7 @@ header {
 }
 
 .home-hero p {
-    font-size: 1.1rem;
+    font-size: 0.875rem;
     color: var(--secondary-text);
     letter-spacing: 0.1em;
     max-width: 760px;
@@ -443,9 +443,9 @@ header {
     font-family: var(--font-sans);
     font-size: 1.2rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.04em;
     cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease;
     z-index: 200;
     box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     line-height: 1.4;
@@ -457,7 +457,7 @@ header {
 }
 
 .compare-action:hover {
-    padding: 1.2rem 4rem;
+    opacity: 0.86;
 }
 
 @media (max-width: 599px) {
@@ -523,8 +523,9 @@ header {
 }
 
 .director-item.selected {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+    background-color: rgba(0,0,0,0.055);
+    color: var(--text-color);
+    border-left: 3px solid var(--accent-color);
     padding-left: 2rem;
 }
 
@@ -565,8 +566,8 @@ header {
 }
 
 .director-item.selected .item-keywords {
-    color: var(--bg-color);
-    opacity: 0.8;
+    color: var(--secondary-text);
+    opacity: 1;
 }
 
 @media (max-width: 899px) {
@@ -704,7 +705,7 @@ header {
     }
 
     .home-container {
-        padding: 9vh 1.75rem calc(8rem + env(safe-area-inset-bottom));
+        padding: 2.5rem 1.75rem calc(8rem + env(safe-area-inset-bottom));
     }
 
     .home-hero h1 {
@@ -712,7 +713,7 @@ header {
     }
 
     .home-hero p {
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
 
     .director-search {
@@ -741,7 +742,7 @@ header {
         width: min(620px, calc(100% - 2rem));
         padding: 1rem 1.4rem;
         font-size: 1rem;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.03em;
     }
 }
 
@@ -915,7 +916,7 @@ header {
     }
 
     .home-container {
-        padding: 3.5rem 1rem calc(7.5rem + env(safe-area-inset-bottom));
+        padding: 2rem 1rem calc(7.5rem + env(safe-area-inset-bottom));
     }
 
     .home-hero {
@@ -929,7 +930,7 @@ header {
     }
 
     .home-hero p {
-        font-size: 0.88rem;
+        font-size: 0.875rem;
         line-height: 1.85;
         letter-spacing: 0.05em;
         text-align: center;
@@ -1002,7 +1003,7 @@ header {
         transform: translateY(calc(100% + 1.5rem));
         padding: 0.95rem 1rem;
         font-size: 0.86rem;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.02em;
         line-height: 1.45;
     }
 
@@ -1012,6 +1013,7 @@ header {
 
     .compare-action:hover {
         padding: 0.95rem 1rem;
+        opacity: 0.86;
     }
 }
 
