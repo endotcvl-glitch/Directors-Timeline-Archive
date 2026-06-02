@@ -582,12 +582,13 @@ header {
 /* --- Scalable & Responsive List Styles --- */
 
 .director-category-title {
-    font-family: var(--font-serif);
-    font-size: 1.15rem;
-    color: var(--secondary-text);
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #555555;
     text-align: left;
     padding: 0 0 0.8rem 0;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.08em;
     border-bottom: 2px solid var(--line-color);
     margin-bottom: 1.75rem;
     text-transform: uppercase;
@@ -952,8 +953,8 @@ header {
 
     .director-category-title {
         padding: 0 0 0.7rem;
-        font-size: 0.95rem;
-        letter-spacing: 0.22em;
+        font-size: 1.2rem;
+        letter-spacing: 0.06em;
         margin-bottom: 1.25rem;
     }
 
