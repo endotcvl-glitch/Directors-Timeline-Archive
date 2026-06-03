@@ -38,6 +38,7 @@ const directorsInfo = {
     'lanthimos': { fullNameEn: 'YORGOS LANTHIMOS', nameJa: 'ヨルゴス・ランティモス', surname: 'LANTHIMOS' },
     'scott': { fullNameEn: 'RIDLEY SCOTT', nameJa: 'リドリー・スコット', surname: 'SCOTT' },
     'abrams': { fullNameEn: 'J.J. ABRAMS', nameJa: 'J.J.エイブラムス', surname: 'ABRAMS' },
+    'fennell': { fullNameEn: 'EMERALD FENNELL', nameJa: 'エメラルド・フェネル', surname: 'FENNELL' },
 };
 
 const filmsData = [
@@ -332,6 +333,10 @@ const filmsData = [
     { year: 2017, type: 'gerwig', title: "レディ・バード", context: "誰もが経験する、故郷との決別と母への愛。" },
     { year: 2019, type: 'gerwig', title: "ストーリー・オブ・マイライフ", context: "時代に抗い、自らの筆で運命を切り拓く女性たち。" },
     { year: 2023, type: 'gerwig', title: "バービー", context: "完璧な世界から飛び出し、人間であることを肯定する。" },
+
+    // Emerald Fennell
+    { year: 2020, type: 'fennell', title: "プロミシング・ヤング・ウーマン", context: "復讐とケア、怒りとポップな色彩を交差させた長編監督デビュー作。" },
+    { year: 2023, type: 'fennell', title: "Saltburn", context: "階級、欲望、視線のねじれをブラックユーモアで描く心理劇。" },
 
     // Damien Chazelle
     { year: 2009, type: 'chazelle', title: "ガイ・アンド・マデリン", context: "ヌーヴェルヴァーグへのオマージュを込めたジャズ・ミュージカル。" },

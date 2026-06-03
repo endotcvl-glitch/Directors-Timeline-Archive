@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directors' Timeline Archive | Select Directors</title>
-    <link rel="stylesheet" href="style.css?v=responsive-20260603">
+    <link rel="stylesheet" href="style.css?v=responsive-20260603-3">
 </head>
 
 <body>
@@ -19,6 +19,15 @@
             <p>Directors’ Timeline Archive は、監督たちの作品と時代背景を重ねて眺めるためのアーカイブです。<br>気になる監督を選び、その歩みをたどる。<br>あるいは2人を比較し、それぞれの創作の軌跡を見比べることができます。</p>
         </header>
 
+        <section class="comparison-themes" aria-labelledby="comparison-themes-title">
+            <div class="section-heading">
+                <h2 id="comparison-themes-title">テーマから比較してみる</h2>
+            </div>
+            <div class="theme-list" id="theme-list">
+                <!-- Comparison themes will be injected here -->
+            </div>
+        </section>
+
         <div class="director-search">
             <input type="search" id="director-search" placeholder="Search directors..." aria-label="Search directors">
         </div>
@@ -30,7 +39,7 @@
         <button class="compare-action" id="compare-btn">監督を選択してください</button>
     </div>
 
-    <script src="home.js"></script>
+    <script src="home.js?v=themes-20260603-3"></script>
 </body>
 
 </html>

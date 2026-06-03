@@ -33,7 +33,7 @@ const directors = [
     { category: '2000 -', items: [
         { id: 'favreau', surname: 'FAVREAU', nameJa: 'ジョン・ファヴロー', nameEn: 'JON FAVREAU', keywords: 'ポップな娯楽性 / MCUの起点 / 実写とCGの融合' },
         { id: 'gunn', surname: 'GUNN', nameJa: 'ジェームズ・ガン', nameEn: 'JAMES GUNN', keywords: '異端のチーム劇 / 音楽とユーモア / 感情の爆発' },
-        { id: 'abrams', surname: 'ABRAMS', nameJa: 'J.J.エイブラムス', nameEn: 'J.J. ABRAMS', keywords: '謎の設計 / フランチャイズ再起動 / スピード感' },
+        { id: 'abrams', surname: 'ABRAMS', nameJa: 'J.J.エイブラムス', nameEn: 'J.J. ABRAMS', keywords: 'ミステリーボックス哲学 / 臨場感演出 /　過去作へのリスペクトと再構築' },
         { id: 'whedon', surname: 'WHEDON', nameJa: 'ジョス・ウェドン', nameEn: 'JOSS WHEDON', keywords: 'アンサンブル劇 / 軽快な会話 / ヒーロー群像' },
         { id: 'waititi', surname: 'WAITITI', nameJa: 'タイカ・ワイティティ', nameEn: 'TAIKA WAITITI', keywords: '脱力ユーモア / 孤独 / カラフル' },
         { id: 'lanthimos', surname: 'LANTHIMOS', nameJa: 'ヨルゴス・ランティモス', nameEn: 'YORGOS LANTHIMOS', keywords: '不条理な寓話 / 冷たいユーモア / 身体と制度' },
@@ -50,7 +50,48 @@ const directors = [
         { id: 'zhao', surname: 'ZHAO', nameJa: 'クロエ・ジャオ', nameEn: 'CHLOÉ ZHAO', keywords: '自然光の詩情 / 周縁の人生 / 静かなリアリズム' },
         { id: 'watts', surname: 'WATTS', nameJa: 'ジョン・ワッツ', nameEn: 'JON WATTS', keywords: '青春ヒーロー / 軽やかな成長譚 / MCUの日常感' },
         { id: 'aster', surname: 'ASTER', nameJa: 'アリ・アスター', nameEn: 'ARI ASTER', keywords: '家族の崩壊 / 不安と喪失 / 現代神話' }
+    ]},
+    { category: '2020 -', items: [
+        { id: 'fennell', surname: 'FENNELL', nameJa: 'エメラルド・フェネル', nameEn: 'EMERALD FENNELL', keywords: '復讐と欲望 / ブラックユーモア / 階級と視線' }
     ]}
+];
+
+const comparisonThemes = [
+    {
+        title: '時間と記憶',
+        description: '時間構造とスケールの扱いから、現代SFの広がりを見比べる。',
+        directorIds: ['nolan', 'villeneuve']
+    },
+    {
+        title: 'ブロックバスターの原点',
+        description: '70年代以降の娯楽映画を大きく変えたふたりの歩みを見る。',
+        directorIds: ['spielberg', 'lucas']
+    },
+    {
+        title: '幻想と異形',
+        description: '夢、悪夢、異形の世界をどう映画にしてきたかをたどる。',
+        directorIds: ['lynch', 'burton']
+    },
+    {
+        title: 'ヒーロー映画の変化',
+        description: '現代のヒーロー映画が、作家性とシリーズ展開の間でどう変化したかを見る。',
+        directorIds: ['raimi', 'gunn']
+    },
+    {
+        title: '多作の巨匠たち',
+        description: '長いキャリアの中で膨大な作品を生み出してきたふたりの密度を見比べる。',
+        directorIds: ['spielberg', 'scorsese']
+    },
+    {
+        title: '現代ホラーの恐怖設計',
+        description: 'ジャンル映画の恐怖と、現代的な不安の描き方を比較する。',
+        directorIds: ['wan', 'aster']
+    },
+    {
+        title: 'チームヒーローの時代',
+        description: '大規模なチーム劇と、はみ出し者たちのヒーロー像を見比べる。',
+        directorIds: ['russo', 'gunn']
+    }
 ];
 
 let selectedDirectors = [];
@@ -85,6 +126,47 @@ function hasExactMatch() {
     }
 
     return directors.some(group => group.items.some(matchesSearch));
+}
+
+function getAllDirectors() {
+    return directors.flatMap(group => group.items);
+}
+
+function getDirectorById(id) {
+    return getAllDirectors().find(dir => dir.id === id);
+}
+
+function renderComparisonThemes() {
+    const container = document.getElementById('theme-list');
+
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML = '';
+
+    comparisonThemes.forEach(theme => {
+        const themeDirectors = theme.directorIds.map(getDirectorById).filter(Boolean);
+
+        if (themeDirectors.length !== 2) {
+            return;
+        }
+
+        const link = document.createElement('a');
+        link.className = 'theme-item';
+        link.href = `timeline.html?d1=${theme.directorIds[0]}&d2=${theme.directorIds[1]}`;
+        link.innerHTML = `
+            <div>
+                <h3>${theme.title}</h3>
+                <p>${theme.description}</p>
+            </div>
+            <div class="theme-pair">
+                <span>${themeDirectors[0].nameJa}</span>
+                <span>${themeDirectors[1].nameJa}</span>
+            </div>
+        `;
+        container.appendChild(link);
+    });
 }
 
 function renderList() {
@@ -164,7 +246,7 @@ function toggleSelection(id) {
 function updateUI() {
     renderList();
     const btn = document.getElementById('compare-btn');
-    const allItems = directors.flatMap(g => g.items);
+    const allItems = getAllDirectors();
 
     if (selectedDirectors.length === 1) {
         const d1 = allItems.find(d => d.id === selectedDirectors[0]);
@@ -193,4 +275,5 @@ document.getElementById('director-search').addEventListener('input', (event) => 
 });
 
 // Initial Render
+renderComparisonThemes();
 renderList();
