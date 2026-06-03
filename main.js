@@ -33,6 +33,11 @@ const directorsInfo = {
     'dacosta': { fullNameEn: 'NIA DACOSTA', nameJa: 'ニア・ダコスタ', surname: 'DACOSTA' },
     'zhao': { fullNameEn: 'CHLOÉ ZHAO', nameJa: 'クロエ・ジャオ', surname: 'ZHAO' },
     'watts': { fullNameEn: 'JON WATTS', nameJa: 'ジョン・ワッツ', surname: 'WATTS' },
+    'reeves': { fullNameEn: 'MATT REEVES', nameJa: 'マット・リーヴス', surname: 'REEVES' },
+    'zemeckis': { fullNameEn: 'ROBERT ZEMECKIS', nameJa: 'ロバート・ゼメキス', surname: 'ZEMECKIS' },
+    'lanthimos': { fullNameEn: 'YORGOS LANTHIMOS', nameJa: 'ヨルゴス・ランティモス', surname: 'LANTHIMOS' },
+    'scott': { fullNameEn: 'RIDLEY SCOTT', nameJa: 'リドリー・スコット', surname: 'SCOTT' },
+    'abrams': { fullNameEn: 'J.J. ABRAMS', nameJa: 'J.J.エイブラムス', surname: 'ABRAMS' },
 };
 
 const filmsData = [
@@ -64,12 +69,15 @@ const filmsData = [
     { year: 1980, type: 'lynch', title: "エレファント・マン", context: "異形の姿で生まれた男と医師の交流を通じ、人間の尊厳を問う感動のドラマ。" },
     { year: 1984, type: 'lynch', title: "デューン/砂の惑星", context: "砂の惑星を舞台にした、壮大な宇宙帝国の権力争いを描くSF叙事詩。" },
     { year: 1986, type: 'lynch', title: "ブルーベルベット", context: "平穏な町に潜む狂気と暴力に足を踏み入れた青年が見る、アメリカの暗部。" },
+    { year: 1990, type: 'lynch', title: "ツイン・ピークス Season 1", context: "ローラ・パーマー事件を起点に、郊外の闇と夢の論理をテレビへ持ち込んだ革新的シリーズ。", medium: "Series" },
+    { year: 1990, type: 'lynch', title: "ツイン・ピークス Season 2", context: "1990年から1991年にかけて放送。物語をさらに迷宮化し、テレビ表現の可能性を押し広げた続章。", medium: "Series" },
     { year: 1990, type: 'lynch', title: "ワイルド・アット・ハート", context: "逃避行を続ける恋人たちを描いた、過激で情熱的なロードムービー。" },
     { year: 1992, type: 'lynch', title: "ツイン・ピークス/ローラ・パーマー最期の7日間", context: "ドラマの前日譚。ローラ・パーマー'の死に至る最後の1週間。" },
     { year: 1997, type: 'lynch', title: "ロスト・ハイウェイ", context: "記憶とアイデンティティが交錯する、悪夢のようなミステリー・スリラー。" },
     { year: 1999, type: 'lynch', title: "ストレイト・ストーリー", context: "疎遠だった兄に会うため、トラクターで旅をした老人の実話に基づく温かな物語。" },
     { year: 2001, type: 'lynch', title: "マルホランド・ドライブ", context: "夢と現実が溶け合う、ハリウッドの闇と幻影を鮮烈に描いた傑作。" },
     { year: 2006, type: 'lynch', title: "インランド・エンパイア", context: "女優が次第に現実と虚構の境界を失っていく、実験的な長編。" },
+    { year: 2017, type: 'lynch', title: "ツイン・ピークス: The Return", context: "全18話をリンチが監督し、テレビシリーズの形式を映画的な時間感覚へ押し広げたリミテッドシリーズ。", medium: "Series" },
 
     // Tim Burton
     { year: 1985, type: 'burton', title: "ピーウィーの大冒険", context: "大切な自転車を探すため、変わり者の男が全米を横断するコメディ。" },
@@ -91,6 +99,7 @@ const filmsData = [
     { year: 2014, type: 'burton', title: "ビッグ・アイズ", context: "「ビッグ・アイ」の絵で有名になった画家夫婦の驚きの実話。" },
     { year: 2016, type: 'burton', title: "ミス・ペレグリンと奇妙なこどもたち", context: "特殊な能力を持つ子供たちが暮らす孤児院を巡るファンタジー。" },
     { year: 2019, type: 'burton', title: "ダンボ", context: "大きな耳を持つ象のダンボが、空を飛ぶ力を手に入れる感動の物語。" },
+    { year: 2022, type: 'burton', title: "ウェンズデー", context: "アダムス・ファミリーの娘ウェンズデーを主人公に、ゴシックな学園ミステリーとして再構築したNetflixシリーズ。", medium: "Series" },
     { year: 2024, type: 'burton', title: "ビートルジュース ビートルジュース", context: "奇才ビートルジュースが再び騒動を巻き起こすファンタジーの続編。" },
 
     // Joel & Ethan Coen
@@ -372,10 +381,14 @@ const filmsData = [
     { year: 2014, type: 'gunn', title: "ガーディアンズ・オブ・ギャラクシー", context: "はみ出し者たちを家族へ変えた、音楽と宇宙活劇のMCU異色作。" },
     { year: 2017, type: 'gunn', title: "ガーディアンズ・オブ・ギャラクシー:リミックス", context: "父性と喪失をポップな宇宙絵巻として描いた続編。" },
     { year: 2021, type: 'gunn', title: "ザ・スーサイド・スクワッド", context: "悪党たちの使い捨て任務を、過激なユーモアと情で描いたDC作品。" },
+    { year: 2022, type: 'gunn', title: "ピースメイカー", context: "『ザ・スーサイド・スクワッド』から続く、暴力と不器用な自己探求を描いたDCシリーズ。", medium: "Series" },
     { year: 2023, type: 'gunn', title: "ガーディアンズ・オブ・ギャラクシー:VOLUME 3", context: "チームの終章として、痛みを抱えた者たちの救済を描く。" },
     { year: 2025, type: 'gunn', title: "スーパーマン", context: "新たなDCユニバースの起点として、理想と優しさを背負うヒーロー像を再提示。" },
 
     // Joss Whedon
+    { year: 1997, type: 'whedon', title: "バフィー 〜恋する十字架〜", context: "高校生活と怪物退治を重ね、若者の成長をジャンル横断の連続ドラマとして描いた代表作。", medium: "Series" },
+    { year: 1999, type: 'whedon', title: "エンジェル", context: "『バフィー』から派生し、贖罪と都市の闇をよりノワール調に掘り下げたスピンオフシリーズ。", medium: "Series" },
+    { year: 2002, type: 'whedon', title: "ファイヤーフライ 宇宙大戦争", context: "宇宙西部劇として、家族的な乗組員と辺境の自由を描いた短命ながら強い影響を残したシリーズ。", medium: "Series" },
     { year: 2005, type: 'whedon', title: "セレニティー", context: "テレビシリーズ『ファイヤーフライ』を映画として完結させたSF西部劇。" },
     { year: 2012, type: 'whedon', title: "アベンジャーズ", context: "複数のヒーローを一堂に集め、現代フランチャイズ映画の型を決定づけた作品。" },
     { year: 2015, type: 'whedon', title: "アベンジャーズ/エイジ・オブ・ウルトロン", context: "チームの亀裂と人工知能の暴走を描き、MCUの次章へつないだ大作。" },
@@ -427,6 +440,7 @@ const filmsData = [
     { year: 2011, type: 'levy', title: "リアル・スティール", context: "ロボット格闘と父子の再生を重ねた、感情豊かなSFスポーツ映画。" },
     { year: 2013, type: 'levy', title: "インターンシップ", context: "中年コンビがテック企業の研修に挑む職場コメディ。" },
     { year: 2014, type: 'levy', title: "ナイト ミュージアム/エジプト王の秘密", context: "シリーズの締めくくりとして、魔法の石板と別れを描く冒険作。" },
+    { year: 2016, type: 'levy', title: "ストレンジャー・シングス 未知の世界", context: "製作総指揮と監督参加により、80年代映画的な冒険感を配信シリーズへ接続した代表的作品。", medium: "Series" },
     { year: 2021, type: 'levy', title: "フリー・ガイ", context: "ゲーム世界のモブが自我を得る、明るいメタ・アクション・コメディ。" },
     { year: 2022, type: 'levy', title: "アダム&アダム", context: "時間旅行と父子関係を重ねた、Netflix発のSFアドベンチャー。" },
     { year: 2024, type: 'levy', title: "デッドプール&ウルヴァリン", context: "R指定ヒーローの毒舌とマルチバース的祝祭を組み合わせたMCU作品。" },
@@ -449,7 +463,95 @@ const filmsData = [
     { year: 2017, type: 'watts', title: "スパイダーマン:ホームカミング", context: "青春映画の軽さでMCU版スパイダーマンを再起動した作品。" },
     { year: 2019, type: 'watts', title: "スパイダーマン:ファー・フロム・ホーム", context: "旅と喪失を通して、若きヒーローの自立を描いた続編。" },
     { year: 2021, type: 'watts', title: "スパイダーマン:ノー・ウェイ・ホーム", context: "マルチバース的再会と喪失を重ね、シリーズの節目となった大作。" },
-    { year: 2024, type: 'watts', title: "ウルフズ", context: "二人の始末屋が同じ現場に現れる、スター共演のクライム・コメディ。" }
+    { year: 2024, type: 'watts', title: "ウルフズ", context: "二人の始末屋が同じ現場に現れる、スター共演のクライム・コメディ。" },
+
+    // J.J. Abrams
+    { year: 1998, type: 'abrams', title: "フェリシティの青春", context: "大学生活と恋愛を軸に、若者の選択と成長を繊細に描いた初期の青春シリーズ。", medium: "Series" },
+    { year: 2001, type: 'abrams', title: "エイリアス", context: "二重生活を送る女性スパイを中心に、家族、陰謀、ミッションを高速で重ねる代表的シリーズ。", medium: "Series" },
+    { year: 2004, type: 'abrams', title: "LOST", context: "無人島のサバイバルから始まり、謎と群像劇を世界的現象へ押し上げたミステリーシリーズ。", medium: "Series" },
+    { year: 2006, type: 'abrams', title: "M:i:III", context: "テレビ的なスピード感と感情の軸を持ち込み、長編映画監督としてデビューしたスパイアクション。" },
+    { year: 2008, type: 'abrams', title: "FRINGE/フリンジ", context: "超常科学と陰謀を軸に、ミステリーとSFを連続ドラマとして展開したシリーズ。", medium: "Series" },
+    { year: 2009, type: 'abrams', title: "スター・トレック", context: "若い乗組員たちの出会いを描き、クラシックSFフランチャイズを現代的に再起動した作品。" },
+    { year: 2011, type: 'abrams', title: "SUPER 8/スーパーエイト", context: "少年たちの映画作りと未知との遭遇を重ね、スピルバーグ的な冒険感を再解釈したSFドラマ。" },
+    { year: 2013, type: 'abrams', title: "スター・トレック イントゥ・ダークネス", context: "復讐とテロリズムを軸に、再起動版スター・トレックをさらにアクション寄りに展開した続編。" },
+    { year: 2015, type: 'abrams', title: "スター・ウォーズ/フォースの覚醒", context: "新世代のキャラクターを導入し、巨大フランチャイズを現代に再始動させたスペースオペラ。" },
+    { year: 2019, type: 'abrams', title: "スター・ウォーズ/スカイウォーカーの夜明け", context: "続三部作の完結編として、血筋、記憶、継承をめぐる物語を締めくくった作品。" },
+
+    // Matt Reeves
+    { year: 1996, type: 'reeves', title: "ハッピィブルー", context: "親友の葬儀をきっかけに、恋と喪失を描くリーヴスの長編監督デビュー作。" },
+    { year: 2008, type: 'reeves', title: "クローバーフィールド/HAKAISHA", context: "手持ちカメラの視点で都市崩壊を体験させる、怪獣映画の現代的再構築。" },
+    { year: 2010, type: 'reeves', title: "モールス", context: "孤独な少年と吸血鬼の少女の関係を、冷たい静けさで描いたリメイク。" },
+    { year: 2014, type: 'reeves', title: "猿の惑星:新世紀", context: "人類と猿の対立を、感情と政治のドラマとして描いたシリーズ再生の中核作。" },
+    { year: 2017, type: 'reeves', title: "猿の惑星:聖戦記", context: "復讐と信仰を帯びた戦争映画として、シーザーの物語を荘厳に締めくくった作品。" },
+    { year: 2022, type: 'reeves', title: "THE BATMAN-ザ・バットマン-", context: "若きバットマンを探偵映画とノワールの質感で再解釈したダークなヒーロー映画。" },
+
+    // Robert Zemeckis
+    { year: 1978, type: 'zemeckis', title: "抱きしめたい", context: "ビートルズ来米の熱狂を背景に、若者たちの一夜を描いた長編監督デビュー作。" },
+    { year: 1980, type: 'zemeckis', title: "ユーズド・カー", context: "中古車販売店を舞台に、毒気のある笑いと勢いで描く初期コメディ。" },
+    { year: 1984, type: 'zemeckis', title: "ロマンシング・ストーン 秘宝の谷", context: "冒険小説家が現実の冒険に巻き込まれる、軽快なアドベンチャー・ロマンス。" },
+    { year: 1985, type: 'zemeckis', title: "バック・トゥ・ザ・フューチャー", context: "時間旅行と青春コメディを完璧に結びつけた、ポップ映画の金字塔。" },
+    { year: 1988, type: 'zemeckis', title: "ロジャー・ラビット", context: "実写とアニメーションを融合させ、映画技術とノワール喜劇を結びつけた作品。" },
+    { year: 1989, type: 'zemeckis', title: "バック・トゥ・ザ・フューチャー PART2", context: "未来と過去を交錯させ、時間改変のアイデアを加速させた続編。" },
+    { year: 1990, type: 'zemeckis', title: "バック・トゥ・ザ・フューチャー PART3", context: "西部劇の形式で三部作を締めくくる、時間旅行シリーズの完結編。" },
+    { year: 1992, type: 'zemeckis', title: "永遠に美しく…", context: "若さへの執着をブラックコメディと視覚効果で描いた風刺的ファンタジー。" },
+    { year: 1994, type: 'zemeckis', title: "フォレスト・ガンプ/一期一会", context: "個人の人生とアメリカ現代史を視覚効果で重ね合わせた大衆映画の代表作。" },
+    { year: 1997, type: 'zemeckis', title: "コンタクト", context: "科学、信仰、未知との対話を壮大なスケールで描いたSFドラマ。" },
+    { year: 2000, type: 'zemeckis', title: "ホワット・ライズ・ビニース", context: "幽霊譚と夫婦の秘密をクラシカルなサスペンスとして組み立てた作品。" },
+    { year: 2000, type: 'zemeckis', title: "キャスト・アウェイ", context: "孤島に取り残された男の時間と孤独を、身体的なサバイバルとして描いたドラマ。" },
+    { year: 2004, type: 'zemeckis', title: "ポーラー・エクスプレス", context: "パフォーマンスキャプチャを大きく押し出した、技術実験性の高いクリスマス映画。" },
+    { year: 2007, type: 'zemeckis', title: "ベオウルフ/呪われし勇者", context: "神話的英雄譚をデジタル映像で再構成したモーションキャプチャ作品。" },
+    { year: 2009, type: 'zemeckis', title: "Disney's クリスマス・キャロル", context: "古典文学をデジタル表現で再構成し、幻想と恐怖を強調したクリスマス映画。" },
+    { year: 2012, type: 'zemeckis', title: "フライト", context: "英雄的な緊急着陸の裏にある依存と罪を描いた、硬質な人間ドラマ。" },
+    { year: 2015, type: 'zemeckis', title: "ザ・ウォーク", context: "綱渡りの実話を、空間体験と視覚効果で再現した伝記ドラマ。" },
+    { year: 2016, type: 'zemeckis', title: "マリアンヌ", context: "戦時下の愛と疑念をクラシカルなスパイ・ロマンスとして描いた作品。" },
+    { year: 2018, type: 'zemeckis', title: "マーウェン", context: "トラウマと創作の世界を、実写と人形的なイメージで交差させた作品。" },
+    { year: 2020, type: 'zemeckis', title: "魔女がいっぱい", context: "ロアルド・ダール原作を、ブラックなファンタジーとして再映画化した作品。" },
+    { year: 2022, type: 'zemeckis', title: "ピノキオ", context: "ディズニー古典を実写とCGで再構成した配信映画。" },
+    { year: 2024, type: 'zemeckis', title: "Here", context: "固定された視点から、同じ場所に重なる時間と家族の記憶を描いた実験的ドラマ。" },
+
+    // Yorgos Lanthimos
+    { year: 2001, type: 'lanthimos', title: "My Best Friend", context: "ランティモスの初期長編。後年の不条理な人間観へつながるギリシャ時代の作品。" },
+    { year: 2005, type: 'lanthimos', title: "キネッタ", context: "反復される行為と奇妙な距離感で、人間関係の不自然さを見つめる初期作。" },
+    { year: 2009, type: 'lanthimos', title: "籠の中の乙女", context: "閉ざされた家族制度を不条理な寓話として描き、国際的評価を決定づけた作品。" },
+    { year: 2011, type: 'lanthimos', title: "アルプス", context: "死者の代役を演じる人々を通じ、喪失と役割の奇妙な関係を描いた作品。" },
+    { year: 2015, type: 'lanthimos', title: "ロブスター", context: "恋愛と社会制度を冷たいユーモアで寓話化した英語作品。" },
+    { year: 2017, type: 'lanthimos', title: "聖なる鹿殺し", context: "罪と報復の構造を、神話的な不条理と不穏な身体感覚で描いたスリラー。" },
+    { year: 2018, type: 'lanthimos', title: "女王陛下のお気に入り", context: "宮廷政治と欲望の駆け引きを、歪んだユーモアと視覚で描いた歴史劇。" },
+    { year: 2023, type: 'lanthimos', title: "哀れなるものたち", context: "身体と自由をめぐる寓話を、極彩色の世界観で描いた奇想の成長譚。" },
+    { year: 2024, type: 'lanthimos', title: "憐れみの3章", context: "支配、信仰、身体をめぐる複数の物語を、不条理なトーンで連ねたオムニバス。" },
+    { year: 2025, type: 'lanthimos', title: "Bugonia", context: "陰謀論と権力への不信を、ブラックコメディとSF的設定で描いたリメイク作品。" },
+
+    // Ridley Scott
+    { year: 1977, type: 'scott', title: "デュエリスト/決闘者", context: "ナポレオン時代の執拗な決闘を、絵画的な光と構図で描いた長編監督デビュー作。" },
+    { year: 1979, type: 'scott', title: "エイリアン", context: "宇宙船という閉鎖空間に身体的恐怖を持ち込んだ、SFホラーの金字塔。" },
+    { year: 1982, type: 'scott', title: "ブレードランナー", context: "未来都市の視覚イメージと人造人間の存在論を結びつけたSF映画の古典。" },
+    { year: 1985, type: 'scott', title: "レジェンド/光と闇の伝説", context: "幻想世界を濃密な美術と光で構築したダークファンタジー。" },
+    { year: 1987, type: 'scott', title: "誰かに見られてる", context: "都市の視線と危険な恋愛を絡めた、スタイリッシュなサスペンス。" },
+    { year: 1989, type: 'scott', title: "ブラック・レイン", context: "大阪を舞台に、異文化の衝突と犯罪都市のイメージを描いた刑事アクション。" },
+    { year: 1991, type: 'scott', title: "テルマ&ルイーズ", context: "女性二人の逃避行を、自由と反抗のロードムービーとして刻んだ作品。" },
+    { year: 1992, type: 'scott', title: "1492 コロンブス", context: "新大陸到達の神話と暴力を、壮大な歴史絵巻として描いた作品。" },
+    { year: 1996, type: 'scott', title: "白い嵐", context: "帆船での訓練航海を通じ、若者たちの成長と自然の脅威を描くドラマ。" },
+    { year: 1997, type: 'scott', title: "G.I.ジェーン", context: "女性兵士が過酷な訓練へ挑む、制度と身体の限界をめぐるアクションドラマ。" },
+    { year: 2000, type: 'scott', title: "グラディエーター", context: "古代ローマの復讐劇を、重厚な美術と身体性で復活させた歴史大作。" },
+    { year: 2001, type: 'scott', title: "ハンニバル", context: "レクター博士の美学と残酷性を、濃密な映像で描いたサスペンス続編。" },
+    { year: 2001, type: 'scott', title: "ブラックホーク・ダウン", context: "市街戦の混乱を圧倒的な臨場感で描いた現代戦争映画。" },
+    { year: 2003, type: 'scott', title: "マッチスティック・メン", context: "詐欺師の神経症と親子関係を軽妙に描いた犯罪ドラマ。" },
+    { year: 2005, type: 'scott', title: "キングダム・オブ・ヘブン", context: "十字軍時代の信仰と政治を、壮大な歴史劇として描いた作品。" },
+    { year: 2006, type: 'scott', title: "プロヴァンスの贈りもの", context: "南仏の風景と人生の再発見を描く、スコット作品では柔らかなロマンス。" },
+    { year: 2007, type: 'scott', title: "アメリカン・ギャングスター", context: "麻薬王と刑事の対比を、社会の構造とともに描いた犯罪叙事詩。" },
+    { year: 2008, type: 'scott', title: "ワールド・オブ・ライズ", context: "対テロ戦争の情報戦と不信を描いたスパイ・サスペンス。" },
+    { year: 2010, type: 'scott', title: "ロビン・フッド", context: "伝説的英雄の起源を、戦争と政治の物語として再構築した歴史アクション。" },
+    { year: 2012, type: 'scott', title: "プロメテウス", context: "人類の起源と創造主への問いを、エイリアン神話へ接続したSF大作。" },
+    { year: 2013, type: 'scott', title: "悪の法則", context: "欲望と暴力の連鎖を、乾いた寓話として描いた犯罪スリラー。" },
+    { year: 2014, type: 'scott', title: "エクソダス:神と王", context: "モーセの物語を大規模な映像で再構成した聖書叙事詩。" },
+    { year: 2015, type: 'scott', title: "オデッセイ", context: "火星に取り残された宇宙飛行士の生存を、知性とユーモアで描いたSFサバイバル。" },
+    { year: 2017, type: 'scott', title: "エイリアン:コヴェナント", context: "創造と怪物の系譜を、再びエイリアン神話の恐怖へ結びつけた作品。" },
+    { year: 2017, type: 'scott', title: "ゲティ家の身代金", context: "誘拐事件と巨万の富の冷酷さを描いた実録サスペンス。" },
+    { year: 2020, type: 'scott', title: "レイズド・バイ・ウルブス/神なき惑星", context: "人類の信仰と人工知能の母性をめぐる、SFシリーズの立ち上げを担った作品。", medium: "Series" },
+    { year: 2021, type: 'scott', title: "最後の決闘裁判", context: "一つの事件を複数の視点から描き、権力と真実の構造を問う中世劇。" },
+    { year: 2021, type: 'scott', title: "ハウス・オブ・グッチ", context: "ブランド一族の欲望と崩壊を、華やかな犯罪ドラマとして描いた作品。" },
+    { year: 2023, type: 'scott', title: "ナポレオン", context: "英雄の神話と私生活の脆さを、戦争スペクタクルと心理劇で描いた歴史大作。" },
+    { year: 2024, type: 'scott', title: "グラディエーターII", context: "ローマ帝国の暴力と継承を、前作の影を背負う新たな復讐劇として描いた続編。" }
 ];
 
 const episodesData = {
@@ -549,6 +651,34 @@ function setupJumpNav() {
     });
 }
 
+function getWorkMedium(work) {
+    return work.medium || 'Film';
+}
+
+function getWorkMediumClass(work) {
+    return getWorkMedium(work).toLowerCase();
+}
+
+function getWorkSearchType(work) {
+    return getWorkMedium(work) === 'Series' ? 'series' : 'movie';
+}
+
+function renderWorkCard(work, directorId) {
+    return `
+        <div class="film-card">
+            <div class="card-content">
+                <div class="work-medium ${getWorkMediumClass(work)}">${getWorkMedium(work)}</div>
+                <h2 class="film-title">
+                    <a href="https://www.google.com/search?q=${encodeURIComponent(work.title + ' ' + (directorsInfo[directorId]?.fullNameEn || '') + ' ' + getWorkSearchType(work))}" target="_blank" rel="noopener noreferrer">
+                        ${work.title}
+                    </a>
+                </h2>
+                <p class="film-context">${work.context}</p>
+            </div>
+        </div>
+    `;
+}
+
 function renderTimeline() {
     const { d1, d2 } = getUrlParams();
     updateHeaderLabels(d1, d2);
@@ -618,9 +748,9 @@ function renderTimeline() {
         row.className = `timeline-row ${isNow ? 'is-current' : ''}`;
         row.id = `year-${year}`;
 
-        const filmLeft = filmsData.find(f => f.year === year && f.type === d1);
-        const filmRight = d2
-            ? filmsData.find(f => f.year === year && f.type === d2)
+        const worksLeft = filmsData.filter(f => f.year === year && f.type === d1);
+        const worksRight = d2
+            ? filmsData.filter(f => f.year === year && f.type === d2)
             : null;
 
         // Single mode: Fetch other films from same year
@@ -631,18 +761,7 @@ function renderTimeline() {
         const episode = episodesData[year] || (isNow ? "THE PRESENT / AI ERA" : "");
         row.innerHTML = `
             <div class="side nolan-side">
-                ${filmLeft ? `
-                    <div class="film-card">
-                        <div class="card-content">
-                            <h2 class="film-title">
-                                <a href="https://www.google.com/search?q=${encodeURIComponent(filmLeft.title + ' ' + (directorsInfo[d1]?.fullNameEn || '') + ' movie')}" target="_blank" rel="noopener noreferrer">
-                                    ${filmLeft.title}
-                                </a>
-                            </h2>
-                            <p class="film-context">${filmLeft.context}</p>
-                        </div>
-                    </div>
-                ` : ''}
+                ${worksLeft.map(work => renderWorkCard(work, d1)).join('')}
             </div>
 
             <div class="center-axis">
@@ -651,18 +770,7 @@ function renderTimeline() {
             </div>
 
             <div class="side villeneuve-side">
-                ${filmRight ? `
-                    <div class="film-card">
-                        <div class="card-content">
-                            <h2 class="film-title">
-                                <a href="https://www.google.com/search?q=${encodeURIComponent(filmRight.title + ' ' + (directorsInfo[d2]?.fullNameEn || '') + ' movie')}" target="_blank" rel="noopener noreferrer">
-                                    ${filmRight.title}
-                                </a>
-                            </h2>
-                            <p class="film-context">${filmRight.context}</p>
-                        </div>
-                    </div>
-                ` : (otherFilms.length > 0 ? `
+                ${d2 ? worksRight.map(work => renderWorkCard(work, d2)).join('') : (otherFilms.length > 0 ? `
                     <div class="other-films-container">
                         ${otherFilms.map(f => `
                             <div class="other-film-item" data-director-id="${f.type}" role="button" tabindex="0">
