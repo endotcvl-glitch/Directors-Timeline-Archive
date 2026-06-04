@@ -518,7 +518,7 @@ header {
 }
 
 .director-select-heading {
-    margin-top: 0;
+    margin-top: clamp(3.5rem, 8vh, 6rem);
     margin-bottom: 1.1rem;
 }
 
@@ -1378,6 +1378,10 @@ header {
 
     .section-heading h2 {
         font-size: 0.95rem;
+    }
+
+    .director-select-heading {
+        margin-top: 3.5rem;
     }
 
     .theme-list {
