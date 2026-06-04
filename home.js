@@ -83,7 +83,7 @@ const comparisonThemes = [
         directorIds: ['spielberg', 'scorsese']
     },
     {
-        title: '現代ホラーの恐怖設計',
+        title: '新時代のホラー牽引者',
         description: 'ジャンル映画の恐怖と、現代的な不安の描き方を比較する。',
         directorIds: ['wan', 'aster']
     },
@@ -91,6 +91,11 @@ const comparisonThemes = [
         title: 'チームヒーローの時代',
         description: '大規模なチーム劇と、はみ出し者たちのヒーロー像を見比べる。',
         directorIds: ['russo', 'gunn']
+    },
+    {
+        title: '女性の自立と世界の違和感',
+        description: '自己形成、怒り、欲望を通して、現代女性像の変化を見比べる。',
+        directorIds: ['gerwig', 'fennell']
     }
 ];
 
