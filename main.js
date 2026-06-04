@@ -588,6 +588,28 @@ const episodesData = {
     2023: "ハリウッド大規模スト",
 };
 
+const eventsData = [
+    { year: 2001, title: "9.11同時多発テロ", category: "WORLD" },
+    { year: 2005, title: "YouTubeスタート", category: "TECH" },
+    { year: 2007, title: "iPhone発売", category: "TECH" },
+    { year: 2007, title: "Netflix配信開始", category: "INDUSTRY" },
+    { year: 2008, title: "リーマン・ショック", category: "WORLD" },
+    { year: 2008, title: "MCUスタート", category: "FILM" },
+    { year: 2009, title: "『アバター』公開 3D映画の再定義", category: "FILM" },
+    { year: 2013, title: "Netflix自社制作開始", category: "INDUSTRY" },
+    { year: 2017, title: "#MeToo運動", category: "INDUSTRY" },
+    { year: 2020, title: "COVID-19パンデミック", category: "WORLD" },
+    { year: 2022, title: "生成AIの爆発的普及", category: "TECH" },
+    { year: 2023, title: "ハリウッド大規模スト", category: "INDUSTRY" }
+];
+
+window.directorsTimelineData = {
+    directorsInfo,
+    filmsData,
+    episodesData,
+    eventsData
+};
+
 function normalizeDirectorId(id, fallback = 'nolan') {
     return Object.prototype.hasOwnProperty.call(directorsInfo, id) ? id : fallback;
 }
@@ -802,5 +824,7 @@ function renderTimeline() {
         container.appendChild(row);
     }
 }
-setupJumpNav();
-renderTimeline();
+if (document.getElementById('timeline-container')) {
+    setupJumpNav();
+    renderTimeline();
+}

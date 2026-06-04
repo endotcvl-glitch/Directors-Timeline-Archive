@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directors' Timeline Archive | Select Directors</title>
-    <link rel="stylesheet" href="style.css?v=responsive-20260604-11">
+    <title>Directors' Timeline Archive</title>
+    <link rel="stylesheet" href="style.css?v=responsive-20260604-15">
 </head>
 
 <body>
@@ -13,6 +13,7 @@
         <header class="home-hero">
             <h1>DIRECTORS' TIMELINE ARCHIVE</h1>
             <p>Directors’ Timeline Archive は、監督たちの作品と時代背景を重ねて眺めるためのアーカイブです。<br>気になる監督を選び、その歩みをたどる。<br>あるいは2人を比較し、それぞれの創作の軌跡を見比べることができます。</p>
+            <a href="about.html" class="home-about-link">What is this?</a>
         </header>
 
         <section class="comparison-themes" aria-labelledby="comparison-themes-title">
@@ -24,31 +25,34 @@
             </div>
         </section>
 
-        <div class="section-heading director-select-heading">
-            <h2>気になる監督を選ぶ</h2>
-        </div>
-
-        <div class="director-search">
-            <input type="search" id="director-search" placeholder="Search directors..." aria-label="Search directors">
-        </div>
-
-        <main class="director-grid" id="director-grid">
-            <!-- Director cards will be injected here -->
-        </main>
+        <section class="explore-paths" aria-labelledby="explore-paths-title">
+            <div class="section-heading">
+                <h2 id="explore-paths-title">探し方を選ぶ</h2>
+            </div>
+            <div class="explore-path-list">
+                <a href="directors.html" class="explore-path-card">
+                    <span>気になる監督を選ぶ</span>
+                    <small>監督を1人または2人選んで、作品年表を見る。</small>
+                </a>
+                <a href="years.html" class="explore-path-card">
+                    <span>年代から探す</span>
+                    <small>年ごとの作品と、映画業界・社会の出来事を見る。</small>
+                </a>
+            </div>
+        </section>
 
         <footer class="site-footer">
             <a href="index.html" class="footer-title">DIRECTORS' TIMELINE ARCHIVE</a>
             <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="index.html">SELECT DIRECTORS</a>
+                <a href="directors.html">SELECT DIRECTORS</a>
+                <a href="years.html">EXPLORE BY YEAR</a>
                 <a href="about.html">ABOUT / NEWS</a>
             </nav>
             <p>&copy; 2026 Directors' Timeline Archive.</p>
         </footer>
-
-        <button class="compare-action" id="compare-btn">監督を選択してください</button>
     </div>
 
-    <script src="home.js?v=themes-20260604"></script>
+    <script src="home.js?v=split-20260604"></script>
 </body>
 
 </html>

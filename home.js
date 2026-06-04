@@ -176,6 +176,11 @@ function renderComparisonThemes() {
 
 function renderList() {
     const container = document.getElementById('director-grid');
+
+    if (!container) {
+        return;
+    }
+
     const isSearching = searchQuery.trim().length > 0;
     const hasMatch = hasExactMatch();
     let firstMatchItem = null;
@@ -251,6 +256,11 @@ function toggleSelection(id) {
 function updateUI() {
     renderList();
     const btn = document.getElementById('compare-btn');
+
+    if (!btn) {
+        return;
+    }
+
     const allItems = getAllDirectors();
 
     if (selectedDirectors.length === 1) {
@@ -266,18 +276,26 @@ function updateUI() {
     }
 }
 
-document.getElementById('compare-btn').onclick = () => {
-    if (selectedDirectors.length >= 1) {
-        const d1 = selectedDirectors[0];
-        const d2 = selectedDirectors[1] || '';
-        window.location.href = `timeline.html?d1=${d1}${d2 ? `&d2=${d2}` : ''}`;
-    }
-};
+const compareButton = document.getElementById('compare-btn');
 
-document.getElementById('director-search').addEventListener('input', (event) => {
-    searchQuery = event.target.value;
-    renderList();
-});
+if (compareButton) {
+    compareButton.onclick = () => {
+        if (selectedDirectors.length >= 1) {
+            const d1 = selectedDirectors[0];
+            const d2 = selectedDirectors[1] || '';
+            window.location.href = `timeline.html?d1=${d1}${d2 ? `&d2=${d2}` : ''}`;
+        }
+    };
+}
+
+const directorSearchInput = document.getElementById('director-search');
+
+if (directorSearchInput) {
+    directorSearchInput.addEventListener('input', (event) => {
+        searchQuery = event.target.value;
+        renderList();
+    });
+}
 
 // Initial Render
 renderComparisonThemes();
