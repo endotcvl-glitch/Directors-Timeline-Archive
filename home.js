@@ -15,6 +15,7 @@ const directors = [
     ]},
     { category: '1980 -', items: [
         { id: 'bigelow', surname: 'BIGELOW', nameJa: 'キャスリン・ビグロー', nameEn: 'KATHRYN BIGELOW', keywords: '緊迫のリアリズム / 極限の暴力 / 骨太な演出' },
+        { id: 'cameron', surname: 'CAMERON', nameJa: 'ジェームズ・キャメロン', nameEn: 'JAMES CAMERON', keywords: '技術革新 / 巨大スケール / 海洋とSF' },
         { id: 'coen', surname: 'COENS', nameJa: 'ジョエル＆イーサン・コーエン', nameEn: 'JOEL & ETHAN COEN', keywords: 'ブラックユーモア / 皮肉な運命 / 緻密な脚本' },
         { id: 'burton', surname: 'BURTON', nameJa: 'ティム・バートン', nameEn: 'TIM BURTON', keywords: 'ゴシック幻想 / 異形の愛 / ダークファンタジー' },
         { id: 'raimi', surname: 'RAIMI', nameJa: 'サム・ライミ', nameEn: 'SAM RAIMI', keywords: 'スピード感のある演出 / コミック的映像 / ホラーとユーモア' }

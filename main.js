@@ -8,6 +8,7 @@ const directorsInfo = {
     'coen': { fullNameEn: 'JOEL & ETHAN COEN', nameJa: 'ジョエル＆イーサン・コーエン', surname: 'COENS' },
     'burton': { fullNameEn: 'TIM BURTON', nameJa: 'ティム・バートン', surname: 'BURTON' },
     'bigelow': { fullNameEn: 'KATHRYN BIGELOW', nameJa: 'キャスリン・ビグロー', surname: 'BIGELOW' },
+    'cameron': { fullNameEn: 'JAMES CAMERON', nameJa: 'ジェームズ・キャメロン', surname: 'CAMERON' },
     'pta': { fullNameEn: 'PAUL THOMAS ANDERSON', nameJa: 'ポール・トーマス・アンダーソン', surname: 'PTA' },
     'miller': { fullNameEn: 'GEORGE MILLER', nameJa: 'ジョージ・ミラー', surname: 'MILLER' },
     'wright': { fullNameEn: 'EDGAR WRIGHT', nameJa: 'エドガー・ライト', surname: 'WRIGHT' },
@@ -122,6 +123,16 @@ const filmsData = [
     { year: 2013, type: 'coen', title: "インサイド・ルーウィン・デイヴィス 名もなき男の歌", context: "1960年代、売れないフォーク歌手の苦悩と孤独な日々。" },
     { year: 2016, type: 'coen', title: "ヘイル、シーザー!", context: "1950年代のハリウッドを舞台に、誘拐されたスターを救うべく奔走する物語。" },
     { year: 2018, type: 'coen', title: "バスターのバラード", context: "西部開拓時代をテーマにした6つのエピソードからなるオムニバス。" },
+
+    // James Cameron
+    { year: 1984, type: 'cameron', title: "ターミネーター", context: "低予算SFを、機械の悪夢と追跡劇の強度で神話化した出発点。" },
+    { year: 1986, type: 'cameron', title: "エイリアン2", context: "ホラーを戦争映画へ拡張し、リプリーの母性と戦闘を結びつけた続編。" },
+    { year: 1989, type: 'cameron', title: "アビス", context: "深海を舞台に、人類と未知の知性との接触を描いたSF大作。" },
+    { year: 1991, type: 'cameron', title: "ターミネーター2", context: "デジタルVFXの躍進と、破壊者が守護者へ変わる物語を融合した到達点。" },
+    { year: 1994, type: 'cameron', title: "トゥルーライズ", context: "スパイ映画と夫婦劇を、巨大なアクションのスケールで描く娯楽作。" },
+    { year: 1997, type: 'cameron', title: "タイタニック", context: "歴史的悲劇とロマンスを、圧倒的なスペクタクルとして結晶させた大作。" },
+    { year: 2009, type: 'cameron', title: "アバター", context: "3D映像とモーションキャプチャで、映画体験の基準を更新したSF巨編。" },
+    { year: 2022, type: 'cameron', title: "アバター:ウェイ・オブ・ウォーター", context: "水中撮影と家族の物語を軸に、パンドラの世界をさらに拡張した続編。" },
 
     // The Wachowskis
     { year: 1996, type: 'wachowskis', title: "バウンド", context: "2人の女性がマフィアの金を奪うために協力するクライム・サスペンス。" },
