@@ -74,7 +74,7 @@ const filmsData = [
     { year: 1990, type: 'lynch', title: "ツイン・ピークス Season 1", context: "ローラ・パーマー事件を起点に、郊外の闇と夢の論理をテレビへ持ち込んだ革新的シリーズ。", medium: "Series" },
     { year: 1990, type: 'lynch', title: "ツイン・ピークス Season 2", context: "1990年から1991年にかけて放送。物語をさらに迷宮化し、テレビ表現の可能性を押し広げた続章。", medium: "Series" },
     { year: 1990, type: 'lynch', title: "ワイルド・アット・ハート", context: "逃避行を続ける恋人たちを描いた、過激で情熱的なロードムービー。" },
-    { year: 1992, type: 'lynch', title: "ツイン・ピークス/ローラ・パーマー最期の7日間", context: "ドラマの前日譚。ローラ・パーマー'の死に至る最後の1週間。" },
+    { year: 1992, type: 'lynch', title: "ツイン・ピークス/ローラ・パーマー最期の7日間", context: "ドラマの前日譚。ローラ・パーマーの死に至る最後の1週間。" },
     { year: 1997, type: 'lynch', title: "ロスト・ハイウェイ", context: "記憶とアイデンティティが交錯する、悪夢のようなミステリー・スリラー。" },
     { year: 1999, type: 'lynch', title: "ストレイト・ストーリー", context: "疎遠だった兄に会うため、トラクターで旅をした老人の実話に基づく温かな物語。" },
     { year: 2001, type: 'lynch', title: "マルホランド・ドライブ", context: "夢と現実が溶け合う、ハリウッドの闇と幻影を鮮烈に描いた傑作。" },
