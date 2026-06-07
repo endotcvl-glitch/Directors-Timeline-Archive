@@ -11,6 +11,7 @@
     --font-serif: 'Playfair Display', serif;
     --font-title: 'Karla', 'Inter', 'Noto Sans JP', sans-serif;
     --title-letter-spacing: 0.12em;
+    --global-nav-font-size: 13pt;
 }
 
 *,
@@ -70,7 +71,7 @@ header {
     margin-top: 0.75rem;
     color: var(--secondary-text);
     font-family: var(--font-sans);
-    font-size: 0.64rem;
+    font-size: var(--global-nav-font-size);
     font-weight: 700;
     letter-spacing: 0.08em;
     line-height: 1.5;
@@ -521,7 +522,7 @@ header {
 }
 
 .home-hero .header-nav {
-    margin: 1rem 0 1.1rem;
+    margin: 2rem 0 2.4rem;
 }
 
 .home-hero p {
@@ -734,7 +735,7 @@ header {
 
 .director-search {
     width: min(100%, 560px);
-    margin: 0 auto 4vh;
+    margin: 0 0 4vh;
     text-align: left;
 }
 
@@ -1313,7 +1314,7 @@ header {
     .header-nav {
         gap: 0.4rem 0.9rem;
         margin-top: 0.55rem;
-        font-size: 0.6rem;
+        font-size: var(--global-nav-font-size);
         letter-spacing: 0.07em;
     }
 
@@ -1514,7 +1515,7 @@ header {
     .header-nav {
         gap: 0.25rem 0.65rem;
         margin-top: 0.45rem;
-        font-size: 0.56rem;
+        font-size: var(--global-nav-font-size);
         letter-spacing: 0.03em;
         line-height: 1.45;
     }
