@@ -50,7 +50,8 @@ const directors = [
         { id: 'dacosta', surname: 'DACOSTA', nameJa: 'ニア・ダコスタ', nameEn: 'NIA DACOSTA', keywords: '社会的寓話 / ジャンル横断 / 鋭い視点' },
         { id: 'zhao', surname: 'ZHAO', nameJa: 'クロエ・ジャオ', nameEn: 'CHLOÉ ZHAO', keywords: '自然光の詩情 / 周縁の人生 / 静かなリアリズム' },
         { id: 'watts', surname: 'WATTS', nameJa: 'ジョン・ワッツ', nameEn: 'JON WATTS', keywords: '青春ヒーロー / 軽やかな成長譚 / MCUの日常感' },
-        { id: 'aster', surname: 'ASTER', nameJa: 'アリ・アスター', nameEn: 'ARI ASTER', keywords: '家族の崩壊 / 不安と喪失 / 現代神話' }
+        { id: 'aster', surname: 'ASTER', nameJa: 'アリ・アスター', nameEn: 'ARI ASTER', keywords: '家族の崩壊 / 不安と喪失 / 現代神話' },
+        { id: 'trachtenberg', surname: 'TRACHTENBERG', nameJa: 'ダン・トラクテンバーグ', nameEn: 'DAN TRACHTENBERG', keywords: 'ロジカルアクション演出 / サバイバルSF / シリーズ再解釈' }
     ]},
     { category: '2020 -', items: [
         { id: 'fennell', surname: 'FENNELL', nameJa: 'エメラルド・フェネル', nameEn: 'EMERALD FENNELL', keywords: '復讐と欲望 / ブラックユーモア / 階級と視線' }
@@ -59,43 +60,43 @@ const directors = [
 
 const comparisonThemes = [
     {
-        title: '時間と記憶',
-        description: '時間構造とスケールの扱いから、現代SFの広がりを見比べる。',
+        title: '現代SFのかたち',
+        description: '時間を組み替えるノーランと、静かに世界を広げるヴィルヌーヴ。現代SFの見え方が少し変わるふたりです。',
         directorIds: ['nolan', 'villeneuve']
     },
     {
         title: 'ブロックバスターの原点',
-        description: '70年代以降の娯楽映画を大きく変えたふたりの歩みを見る。',
+        description: '映画館で物語を観ることの大切さを教えてくれたふたり。その始まりと広がりをたどります。',
         directorIds: ['spielberg', 'lucas']
     },
     {
         title: '幻想と異形',
-        description: '夢、悪夢、異形の世界をどう映画にしてきたかをたどる。',
+        description: '奇妙で、少しこわくて、どこか愛おしい世界。夢と悪夢のあいだを歩くふたりを比べます。',
         directorIds: ['lynch', 'burton']
     },
     {
         title: 'ヒーロー映画の変化',
-        description: '現代のヒーロー映画が、作家性とシリーズ展開の間でどう変化したかを見る。',
+        description: 'ヒーローはどう変わってきたのか。熱さ、ユーモア、チーム感の違いを見比べられます。',
         directorIds: ['raimi', 'gunn']
     },
     {
         title: '多作の巨匠たち',
-        description: '長いキャリアの中で膨大な作品を生み出してきたふたりの密度を見比べる。',
+        description: '長いキャリアの中で、何度も映画の風景を変えてきたふたり。作品の多さと変化を眺めます。',
         directorIds: ['spielberg', 'scorsese']
     },
     {
         title: '新時代のホラー牽引者',
-        description: 'ジャンル映画の恐怖と、現代的な不安の描き方を比較する。',
+        description: 'ただ驚かせるだけではない、今の時代の怖さ。ジャンルの広げ方をふたりの作品から見ていきます。',
         directorIds: ['wan', 'aster']
     },
     {
         title: 'チームヒーローの時代',
-        description: '大規模なチーム劇と、はみ出し者たちのヒーロー像を見比べる。',
+        description: '仲間が集まり、ぶつかり、ひとつの物語になっていく。チームで描くヒーロー像を比べます。',
         directorIds: ['russo', 'gunn']
     },
     {
         title: '女性の自立と世界の違和感',
-        description: '自己形成、怒り、欲望を通して、現代女性像の変化を見比べる。',
+        description: '自分らしく生きようとする人たちと、どこか居心地の悪い世界。その描き方の違いを見ていきます。',
         directorIds: ['gerwig', 'fennell']
     }
 ];

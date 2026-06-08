@@ -35,6 +35,7 @@ const directorsInfo = {
     'zhao': { fullNameEn: 'CHLOÉ ZHAO', nameJa: 'クロエ・ジャオ', surname: 'ZHAO' },
     'watts': { fullNameEn: 'JON WATTS', nameJa: 'ジョン・ワッツ', surname: 'WATTS' },
     'reeves': { fullNameEn: 'MATT REEVES', nameJa: 'マット・リーヴス', surname: 'REEVES' },
+    'trachtenberg': { fullNameEn: 'DAN TRACHTENBERG', nameJa: 'ダン・トラクテンバーグ', surname: 'TRACHTENBERG' },
     'zemeckis': { fullNameEn: 'ROBERT ZEMECKIS', nameJa: 'ロバート・ゼメキス', surname: 'ZEMECKIS' },
     'lanthimos': { fullNameEn: 'YORGOS LANTHIMOS', nameJa: 'ヨルゴス・ランティモス', surname: 'LANTHIMOS' },
     'scott': { fullNameEn: 'RIDLEY SCOTT', nameJa: 'リドリー・スコット', surname: 'SCOTT' },
@@ -500,6 +501,12 @@ const filmsData = [
     { year: 2014, type: 'reeves', title: "猿の惑星:新世紀", context: "人類と猿の対立を、感情と政治のドラマとして描いたシリーズ再生の中核作。" },
     { year: 2017, type: 'reeves', title: "猿の惑星:聖戦記", context: "復讐と信仰を帯びた戦争映画として、シーザーの物語を荘厳に締めくくった作品。" },
     { year: 2022, type: 'reeves', title: "THE BATMAN-ザ・バットマン-", context: "若きバットマンを探偵映画とノワールの質感で再解釈したダークなヒーロー映画。" },
+
+    // Dan Trachtenberg
+    { year: 2016, type: 'trachtenberg', title: "10 クローバーフィールド・レーン", context: "地下シェルターという閉鎖空間で、外の脅威と内側の不信を緊張感たっぷりに描いた長編デビュー作。" },
+    { year: 2022, type: 'trachtenberg', title: "プレデター：ザ・プレイ", context: "18世紀のコマンチ族の戦士を主人公に、プレデター神話をサバイバル映画として鮮やかに再起動した作品。" },
+    { year: 2025, type: 'trachtenberg', title: "プレデター：最凶頂上決戦", context: "異なる時代の戦士たちとプレデターの戦いを描く、アンソロジー形式のアニメーション映画。" },
+    { year: 2025, type: 'trachtenberg', title: "プレデター：バッドランド", context: "若きプレデターを主人公に据え、狩る側の視点からシリーズの世界を広げたSFアクション。" },
 
     // Robert Zemeckis
     { year: 1978, type: 'zemeckis', title: "抱きしめたい", context: "ビートルズ来米の熱狂を背景に、若者たちの一夜を描いた長編監督デビュー作。" },
