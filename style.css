@@ -1127,6 +1127,19 @@ header {
     opacity: 0.86;
 }
 
+.compare-action-main,
+.compare-action-note {
+    display: block;
+}
+
+.compare-action-note {
+    margin-top: 0.35rem;
+    font-size: 0.58em;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    opacity: 0.72;
+}
+
 @media (max-width: 599px) {
     .home-hero h1 { font-size: 2.5rem; }
     .director-grid { grid-template-columns: 1fr; }

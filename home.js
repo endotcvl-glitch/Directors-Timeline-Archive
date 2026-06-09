@@ -255,6 +255,22 @@ function toggleSelection(id) {
     updateUI();
 }
 
+function setCompareButtonContent(button, mainText, noteText = '') {
+    button.innerHTML = '';
+
+    const main = document.createElement('span');
+    main.className = 'compare-action-main';
+    main.textContent = mainText;
+    button.appendChild(main);
+
+    if (noteText) {
+        const note = document.createElement('span');
+        note.className = 'compare-action-note';
+        note.textContent = noteText;
+        button.appendChild(note);
+    }
+}
+
 function updateUI() {
     renderList();
     const btn = document.getElementById('compare-btn');
@@ -267,11 +283,15 @@ function updateUI() {
 
     if (selectedDirectors.length === 1) {
         const d1 = allItems.find(d => d.id === selectedDirectors[0]);
-        btn.textContent = `${d1.nameJa} の作品年表を見る`;
+        setCompareButtonContent(
+            btn,
+            `${d1.nameJa} の作品年表を見る`,
+            'もう1人監督を選ぶと2人の監督の作品年表の比較ができます'
+        );
         btn.classList.add('visible');
     } else if (selectedDirectors.length === 2) {
         const names = selectedDirectors.map(id => allItems.find(d => d.id === id).nameJa);
-        btn.textContent = `${names[0]} と ${names[1]} を比較する`;
+        setCompareButtonContent(btn, `${names[0]} と ${names[1]} を比較する`);
         btn.classList.add('visible');
     } else {
         btn.classList.remove('visible');
