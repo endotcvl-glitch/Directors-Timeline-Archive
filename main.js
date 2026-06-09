@@ -607,18 +607,35 @@ const episodesData = {
 };
 
 const eventsData = [
+    { year: 2000, title: "DVD市場が映画鑑賞の中心メディアとして拡大", category: "INDUSTRY" },
     { year: 2001, title: "9.11同時多発テロ", category: "WORLD" },
+    { year: 2002, title: "『ロード・オブ・ザ・リング』三部作が世界的現象に", category: "FILM" },
+    { year: 2003, title: "デジタル上映とVFX大作の存在感が拡大", category: "TECH" },
+    { year: 2004, title: "Facebook開始", category: "TECH" },
     { year: 2005, title: "YouTubeスタート", category: "TECH" },
+    { year: 2006, title: "Twitter開始", category: "TECH" },
     { year: 2007, title: "iPhone発売", category: "TECH" },
     { year: 2007, title: "Netflix配信開始", category: "INDUSTRY" },
     { year: 2008, title: "リーマン・ショック", category: "WORLD" },
     { year: 2008, title: "MCUスタート", category: "FILM" },
     { year: 2009, title: "『アバター』公開 3D映画の再定義", category: "FILM" },
+    { year: 2010, title: "3D映画ブームが世界的に拡大", category: "INDUSTRY" },
+    { year: 2011, title: "東日本大震災", category: "WORLD" },
+    { year: 2012, title: "DisneyがLucasfilmを買収", category: "INDUSTRY" },
     { year: 2013, title: "Netflix自社制作開始", category: "INDUSTRY" },
+    { year: 2014, title: "ストリーミング作品の映画賞・批評での存在感が拡大", category: "INDUSTRY" },
+    { year: 2015, title: "『スター・ウォーズ』新三部作が始動", category: "FILM" },
+    { year: 2016, title: "配信プラットフォームのオリジナル作品競争が加速", category: "INDUSTRY" },
     { year: 2017, title: "#MeToo運動", category: "INDUSTRY" },
+    { year: 2018, title: "配信と劇場公開をめぐる議論が拡大", category: "INDUSTRY" },
+    { year: 2019, title: "Disney+開始", category: "INDUSTRY" },
     { year: 2020, title: "COVID-19パンデミック", category: "WORLD" },
+    { year: 2021, title: "劇場公開と配信同時公開の議論が本格化", category: "INDUSTRY" },
     { year: 2022, title: "生成AIの爆発的普及", category: "TECH" },
-    { year: 2023, title: "ハリウッド大規模スト", category: "INDUSTRY" }
+    { year: 2023, title: "ハリウッド大規模スト", category: "INDUSTRY" },
+    { year: 2024, title: "生成AIと映像制作をめぐる議論が拡大", category: "TECH" },
+    { year: 2025, title: "映画館体験と配信視聴の共存が定着", category: "INDUSTRY" },
+    { year: 2026, title: "大作シリーズと作家映画の公開予定が集中", category: "FILM" }
 ];
 
 window.directorsTimelineData = {
