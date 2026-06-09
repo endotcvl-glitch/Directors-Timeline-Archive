@@ -175,8 +175,8 @@ Film / Series はタグとして表示される。指定がない場合は Film 
   - `ABOUT / NEWS`
   - `お問合せ`
 
-- `お問合せ` は現在 `about.html#contact` にリンクしている。
-  - 今後、Googleフォームなどを用意した場合は、このリンク先を差し替える。
+- `お問合せ` は Googleフォームにリンクしている。
+  - URL: `https://docs.google.com/forms/d/e/1FAIpQLSdN7yUjTtm66DHwKF5QB96z2W-cMja4MveVtbeCkA46DR5BCQ/viewform?usp=dialog`
 
 - CSS更新後は、HTML側の `style.css?v=...` を更新してキャッシュを避けることがある。
 
@@ -238,7 +238,7 @@ python3 -m http.server 8765
 
 ## 今後の候補
 
-- お問合せリンクを Googleフォームに差し替える。
+- お問合せフォームの項目や説明文を必要に応じて調整する。
 - テーマ比較をさらに整理・追加する。
 - 年代ページの Events を増やす。
 - 監督ごとの Series 掲載方針を整理する。
