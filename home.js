@@ -8,9 +8,9 @@ const directors = [
     { category: '1970 -', items: [
         { id: 'lucas', surname: 'LUCAS', nameJa: 'ジョージ・ルーカス', nameEn: 'GEORGE LUCAS', keywords: 'スペースオペラ / デジタル革命 / 冒険の神話' },
         { id: 'spielberg', surname: 'SPIELBERG', nameJa: 'スティーヴン・スピルバーグ', nameEn: 'STEVEN SPIELBERG', keywords: '驚異の物語 / 圧倒的映画術 / ヒューマニズム' },
-        { id: 'lynch', surname: 'LYNCH', nameJa: 'デヴィッド・リンチ', nameEn: 'DAVID LYNCH', keywords: '悪夢と不条理 / サウンドデザイン / 超現実主義' },
+        { id: 'lynch', surname: 'LYNCH', nameJa: 'デヴィッド・リンチ', nameEn: 'DAVID LYNCH', keywords: '悪夢と不条理とユーモア / サウンドデザイン / 超現実主義' },
         { id: 'miller', surname: 'MILLER', nameJa: 'ジョージ・ミラー', nameEn: 'GEORGE MILLER', keywords: '身体性アクション / 神話的世界観 / 寓話的表現' },
-        { id: 'scott', surname: 'SCOTT', nameJa: 'リドリー・スコット', nameEn: 'RIDLEY SCOTT', keywords: '重厚な世界構築 / 光と影の造形 / 歴史とSF' },
+        { id: 'scott', surname: 'SCOTT', nameJa: 'リドリー・スコット', nameEn: 'RIDLEY SCOTT', keywords: '重厚な世界構築 / 光と影の造形 /　神話性' },
         { id: 'zemeckis', surname: 'ZEMECKIS', nameJa: 'ロバート・ゼメキス', nameEn: 'ROBERT ZEMECKIS', keywords: '技術革新 / ポップな物語 / 時間と記憶' }
     ]},
     { category: '1980 -', items: [
@@ -48,7 +48,7 @@ const directors = [
         { id: 'peele', surname: 'PEELE', nameJa: 'ジョーダン・ピール', nameEn: 'JORDAN PEELE', keywords: '社会派ホラー / 緻密な伏線 / 異質な恐怖' },
         { id: 'coogler', surname: 'COOGLER', nameJa: 'ライアン・クーグラー', nameEn: 'RYAN COOGLER', keywords: 'アイデンティティ / 魂の継承 / 圧倒的躍動感' },
         { id: 'dacosta', surname: 'DACOSTA', nameJa: 'ニア・ダコスタ', nameEn: 'NIA DACOSTA', keywords: '社会的寓話 / ジャンル横断 / 鋭い視点' },
-        { id: 'zhao', surname: 'ZHAO', nameJa: 'クロエ・ジャオ', nameEn: 'CHLOÉ ZHAO', keywords: '自然光の詩情 / 周縁の人生 / 静かなリアリズム' },
+        { id: 'zhao', surname: 'ZHAO', nameJa: 'クロエ・ジャオ', nameEn: 'CHLOÉ ZHAO', keywords: '圧倒的な自然美の映像 / ドキュメンタリータッチ / 静かなリアリズム' },
         { id: 'watts', surname: 'WATTS', nameJa: 'ジョン・ワッツ', nameEn: 'JON WATTS', keywords: '青春ヒーロー / 軽やかな成長譚 / MCUの日常感' },
         { id: 'aster', surname: 'ASTER', nameJa: 'アリ・アスター', nameEn: 'ARI ASTER', keywords: '家族の崩壊 / 不安と喪失 / 現代神話' },
         { id: 'trachtenberg', surname: 'TRACHTENBERG', nameJa: 'ダン・トラクテンバーグ', nameEn: 'DAN TRACHTENBERG', keywords: 'ロジカルアクション演出 / サバイバルSF / シリーズ再解釈' }
