@@ -9,6 +9,7 @@ const directorsInfo = {
     'burton': { fullNameEn: 'TIM BURTON', nameJa: 'ティム・バートン', surname: 'BURTON' },
     'bigelow': { fullNameEn: 'KATHRYN BIGELOW', nameJa: 'キャスリン・ビグロー', surname: 'BIGELOW' },
     'cameron': { fullNameEn: 'JAMES CAMERON', nameJa: 'ジェームズ・キャメロン', surname: 'CAMERON' },
+    'jackson': { fullNameEn: 'PETER JACKSON', nameJa: 'ピーター・ジャクソン', surname: 'JACKSON' },
     'pta': { fullNameEn: 'PAUL THOMAS ANDERSON', nameJa: 'ポール・トーマス・アンダーソン', surname: 'PTA' },
     'miller': { fullNameEn: 'GEORGE MILLER', nameJa: 'ジョージ・ミラー', surname: 'MILLER' },
     'wright': { fullNameEn: 'EDGAR WRIGHT', nameJa: 'エドガー・ライト', surname: 'WRIGHT' },
@@ -134,6 +135,23 @@ const filmsData = [
     { year: 1997, type: 'cameron', title: "タイタニック", context: "歴史的悲劇とロマンスを、圧倒的なスペクタクルとして結晶させた大作。" },
     { year: 2009, type: 'cameron', title: "アバター", context: "3D映像とモーションキャプチャで、映画体験の基準を更新したSF巨編。" },
     { year: 2022, type: 'cameron', title: "アバター:ウェイ・オブ・ウォーター", context: "水中撮影と家族の物語を軸に、パンドラの世界をさらに拡張した続編。" },
+
+    // Peter Jackson
+    { year: 1987, type: 'jackson', title: "バッド・テイスト", context: "低予算の自主制作から生まれた、過激なユーモアと特殊効果に満ちた長編デビュー作。" },
+    { year: 1989, type: 'jackson', title: "ミート・ザ・フィーブル 怒りのヒポポタマス", context: "人形劇のかわいらしさをブラックユーモアで裏返した、毒気の強いカルト作。" },
+    { year: 1992, type: 'jackson', title: "ブレインデッド", context: "スプラッターとコメディを極端なエネルギーで結びつけた、初期ジャクソンの代表作。" },
+    { year: 1994, type: 'jackson', title: "乙女の祈り", context: "実際の事件をもとに、少女たちの想像力と危うい親密さを繊細に描いた心理ドラマ。" },
+    { year: 1996, type: 'jackson', title: "さまよう魂たち", context: "幽霊が見える男の物語を、ホラー、コメディ、VFXで軽快に組み立てた娯楽作。" },
+    { year: 2001, type: 'jackson', title: "ロード・オブ・ザ・リング", context: "トールキンの壮大な世界を実写映画として立ち上げ、現代ファンタジー映画の基準を変えた第一章。" },
+    { year: 2002, type: 'jackson', title: "ロード・オブ・ザ・リング/二つの塔", context: "複数の戦いと旅を並行して描き、中つ国のスケールと感情をさらに広げた第二章。" },
+    { year: 2003, type: 'jackson', title: "ロード・オブ・ザ・リング/王の帰還", context: "長大な旅と戦争を圧倒的なスペクタクルで締めくくった、三部作の完結編。" },
+    { year: 2005, type: 'jackson', title: "キング・コング", context: "古典的怪獣映画への愛を、最新VFXと冒険映画のスケールで語り直した大作。" },
+    { year: 2009, type: 'jackson', title: "ラブリーボーン", context: "殺された少女の視点から、喪失と家族の再生を幻想的な映像で描いたドラマ。" },
+    { year: 2012, type: 'jackson', title: "ホビット 思いがけない冒険", context: "再び中つ国へ戻り、ビルボの旅立ちを冒険の明るさと大作感で描いた前日譚。" },
+    { year: 2013, type: 'jackson', title: "ホビット 竜に奪われた王国", context: "スマウグとの対峙を中心に、冒険の緊張とファンタジー世界の広がりを強めた第二章。" },
+    { year: 2014, type: 'jackson', title: "ホビット 決戦のゆくえ", context: "中つ国をめぐる戦いと別れを描き、ホビット三部作を締めくくった完結編。" },
+    { year: 2018, type: 'jackson', title: "彼らは生きていた", context: "第一次世界大戦の記録映像を修復・着色し、遠い戦争を現在の感覚へ近づけたドキュメンタリー。" },
+    { year: 2021, type: 'jackson', title: "ザ・ビートルズ: Get Back", context: "膨大な記録映像を再編集し、ビートルズの創作現場を長い時間の流れで見せたドキュメンタリーシリーズ。", medium: "Series" },
 
     // The Wachowskis
     { year: 1996, type: 'wachowskis', title: "バウンド", context: "2人の女性がマフィアの金を奪うために協力するクライム・サスペンス。" },

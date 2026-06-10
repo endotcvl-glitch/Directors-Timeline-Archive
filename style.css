@@ -825,12 +825,25 @@ header {
     margin-bottom: 1.45rem;
 }
 
+.year-results-title {
+    min-width: 0;
+}
+
 .year-results-header h2 {
     font-family: var(--font-serif);
     font-size: 2.45rem;
     font-weight: 700;
     letter-spacing: 0.04em;
     line-height: 1;
+}
+
+.year-summary {
+    max-width: 620px;
+    margin-top: 0.7rem;
+    color: var(--secondary-text);
+    font-size: 0.86rem;
+    letter-spacing: 0.05em;
+    line-height: 1.85;
 }
 
 .year-results-header a {
@@ -1839,6 +1852,13 @@ header {
     .year-results-header h2 {
         margin-bottom: 0.8rem;
         font-size: 2rem;
+    }
+
+    .year-summary {
+        max-width: none;
+        margin: -0.25rem 0 0.9rem;
+        font-size: 0.82rem;
+        line-height: 1.75;
     }
 
     .year-result-grid {

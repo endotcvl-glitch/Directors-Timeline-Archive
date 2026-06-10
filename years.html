@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directors' Timeline Archive | Explore by Year</title>
-    <link rel="stylesheet" href="style.css?v=responsive-20260605-20">
+    <link rel="stylesheet" href="style.css?v=year-summary-20260610">
 </head>
 
 <body>
@@ -32,8 +32,10 @@
 
         <section class="year-results" aria-live="polite">
             <div class="year-results-header">
-                <h2 id="selected-year-title">2008</h2>
-                <a href="directors.html">監督選択へ戻る</a>
+                <div class="year-results-title">
+                    <h2 id="selected-year-title">2008</h2>
+                    <p class="year-summary" id="selected-year-summary"></p>
+                </div>
             </div>
 
             <div class="year-result-grid">
@@ -62,7 +64,7 @@
     </footer>
 
     <script src="main.js?v=year-events-20260609"></script>
-    <script src="years.js?v=years-20260604"></script>
+    <script src="years.js?v=year-summary-20260610"></script>
 </body>
 
 </html>
