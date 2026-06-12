@@ -838,7 +838,7 @@ header {
 }
 
 .year-summary {
-    max-width: 620px;
+    max-width: 820px;
     margin-top: 0.7rem;
     color: var(--secondary-text);
     font-size: 0.86rem;

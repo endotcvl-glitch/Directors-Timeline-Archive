@@ -15,11 +15,14 @@ const directorsInfo = {
     'wright': { fullNameEn: 'EDGAR WRIGHT', nameJa: 'エドガー・ライト', surname: 'WRIGHT' },
     'coogler': { fullNameEn: 'RYAN COOGLER', nameJa: 'ライアン・クーグラー', surname: 'COOGLER' },
     'fincher': { fullNameEn: 'DAVID FINCHER', nameJa: 'デイヴィッド・フィンチャー', surname: 'FINCHER' },
+    'shyamalan': { fullNameEn: 'M. NIGHT SHYAMALAN', nameJa: 'M・ナイト・シャマラン', surname: 'SHYAMALAN' },
     'tarantino': { fullNameEn: 'QUENTIN TARANTINO', nameJa: 'クエンティン・タランティーノ', surname: 'TARANTINO' },
     'anderson': { fullNameEn: 'WES ANDERSON', nameJa: 'ウェス・アンダーソン', surname: 'ANDERSON' },
     'nolan': { fullNameEn: 'CHRISTOPHER NOLAN', nameJa: 'クリストファー・ノーラン', surname: 'NOLAN' },
     'villeneuve': { fullNameEn: 'DENIS VILLENEUVE', nameJa: 'ドゥニ・ヴィルヌーヴ', surname: 'VILLENEUVE' },
     'wachowskis': { fullNameEn: 'THE WACHOWSKIS', nameJa: 'ラナ＆リリー・ウォシャウスキー', surname: 'WACHOWSKIS' },
+    'garland': { fullNameEn: 'ALEX GARLAND', nameJa: 'アレックス・ガーランド', surname: 'GARLAND' },
+    'kosinski': { fullNameEn: 'JOSEPH KOSINSKI', nameJa: 'ジョセフ・コシンスキー', surname: 'KOSINSKI' },
     'gerwig': { fullNameEn: 'GRETA GERWIG', nameJa: 'グレタ・ガーウィグ', surname: 'GERWIG' },
     'chazelle': { fullNameEn: 'DAMIEN CHAZELLE', nameJa: 'デイミアン・チャゼル', surname: 'CHAZELLE' },
     'peele': { fullNameEn: 'JORDAN PEELE', nameJa: 'ジョーダン・ピール', surname: 'PEELE' },
@@ -359,6 +362,24 @@ const filmsData = [
     { year: 2022, type: 'coogler', title: "ブラックパンサー/ワカンダ・フォーエバー", context: "喪失を乗り越え、国と伝統を守る者たちの闘い。" },
     { year: 2025, type: 'coogler', title: "シナーズ", context: "1930年代アメリカ南部を舞台にした、漆黒のスーパーナチュラル・ホラー。" },
 
+    // M. Night Shyamalan
+    { year: 1992, type: 'shyamalan', title: "Praying with Anger", context: "インドに戻った青年の葛藤を描く、シャマランの長編監督デビュー作。" },
+    { year: 1998, type: 'shyamalan', title: "翼のない天使", context: "祖父の死をきっかけに信仰と喪失を見つめる少年の成長譚。" },
+    { year: 1999, type: 'shyamalan', title: "シックス・センス", context: "死者が見える少年と心理学者の交流を、静かな恐怖と喪失で描いた代表作。" },
+    { year: 2000, type: 'shyamalan', title: "アンブレイカブル", context: "ヒーロー神話を日常の不穏さと身体の感覚から再解釈した作品。" },
+    { year: 2002, type: 'shyamalan', title: "サイン", context: "家族の喪失と信仰の揺らぎを、宇宙からの脅威と重ねたSFスリラー。" },
+    { year: 2004, type: 'shyamalan', title: "ヴィレッジ", context: "閉ざされた共同体の恐怖と、守るための嘘を寓話的に描く。" },
+    { year: 2006, type: 'shyamalan', title: "レディ・イン・ザ・ウォーター", context: "集合住宅に現れた謎の女性をめぐる、現代の寓話的ファンタジー。" },
+    { year: 2008, type: 'shyamalan', title: "ハプニング", context: "見えない異変が人々を襲う、環境不安と終末感を帯びたスリラー。" },
+    { year: 2010, type: 'shyamalan', title: "エアベンダー", context: "四つの元素を操る世界を描く、アニメーション原作のファンタジー大作。" },
+    { year: 2013, type: 'shyamalan', title: "アフター・アース", context: "荒廃した地球で父子が生存を試される、SFサバイバル作品。" },
+    { year: 2015, type: 'shyamalan', title: "ヴィジット", context: "祖父母の家を訪れた姉弟が体験する違和感を、低予算ホラーとして再構築した復活作。" },
+    { year: 2016, type: 'shyamalan', title: "スプリット", context: "多重人格の男に監禁された少女たちを描き、身体と怪物性を緊張感で押し出した作品。" },
+    { year: 2019, type: 'shyamalan', title: "ミスター・ガラス", context: "『アンブレイカブル』から続くヒーロー神話を、精神病院の密室で収束させる。" },
+    { year: 2021, type: 'shyamalan', title: "オールド", context: "急速に時間が進む浜辺で、家族と身体の変化をサスペンスとして描く。" },
+    { year: 2023, type: 'shyamalan', title: "ノック 終末の訪問者", context: "世界の終わりを告げる訪問者たちと家族の選択を、閉鎖空間の緊張で描く。" },
+    { year: 2024, type: 'shyamalan', title: "トラップ", context: "コンサート会場を舞台に、逃げ場のない罠と父娘関係を絡めたスリラー。" },
+
     // Greta Gerwig
     { year: 2017, type: 'gerwig', title: "レディ・バード", context: "誰もが経験する、故郷との決別と母への愛。" },
     { year: 2019, type: 'gerwig', title: "ストーリー・オブ・マイライフ", context: "時代に抗い、自らの筆で運命を切り拓く女性たち。" },
@@ -374,6 +395,22 @@ const filmsData = [
     { year: 2016, type: 'chazelle', title: "ラ・ラ・ランド", context: "夢を追う二人。美しき色彩と、ビターな現実のミュージカル。" },
     { year: 2018, type: 'chazelle', title: "ファースト・マン", context: "月面着陸の裏にあった、一人の男の沈黙と死の影。" },
     { year: 2022, type: 'chazelle', title: "バビロン", context: "サイレントからトーキーへ。狂乱のハリウッドの黄金期。" },
+
+    // Alex Garland
+    { year: 2014, type: 'garland', title: "エクス・マキナ", context: "人工知能と欲望、支配の関係を、閉じた空間の心理戦として描いた監督デビュー作。" },
+    { year: 2018, type: 'garland', title: "アナイアレイション -全滅領域-", context: "変異する自然と身体を通して、自己破壊と変容を描くSFスリラー。" },
+    { year: 2020, type: 'garland', title: "DEVS/デヴス", context: "決定論と自由意志をめぐる問いを、テック企業の陰謀と静謐な映像で描いたシリーズ。", medium: "Series" },
+    { year: 2022, type: 'garland', title: "MEN 同じ顔の男たち", context: "喪失と暴力の記憶を、民俗ホラーと身体的な悪夢へ変換した作品。" },
+    { year: 2024, type: 'garland', title: "シビル・ウォー アメリカ最後の日", context: "分断されたアメリカを戦場として捉え、報道と暴力の距離を問うロードムービー。" },
+    { year: 2025, type: 'garland', title: "Warfare", context: "戦場の一瞬をリアルタイム的な緊張で描く、レイ・メンドーサとの共同監督作。" },
+
+    // Joseph Kosinski
+    { year: 2010, type: 'kosinski', title: "トロン:レガシー", context: "デジタル世界の光と速度を、ミニマルな映像設計と音楽で再構築した長編監督デビュー作。" },
+    { year: 2013, type: 'kosinski', title: "オブリビオン", context: "荒廃した地球と記憶の謎を、硬質なSFビジュアルで描いたSF作品。" },
+    { year: 2017, type: 'kosinski', title: "オンリー・ザ・ブレイブ", context: "山火事に立ち向かう消防隊の連帯と犠牲を、実話をもとに描いたドラマ。" },
+    { year: 2022, type: 'kosinski', title: "トップガン マーヴェリック", context: "実機撮影の身体感覚と継承の物語で、劇場体験の強さを再提示した大作。" },
+    { year: 2022, type: 'kosinski', title: "スパイダーヘッド", context: "感情を操作する実験施設を舞台に、自由意志と管理を問うSFスリラー。" },
+    { year: 2025, type: 'kosinski', title: "F1/エフワン", context: "モータースポーツの速度と身体感覚を、大型スクリーン向けの映像設計で描くレース映画。" },
 
     // Jordan Peele
     { year: 2017, type: 'peele', title: "ゲット・アウト", context: "人種差別の恐怖を、巧妙な伏線で描く新世代ホラー。" },
