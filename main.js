@@ -31,6 +31,7 @@ const directorsInfo = {
     'aster': { fullNameEn: 'ARI ASTER', nameJa: 'アリ・アスター', surname: 'ASTER' },
     'wan': { fullNameEn: 'JAMES WAN', nameJa: 'ジェームズ・ワン', surname: 'WAN' },
     'favreau': { fullNameEn: 'JON FAVREAU', nameJa: 'ジョン・ファヴロー', surname: 'FAVREAU' },
+    'lordmiller': { fullNameEn: 'PHIL LORD & CHRISTOPHER MILLER', nameJa: 'フィル・ロード＆クリス・ミラー', surname: 'LORD & MILLER' },
     'gunn': { fullNameEn: 'JAMES GUNN', nameJa: 'ジェームズ・ガン', surname: 'GUNN' },
     'whedon': { fullNameEn: 'JOSS WHEDON', nameJa: 'ジョス・ウェドン', surname: 'WHEDON' },
     'waititi': { fullNameEn: 'TAIKA WAITITI', nameJa: 'タイカ・ワイティティ', surname: 'WAITITI' },
@@ -478,6 +479,12 @@ const filmsData = [
     { year: 2016, type: 'favreau', title: "ジャングル・ブック", context: "実写とCGの境界を押し広げた、ディズニー古典の再構築。" },
     { year: 2019, type: 'favreau', title: "ライオン・キング", context: "フォトリアルCGで古典アニメーションを再構成した大型リメイク。" },
 
+    // Phil Lord & Christopher Miller
+    { year: 2009, type: 'lordmiller', title: "くもりときどきミートボール", context: "奇抜な発明と食べ物の嵐を、テンポの速いギャグと家族の物語で描いた長編監督デビュー作。" },
+    { year: 2012, type: 'lordmiller', title: "21ジャンプストリート", context: "往年のテレビシリーズを、自己言及的な笑いとバディ映画の勢いで再構築したコメディ。" },
+    { year: 2014, type: 'lordmiller', title: "LEGO ムービー", context: "玩具の世界をメタな物語とポップな映像で広げ、創造することの楽しさを描いたアニメーション。" },
+    { year: 2014, type: 'lordmiller', title: "22ジャンプストリート", context: "続編映画そのものを笑いに変えながら、バディの関係をさらに押し広げたコメディ。" },
+
     // James Gunn
     { year: 2006, type: 'gunn', title: "スリザー", context: "B級ホラーとブラックユーモアを融合した、ガンの長編監督デビュー作。" },
     { year: 2010, type: 'gunn', title: "スーパー!", context: "普通の男がヒーローを名乗る、痛みと滑稽さに満ちた自警団映画。" },
@@ -707,6 +714,7 @@ const eventsData = [
     { year: 2009, title: "『アバター』公開 3D映画の再定義", category: "FILM" },
     { year: 2010, title: "3D映画ブームが世界的に拡大", category: "INDUSTRY" },
     { year: 2011, title: "東日本大震災", category: "WORLD" },
+    { year: 2012, title: "トニー・スコット監督が死去", category: "INDUSTRY" },
     { year: 2012, title: "DisneyがLucasfilmを買収", category: "INDUSTRY" },
     { year: 2013, title: "Netflix自社制作開始", category: "INDUSTRY" },
     { year: 2014, title: "ストリーミング作品の映画賞・批評での存在感が拡大", category: "INDUSTRY" },
@@ -720,6 +728,7 @@ const eventsData = [
     { year: 2022, title: "生成AIの爆発的普及", category: "TECH" },
     { year: 2023, title: "ハリウッド大規模スト", category: "INDUSTRY" },
     { year: 2024, title: "生成AIと映像制作をめぐる議論が拡大", category: "TECH" },
+    { year: 2025, title: "デヴィッド・リンチ監督が死去", category: "INDUSTRY" },
     { year: 2025, title: "映画館体験と配信視聴の共存が定着", category: "INDUSTRY" },
     { year: 2026, title: "大作シリーズと作家映画の公開予定が集中", category: "FILM" }
 ];
