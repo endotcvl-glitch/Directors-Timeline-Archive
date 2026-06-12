@@ -15,6 +15,7 @@ const directors = [
     ]},
     { category: '1980 -', items: [
         { id: 'bigelow', surname: 'BIGELOW', nameJa: 'キャスリン・ビグロー', nameEn: 'KATHRYN BIGELOW', keywords: '緊迫のリアリズム / 極限の暴力 / 骨太な演出' },
+        { id: 'tonyscott', surname: 'SCOTT', nameJa: 'トニー・スコット', nameEn: 'TONY SCOTT', keywords: '疾走感ある編集 / 男たちの緊張 / スタイリッシュアクション' },
         { id: 'cameron', surname: 'CAMERON', nameJa: 'ジェームズ・キャメロン', nameEn: 'JAMES CAMERON', keywords: '技術革新 / 巨大スケール / 海洋とSF' },
         { id: 'jackson', surname: 'JACKSON', nameJa: 'ピーター・ジャクソン', nameEn: 'PETER JACKSON', keywords: 'ファンタジー叙事詩 / 特殊効果 / ニュージーランド映画' },
         { id: 'coen', surname: 'COENS', nameJa: 'ジョエル＆イーサン・コーエン', nameEn: 'JOEL & ETHAN COEN', keywords: 'ブラックユーモア / 皮肉な運命 / 緻密な脚本' },
@@ -23,6 +24,7 @@ const directors = [
     ]},
     { category: '1990 -', items: [
         { id: 'fincher', surname: 'FINCHER', nameJa: 'デイヴィッド・フィンチャー', nameEn: 'DAVID FINCHER', keywords: '精密演出 / 執着と狂気 / 冷徹な世界観' },
+        { id: 'mendes', surname: 'MENDES', nameJa: 'サム・メンデス', nameEn: 'SAM MENDES', keywords: '舞台的構成 / 英国的ドラマ / 大作と親密さ' },
         { id: 'shyamalan', surname: 'SHYAMALAN', nameJa: 'M・ナイト・シャマラン', nameEn: 'M. NIGHT SHYAMALAN', keywords: '不穏な日常 / ツイスト / 信仰と恐怖' },
         { id: 'tarantino', surname: 'TARANTINO', nameJa: 'クエンティン・タランティーノ', nameEn: 'QUENTIN TARANTINO', keywords: '饒舌な会話劇 / 映画へのオマージュ / 鮮烈な暴力' },
         { id: 'wright', surname: 'WRIGHT', nameJa: 'エドガー・ライト', nameEn: 'EDGAR WRIGHT', keywords: '音楽との同期 / 高速カット割 / 究極のジャンル愛' },
@@ -102,6 +104,11 @@ const comparisonThemes = [
         title: '女性の自立と世界の違和感',
         description: '自分らしく生きようとする人たちと、どこか居心地の悪い世界。その描き方の違いを見ていきます。',
         directorIds: ['gerwig', 'fennell']
+    },
+    {
+        title: 'スコット兄弟の映像美',
+        description: '重厚な世界を築くリドリーと、速度と熱で駆け抜けるトニー。兄弟それぞれの映像感覚を比べます。',
+        directorIds: ['scott', 'tonyscott']
     }
 ];
 

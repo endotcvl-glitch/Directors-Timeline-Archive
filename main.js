@@ -8,6 +8,7 @@ const directorsInfo = {
     'coen': { fullNameEn: 'JOEL & ETHAN COEN', nameJa: 'ジョエル＆イーサン・コーエン', surname: 'COENS' },
     'burton': { fullNameEn: 'TIM BURTON', nameJa: 'ティム・バートン', surname: 'BURTON' },
     'bigelow': { fullNameEn: 'KATHRYN BIGELOW', nameJa: 'キャスリン・ビグロー', surname: 'BIGELOW' },
+    'tonyscott': { fullNameEn: 'TONY SCOTT', nameJa: 'トニー・スコット', surname: 'SCOTT' },
     'cameron': { fullNameEn: 'JAMES CAMERON', nameJa: 'ジェームズ・キャメロン', surname: 'CAMERON' },
     'jackson': { fullNameEn: 'PETER JACKSON', nameJa: 'ピーター・ジャクソン', surname: 'JACKSON' },
     'pta': { fullNameEn: 'PAUL THOMAS ANDERSON', nameJa: 'ポール・トーマス・アンダーソン', surname: 'PTA' },
@@ -15,6 +16,7 @@ const directorsInfo = {
     'wright': { fullNameEn: 'EDGAR WRIGHT', nameJa: 'エドガー・ライト', surname: 'WRIGHT' },
     'coogler': { fullNameEn: 'RYAN COOGLER', nameJa: 'ライアン・クーグラー', surname: 'COOGLER' },
     'fincher': { fullNameEn: 'DAVID FINCHER', nameJa: 'デイヴィッド・フィンチャー', surname: 'FINCHER' },
+    'mendes': { fullNameEn: 'SAM MENDES', nameJa: 'サム・メンデス', surname: 'MENDES' },
     'shyamalan': { fullNameEn: 'M. NIGHT SHYAMALAN', nameJa: 'M・ナイト・シャマラン', surname: 'SHYAMALAN' },
     'tarantino': { fullNameEn: 'QUENTIN TARANTINO', nameJa: 'クエンティン・タランティーノ', surname: 'TARANTINO' },
     'anderson': { fullNameEn: 'WES ANDERSON', nameJa: 'ウェス・アンダーソン', surname: 'ANDERSON' },
@@ -292,6 +294,17 @@ const filmsData = [
     { year: 2023, type: 'fincher', title: "ザ・キラー", context: "緻密で非情な殺し屋の、ストイックな復讐劇。" },
     { year: 2026, type: 'fincher', title: "The Adventures of Cliff Booth", context: "公開予定。クリフ・ブースを主人公に、タランティーノ脚本をフィンチャーが監督するスピンオフ。" },
 
+    // Sam Mendes
+    { year: 1999, type: 'mendes', title: "アメリカン・ビューティー", context: "郊外の家庭に潜む空虚と欲望を、冷ややかな美しさで描いた長編監督デビュー作。" },
+    { year: 2002, type: 'mendes', title: "ロード・トゥ・パーディション", context: "父と息子、裏社会の掟を、クラシカルな映像美で描くノワール調のドラマ。" },
+    { year: 2005, type: 'mendes', title: "ジャーヘッド", context: "湾岸戦争の兵士たちの待機と空白を、乾いた視点で描いた戦争映画。" },
+    { year: 2008, type: 'mendes', title: "レボリューショナリー・ロード/燃え尽きるまで", context: "理想の生活に閉じ込められた夫婦の崩壊を、抑制された演出で見つめる。" },
+    { year: 2009, type: 'mendes', title: "お家をさがそう", context: "出産を控えたカップルの旅を通して、家族と居場所を軽やかに描いた作品。" },
+    { year: 2012, type: 'mendes', title: "007 スカイフォール", context: "ボンドの過去と組織の老いを、重厚な映像美と現代的アクションで再定義した作品。" },
+    { year: 2015, type: 'mendes', title: "007 スペクター", context: "秘密組織との対決を通じて、ボンド神話の系譜を大作スケールでつなぐ。" },
+    { year: 2019, type: 'mendes', title: "1917 命をかけた伝令", context: "第一次世界大戦の前線を、長回し的な没入感で駆け抜ける戦争映画。" },
+    { year: 2022, type: 'mendes', title: "エンパイア・オブ・ライト", context: "映画館を舞台に、孤独な人々のつながりと時代の痛みを静かに描く。" },
+
     // Wes Anderson
     { year: 1996, type: 'anderson', title: "アンソニーのハッピー・モーメント", context: "オフビートなユーモアと、愛すべきはみ出し者たち。" },
     { year: 1998, type: 'anderson', title: "天才マックスの世界", context: "奇妙な三角関係を描いた、青春映画の新たな地平。" },
@@ -318,6 +331,24 @@ const filmsData = [
     { year: 2012, type: 'bigelow', title: "ゼロ・ダーク・サーティ", context: "ビンラディン追跡の、過酷で冷徹な10年間の執念。" },
     { year: 2017, type: 'bigelow', title: "デトロイト", context: "差別と暴力が爆発した、デトロイト暴動の真実。" },
     { year: 2025, type: 'bigelow', title: "ハウス・オブ・ダイナマイト", context: "Netflixで配信された、米政府の緊迫したミサイル対応をリアルタイムで追う政治サスペンス。" },
+
+    // Tony Scott
+    { year: 1983, type: 'tonyscott', title: "ハンガー", context: "ヴァンパイアの官能と退廃を、スタイリッシュな映像で描いた長編監督デビュー作。" },
+    { year: 1986, type: 'tonyscott', title: "トップガン", context: "戦闘機、友情、競争心を鮮烈な映像と音楽で結びつけた80年代を代表する大作。" },
+    { year: 1987, type: 'tonyscott', title: "ビバリーヒルズ・コップ2", context: "軽快なスター性と派手なアクションを押し出した、人気シリーズの続編。" },
+    { year: 1990, type: 'tonyscott', title: "リベンジ", context: "愛と裏切り、暴力が絡み合う復讐劇を、濃密な情感で描く。" },
+    { year: 1990, type: 'tonyscott', title: "デイズ・オブ・サンダー", context: "レースの速度とスターの熱気を、派手な映像設計で描いたモータースポーツ映画。" },
+    { year: 1991, type: 'tonyscott', title: "ラスト・ボーイスカウト", context: "荒んだ私立探偵と元スター選手のコンビを、皮肉と暴力で走らせるアクション。" },
+    { year: 1993, type: 'tonyscott', title: "トゥルー・ロマンス", context: "逃避行する恋人たちを、ポップな暴力と疾走感で描いたクライムロマンス。" },
+    { year: 1995, type: 'tonyscott', title: "クリムゾン・タイド", context: "原子力潜水艦内の緊迫した対立を、男たちの心理戦として描く軍事サスペンス。" },
+    { year: 1996, type: 'tonyscott', title: "ザ・ファン", context: "スター選手への執着が暴走する男を描く、都市の熱と狂気のスリラー。" },
+    { year: 1998, type: 'tonyscott', title: "エネミー・オブ・アメリカ", context: "監視社会の不安を、逃走劇とハイテンポな編集で描いたサスペンスアクション。" },
+    { year: 2001, type: 'tonyscott', title: "スパイ・ゲーム", context: "師弟関係と諜報戦を、時間制限の中で描く緊迫のスパイスリラー。" },
+    { year: 2004, type: 'tonyscott', title: "マイ・ボディガード", context: "少女を守れなかった男の怒りと贖罪を、激しい映像で描いた復讐劇。" },
+    { year: 2005, type: 'tonyscott', title: "ドミノ", context: "実在の女性バウンティハンターを、断片的で過剰な映像スタイルで描く。" },
+    { year: 2006, type: 'tonyscott', title: "デジャヴ", context: "時間を越える捜査を、SFと犯罪サスペンスの速度感で描いた作品。" },
+    { year: 2009, type: 'tonyscott', title: "サブウェイ123 激突", context: "地下鉄ジャック事件を、都市の緊張と交渉劇として再構築したリメイク。" },
+    { year: 2010, type: 'tonyscott', title: "アンストッパブル", context: "暴走列車を止める男たちを、無駄のない速度と熱量で描いた遺作。" },
 
     // Paul Thomas Anderson
     { year: 1996, type: 'pta', title: "ハードエイト", context: "ベテラン博打打ちと青年の奇妙な師弟関係を描いたデビュー作。" },
