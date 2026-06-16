@@ -430,6 +430,11 @@ header {
     text-transform: uppercase;
 }
 
+.contemporary-label-en,
+.contemporary-label-ja {
+    font-family: var(--font-sans);
+}
+
 .label-l,
 .label-r {
     text-align: center;
@@ -521,8 +526,19 @@ header {
     overflow-wrap: anywhere;
 }
 
+.home-logo {
+    width: min(100%, 610px);
+    margin-inline: auto;
+}
+
+.home-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .home-hero .header-nav {
-    margin: 2rem 0 2.4rem;
+    margin: 3rem 0 2.4rem;
 }
 
 .home-hero p {

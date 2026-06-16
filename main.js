@@ -772,7 +772,7 @@ function updateHeaderLabels(d1Id, d2Id) {
             labels[1].innerHTML = `<div class="label-surname">${d2Info.nameJa}</div><div class="label-ja">${d2Info.fullNameEn}</div>`;
         } else {
             labels[1].style.display = 'block';
-            labels[1].innerHTML = `<div class="label-en">CONTEMPORARY WORKS</div><div class="label-ja">同時代の作品</div>`;
+            labels[1].innerHTML = `<div class="label-en contemporary-label-en">CONTEMPORARY WORKS</div><div class="label-ja contemporary-label-ja">同時代の作品</div>`;
         }
     }
 }
