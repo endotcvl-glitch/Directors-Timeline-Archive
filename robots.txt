@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://endotcvl-glitch.github.io/Directors-Timeline-Archive/sitemap.xml
