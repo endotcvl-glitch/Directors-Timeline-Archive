@@ -1626,7 +1626,7 @@ header {
     }
 
     .director-labels {
-        top: 78px;
+        top: 96px;
         grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
         padding: 0.5rem 0.55rem 0.55rem;
         column-gap: 0.25rem;
@@ -1661,7 +1661,7 @@ header {
     }
 
     .jump-nav {
-        top: 128px;
+        top: 154px;
         justify-content: flex-start;
         gap: 1.25rem;
         padding: 0.7rem 1rem;
@@ -1677,7 +1677,7 @@ header {
         width: 100%;
         max-width: none;
         margin: 0;
-        padding: 188px 0 calc(7rem + env(safe-area-inset-bottom));
+        padding: 218px 0 calc(7rem + env(safe-area-inset-bottom));
         overflow-x: hidden;
         overflow-y: visible;
     }
