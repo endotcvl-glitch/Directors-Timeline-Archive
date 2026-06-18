@@ -1195,7 +1195,7 @@ header {
 
 .compare-action-note {
     margin-top: 0.35rem;
-    font-size: 0.58em;
+    font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 0.03em;
     opacity: 0.72;
@@ -2110,6 +2110,10 @@ header {
     .compare-action:hover {
         padding: 0.95rem 1rem;
         opacity: 0.86;
+    }
+
+    .compare-action-note {
+        font-size: 0.92rem;
     }
 }
 
