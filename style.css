@@ -37,14 +37,14 @@ body {
 header {
     position: fixed;
     top: 0; left: 0; width: 100%;
-    padding: 2rem;
+    padding: 3.75rem 2rem 0.75rem;
     z-index: 100;
     text-align: center;
     background: var(--bg-color);
 }
 
 .timeline-header {
-    padding: 1.35rem 2rem 0.75rem;
+    padding: 3.75rem 2rem 0.75rem;
     text-align: center;
 }
 
@@ -65,11 +65,18 @@ header {
 
 .header-nav {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.45rem 1.15rem;
-    margin-top: 0.75rem;
-    color: var(--secondary-text);
+    width: 100%;
+    margin-top: 0;
+    padding: 0.72rem 1rem;
+    background: #222222;
+    color: rgba(255,255,255,0.82);
     font-family: var(--font-sans);
     font-size: var(--global-nav-font-size);
     font-weight: 700;
@@ -86,7 +93,7 @@ header {
 
 .header-nav a:hover,
 .header-nav a.is-active {
-    color: var(--text-color);
+    color: #ffffff;
     opacity: 1;
 }
 
@@ -498,7 +505,7 @@ header {
 
 .home-container {
     width: min(100%, 1200px);
-    padding: clamp(1.5rem, 4vh, 2.25rem) clamp(1.25rem, 5vw, 4rem) calc(8rem + env(safe-area-inset-bottom));
+    padding: calc(4.4rem + clamp(1.5rem, 4vh, 2.25rem)) clamp(1.25rem, 5vw, 4rem) calc(8rem + env(safe-area-inset-bottom));
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -547,7 +554,7 @@ header {
 }
 
 .home-hero .header-nav {
-    margin: 2rem 0 2.4rem;
+    margin: 0;
 }
 
 .home-hero p {
@@ -1350,11 +1357,11 @@ header {
 
 @media (min-width: 600px) and (max-width: 899px) {
     header {
-        padding: 1.35rem 1.5rem;
+        padding: 3.45rem 1.5rem 0.75rem;
     }
 
     .timeline-header {
-        padding: 1rem 1.5rem 0.65rem;
+        padding: 3.45rem 1.5rem 0.65rem;
     }
 
     .site-title {
@@ -1365,7 +1372,7 @@ header {
 
     .header-nav {
         gap: 0.4rem 0.9rem;
-        margin-top: 0.55rem;
+        margin-top: 0;
         font-size: var(--global-nav-font-size);
         letter-spacing: 0.07em;
     }
@@ -1448,7 +1455,7 @@ header {
     }
 
     .home-container {
-        padding: 2rem 1.75rem calc(8rem + env(safe-area-inset-bottom));
+        padding: 5.4rem 1.75rem calc(8rem + env(safe-area-inset-bottom));
     }
 
     .home-container.directors-page-container {
@@ -1529,12 +1536,12 @@ header {
     }
 
     header {
-        padding: 0.75rem 1rem 0.85rem;
+        padding: 3.05rem 1rem 0.85rem;
         text-align: left;
     }
 
     .timeline-header {
-        padding: 0.7rem 0.75rem 0.55rem;
+        padding: 3.05rem 0.75rem 0.55rem;
         text-align: center;
     }
 
@@ -1571,7 +1578,8 @@ header {
         max-width: 100%;
         overflow-x: auto;
         scrollbar-width: none;
-        margin-top: 0.45rem;
+        margin-top: 0;
+        padding: 0.68rem 0.75rem;
         font-size: 0.72rem;
         letter-spacing: 0.01em;
         line-height: 1.45;
@@ -1736,7 +1744,7 @@ header {
     }
 
     .home-container {
-        padding: 2rem 1rem calc(7.5rem + env(safe-area-inset-bottom));
+        padding: 4.85rem 1rem calc(7.5rem + env(safe-area-inset-bottom));
     }
 
     .home-container.directors-page-container {
