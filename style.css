@@ -116,14 +116,14 @@ header {
     width: min(100%, 1200px);
     margin: 0 auto;
     padding: 2.5rem clamp(1.25rem, 5vw, 4rem) 3rem;
-    color: var(--secondary-text);
+    color: var(--text-color);
     font-family: var(--font-sans);
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.12em;
     line-height: 1.6;
     text-align: center;
-    opacity: 0.58;
+    opacity: 1;
 }
 
 .footer-title {
@@ -147,7 +147,7 @@ header {
 }
 
 .footer-nav a {
-    color: var(--secondary-text);
+    color: var(--text-color);
     font-family: var(--font-sans);
     font-size: 0.66rem;
     font-weight: 700;
