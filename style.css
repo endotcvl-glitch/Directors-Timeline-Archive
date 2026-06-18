@@ -1694,7 +1694,7 @@ header {
 
     .timeline-row,
     .timeline-container.single-mode .timeline-row {
-        grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) 60px minmax(0, 1fr);
         column-gap: 6px;
         width: 100%;
         min-height: 0;
@@ -1748,17 +1748,17 @@ header {
     }
 
     .year-label {
-        font-size: 0.82rem;
-        padding: 3px 5px;
+        font-size: 1rem;
+        padding: 3px 6px;
     }
 
     .episode-label {
-        width: 40px;
+        width: 60px;
         margin-top: 0.45rem;
-        font-size: 0.46rem;
-        line-height: 1.35;
-        max-height: 2.8em;
-        overflow: hidden;
+        font-size: 0.58rem;
+        line-height: 1.45;
+        max-height: none;
+        overflow: visible;
     }
 
     .timeline-row.is-current {
@@ -2129,7 +2129,7 @@ header {
 
     .timeline-row,
     .timeline-container.single-mode .timeline-row {
-        grid-template-columns: minmax(0, 1fr) 36px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr);
         column-gap: 4px;
         width: 100%;
         padding: 0.9rem 0;
@@ -2149,12 +2149,12 @@ header {
     }
 
     .year-label {
-        font-size: 0.74rem;
-        padding: 2px 4px;
+        font-size: 0.94rem;
+        padding: 2px 5px;
     }
 
     .episode-label {
-        width: 36px;
-        font-size: 0.44rem;
+        width: 56px;
+        font-size: 0.54rem;
     }
 }
