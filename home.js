@@ -110,6 +110,11 @@ const comparisonThemes = [
         title: 'スコット兄弟の映像美',
         description: '重厚な世界を築くリドリーと、速度と熱で駆け抜けるトニー。兄弟それぞれの映像感覚を比べます。',
         directorIds: ['scott', 'tonyscott']
+    },
+    {
+        title: '謎を仕掛ける語り手たち',
+        description: '静かに伏線を積み上げるシャマランと、謎そのものを推進力にするエイブラムス。物語の引き込み方を比べます。',
+        directorIds: ['shyamalan', 'abrams']
     }
 ];
 
