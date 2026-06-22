@@ -5,6 +5,7 @@ const directorsInfo = {
     'spielberg': { fullNameEn: 'STEVEN SPIELBERG', nameJa: 'スティーヴン・スピルバーグ', surname: 'SPIELBERG' },
     'scorsese': { fullNameEn: 'MARTIN SCORSESE', nameJa: 'マーティン・スコセッシ', surname: 'SCORSESE' },
     'lynch': { fullNameEn: 'DAVID LYNCH', nameJa: 'デヴィッド・リンチ', surname: 'LYNCH' },
+    'hooper': { fullNameEn: 'TOBE HOOPER', nameJa: 'トビー・フーパー', surname: 'HOOPER' },
     'coen': { fullNameEn: 'JOEL & ETHAN COEN', nameJa: 'ジョエル＆イーサン・コーエン', surname: 'COENS' },
     'burton': { fullNameEn: 'TIM BURTON', nameJa: 'ティム・バートン', surname: 'BURTON' },
     'bigelow': { fullNameEn: 'KATHRYN BIGELOW', nameJa: 'キャスリン・ビグロー', surname: 'BIGELOW' },
@@ -89,6 +90,24 @@ const filmsData = [
     { year: 2001, type: 'lynch', title: "マルホランド・ドライブ", context: "夢と現実が溶け合う、ハリウッドの闇と幻影を鮮烈に描いた傑作。" },
     { year: 2006, type: 'lynch', title: "インランド・エンパイア", context: "女優が次第に現実と虚構の境界を失っていく、実験的な長編。" },
     { year: 2017, type: 'lynch', title: "ツイン・ピークス: The Return", context: "全18話をリンチが監督し、テレビシリーズの形式を映画的な時間感覚へ押し広げたリミテッドシリーズ。", medium: "Series" },
+
+    // Tobe Hooper
+    { year: 1969, type: 'hooper', title: "Eggshells", context: "オースティンの若者文化と実験的な映像感覚が混ざる、フーパーの長編デビュー作。" },
+    { year: 1974, type: 'hooper', title: "悪魔のいけにえ", context: "低予算のざらついた質感で、アメリカの田舎道を悪夢へ変えたホラーの金字塔。" },
+    { year: 1976, type: 'hooper', title: "悪魔の沼", context: "湿地のホテルと狂気の主人を舞台に、閉じた空間の恐怖をさらに濃くした怪作。" },
+    { year: 1979, type: 'hooper', title: "死霊伝説", context: "スティーヴン・キング原作をテレビミニシリーズとして映像化し、吸血鬼譚を郊外の不穏さへ結びつけた。", medium: "Series" },
+    { year: 1981, type: 'hooper', title: "ファンハウス/惨劇の館", context: "移動遊園地の暗闇を舞台に、見世物小屋の恐怖とスラッシャー映画の緊張を重ねた作品。" },
+    { year: 1982, type: 'hooper', title: "ポルターガイスト", context: "郊外の家族ドラマと超常現象を結びつけ、80年代ホラーの大衆的な怖さを決定づけた代表作。" },
+    { year: 1985, type: 'hooper', title: "スペースバンパイア", context: "宇宙から来た生命体と吸血鬼的イメージを融合させた、SFホラーの大作。" },
+    { year: 1986, type: 'hooper', title: "スペースインベーダー", context: "古典SFを80年代的な特殊効果とパラノイアでリメイクした侵略ホラー。" },
+    { year: 1986, type: 'hooper', title: "悪魔のいけにえ2", context: "前作の神話をブラックユーモアと過剰なスプラッターへ反転させた続編。" },
+    { year: 1990, type: 'hooper', title: "スポンティニアス・コンバッション/人体自然発火", context: "人体発火という奇怪な現象を、陰謀と身体変容の恐怖として描いたSFホラー。" },
+    { year: 1993, type: 'hooper', title: "Night Terrors", context: "ロバート・イングランドを起用し、幻想と倒錯した恐怖を追った後期ホラー。" },
+    { year: 1995, type: 'hooper', title: "マングラー", context: "スティーヴン・キング原作の機械ホラーを、工場の圧迫感と血なまぐささで映像化。" },
+    { year: 2000, type: 'hooper', title: "クロコダイル", context: "巨大なワニの襲撃を、B級モンスターパニックの勢いで描いた作品。" },
+    { year: 2004, type: 'hooper', title: "ツールボックス・マーダー", context: "古いアパートを舞台に、殺人鬼の気配と建物そのものの不気味さを重ねたスラッシャー。" },
+    { year: 2005, type: 'hooper', title: "Mortuary", context: "遺体安置所と家族の移住を起点に、死と腐敗のイメージを広げた後期作品。" },
+    { year: 2013, type: 'hooper', title: "Djinn", context: "中東の伝承を題材にした、フーパー最後の長編監督作。" },
 
     // Tim Burton
     { year: 1985, type: 'burton', title: "ピーウィーの大冒険", context: "大切な自転車を探すため、変わり者の男が全米を横断するコメディ。" },
