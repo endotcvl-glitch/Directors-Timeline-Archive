@@ -305,7 +305,7 @@ function updateUI() {
         setCompareButtonContent(
             btn,
             `${d1.nameJa} の作品年表を見る`,
-            'もう1人監督を選ぶと2人の監督の作品年表の比較ができます'
+            'もう1人映画監督を選ぶと2人の映画監督の作品年表の比較ができます'
         );
         btn.classList.add('visible');
     } else if (selectedDirectors.length === 2) {
