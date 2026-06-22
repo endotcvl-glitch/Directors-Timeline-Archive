@@ -15,6 +15,7 @@ const directors = [
     ]},
     { category: '1980 -', items: [
         { id: 'bigelow', surname: 'BIGELOW', nameJa: 'キャスリン・ビグロー', nameEn: 'KATHRYN BIGELOW', keywords: '緊迫のリアリズム / 極限の暴力 / 骨太な演出' },
+        { id: 'mann', surname: 'MANN', nameJa: 'マイケル・マン', nameEn: 'MICHAEL MANN', keywords: '都市犯罪 / 夜のリアリズム / 男たちの緊張' },
         { id: 'tonyscott', surname: 'SCOTT', nameJa: 'トニー・スコット', nameEn: 'TONY SCOTT', keywords: '疾走感ある編集 / 男たちの緊張 / スタイリッシュアクション' },
         { id: 'cameron', surname: 'CAMERON', nameJa: 'ジェームズ・キャメロン', nameEn: 'JAMES CAMERON', keywords: '技術革新 / 巨大スケール / 海洋とSF' },
         { id: 'jackson', surname: 'JACKSON', nameJa: 'ピーター・ジャクソン', nameEn: 'PETER JACKSON', keywords: 'ファンタジー叙事詩 / 特殊効果 / ニュージーランド映画' },

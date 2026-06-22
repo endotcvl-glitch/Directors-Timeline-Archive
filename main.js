@@ -8,6 +8,7 @@ const directorsInfo = {
     'coen': { fullNameEn: 'JOEL & ETHAN COEN', nameJa: 'ジョエル＆イーサン・コーエン', surname: 'COENS' },
     'burton': { fullNameEn: 'TIM BURTON', nameJa: 'ティム・バートン', surname: 'BURTON' },
     'bigelow': { fullNameEn: 'KATHRYN BIGELOW', nameJa: 'キャスリン・ビグロー', surname: 'BIGELOW' },
+    'mann': { fullNameEn: 'MICHAEL MANN', nameJa: 'マイケル・マン', surname: 'MANN' },
     'tonyscott': { fullNameEn: 'TONY SCOTT', nameJa: 'トニー・スコット', surname: 'SCOTT' },
     'cameron': { fullNameEn: 'JAMES CAMERON', nameJa: 'ジェームズ・キャメロン', surname: 'CAMERON' },
     'jackson': { fullNameEn: 'PETER JACKSON', nameJa: 'ピーター・ジャクソン', surname: 'JACKSON' },
@@ -332,6 +333,20 @@ const filmsData = [
     { year: 2012, type: 'bigelow', title: "ゼロ・ダーク・サーティ", context: "ビンラディン追跡の、過酷で冷徹な10年間の執念。" },
     { year: 2017, type: 'bigelow', title: "デトロイト", context: "差別と暴力が爆発した、デトロイト暴動の真実。" },
     { year: 2025, type: 'bigelow', title: "ハウス・オブ・ダイナマイト", context: "Netflixで配信された、米政府の緊迫したミサイル対応をリアルタイムで追う政治サスペンス。" },
+
+    // Michael Mann
+    { year: 1981, type: 'mann', title: "ザ・クラッカー/真夜中のアウトロー", context: "プロの金庫破りの孤独と美学を、夜の都市と電子音楽で刻んだ長編劇映画デビュー作。" },
+    { year: 1983, type: 'mann', title: "ザ・キープ", context: "第二次世界大戦下の要塞に潜む超自然的な恐怖を、異様な映像美で描いたホラー。" },
+    { year: 1986, type: 'mann', title: "刑事グラハム/凍りついた欲望", context: "ハンニバル・レクター以前の連続殺人捜査を、冷たい色彩と心理の緊張で描いたスリラー。" },
+    { year: 1992, type: 'mann', title: "ラスト・オブ・モヒカン", context: "植民地時代の戦火と愛を、壮大な自然と疾走するアクションで描いた歴史劇。" },
+    { year: 1995, type: 'mann', title: "ヒート", context: "刑事と強盗、それぞれのプロフェッショナルな孤独を正面から対峙させた犯罪映画の金字塔。" },
+    { year: 1999, type: 'mann', title: "インサイダー", context: "巨大企業と報道の倫理をめぐる実話を、静かな緊張と怒りで描いた社会派ドラマ。" },
+    { year: 2001, type: 'mann', title: "ALI アリ", context: "モハメド・アリの闘いを、スポーツ、政治、時代の熱として描いた伝記映画。" },
+    { year: 2004, type: 'mann', title: "コラテラル", context: "夜のロサンゼルスを走るタクシーの中で、殺し屋と運転手の一夜を描いた都市スリラー。" },
+    { year: 2006, type: 'mann', title: "マイアミ・バイス", context: "潜入捜査の危うさと関係の希薄さを、デジタル映像の夜景と湿度で描いた犯罪映画。" },
+    { year: 2009, type: 'mann', title: "パブリック・エネミーズ", context: "大恐慌時代の犯罪者ジョン・デリンジャーを、神話と制度の狭間で描いたギャング映画。" },
+    { year: 2015, type: 'mann', title: "ブラックハット", context: "サイバー犯罪と国境を越える追跡を、硬質なデジタル映像で描いたテクノスリラー。" },
+    { year: 2023, type: 'mann', title: "フェラーリ", context: "エンツォ・フェラーリの私生活とレースの危険を、速度と喪失のドラマとして描いた伝記映画。" },
 
     // Tony Scott
     { year: 1983, type: 'tonyscott', title: "ハンガー", context: "ヴァンパイアの官能と退廃を、スタイリッシュな映像で描いた長編監督デビュー作。" },
