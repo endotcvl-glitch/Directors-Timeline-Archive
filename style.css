@@ -682,10 +682,10 @@ header {
     gap: 0.45rem;
     min-height: 6.5rem;
     padding: 1.1rem 1.2rem;
-    border: 1px solid var(--line-color);
+    border: 1px solid #1A1A1A;
     border-radius: 8px;
-    background: rgba(255,255,255,0.28);
-    color: inherit;
+    background: #1A1A1A;
+    color: #ffffff;
     font-family: var(--font-sans);
     text-decoration: none;
     text-align: left;
@@ -693,13 +693,13 @@ header {
 }
 
 .explore-path-card:hover {
-    border-color: #555555;
-    background: rgba(255,255,255,0.48);
+    border-color: #1A1A1A;
+    background: #1A1A1A;
     transform: translateY(-2px);
 }
 
 .explore-path-card span {
-    color: var(--text-color);
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -707,7 +707,7 @@ header {
 }
 
 .explore-path-card small {
-    color: var(--secondary-text);
+    color: rgba(255,255,255,0.78);
     font-size: 0.74rem;
     font-weight: 400;
     letter-spacing: 0.04em;
