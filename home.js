@@ -202,6 +202,45 @@ function renderComparisonThemes() {
     });
 }
 
+function renderEditorNotePreview() {
+    const container = document.getElementById('editor-note-teaser');
+    const notes = window.editorNotes || [];
+    const note = notes[0];
+
+    if (!container || !note) {
+        return;
+    }
+
+    container.innerHTML = '';
+
+    const meta = document.createElement('p');
+    meta.className = 'editor-note-meta';
+    meta.textContent = `${note.directorNameJa} / ${note.filmTitleJa} / ${note.year}`;
+
+    const heading = document.createElement('h2');
+    heading.id = 'editor-note-title';
+    heading.textContent = note.heading;
+
+    const title = document.createElement('p');
+    title.className = 'editor-note-film-title';
+    title.textContent = note.title;
+
+    const excerpt = document.createElement('p');
+    excerpt.className = 'editor-note-excerpt';
+    excerpt.textContent = note.excerpt;
+
+    const link = document.createElement('a');
+    link.className = 'editor-note-link';
+    link.href = `note.html?id=${encodeURIComponent(note.id)}`;
+    link.textContent = 'Read more';
+
+    container.appendChild(heading);
+    container.appendChild(meta);
+    container.appendChild(title);
+    container.appendChild(excerpt);
+    container.appendChild(link);
+}
+
 function renderList() {
     const container = document.getElementById('director-grid');
 
@@ -347,4 +386,5 @@ if (directorSearchInput) {
 
 // Initial Render
 renderComparisonThemes();
+renderEditorNotePreview();
 renderList();
