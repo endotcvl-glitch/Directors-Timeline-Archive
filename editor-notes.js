@@ -1,13 +1,14 @@
 const editorNotes = [
     {
-        id: "nolan-insomnia",
-        directorName: "Christopher Nolan",
-        directorNameJa: "クリストファー・ノーラン",
-        filmTitle: "Insomnia",
-        filmTitleJa: "インソムニア",
-        year: 2002,
+        slug: "christopher-nolan",
+        director: "Christopher Nolan",
+        directorJa: "クリストファー・ノーラン",
+        featuredFilm: {
+            title: "Insomnia",
+            titleJa: "インソムニア",
+            year: 2002
+        },
         heading: "この監督のこの一本",
-        title: "クリストファー・ノーラン『インソムニア』",
         excerpt: "『メメント』の次に撮られた本作は、後のノーラン作品に通じる罪悪感や倫理のテーマが静かに現れている一本です。",
         body: [
             "『メメント』で一躍注目を集めたノーランですが、私があえて挙げたいのは、その次に撮った『インソムニア』です。",
@@ -17,6 +18,7 @@ const editorNotes = [
             "『インソムニア』は、後のノーラン作品で繰り返される「罪悪感」「倫理」「主人公の内面」といったテーマが静かに芽生えている一本です。",
             "年表の中では目立たない作品かもしれませんが、ノーランという監督の転換点として見ると、とても面白い一本だと思います。"
         ],
+        additions: [],
         note: "これは制作者が年表を眺めながら「入口としておすすめしたい」と感じた一本です。代表作や最高傑作を選ぶことを目的としたものではありません。"
     }
 ];

@@ -215,7 +215,7 @@ function renderEditorNotePreview() {
 
     const meta = document.createElement('p');
     meta.className = 'editor-note-meta';
-    meta.textContent = `${note.directorNameJa} / ${note.filmTitleJa} / ${note.year}`;
+    meta.textContent = `${note.directorJa} / ${note.featuredFilm.titleJa} / ${note.featuredFilm.year}`;
 
     const heading = document.createElement('h2');
     heading.id = 'editor-note-title';
@@ -223,7 +223,7 @@ function renderEditorNotePreview() {
 
     const title = document.createElement('p');
     title.className = 'editor-note-film-title';
-    title.textContent = note.title;
+    title.textContent = `${note.directorJa}『${note.featuredFilm.titleJa}』`;
 
     const excerpt = document.createElement('p');
     excerpt.className = 'editor-note-excerpt';
@@ -231,8 +231,8 @@ function renderEditorNotePreview() {
 
     const link = document.createElement('a');
     link.className = 'editor-note-link';
-    link.href = `note.html?id=${encodeURIComponent(note.id)}`;
-    link.textContent = 'Read more';
+    link.href = `notes/${encodeURIComponent(note.slug)}.html`;
+    link.textContent = '続きを読む →';
 
     container.appendChild(heading);
     container.appendChild(meta);
