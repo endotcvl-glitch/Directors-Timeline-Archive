@@ -3,13 +3,19 @@ const directors = [
         { id: 'kubrick', surname: 'KUBRICK', nameJa: 'スタンリー・キューブリック', nameEn: 'STANLEY KUBRICK', keywords: '完璧主義 / 徹底した構図 / 哲学的' }
     ]},
     { category: '1960 -', items: [
-        { id: 'scorsese', surname: 'SCORSESE', nameJa: 'マーティン・スコセッシ', nameEn: 'MARTIN SCORSESE', keywords: '犯罪と贖罪 / アメリカ社会 / 人間の情熱' }
+        { id: 'scorsese', surname: 'SCORSESE', nameJa: 'マーティン・スコセッシ', nameEn: 'MARTIN SCORSESE', keywords: '犯罪と贖罪 / アメリカ社会 / 人間の情熱' },
+        { id: 'romero', surname: 'ROMERO', nameJa: 'ジョージ・A・ロメロ', nameEn: 'GEORGE A. ROMERO', keywords: 'ゾンビ映画の父 / 社会風刺 / インディペンデント精神' },
+        { id: 'cronenberg', surname: 'CRONENBERG', nameJa: 'デヴィッド・クローネンバーグ', nameEn: 'DAVID CRONENBERG', keywords: 'ボディホラー / テクノロジーと身体 / 冷たい知性' }
     ]},
     { category: '1970 -', items: [
         { id: 'lucas', surname: 'LUCAS', nameJa: 'ジョージ・ルーカス', nameEn: 'GEORGE LUCAS', keywords: 'スペースオペラ / デジタル革命 / 冒険の神話' },
         { id: 'spielberg', surname: 'SPIELBERG', nameJa: 'スティーヴン・スピルバーグ', nameEn: 'STEVEN SPIELBERG', keywords: '驚異の物語 / 圧倒的映画術 / ヒューマニズム' },
         { id: 'lynch', surname: 'LYNCH', nameJa: 'デヴィッド・リンチ', nameEn: 'DAVID LYNCH', keywords: '悪夢と不条理とユーモア / サウンドデザイン / 超現実主義' },
         { id: 'hooper', surname: 'HOOPER', nameJa: 'トビー・フーパー', nameEn: 'TOBE HOOPER', keywords: '低予算ホラー / アメリカの悪夢 / ざらついた恐怖' },
+        { id: 'craven', surname: 'CRAVEN', nameJa: 'ウェス・クレイヴン', nameEn: 'WES CRAVEN', keywords: '夢と現実の恐怖 / メタホラー / スラッシャー刷新' },
+        { id: 'stone', surname: 'STONE', nameJa: 'オリバー・ストーン', nameEn: 'OLIVER STONE', keywords: 'アメリカ政治 / 戦争の記憶 / 強烈な社会批評' },
+        { id: 'argento', surname: 'ARGENTO', nameJa: 'ダリオ・アルジェント', nameEn: 'DARIO ARGENTO', keywords: 'ジャッロ / 色彩と殺意 / イタリアンホラー' },
+        { id: 'carpenter', surname: 'CARPENTER', nameJa: 'ジョン・カーペンター', nameEn: 'JOHN CARPENTER', keywords: 'ミニマルな恐怖 / シンセサウンド / ジャンル映画の職人' },
         { id: 'miller', surname: 'MILLER', nameJa: 'ジョージ・ミラー', nameEn: 'GEORGE MILLER', keywords: '身体性アクション / 神話的世界観 / 寓話的表現' },
         { id: 'scott', surname: 'SCOTT', nameJa: 'リドリー・スコット', nameEn: 'RIDLEY SCOTT', keywords: '重厚な世界構築 / 光と影の造形 /　神話性' },
         { id: 'zemeckis', surname: 'ZEMECKIS', nameJa: 'ロバート・ゼメキス', nameEn: 'ROBERT ZEMECKIS', keywords: '技術革新 / ポップな物語 / 時間と記憶' }
@@ -60,6 +66,7 @@ const directors = [
         { id: 'zhao', surname: 'ZHAO', nameJa: 'クロエ・ジャオ', nameEn: 'CHLOÉ ZHAO', keywords: '圧倒的な自然美の映像 / ドキュメンタリータッチ / 静かなリアリズム' },
         { id: 'watts', surname: 'WATTS', nameJa: 'ジョン・ワッツ', nameEn: 'JON WATTS', keywords: '青春ヒーロー / 軽やかな成長譚 / MCUの日常感' },
         { id: 'aster', surname: 'ASTER', nameJa: 'アリ・アスター', nameEn: 'ARI ASTER', keywords: '家族の崩壊 / 不安と喪失 / 現代神話' },
+        { id: 'flanagan', surname: 'FLANAGAN', nameJa: 'マイク・フラナガン', nameEn: 'MIKE FLANAGAN', keywords: '情感あるホラー / 喪失と信仰 / スティーヴン・キング翻案' },
         { id: 'trachtenberg', surname: 'TRACHTENBERG', nameJa: 'ダン・トラクテンバーグ', nameEn: 'DAN TRACHTENBERG', keywords: 'ロジカルアクション演出 / サバイバルSF / シリーズ再解釈' }
     ]},
     { category: '2020 -', items: [
