@@ -5,10 +5,12 @@ const directors = [
     { category: '1960 -', items: [
         { id: 'scorsese', surname: 'SCORSESE', nameJa: 'マーティン・スコセッシ', nameEn: 'MARTIN SCORSESE', keywords: '犯罪と贖罪 / アメリカ社会 / 人間の情熱' },
         { id: 'romero', surname: 'ROMERO', nameJa: 'ジョージ・A・ロメロ', nameEn: 'GEORGE A. ROMERO', keywords: 'ゾンビ映画の父 / 社会風刺 / インディペンデント精神' },
-        { id: 'cronenberg', surname: 'CRONENBERG', nameJa: 'デヴィッド・クローネンバーグ', nameEn: 'DAVID CRONENBERG', keywords: 'ボディホラー / テクノロジーと身体 / 冷たい知性' }
+        { id: 'cronenberg', surname: 'CRONENBERG', nameJa: 'デヴィッド・クローネンバーグ', nameEn: 'DAVID CRONENBERG', keywords: 'ボディホラー / テクノロジーと身体 / 冷たい知性' },
+        { id: 'donner', surname: 'DONNER', nameJa: 'リチャード・ドナー', nameEn: 'RICHARD DONNER', keywords: '娯楽映画の職人 / ヒーロー映画の原点 / バディアクション' }
     ]},
     { category: '1970 -', items: [
         { id: 'lucas', surname: 'LUCAS', nameJa: 'ジョージ・ルーカス', nameEn: 'GEORGE LUCAS', keywords: 'スペースオペラ / デジタル革命 / 冒険の神話' },
+        { id: 'eastwood', surname: 'EASTWOOD', nameJa: 'クリント・イーストウッド', nameEn: 'CLINT EASTWOOD', keywords: '西部劇の継承 / 道徳と暴力 / 静かな演出' },
         { id: 'spielberg', surname: 'SPIELBERG', nameJa: 'スティーヴン・スピルバーグ', nameEn: 'STEVEN SPIELBERG', keywords: '驚異の物語 / 圧倒的映画術 / ヒューマニズム' },
         { id: 'lynch', surname: 'LYNCH', nameJa: 'デイヴィッド・リンチ', nameEn: 'DAVID LYNCH', keywords: '悪夢と不条理とユーモア / サウンドデザイン / 超現実主義' },
         { id: 'hooper', surname: 'HOOPER', nameJa: 'トビー・フーパー', nameEn: 'TOBE HOOPER', keywords: '低予算ホラー / アメリカの悪夢 / ざらついた恐怖' },
@@ -213,10 +215,6 @@ function renderEditorNotePreview() {
 
     container.innerHTML = '';
 
-    const meta = document.createElement('p');
-    meta.className = 'editor-note-meta';
-    meta.textContent = `${note.directorJa} / ${note.featuredFilm.titleJa} / ${note.featuredFilm.year}`;
-
     const heading = document.createElement('h2');
     heading.id = 'editor-note-title';
     heading.textContent = note.heading;
@@ -235,7 +233,6 @@ function renderEditorNotePreview() {
     link.textContent = '続きを読む →';
 
     container.appendChild(heading);
-    container.appendChild(meta);
     container.appendChild(title);
     container.appendChild(excerpt);
     container.appendChild(link);

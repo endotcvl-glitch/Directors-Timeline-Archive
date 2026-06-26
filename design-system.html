@@ -25,7 +25,7 @@
         }
 
         .ds-hero {
-            border-top: 2px solid #555555;
+            border-top: 2px solid var(--accent-color);
             padding: 1.6rem 0 3rem;
         }
 
@@ -246,7 +246,7 @@
         }
 
         .ds-page-hero-sample {
-            border-top: 2px solid #555555;
+            border-top: 2px solid var(--accent-color);
             padding: 1.2rem 0 1.8rem;
         }
 
@@ -371,7 +371,6 @@
 
     <main class="design-system-container">
         <section class="ds-hero">
-            <p class="info-kicker">DESIGN SYSTEM</p>
             <h1>Directors' Timeline Archive</h1>
             <p>カラー、タイポグラフィ、余白、コンテンツ幅、コンポーネントの見え方を確認するためのデザインシステムページです。</p>
         </section>
@@ -400,7 +399,7 @@
         <section class="ds-section">
             <div class="ds-section-header">
                 <h2>Color</h2>
-                <p>`style.css` のCSS変数を基準にしたカラーパレットです。色数を増やさず、背景、文字、補助情報、罫線で整理します。</p>
+                <p>`style.css` のCSS変数を基準にしたカラーパレットです。色数を増やさず、背景、文字、補助情報、罫線、アクセントで整理します。</p>
             </div>
             <div class="ds-grid">
                 <div class="ds-swatch">
@@ -423,13 +422,23 @@
                     <h3>Line</h3>
                     <p>#d8d8d8<br>--line-color</p>
                 </div>
+                <div class="ds-swatch">
+                    <div class="ds-color" style="--swatch: var(--accent-color);"></div>
+                    <h3>Accent</h3>
+                    <p>#4B6584<br>--accent-color</p>
+                </div>
+                <div class="ds-swatch">
+                    <div class="ds-color" style="--swatch: var(--accent-hover-color);"></div>
+                    <h3>Hover</h3>
+                    <p>#374F69<br>--accent-hover-color</p>
+                </div>
             </div>
         </section>
 
         <section class="ds-section">
             <div class="ds-section-header">
                 <h2>Typography</h2>
-                <p>通常UIと日本語本文はゴシック体を基本にします。セリフ体は限定的に使い、一覧カードなどの主役にはしません。</p>
+                <p>通常UIと日本語本文はゴシック体を基本にします。セリフ体は英語・数字に限定して使い、日本語など英数字以外の文字には使いません。</p>
             </div>
             <div class="ds-type-list">
                 <div class="ds-type-sample">
@@ -643,7 +652,6 @@
                 <div class="ds-component-sample">
                     <h3>Page Hero</h3>
                     <div class="ds-page-hero-sample">
-                        <p class="info-kicker">EDITOR'S NOTES</p>
                         <h3>Editor's Notes</h3>
                         <p>この監督のこの一本</p>
                     </div>

@@ -24,7 +24,14 @@
 :root {
     --bg-color: #f0f0f0;
     --text-color: #1a1a1a;
-    --accent-color: #000000;
+    --accent-color: #4B6584;
+    --accent-hover-color: #374F69;
+    --link-color: var(--accent-color);
+    --link-hover-color: var(--accent-hover-color);
+    --button-color: var(--accent-color);
+    --button-hover-color: var(--accent-hover-color);
+    --timeline-color: var(--accent-color);
+    --timeline-tint: rgba(75, 101, 132, 0.06);
     --secondary-text: #666666;
     --line-color: #d8d8d8;
     --card-bg: #ffffff;
@@ -34,8 +41,12 @@
 ### 使い分け
 
 - `--bg-color`: ページ背景。サイト全体のライトグレー。
-- `--text-color`: 主要テキスト。見出し、本文、重要リンク。
-- `--accent-color`: 強い操作、選択状態、強調線など。
+- `--text-color`: 主要テキスト。見出し、本文。
+- `--accent-color`: 強い操作、選択状態、強調線など。現在はブルーグレー `#4B6584`。
+- `--accent-hover-color`: ホバー時に使う、少し濃いブルーグレー。
+- `--link-color`: 本文内リンクや操作リンク。
+- `--button-color`: ボタン、選択状態、大きな導線。
+- `--timeline-color`: タイムラインの軸線や現在年の強調。
 - `--secondary-text`: 補助情報、説明文、メタ情報。
 - `--line-color`: 区切り線、カード境界、静かなグルーピング。
 - `--card-bg`: カード背景が必要な場合に使う。ただしカード感を強くしすぎない。
@@ -64,7 +75,8 @@
 
 - 日本語本文と通常UIは `--font-sans` を使う。
 - サイトタイトルや強い英字ロゴ表現は `--font-title` を使う。
-- `--font-serif` は限定的に使う。装飾的に見えやすいため、Editor's Notes の一覧カードなどでは主役にしない。
+- `--font-serif` は英語・数字に限定して使う。日本語など英数字以外の文字には serif を使わない。
+- `--font-serif` は装飾的に見えやすいため、Editor's Notes の一覧カードなどでは主役にしない。
 - 文字の強弱は、サイズ、太さ、色、余白で作る。
 - 文字間は基本的に詰めすぎない。負の letter-spacing は使わない。
 
@@ -128,7 +140,7 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 ### セクション区切り
 
 - 大きなセクションは上罫線で区切る。
-- 区切り線は `--line-color`、重要なページ冒頭は `#555555` 程度の濃い線を使う。
+- 区切り線は `--line-color`、重要なページ冒頭やタイムラインの強調は `--accent-color` を使う。
 
 ## コンポーネント
 
@@ -163,14 +175,12 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 
 構成:
 
-- キッカー: 小さなカテゴリ表記。
 - ページタイトル: ページ内で最も強い見出し。
 - 説明文: `--secondary-text` の短い補足。
 
 関連クラス:
 
 - `.page-hero`
-- `.info-kicker`
 
 ### Year Page
 
