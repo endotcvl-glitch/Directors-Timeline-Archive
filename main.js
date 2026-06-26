@@ -6,7 +6,7 @@ const directorsInfo = {
     'scorsese': { fullNameEn: 'MARTIN SCORSESE', nameJa: 'マーティン・スコセッシ', surname: 'SCORSESE' },
     'romero': { fullNameEn: 'GEORGE A. ROMERO', nameJa: 'ジョージ・A・ロメロ', surname: 'ROMERO' },
     'cronenberg': { fullNameEn: 'DAVID CRONENBERG', nameJa: 'デヴィッド・クローネンバーグ', surname: 'CRONENBERG' },
-    'lynch': { fullNameEn: 'DAVID LYNCH', nameJa: 'デヴィッド・リンチ', surname: 'LYNCH' },
+    'lynch': { fullNameEn: 'DAVID LYNCH', nameJa: 'デイヴィッド・リンチ', surname: 'LYNCH' },
     'hooper': { fullNameEn: 'TOBE HOOPER', nameJa: 'トビー・フーパー', surname: 'HOOPER' },
     'craven': { fullNameEn: 'WES CRAVEN', nameJa: 'ウェス・クレイヴン', surname: 'CRAVEN' },
     'stone': { fullNameEn: 'OLIVER STONE', nameJa: 'オリバー・ストーン', surname: 'STONE' },
@@ -920,7 +920,7 @@ const eventsData = [
     { year: 2022, title: "生成AIの爆発的普及", category: "TECH" },
     { year: 2023, title: "ハリウッド大規模スト", category: "INDUSTRY" },
     { year: 2024, title: "生成AIと映像制作をめぐる議論が拡大", category: "TECH" },
-    { year: 2025, title: "デヴィッド・リンチ監督が死去", category: "INDUSTRY" },
+    { year: 2025, title: "デイヴィッド・リンチ監督が死去", category: "INDUSTRY" },
     { year: 2025, title: "映画館体験と配信視聴の共存が定着", category: "INDUSTRY" },
     { year: 2026, title: "大作シリーズと作家映画の公開予定が集中", category: "FILM" }
 ];

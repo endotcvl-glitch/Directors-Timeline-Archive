@@ -1194,7 +1194,8 @@ header {
 }
 
 .note-container {
-    max-width: 880px;
+    width: min(100%, 1100px);
+    max-width: 1100px;
 }
 
 .note-article {
@@ -1211,6 +1212,15 @@ header {
     letter-spacing: 0.02em;
     line-height: 1.35;
     margin-bottom: 0.8rem;
+}
+
+.note-director-en {
+    color: var(--secondary-text);
+    font-family: var(--font-serif);
+    font-size: 0.48em;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
 }
 
 .note-heading {
@@ -1266,7 +1276,8 @@ header {
 }
 
 .notes-index-container {
-    max-width: 980px;
+    width: min(100%, 1100px);
+    max-width: 1100px;
 }
 
 .note-index-hero {
@@ -1275,13 +1286,16 @@ header {
 
 .note-card-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.9rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
     border-top: 1px solid var(--line-color);
 }
 
 .note-card {
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 1.5rem;
+    align-items: end;
     padding: 1.3rem 0;
     border-bottom: 1px solid var(--line-color);
     color: inherit;
@@ -1294,14 +1308,25 @@ header {
     transform: translateY(-2px);
 }
 
-.note-card-director {
+.note-card-director-ja {
     color: var(--text-color);
     font-family: var(--font-sans);
-    font-size: 1.08rem;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     line-height: 1.5;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.6rem;
+}
+
+.note-card-director-en {
+    color: var(--secondary-text);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    margin-bottom: 1.05rem;
+    text-transform: uppercase;
 }
 
 .note-card-heading {
@@ -1310,24 +1335,41 @@ header {
     font-weight: 700;
     letter-spacing: 0.08em;
     line-height: 1.6;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.45rem;
 }
 
-.note-card-film {
+.note-card-film-ja {
     color: var(--text-color);
-    font-size: 0.92rem;
-    letter-spacing: 0.04em;
-    line-height: 1.6;
-    margin-bottom: 0.9rem;
+    font-family: var(--font-sans);
+    font-size: clamp(1.12rem, 1.8vw, 1.38rem);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+}
+
+.note-card-film-meta {
+    color: var(--secondary-text);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .note-card-link {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: end;
     color: var(--text-color);
     font-family: var(--font-sans);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     line-height: 1.5;
+    white-space: nowrap;
 }
 
 .note-featured-film {

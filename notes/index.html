@@ -28,7 +28,7 @@
     <meta name="twitter:title" content="Editor's Notes｜Directors' Timeline Archive">
     <meta name="twitter:description" content="映画監督の作品年表を眺めながら、制作者が「入口としておすすめしたい」と感じた一本を監督ごとに紹介するEditor's Notesです。">
     <meta name="twitter:image" content="https://directors-timeline-archive.com/assets/ogp.png">
-    <link rel="stylesheet" href="../style.css?v=editor-notes-directors-20260625">
+    <link rel="stylesheet" href="../style.css?v=editor-notes-ja-title-balance-20260626">
 </head>
 
 <body>
@@ -50,10 +50,9 @@
         </section>
 
         <section class="note-card-list" id="notes-list" aria-label="Editor's Notes list">
-            <a href="christopher-nolan.html" class="note-card">
-                <p class="note-card-director">Christopher Nolan</p>
-                <p class="note-card-heading">この監督のこの一本</p>
-                <p class="note-card-film">『Insomnia』</p>
+            <a href="david-lynch.html" class="note-card">
+                <p class="note-card-director-ja">デイヴィッド・リンチ</p>
+                <p class="note-card-film-ja">『イレイザーヘッド』</p>
                 <span class="note-card-link">続きを読む →</span>
             </a>
         </section>
@@ -61,7 +60,7 @@
         <p class="note-back-link"><a href="../index.html">Back to Home</a></p>
     </main>
 
-    <script src="../editor-notes.js?v=editor-notes-directors-20260625"></script>
+    <script src="../editor-notes.js?v=editor-notes-lynch-20260626"></script>
     <script>
     function renderNotesIndex() {
         const container = document.getElementById('notes-list');
@@ -78,9 +77,8 @@
             link.className = 'note-card';
             link.href = `${note.slug}.html`;
             link.innerHTML = `
-                <p class="note-card-director">${note.director}</p>
-                <p class="note-card-heading">${note.heading}</p>
-                <p class="note-card-film">『${note.featuredFilm.title}』</p>
+                <p class="note-card-director-ja">${note.directorJa}</p>
+                <p class="note-card-film-ja">『${note.featuredFilm.titleJa}』</p>
                 <span class="note-card-link">続きを読む →</span>
             `;
             container.appendChild(link);

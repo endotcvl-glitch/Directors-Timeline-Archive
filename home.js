@@ -10,7 +10,7 @@ const directors = [
     { category: '1970 -', items: [
         { id: 'lucas', surname: 'LUCAS', nameJa: 'ジョージ・ルーカス', nameEn: 'GEORGE LUCAS', keywords: 'スペースオペラ / デジタル革命 / 冒険の神話' },
         { id: 'spielberg', surname: 'SPIELBERG', nameJa: 'スティーヴン・スピルバーグ', nameEn: 'STEVEN SPIELBERG', keywords: '驚異の物語 / 圧倒的映画術 / ヒューマニズム' },
-        { id: 'lynch', surname: 'LYNCH', nameJa: 'デヴィッド・リンチ', nameEn: 'DAVID LYNCH', keywords: '悪夢と不条理とユーモア / サウンドデザイン / 超現実主義' },
+        { id: 'lynch', surname: 'LYNCH', nameJa: 'デイヴィッド・リンチ', nameEn: 'DAVID LYNCH', keywords: '悪夢と不条理とユーモア / サウンドデザイン / 超現実主義' },
         { id: 'hooper', surname: 'HOOPER', nameJa: 'トビー・フーパー', nameEn: 'TOBE HOOPER', keywords: '低予算ホラー / アメリカの悪夢 / ざらついた恐怖' },
         { id: 'craven', surname: 'CRAVEN', nameJa: 'ウェス・クレイヴン', nameEn: 'WES CRAVEN', keywords: '夢と現実の恐怖 / メタホラー / スラッシャー刷新' },
         { id: 'stone', surname: 'STONE', nameJa: 'オリバー・ストーン', nameEn: 'OLIVER STONE', keywords: 'アメリカ政治 / 戦争の記憶 / 強烈な社会批評' },
