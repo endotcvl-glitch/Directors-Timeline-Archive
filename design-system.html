@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-851X5CREQM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-851X5CREQM');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Design System｜Directors' Timeline Archive</title>
+    <meta name="description" content="Directors' Timeline Archive のカラー、タイポグラフィ、余白、コンポーネントを確認するためのデザインシステムページです。">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="stylesheet" href="style.css?v=editor-notes-ja-title-balance-20260626">
+    <style>
+        .design-system-container {
+            width: min(100%, 1100px);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 150px clamp(1.25rem, 5vw, 4rem) 110px;
+        }
+
+        .ds-hero {
+            border-top: 2px solid #555555;
+            padding: 1.6rem 0 3rem;
+        }
+
+        .ds-hero h1 {
+            font-family: var(--font-sans);
+            font-size: clamp(1.65rem, 4vw, 2.35rem);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
+        .ds-hero p {
+            max-width: 720px;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            line-height: 1.8;
+        }
+
+        .ds-section {
+            border-top: 1px solid var(--line-color);
+            padding: 2rem 0 3.25rem;
+        }
+
+        .ds-section-header {
+            display: grid;
+            grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+            gap: 2rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .ds-section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            line-height: 1.4;
+        }
+
+        .ds-section-header p {
+            color: var(--secondary-text);
+            font-size: 0.86rem;
+            letter-spacing: 0.04em;
+            line-height: 1.8;
+        }
+
+        .ds-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .ds-swatch {
+            border-top: 1px solid var(--line-color);
+            padding-top: 0.8rem;
+        }
+
+        .ds-color {
+            height: 88px;
+            margin-bottom: 0.85rem;
+            border: 1px solid var(--line-color);
+            background: var(--swatch);
+        }
+
+        .ds-swatch h3,
+        .ds-type-sample h3,
+        .ds-width-sample h3,
+        .ds-component-sample h3 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            line-height: 1.6;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+        }
+
+        .ds-swatch p,
+        .ds-width-sample p,
+        .ds-component-sample p {
+            color: var(--secondary-text);
+            font-size: 0.78rem;
+            letter-spacing: 0.05em;
+            line-height: 1.7;
+        }
+
+        .ds-type-list {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .ds-type-sample {
+            display: grid;
+            grid-template-columns: minmax(0, 0.35fr) minmax(0, 1fr);
+            gap: 1rem;
+            align-items: baseline;
+            border-top: 1px solid var(--line-color);
+            padding-top: 1rem;
+        }
+
+        .ds-type-content {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .ds-type-site-title {
+            font-family: var(--font-title);
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: var(--title-letter-spacing);
+            line-height: 1.4;
+        }
+
+        .ds-type-page-title {
+            font-size: clamp(1.65rem, 4vw, 2.35rem);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.25;
+        }
+
+        .ds-type-section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            line-height: 1.4;
+        }
+
+        .ds-type-body {
+            max-width: 760px;
+            font-size: 0.98rem;
+            letter-spacing: 0.02em;
+            line-height: 2.05;
+        }
+
+        .ds-type-meta {
+            color: var(--secondary-text);
+            font-size: 0.82rem;
+            letter-spacing: 0.06em;
+            line-height: 1.75;
+        }
+
+        .ds-type-specs {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.45rem 1rem;
+            color: var(--secondary-text);
+            font-size: 0.74rem;
+            letter-spacing: 0.04em;
+            line-height: 1.6;
+        }
+
+        .ds-type-specs div {
+            border-top: 1px solid var(--line-color);
+            padding-top: 0.45rem;
+        }
+
+        .ds-type-specs dt {
+            color: var(--text-color);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 1.5;
+            margin-bottom: 0.1rem;
+            text-transform: uppercase;
+        }
+
+        .ds-type-specs dd {
+            margin: 0;
+        }
+
+        .ds-widths {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .ds-width-bar {
+            height: 42px;
+            border: 1px solid var(--line-color);
+            background: rgba(26, 26, 26, 0.05);
+        }
+
+        .ds-width-1100 {
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .ds-width-760 {
+            width: min(100%, 760px);
+        }
+
+        .ds-width-mobile {
+            width: min(100%, 360px);
+        }
+
+        .ds-spacing-row {
+            display: grid;
+            grid-template-columns: 90px minmax(0, 1fr);
+            gap: 1rem;
+            align-items: center;
+            border-top: 1px solid var(--line-color);
+            padding: 1rem 0;
+        }
+
+        .ds-spacing-unit {
+            height: 24px;
+            background: var(--text-color);
+            opacity: 0.14;
+        }
+
+        .ds-components {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .ds-component-sample {
+            border-top: 1px solid var(--line-color);
+            padding-top: 1rem;
+        }
+
+        .ds-page-hero-sample {
+            border-top: 2px solid #555555;
+            padding: 1.2rem 0 1.8rem;
+        }
+
+        .ds-page-hero-sample h3 {
+            font-size: 1.6rem;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.7rem;
+            text-transform: none;
+        }
+
+        .ds-note-card-sample {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            column-gap: 1.5rem;
+            align-items: end;
+            border-top: 1px solid var(--line-color);
+            border-bottom: 1px solid var(--line-color);
+            padding: 1.3rem 0;
+        }
+
+        .ds-note-card-sample .director {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            line-height: 1.5;
+            margin-bottom: 0.6rem;
+        }
+
+        .ds-note-card-sample .film {
+            font-size: clamp(1.12rem, 1.8vw, 1.38rem);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            line-height: 1.35;
+        }
+
+        .ds-note-card-sample .link {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            align-self: end;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            white-space: nowrap;
+        }
+
+        .ds-principles {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .ds-principle {
+            border-top: 1px solid var(--line-color);
+            padding-top: 1rem;
+        }
+
+        .ds-principle strong {
+            display: block;
+            margin-bottom: 0.35rem;
+            font-size: 0.88rem;
+            letter-spacing: 0.04em;
+        }
+
+        .ds-principle span {
+            color: var(--secondary-text);
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
+            line-height: 1.75;
+        }
+
+        @media (max-width: 820px) {
+            .design-system-container {
+                padding: 110px 1rem 80px;
+            }
+
+            .ds-section-header,
+            .ds-type-sample,
+            .ds-components {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .ds-type-specs {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .ds-grid,
+            .ds-principles {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 520px) {
+            .ds-grid,
+            .ds-principles,
+            .ds-type-specs {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .ds-note-card-sample {
+                grid-template-columns: minmax(0, 1fr);
+                row-gap: 1rem;
+            }
+
+            .ds-note-card-sample .link {
+                grid-column: 1;
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="timeline-header">
+        <a href="index.html" class="site-title site-title-link">DIRECTORS' TIMELINE ARCHIVE</a>
+        <nav class="header-nav" aria-label="Primary navigation">
+            <a href="index.html">HOME</a>
+            <a href="directors.html">監督から探す</a>
+            <a href="years.html">年代から探す</a>
+            <a href="index.html#comparison-themes">テーマで比較</a>
+        </nav>
+    </header>
+
+    <main class="design-system-container">
+        <section class="ds-hero">
+            <p class="info-kicker">DESIGN SYSTEM</p>
+            <h1>Directors' Timeline Archive</h1>
+            <p>カラー、タイポグラフィ、余白、コンテンツ幅、コンポーネントの見え方を確認するためのデザインシステムページです。</p>
+        </section>
+
+        <section class="ds-section">
+            <div class="ds-section-header">
+                <h2>Principles</h2>
+                <p>このサイトは、映画監督の作品年表と時代背景を静かに眺めるためのアーカイブです。装飾ではなく、情報の整理そのものをデザインの中心に置きます。</p>
+            </div>
+            <div class="ds-principles">
+                <div class="ds-principle">
+                    <strong>Minimal</strong>
+                    <span>余白、罫線、文字の強弱で構成する。</span>
+                </div>
+                <div class="ds-principle">
+                    <strong>Typographic</strong>
+                    <span>画像装飾よりも、文字の階層で情報を読ませる。</span>
+                </div>
+                <div class="ds-principle">
+                    <strong>Archive</strong>
+                    <span>レビューサイトではなく、年表アーカイブとして振る舞う。</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="ds-section">
+            <div class="ds-section-header">
+                <h2>Color</h2>
+                <p>`style.css` のCSS変数を基準にしたカラーパレットです。色数を増やさず、背景、文字、補助情報、罫線で整理します。</p>
+            </div>
+            <div class="ds-grid">
+                <div class="ds-swatch">
+                    <div class="ds-color" style="--swatch: var(--bg-color);"></div>
+                    <h3>Background</h3>
+                    <p>#f0f0f0<br>--bg-color</p>
+                </div>
+                <div class="ds-swatch">
+                    <div class="ds-color" style="--swatch: var(--text-color);"></div>
+                    <h3>Text</h3>
+                    <p>#1a1a1a<br>--text-color</p>
+                </div>
+                <div class="ds-swatch">
+                    <div class="ds-color" style="--swatch: var(--secondary-text);"></div>
+                    <h3>Secondary</h3>
+                    <p>#666666<br>--secondary-text</p>
+                </div>
+                <div class="ds-swatch">
+                    <div class="ds-color" style="--swatch: var(--line-color);"></div>
+                    <h3>Line</h3>
+                    <p>#d8d8d8<br>--line-color</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ds-section">
+            <div class="ds-section-header">
+                <h2>Typography</h2>
+                <p>通常UIと日本語本文はゴシック体を基本にします。セリフ体は限定的に使い、一覧カードなどの主役にはしません。</p>
+            </div>
+            <div class="ds-type-list">
+                <div class="ds-type-sample">
+                    <h3>Site Title</h3>
+                    <div class="ds-type-content">
+                        <p class="ds-type-site-title">DIRECTORS' TIMELINE ARCHIVE</p>
+                        <dl class="ds-type-specs" aria-label="Site Title typography specs">
+                            <div>
+                                <dt>Font</dt>
+                                <dd>Karla / Inter / Noto Sans JP</dd>
+                            </div>
+                            <div>
+                                <dt>Size</dt>
+                                <dd>1.1rem</dd>
+                            </div>
+                            <div>
+                                <dt>Weight</dt>
+                                <dd>700</dd>
+                            </div>
+                            <div>
+                                <dt>Line Height</dt>
+                                <dd>1.4</dd>
+                            </div>
+                            <div>
+                                <dt>Spacing</dt>
+                                <dd>0.12em</dd>
+                            </div>
+                            <div>
+                                <dt>Case</dt>
+                                <dd>Uppercase</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="ds-type-sample">
+                    <h3>Page Title</h3>
+                    <div class="ds-type-content">
+                        <p class="ds-type-page-title">Editor's Notes</p>
+                        <dl class="ds-type-specs" aria-label="Page Title typography specs">
+                            <div>
+                                <dt>Font</dt>
+                                <dd>Inter / Noto Sans JP</dd>
+                            </div>
+                            <div>
+                                <dt>Size</dt>
+                                <dd>clamp(1.65rem, 4vw, 2.35rem)</dd>
+                            </div>
+                            <div>
+                                <dt>Weight</dt>
+                                <dd>700</dd>
+                            </div>
+                            <div>
+                                <dt>Line Height</dt>
+                                <dd>1.25</dd>
+                            </div>
+                            <div>
+                                <dt>Spacing</dt>
+                                <dd>0.02em</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="ds-type-sample">
+                    <h3>Section</h3>
+                    <div class="ds-type-content">
+                        <p class="ds-type-section-title">年代から映画を見る</p>
+                        <dl class="ds-type-specs" aria-label="Section typography specs">
+                            <div>
+                                <dt>Font</dt>
+                                <dd>Inter / Noto Sans JP</dd>
+                            </div>
+                            <div>
+                                <dt>Size</dt>
+                                <dd>1.25rem</dd>
+                            </div>
+                            <div>
+                                <dt>Weight</dt>
+                                <dd>700</dd>
+                            </div>
+                            <div>
+                                <dt>Line Height</dt>
+                                <dd>1.4</dd>
+                            </div>
+                            <div>
+                                <dt>Spacing</dt>
+                                <dd>0.04em</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="ds-type-sample">
+                    <h3>Body</h3>
+                    <div class="ds-type-content">
+                        <p class="ds-type-body">映画監督の作品を年表で比較し、作品の流れ、公開時期、時代背景を同じ時間軸で眺めるための本文スタイルです。</p>
+                        <dl class="ds-type-specs" aria-label="Body typography specs">
+                            <div>
+                                <dt>Font</dt>
+                                <dd>Inter / Noto Sans JP</dd>
+                            </div>
+                            <div>
+                                <dt>Size</dt>
+                                <dd>0.98rem</dd>
+                            </div>
+                            <div>
+                                <dt>Weight</dt>
+                                <dd>400</dd>
+                            </div>
+                            <div>
+                                <dt>Line Height</dt>
+                                <dd>2.05</dd>
+                            </div>
+                            <div>
+                                <dt>Spacing</dt>
+                                <dd>0.02em</dd>
+                            </div>
+                            <div>
+                                <dt>Max Width</dt>
+                                <dd>760px</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="ds-type-sample">
+                    <h3>Meta</h3>
+                    <div class="ds-type-content">
+                        <p class="ds-type-meta">補助情報、説明文、キャプション、メタ情報に使う控えめなテキスト。</p>
+                        <dl class="ds-type-specs" aria-label="Meta typography specs">
+                            <div>
+                                <dt>Font</dt>
+                                <dd>Inter / Noto Sans JP</dd>
+                            </div>
+                            <div>
+                                <dt>Size</dt>
+                                <dd>0.82rem</dd>
+                            </div>
+                            <div>
+                                <dt>Weight</dt>
+                                <dd>400</dd>
+                            </div>
+                            <div>
+                                <dt>Line Height</dt>
+                                <dd>1.75</dd>
+                            </div>
+                            <div>
+                                <dt>Spacing</dt>
+                                <dd>0.06em</dd>
+                            </div>
+                            <div>
+                                <dt>Color</dt>
+                                <dd>--secondary-text</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ds-section">
+            <div class="ds-section-header">
+                <h2>Layout Width</h2>
+                <p>PC表示では主要な一覧・情報ページの外側幅を1100pxに揃えます。長文本文は読みやすさを優先して760px程度に絞ります。</p>
+            </div>
+            <div class="ds-widths">
+                <div class="ds-width-sample">
+                    <h3>Outer Content / 1100px</h3>
+                    <div class="ds-width-bar ds-width-1100"></div>
+                    <p>years.html、notes/index.html、notes/*.html の外側コンテナ。</p>
+                </div>
+                <div class="ds-width-sample">
+                    <h3>Reading Width / 760px</h3>
+                    <div class="ds-width-bar ds-width-760"></div>
+                    <p>Editor's Notes の本文など、長文を読むエリア。</p>
+                </div>
+                <div class="ds-width-sample">
+                    <h3>Mobile Reference / 1rem Padding</h3>
+                    <div class="ds-width-bar ds-width-mobile"></div>
+                    <p>スマホでは左右余白を1rem程度にして、無理にPC幅を維持しない。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ds-section">
+            <div class="ds-section-header">
+                <h2>Spacing & Lines</h2>
+                <p>カードや囲みを増やすより、上下余白と罫線で区切ります。情報のまとまりを静かに示すための要素です。</p>
+            </div>
+            <div class="ds-spacing-row">
+                <h3>0.5rem</h3>
+                <div class="ds-spacing-unit" style="width: 0.5rem;"></div>
+            </div>
+            <div class="ds-spacing-row">
+                <h3>1rem</h3>
+                <div class="ds-spacing-unit" style="width: 1rem;"></div>
+            </div>
+            <div class="ds-spacing-row">
+                <h3>2rem</h3>
+                <div class="ds-spacing-unit" style="width: 2rem;"></div>
+            </div>
+            <div class="ds-spacing-row">
+                <h3>4rem</h3>
+                <div class="ds-spacing-unit" style="width: 4rem;"></div>
+            </div>
+        </section>
+
+        <section class="ds-section">
+            <div class="ds-section-header">
+                <h2>Components</h2>
+                <p>主要コンポーネントのサンプルです。実装時は過度な装飾を避け、クリック領域と見た目の幅を一致させます。</p>
+            </div>
+            <div class="ds-components">
+                <div class="ds-component-sample">
+                    <h3>Page Hero</h3>
+                    <div class="ds-page-hero-sample">
+                        <p class="info-kicker">EDITOR'S NOTES</p>
+                        <h3>Editor's Notes</h3>
+                        <p>この監督のこの一本</p>
+                    </div>
+                </div>
+                <div class="ds-component-sample">
+                    <h3>Editor's Notes Card</h3>
+                    <div class="ds-note-card-sample">
+                        <div>
+                            <p class="director">デイヴィッド・リンチ</p>
+                            <p class="film">『イレイザーヘッド』</p>
+                        </div>
+                        <span class="link">続きを読む →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p class="note-back-link"><a href="index.html">Back to Home</a></p>
+    </main>
+</body>
+
+</html>
