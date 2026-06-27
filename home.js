@@ -207,7 +207,7 @@ function renderComparisonThemes() {
 function renderEditorNotePreview() {
     const container = document.getElementById('editor-note-teaser');
     const notes = window.editorNotes || [];
-    const note = notes[0];
+    const note = notes[notes.length - 1];
 
     if (!container || !note) {
         return;
@@ -217,11 +217,12 @@ function renderEditorNotePreview() {
 
     const heading = document.createElement('h2');
     heading.id = 'editor-note-title';
+    heading.className = 'editor-note-subtitle';
     heading.textContent = note.heading;
 
     const title = document.createElement('p');
     title.className = 'editor-note-film-title';
-    title.textContent = `${note.directorJa}『${note.featuredFilm.titleJa}』`;
+    title.textContent = `${note.directorJa} ${formatEditorNoteFilmTitles(note)}`;
 
     const excerpt = document.createElement('p');
     excerpt.className = 'editor-note-excerpt';
@@ -232,10 +233,27 @@ function renderEditorNotePreview() {
     link.href = `notes/${encodeURIComponent(note.slug)}.html`;
     link.textContent = '続きを読む →';
 
+    const links = document.createElement('div');
+    links.className = 'editor-note-links';
+
+    const indexLink = document.createElement('a');
+    indexLink.className = 'editor-note-link';
+    indexLink.href = 'notes/index.html';
+    indexLink.textContent = "Editor's Notesをもっと見る";
+
+    links.appendChild(link);
+    links.appendChild(indexLink);
+
     container.appendChild(heading);
     container.appendChild(title);
     container.appendChild(excerpt);
-    container.appendChild(link);
+    container.appendChild(links);
+}
+
+function formatEditorNoteFilmTitles(note) {
+    const films = note.featuredFilms || (note.featuredFilm ? [note.featuredFilm] : []);
+
+    return films.map(film => film.titleJa).join('／');
 }
 
 function renderList() {
