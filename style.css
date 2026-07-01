@@ -178,6 +178,20 @@ header {
     color: var(--link-hover-color);
 }
 
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+}
+
+.x-icon {
+    display: inline-block;
+    width: 0.82rem;
+    height: 0.82rem;
+    fill: currentColor;
+    flex: 0 0 auto;
+}
+
 .site-footer p {
     margin: 0;
 }
@@ -1279,10 +1293,17 @@ header {
 }
 
 .info-contact-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    align-items: center;
     margin-top: 1.8rem;
 }
 
 .info-contact-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
     color: var(--link-color);
     font-size: 0.82rem;
     font-weight: 700;

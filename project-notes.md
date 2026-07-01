@@ -166,6 +166,12 @@ years.html?year=2008
 https://docs.google.com/forms/d/e/1FAIpQLSdN7yUjTtm66DHwKF5QB96z2W-cMja4MveVtbeCkA46DR5BCQ/viewform?usp=dialog
 ```
 
+Xアカウントへのリンクも設置している。
+
+```text
+https://x.com/DTAarchive
+```
+
 ### `notes/index.html`
 
 Editor's Notes 一覧ページ。
@@ -487,6 +493,7 @@ Footer には以下を表示。
 - `EXPLORE BY YEAR`
 - `ABOUT / NEWS`
 - `お問合せ`
+- `X @DTAarchive`
 
 ### キャッシュ対策
 
