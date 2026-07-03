@@ -44,19 +44,18 @@
     ]
   },
   {
-    "id": "seven-samurai-japan-release",
-    "date": "04-26",
-    "year": 1954,
+    "id": "star-wars-us-release",
+    "date": "05-25",
+    "year": 1977,
     "type": "movie_release",
-    "title": "『七人の侍』日本公開",
-    "movie": "Seven Samurai",
-    "director": "Akira Kurosawa",
-    "description": "黒澤明監督による時代劇映画。集団劇やアクション演出の面でも、後の映画に大きな影響を与えた一本。",
-    "country": "JP",
-    "source": "https://en.wikipedia.org/wiki/Seven_Samurai",
+    "title": "『スター・ウォーズ』全米公開",
+    "movie": "Star Wars",
+    "director": "George Lucas",
+    "description": "ジョージ・ルーカス監督によるスペースオペラ。映画興行、視覚効果、シリーズ映画のあり方を大きく変えた作品。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Star_Wars_(film)",
     "links": []
   },
-  
   {
     "id": "jaws-us-release",
     "date": "06-20",
