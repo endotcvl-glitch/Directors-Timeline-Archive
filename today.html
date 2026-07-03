@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-851X5CREQM"></script>
     <script>
@@ -10,40 +11,41 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>映画監督タイムライン比較 | Directors Timeline Archive</title>
-    <meta name="description" content="選択した映画監督の作品を公開年順に表示。1人の歩みや2人の監督比較を、同時代の映画・社会の出来事と並べて確認できます。">
-    <link rel="canonical" href="https://directors-timeline-archive.com/timeline.html">
+    <title>Today in Film History | Directors Timeline Archive</title>
+    <meta name="description" content="今日の日付にまつわる映画史イベントを表示し、X投稿用テキストを生成できるページです。映画公開日、監督の誕生日、映画史の出来事を日付で整理します。">
+    <link rel="canonical" href="https://directors-timeline-archive.com/today.html">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Directors' Timeline Archive">
-    <meta property="og:title" content="映画監督タイムライン比較｜Directors' Timeline Archive">
-    <meta property="og:description" content="選択した映画監督の作品を公開年順に表示。1人の歩みや2人の監督比較を、同時代の映画・社会の出来事と並べて確認できます。">
-    <meta property="og:url" content="https://directors-timeline-archive.com/timeline.html">
+    <meta property="og:title" content="Today in Film History | Directors Timeline Archive">
+    <meta property="og:description" content="今日の日付にまつわる映画史イベントを表示し、X投稿用テキストを生成できるページです。映画公開日、監督の誕生日、映画史の出来事を日付で整理します。">
+    <meta property="og:url" content="https://directors-timeline-archive.com/today.html">
     <meta property="og:image" content="https://directors-timeline-archive.com/assets/ogp-20260703.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Directors' Timeline Archive">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="映画監督タイムライン比較｜Directors' Timeline Archive">
-    <meta name="twitter:description" content="選択した映画監督の作品を公開年順に表示。1人の歩みや2人の監督比較を、同時代の映画・社会の出来事と並べて確認できます。">
+    <meta name="twitter:title" content="Today in Film History | Directors Timeline Archive">
+    <meta name="twitter:description" content="今日の日付にまつわる映画史イベントを表示し、X投稿用テキストを生成できるページです。映画公開日、監督の誕生日、映画史の出来事を日付で整理します。">
     <meta name="twitter:image" content="https://directors-timeline-archive.com/assets/ogp-20260703.png">
     <link rel="stylesheet" href="style.css?v=today-20260703">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "作品タイムライン",
-        "url": "https://directors-timeline-archive.com/timeline.html",
+        "@type": "CollectionPage",
+        "name": "Today in Film History",
+        "url": "https://directors-timeline-archive.com/today.html",
         "isPartOf": {
             "@type": "WebSite",
             "name": "Directors' Timeline Archive",
             "url": "https://directors-timeline-archive.com/"
         },
-        "description": "映画監督の作品年表を同じ時間軸で表示し、作品公開時期や時代背景を比較できるページです。",
+        "description": "今日の日付にまつわる映画史イベントを表示するページです。",
         "inLanguage": "ja"
     }
     </script>
 </head>
+
 <body>
     <header class="timeline-header">
         <a href="index.html" class="site-title site-title-link">DIRECTORS' TIMELINE ARCHIVE</a>
@@ -51,37 +53,30 @@
             <a href="index.html">HOME</a>
             <a href="directors.html">監督から探す</a>
             <a href="years.html">年代から探す</a>
-            <a href="today.html">Today</a>
+            <a href="today.html" class="is-active">Today</a>
             <a href="index.html#comparison-themes">テーマで比較</a>
         </nav>
     </header>
 
-    <nav class="jump-nav">
-        <button data-jump-year="1970">70s</button>
-        <button data-jump-year="1980">80s</button>
-        <button data-jump-year="1990">90s</button>
-        <button data-jump-year="2000">00s</button>
-        <button data-jump-year="2010">10s</button>
-        <button data-jump-year="2020">20s</button>
-    </nav>
+    <main class="today-container">
+        <section class="page-hero today-hero">
+            <h1>Today in Film History</h1>
+            <p>今日は何の日</p>
+        </section>
 
-    <div class="director-labels">
-        <div class="label label-l">
-            <div class="label-surname">クリストファー・ノーラン</div>
-            <div class="label-ja">CHRISTOPHER NOLAN</div>
-        </div>
-        <div></div>
-        <div class="label label-r">
-            <div class="label-surname">ドゥニ・ヴィルヌーヴ</div>
-            <div class="label-ja">DENIS VILLENEUVE</div>
-        </div>
-    </div>
+        <section class="today-date-panel" aria-labelledby="today-date-heading">
+            <p class="today-date-label">TODAY</p>
+            <h2 id="today-date-heading"><span id="today-date">--月--日</span></h2>
+        </section>
 
-    <main class="timeline-container" id="timeline-container">
-        <!-- Unified timeline will be injected here -->
+        <section class="today-events-section" aria-live="polite">
+            <div id="today-events" class="today-events-list"></div>
+            <p id="today-empty" class="today-empty" hidden>本日の登録イベントはまだありません。</p>
+            <p id="today-error" class="today-empty" hidden>イベントデータを読み込めませんでした。</p>
+        </section>
     </main>
 
-    <footer class="site-footer timeline-footer">
+    <footer class="site-footer">
         <a href="index.html" class="footer-title">DIRECTORS' TIMELINE ARCHIVE</a>
         <nav class="footer-nav" aria-label="Footer navigation">
             <a href="directors.html">SELECT DIRECTORS</a>
@@ -99,6 +94,7 @@
         <p>&copy; 2026 Directors' Timeline Archive.</p>
     </footer>
 
-    <script src="main.js?v=data-horror-directors-20260625"></script>
+    <script src="today.js?v=today-20260703"></script>
 </body>
+
 </html>

@@ -1,0 +1,154 @@
+[
+  {
+    "id": "david-lynch-birthday",
+    "date": "01-20",
+    "year": 1946,
+    "type": "director_birthday",
+    "title": "デイヴィッド・リンチ誕生日",
+    "movie": "",
+    "director": "David Lynch",
+    "description": "不安、夢、現実と幻想が溶け合う独自の作風で、映画とテレビの表現に大きな足跡を残した映画監督。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/David_Lynch",
+    "links": [
+      {
+        "label": "デイヴィッド・リンチの年表を見る",
+        "url": "timeline.html?d1=lynch"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/david-lynch.html"
+      }
+    ]
+  },
+  {
+    "id": "david-lynch-deathday",
+    "date": "01-16",
+    "year": 2025,
+    "type": "director_deathday",
+    "title": "デイヴィッド・リンチ命日",
+    "movie": "",
+    "director": "David Lynch",
+    "description": "『イレイザーヘッド』『ブルーベルベット』『マルホランド・ドライブ』などで知られる映画監督。映像表現に強い個性を刻んだ。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/David_Lynch",
+    "links": [
+      {
+        "label": "デイヴィッド・リンチの年表を見る",
+        "url": "timeline.html?d1=lynch"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/david-lynch.html"
+      }
+    ]
+  },
+  {
+    "id": "seven-samurai-japan-release",
+    "date": "04-26",
+    "year": 1954,
+    "type": "movie_release",
+    "title": "『七人の侍』日本公開",
+    "movie": "Seven Samurai",
+    "director": "Akira Kurosawa",
+    "description": "黒澤明監督による時代劇映画。集団劇やアクション演出の面でも、後の映画に大きな影響を与えた一本。",
+    "country": "JP",
+    "source": "https://en.wikipedia.org/wiki/Seven_Samurai",
+    "links": []
+  },
+  
+  {
+    "id": "jaws-us-release",
+    "date": "06-20",
+    "year": 1975,
+    "type": "movie_release",
+    "title": "『ジョーズ』全米公開",
+    "movie": "Jaws",
+    "director": "Steven Spielberg",
+    "description": "スティーヴン・スピルバーグ監督によるサスペンス映画。現代的なサマー・ブロックバスターの原点として語られることが多い。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Jaws_(film)",
+    "links": [
+      {
+        "label": "スピルバーグの年表を見る",
+        "url": "timeline.html?d1=spielberg"
+      }
+    ]
+  },
+  {
+    "id": "inception-us-release",
+    "date": "07-16",
+    "year": 2010,
+    "type": "movie_release",
+    "title": "『インセプション』全米公開",
+    "movie": "Inception",
+    "director": "Christopher Nolan",
+    "description": "クリストファー・ノーラン監督の代表作のひとつ。大規模な娯楽映画の中で、記憶、夢、時間の構造を扱った重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Inception",
+    "links": [
+      {
+        "label": "ノーランの年表を見る",
+        "url": "timeline.html?d1=nolan"
+      }
+    ]
+  },
+  {
+    "id": "christopher-nolan-birthday",
+    "date": "07-30",
+    "year": 1970,
+    "type": "director_birthday",
+    "title": "クリストファー・ノーラン誕生日",
+    "movie": "",
+    "director": "Christopher Nolan",
+    "description": "時間構造、記憶、倫理、スケールの大きな映像設計で知られる映画監督。現代映画を語るうえで欠かせない存在。",
+    "country": "UK",
+    "source": "https://en.wikipedia.org/wiki/Christopher_Nolan",
+    "links": [
+      {
+        "label": "ノーランの年表を見る",
+        "url": "timeline.html?d1=nolan"
+      }
+    ]
+  },
+  {
+    "id": "wes-craven-birthday",
+    "date": "08-02",
+    "year": 1939,
+    "type": "director_birthday",
+    "title": "ウェス・クレイヴン誕生日",
+    "movie": "",
+    "director": "Wes Craven",
+    "description": "『エルム街の悪夢』『スクリーム』などで知られる映画監督。ホラー映画の表現と構造を何度も更新した存在。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Wes_Craven",
+    "links": [
+      {
+        "label": "ウェス・クレイヴンの年表を見る",
+        "url": "timeline.html?d1=craven"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/wes-craven.html"
+      }
+    ]
+  },
+  {
+    "id": "steven-spielberg-birthday",
+    "date": "12-18",
+    "year": 1946,
+    "type": "director_birthday",
+    "title": "スティーヴン・スピルバーグ誕生日",
+    "movie": "",
+    "director": "Steven Spielberg",
+    "description": "娯楽映画と映画産業の歴史を語るうえで欠かせない映画監督。現代的なブロックバスターの流れにも大きな影響を与えた。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Steven_Spielberg",
+    "links": [
+      {
+        "label": "スピルバーグの年表を見る",
+        "url": "timeline.html?d1=spielberg"
+      }
+    ]
+  }
+]

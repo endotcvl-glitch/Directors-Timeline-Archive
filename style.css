@@ -1227,6 +1227,190 @@ header {
     letter-spacing: 0.06em;
 }
 
+/* --- Today in Film History Page --- */
+
+.today-container {
+    width: min(100%, 1100px);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 130px clamp(1.25rem, 5vw, 4rem) 68px;
+}
+
+.today-hero {
+    margin-bottom: 0;
+}
+
+.today-date-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 0.35fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: baseline;
+    border-top: 1px solid var(--line-color);
+    padding: 1.25rem 0 1.5rem;
+}
+
+.today-date-label {
+    color: var(--secondary-text);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+}
+
+.today-date-panel h2 {
+    color: var(--text-color);
+    font-family: var(--font-serif);
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+}
+
+.today-events-list {
+    display: grid;
+    gap: 1.4rem;
+}
+
+.today-event-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: clamp(1.25rem, 4vw, 3rem);
+    border-top: 1px solid var(--line-color);
+    padding: 1.7rem 0;
+}
+
+.today-event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.7rem;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    color: var(--secondary-text);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+}
+
+.today-type-label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.55rem;
+    padding: 0.08rem 0.55rem;
+    border: 1px solid rgba(75, 101, 132, 0.32);
+    border-radius: 999px;
+    color: var(--button-color);
+}
+
+.today-event-card h2 {
+    max-width: 760px;
+    font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.45;
+    margin-bottom: 0.8rem;
+}
+
+.today-event-card p {
+    max-width: 760px;
+    color: var(--text-color);
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    line-height: 1.9;
+}
+
+.today-related-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem 1rem;
+    margin-top: 1rem;
+}
+
+.today-related-links a {
+    color: var(--link-color);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+.today-related-links a:hover {
+    color: var(--link-hover-color);
+}
+
+.today-post-box {
+    border-top: 1px solid var(--line-color);
+    padding-top: 0.9rem;
+}
+
+.today-post-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+
+.today-post-header h3 {
+    color: var(--secondary-text);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+}
+
+.copy-post-button {
+    border: 1px solid rgba(75, 101, 132, 0.36);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--button-color);
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    padding: 0.45rem 0.75rem;
+    cursor: pointer;
+}
+
+.copy-post-button:hover {
+    border-color: var(--accent-color);
+    color: var(--button-hover-color);
+}
+
+.today-post-box textarea {
+    width: 100%;
+    min-height: 11rem;
+    border: 1px solid var(--line-color);
+    background: rgba(255,255,255,0.34);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    line-height: 1.75;
+    padding: 0.9rem;
+    resize: vertical;
+}
+
+.copy-status,
+.today-empty {
+    color: var(--secondary-text);
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+}
+
+.copy-status {
+    margin-top: 0.5rem;
+}
+
+.today-empty {
+    border-top: 1px solid var(--line-color);
+    padding-top: 1.4rem;
+}
+
 /* --- Information Page --- */
 
 .info-container {
@@ -2398,6 +2582,10 @@ header {
         padding: 92px 1rem 60px;
     }
 
+    .today-container {
+        padding: 92px 1rem 60px;
+    }
+
     .page-hero {
         padding: 1.2rem 0 1.7rem;
     }
@@ -2494,6 +2682,42 @@ header {
     .year-film-item > span {
         display: inline-block;
         margin-top: 0.35rem;
+    }
+
+    .today-date-panel,
+    .today-event-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.9rem;
+    }
+
+    .today-date-panel {
+        padding: 1rem 0 1.35rem;
+    }
+
+    .today-date-panel h2 {
+        font-size: 2rem;
+    }
+
+    .today-event-card {
+        padding: 1.35rem 0;
+    }
+
+    .today-event-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .today-event-card p {
+        font-size: 0.82rem;
+        line-height: 1.8;
+    }
+
+    .today-post-header {
+        align-items: flex-start;
+    }
+
+    .today-post-box textarea {
+        min-height: 12rem;
+        font-size: 0.78rem;
     }
 
     .info-section {
