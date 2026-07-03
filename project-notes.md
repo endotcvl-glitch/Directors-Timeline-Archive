@@ -91,7 +91,7 @@ PC / スマホともに、以下の構造を維持する。
 ├── CNAME
 ├── assets/
 │   ├── logo.svg
-│   └── ogp.png
+│   └── ogp-20260703.png
 └── notes/
     ├── index.html
     ├── david-lynch.html
@@ -450,7 +450,7 @@ Sitemap: https://directors-timeline-archive.com/sitemap.xml
 ### OGP / favicon / GA4
 
 - 既存のOGPタグを不用意に削除しない。
-- `assets/ogp.png` をOGP画像として使う。
+- `assets/ogp-20260703.png` をOGP画像として使う。
 - favicon設定を削除しない。
 - GA4タグを削除しない。
 
