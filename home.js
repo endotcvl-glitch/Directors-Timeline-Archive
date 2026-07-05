@@ -28,6 +28,7 @@ const directors = [
         { id: 'tonyscott', surname: 'SCOTT', nameJa: 'トニー・スコット', nameEn: 'TONY SCOTT', keywords: '疾走感ある編集 / 男たちの緊張 / スタイリッシュアクション' },
         { id: 'cameron', surname: 'CAMERON', nameJa: 'ジェームズ・キャメロン', nameEn: 'JAMES CAMERON', keywords: '技術革新 / 巨大スケール / 海洋とSF' },
         { id: 'jackson', surname: 'JACKSON', nameJa: 'ピーター・ジャクソン', nameEn: 'PETER JACKSON', keywords: 'ファンタジー叙事詩 / 特殊効果 / ニュージーランド映画' },
+        { id: 'emmerich', surname: 'EMMERICH', nameJa: 'ローランド・エメリッヒ', nameEn: 'ROLAND EMMERICH', keywords: 'ディザスター映画 / 巨大スケール / 破壊のスペクタクル' },
         { id: 'coen', surname: 'COENS', nameJa: 'ジョエル＆イーサン・コーエン', nameEn: 'JOEL & ETHAN COEN', keywords: 'ブラックユーモア / 皮肉な運命 / 緻密な脚本' },
         { id: 'burton', surname: 'BURTON', nameJa: 'ティム・バートン', nameEn: 'TIM BURTON', keywords: 'ゴシック幻想 / 異形の愛 / ダークファンタジー' },
         { id: 'raimi', surname: 'RAIMI', nameJa: 'サム・ライミ', nameEn: 'SAM RAIMI', keywords: 'スピード感のある演出 / コミック的映像 / ホラーとユーモア' }
