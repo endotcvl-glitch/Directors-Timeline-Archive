@@ -32,6 +32,7 @@
     --button-hover-color: var(--accent-hover-color);
     --timeline-color: var(--accent-color);
     --timeline-tint: rgba(75, 101, 132, 0.06);
+    --global-nav-bg: #48434c;
     --secondary-text: #666666;
     --line-color: #d8d8d8;
     --card-bg: #ffffff;
@@ -47,6 +48,7 @@
 - `--link-color`: 本文内リンクや操作リンク。
 - `--button-color`: ボタン、選択状態、大きな導線。
 - `--timeline-color`: タイムラインの軸線や現在年の強調。
+- `--global-nav-bg`: 全ページ共通のグローバルナビ背景色。
 - `--secondary-text`: 補助情報、説明文、メタ情報。
 - `--line-color`: 区切り線、カード境界、静かなグルーピング。
 - `--card-bg`: カード背景が必要な場合に使う。ただしカード感を強くしすぎない。
@@ -147,15 +149,19 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 ### Header
 
 - サイト全体のナビゲーション。
-- 背景は濃いグレー、文字は白寄りの低コントラスト。
+- 背景は `--global-nav-bg`、文字は白寄りの低コントラスト。
+- ロゴは `assets/header_logo.svg` を使い、ブラウザ左側に配置する。
+- グローバルメニュー項目は `1100px` のコンテンツ幅内で左寄せにする。
 - 現在地は `is-active` で表現する。
 - モバイルでは横スクロールや折り返しを許容し、ナビが本文に重ならないようにする。
 
 関連クラス:
 
 - `.timeline-header`
+- `.header-shell`
 - `.site-title`
 - `.site-title-link`
+- `.site-title-logo`
 - `.header-nav`
 
 ### Footer
@@ -181,6 +187,15 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 関連クラス:
 
 - `.page-hero`
+
+### Home Hero
+
+トップページのヒーローは、`assets/logo_top.svg` のロゴとテキスト扱いの説明キャプションで構成する。
+
+- 背景は `--global-nav-bg` を使い、ナビと連続した色面として見せる。
+- ロゴ左の縦軸はタイムラインを示す装飾として使う。
+- 説明キャプションは画像化せず、HTML上のテキストとして保持する。
+- スマホでは縦軸を省略し、ロゴと説明文の読みやすさを優先する。
 
 ### Year Page
 
