@@ -24,14 +24,14 @@
 :root {
     --bg-color: #f0f0f0;
     --text-color: #1a1a1a;
-    --accent-color: #4B6584;
-    --accent-hover-color: #374F69;
+    --accent-color: #57545b;
+    --accent-hover-color: #48434c;
     --link-color: var(--accent-color);
     --link-hover-color: var(--accent-hover-color);
     --button-color: var(--accent-color);
     --button-hover-color: var(--accent-hover-color);
     --timeline-color: var(--accent-color);
-    --timeline-tint: rgba(75, 101, 132, 0.06);
+    --timeline-tint: rgba(87, 84, 91, 0.06);
     --global-nav-bg: #48434c;
     --secondary-text: #666666;
     --line-color: #d8d8d8;
@@ -43,11 +43,12 @@
 
 - `--bg-color`: ページ背景。サイト全体のライトグレー。
 - `--text-color`: 主要テキスト。見出し、本文。
-- `--accent-color`: 強い操作、選択状態、強調線など。現在はブルーグレー `#4B6584`。
-- `--accent-hover-color`: ホバー時に使う、少し濃いブルーグレー。
+- `--accent-color`: 強い操作、選択状態、強調線など。現在はグレイッシュな `#57545b`。
+- `--accent-hover-color`: ホバー時に使う、少し濃いグレイッシュカラー。
 - `--link-color`: 本文内リンクや操作リンク。
 - `--button-color`: ボタン、選択状態、大きな導線。
 - `--timeline-color`: タイムラインの軸線や現在年の強調。
+- `timeline.html` の中央年代軸の縦ラインは、ロゴ色に合わせて `#a08257` を使う。
 - `--global-nav-bg`: 全ページ共通のグローバルナビ背景色。
 - `--secondary-text`: 補助情報、説明文、メタ情報。
 - `--line-color`: 区切り線、カード境界、静かなグルーピング。
@@ -168,6 +169,7 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 
 - 主要導線を静かに再提示する。
 - サイト全体の終端として、強い装飾は使わない。
+- ロゴは `assets/footer-logo.svg` を使う。
 
 関連クラス:
 
