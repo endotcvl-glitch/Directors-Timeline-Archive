@@ -42,6 +42,10 @@ body {
     min-width: 0;
 }
 
+body.index-page {
+    background-color: var(--global-nav-bg);
+}
+
 a {
     color: var(--link-color);
     transition: color 0.25s ease, opacity 0.25s ease;
@@ -519,6 +523,60 @@ header {
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
+}
+
+.index-page .section-heading h2,
+.index-page .editor-note-section-title,
+.index-page .editor-note-film-title {
+    color: #ffffff;
+}
+
+.index-page .section-heading p,
+.index-page .editor-note-subtitle,
+.index-page .editor-note-excerpt {
+    color: rgba(255,255,255,0.72);
+}
+
+.index-page .editor-note-preview {
+    border-top-color: rgba(255,255,255,0.28);
+}
+
+.index-page .explore-path-card {
+    border-color: rgba(75, 101, 132, 0.34);
+    background: #f5f5f5;
+}
+
+.index-page .explore-path-card:hover {
+    background: #f8f8f8;
+}
+
+.index-page .theme-item {
+    background: #f4f4f4;
+}
+
+.index-page .theme-item:hover {
+    background: #f8f8f8;
+}
+
+.index-page .theme-pair span {
+    background: rgba(255,255,255,0.72);
+}
+
+.index-page .site-footer,
+.index-page .site-footer p {
+    color: rgba(255,255,255,0.68);
+}
+
+.index-page .footer-title,
+.index-page .footer-nav a,
+.index-page .editor-note-link {
+    color: rgba(255,255,255,0.84);
+}
+
+.index-page .footer-title:hover,
+.index-page .footer-nav a:hover,
+.index-page .editor-note-link:hover {
+    color: #ffffff;
 }
 
 .home-container.directors-page-container {
