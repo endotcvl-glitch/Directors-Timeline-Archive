@@ -59,10 +59,11 @@
         }
 
         .ds-section h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
+            color: #a08257;
+            font-size: 1.5rem;
+            font-weight: 600;
             letter-spacing: 0.04em;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .ds-section-header p {
@@ -146,10 +147,11 @@
         }
 
         .ds-type-section-title {
-            font-size: 1.25rem;
-            font-weight: 700;
+            color: #a08257;
+            font-size: 1.5rem;
+            font-weight: 600;
             letter-spacing: 0.04em;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .ds-type-body {
@@ -255,6 +257,85 @@
             letter-spacing: 0.02em;
             margin-bottom: 0.7rem;
             text-transform: none;
+        }
+
+        .ds-section-heading-sample h3 {
+            color: #a08257;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            line-height: 1.5;
+            margin-bottom: 0.65rem;
+            text-align: center;
+            text-transform: none;
+        }
+
+        .ds-section-heading-sample p {
+            color: var(--secondary-text);
+            text-align: center;
+        }
+
+        .ds-home-card-sample {
+            display: grid;
+            gap: 0.9rem;
+        }
+
+        .ds-home-card-sample a {
+            display: block;
+            min-height: 6.5rem;
+            padding: 1.25rem 1.35rem;
+            border: 1px solid rgba(87, 84, 91, 0.34);
+            border-radius: 8px;
+            background: #dddddd;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .ds-home-card-sample strong {
+            display: block;
+            color: var(--text-color);
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            line-height: 1.5;
+            margin-bottom: 0.45rem;
+        }
+
+        .ds-home-card-sample span {
+            color: var(--secondary-text);
+            font-size: 0.76rem;
+            letter-spacing: 0.04em;
+            line-height: 1.7;
+        }
+
+        .ds-timeline-axis-sample {
+            position: relative;
+            min-height: 11rem;
+            padding: 1rem 0;
+            display: grid;
+            place-items: center;
+        }
+
+        .ds-timeline-axis-sample::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background: #a08257;
+            transform: translateX(-50%);
+        }
+
+        .ds-timeline-year {
+            position: relative;
+            z-index: 1;
+            background: var(--bg-color);
+            color: var(--accent-color);
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 0.35rem 0.9rem;
         }
 
         .ds-home-hero-sample {
@@ -506,6 +587,11 @@
                     <h3>Global Nav</h3>
                     <p>#48434c<br>--global-nav-bg</p>
                 </div>
+                <div class="ds-swatch">
+                    <div class="ds-color" style="--swatch: #a08257;"></div>
+                    <h3>Logo Gold</h3>
+                    <p>#a08257<br>heading / axis</p>
+                </div>
             </div>
         </section>
 
@@ -578,7 +664,7 @@
                 <div class="ds-type-sample">
                     <h3>Section</h3>
                     <div class="ds-type-content">
-                        <p class="ds-type-section-title">年代から映画を見る</p>
+                        <p class="ds-type-section-title">テーマから比較してみる</p>
                         <dl class="ds-type-specs" aria-label="Section typography specs">
                             <div>
                                 <dt>Font</dt>
@@ -586,19 +672,23 @@
                             </div>
                             <div>
                                 <dt>Size</dt>
-                                <dd>1.25rem</dd>
+                                <dd>1.5rem</dd>
                             </div>
                             <div>
                                 <dt>Weight</dt>
-                                <dd>700</dd>
+                                <dd>600</dd>
                             </div>
                             <div>
                                 <dt>Line Height</dt>
-                                <dd>1.4</dd>
+                                <dd>1.5</dd>
                             </div>
                             <div>
                                 <dt>Spacing</dt>
                                 <dd>0.04em</dd>
+                            </div>
+                            <div>
+                                <dt>Color</dt>
+                                <dd>#a08257</dd>
                             </div>
                         </dl>
                     </div>
@@ -743,6 +833,32 @@
                             <img src="assets/logo_top.svg" alt="Directors' Timeline Archive">
                             <p>映画監督のキャリアを、一本のタイムラインで。</p>
                         </div>
+                    </div>
+                </div>
+                <div class="ds-component-sample">
+                    <h3>Section Heading</h3>
+                    <div class="ds-section-heading-sample">
+                        <h3>この監督のこの一本</h3>
+                        <p>indexページのセクション見出しとEditor's Notesの小見出し。</p>
+                    </div>
+                </div>
+                <div class="ds-component-sample">
+                    <h3>Index Cards</h3>
+                    <div class="ds-home-card-sample">
+                        <a href="directors.html">
+                            <strong>映画監督から選ぶ</strong>
+                            <span>映画監督を1人または2人選んで、作品年表を見る。</span>
+                        </a>
+                        <a href="index.html#comparison-themes">
+                            <strong>現代SFのかたち</strong>
+                            <span>テーマから2人の映画監督の作品年表を比較する。</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="ds-component-sample">
+                    <h3>Timeline Axis</h3>
+                    <div class="ds-timeline-axis-sample">
+                        <span class="ds-timeline-year">1996</span>
                     </div>
                 </div>
                 <div class="ds-component-sample">
