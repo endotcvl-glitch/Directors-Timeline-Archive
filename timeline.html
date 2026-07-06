@@ -27,7 +27,7 @@
     <meta name="twitter:title" content="映画監督タイムライン比較 | Directors Timeline Archive">
     <meta name="twitter:description" content="選択した映画監督の作品を公開年順に表示。1人の歩みや2人の監督比較を、同時代の映画・社会の出来事と並べて確認できます。">
     <meta name="twitter:image" content="https://directors-timeline-archive.com/assets/ogp-20260703.png">
-    <link rel="stylesheet" href="style.css?v=css-cleanup-20260706">
+    <link rel="stylesheet" href="style.css?v=mobile-nav-20260706">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -50,11 +50,16 @@
             <a href="index.html" class="site-title site-title-link" aria-label="Directors' Timeline Archive Home">
                 <img src="assets/header_logo.svg" alt="" class="site-title-logo">
             </a>
-            <nav class="header-nav" aria-label="Primary navigation">
-                <a href="index.html">HOME</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="header-nav" id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html">ホーム</a>
                 <a href="directors.html">監督から探す</a>
                 <a href="years.html">年代から探す</a>
-                <a href="today.html">Today</a>
+                <a href="today.html">今日は何の日</a>
                 <a href="index.html#comparison-themes">テーマで比較</a>
             </nav>
         </div>
@@ -88,10 +93,12 @@
     <footer class="site-footer timeline-footer">
         <a href="index.html" class="footer-title">DIRECTORS' TIMELINE ARCHIVE</a>
         <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="directors.html">SELECT DIRECTORS</a>
-            <a href="years.html">EXPLORE BY YEAR</a>
-            <a href="today.html">TODAY</a>
-            <a href="about.html">ABOUT / NEWS</a>
+            <a href="index.html">ホーム</a>
+            <a href="directors.html">監督から探す</a>
+            <a href="years.html">年代から探す</a>
+            <a href="today.html">今日は何の日</a>
+            <a href="index.html#comparison-themes">テーマで比較</a>
+            <a href="about.html">このサイトについて</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN7yUjTtm66DHwKF5QB96z2W-cMja4MveVtbeCkA46DR5BCQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">お問合せ</a>
             <a href="https://x.com/DTAarchive" class="social-link x-link" target="_blank" rel="noopener noreferrer" aria-label="X @DTAarchive">
                 <svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -104,5 +111,6 @@
     </footer>
 
     <script src="main.js?v=emmerich-20260705"></script>
+    <script src="navigation.js?v=mobile-nav-20260706"></script>
 </body>
 </html>
