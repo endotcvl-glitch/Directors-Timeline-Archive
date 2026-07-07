@@ -1279,6 +1279,7 @@ header {
 }
 
 .today-hero {
+    border-top: none;
     margin-bottom: 0;
 }
 
@@ -1287,7 +1288,6 @@ header {
     grid-template-columns: minmax(0, 0.35fr) minmax(0, 1fr);
     gap: 1.5rem;
     align-items: baseline;
-    border-top: 1px solid var(--line-color);
     padding: 1.25rem 0 1.5rem;
 }
 
