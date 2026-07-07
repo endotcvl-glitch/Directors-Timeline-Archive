@@ -44,6 +44,42 @@
     ]
   },
   {
+    "id": "oppenheimer-oscars-best-picture-director",
+    "date": "03-10",
+    "year": 2024,
+    "type": "award",
+    "title": "『オッペンハイマー』がアカデミー賞作品賞・監督賞を受賞",
+    "movie": "Oppenheimer",
+    "director": "Christopher Nolan",
+    "description": "第96回アカデミー賞で『オッペンハイマー』が作品賞、クリストファー・ノーランが監督賞を受賞。ノーランのキャリアにおける大きな節目となった。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/2024",
+    "links": [
+      {
+        "label": "ノーランの年表を見る",
+        "url": "timeline.html?d1=nolan"
+      }
+    ]
+  },
+  {
+    "id": "memento-us-release",
+    "date": "03-16",
+    "year": 2001,
+    "type": "movie_release",
+    "title": "『メメント』全米公開",
+    "movie": "Memento",
+    "director": "Christopher Nolan",
+    "description": "逆行するカラー場面と時系列順のモノクロ場面を交差させ、ノーランの時間構造への関心を強く印象づけた初期重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Memento_(film)",
+    "links": [
+      {
+        "label": "ノーランの年表を見る",
+        "url": "timeline.html?d1=nolan"
+      }
+    ]
+  },
+  {
     "id": "star-wars-us-release",
     "date": "05-25",
     "year": 1977,
@@ -93,6 +129,42 @@
     ]
   },
   {
+    "id": "dark-knight-us-release",
+    "date": "07-18",
+    "year": 2008,
+    "type": "movie_release",
+    "title": "『ダークナイト』全米公開",
+    "movie": "The Dark Knight",
+    "director": "Christopher Nolan",
+    "description": "スーパーヒーロー映画を犯罪劇と倫理のドラマへ押し広げ、興行面でも批評面でも大きな節目となった作品。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/The_Dark_Knight",
+    "links": [
+      {
+        "label": "ノーランの年表を見る",
+        "url": "timeline.html?d1=nolan"
+      }
+    ]
+  },
+  {
+    "id": "oppenheimer-us-uk-release",
+    "date": "07-21",
+    "year": 2023,
+    "type": "movie_release",
+    "title": "『オッペンハイマー』米英公開",
+    "movie": "Oppenheimer",
+    "director": "Christopher Nolan",
+    "description": "70mmフィルムやIMAX上映も話題となり、伝記映画として大規模な観客を集めたノーランの重要作。",
+    "country": "US/UK",
+    "source": "https://en.wikipedia.org/wiki/Oppenheimer_(film)",
+    "links": [
+      {
+        "label": "ノーランの年表を見る",
+        "url": "timeline.html?d1=nolan"
+      }
+    ]
+  },
+  {
     "id": "christopher-nolan-birthday",
     "date": "07-30",
     "year": 1970,
@@ -100,7 +172,7 @@
     "title": "クリストファー・ノーラン誕生日",
     "movie": "",
     "director": "Christopher Nolan",
-    "description": "時間構造、記憶、倫理、スケールの大きな映像設計で知られる映画監督。現代映画を語るうえで欠かせない存在。",
+    "description": "『メメント』『ダークナイト』『インセプション』『オッペンハイマー』などで知られる映画監督。時間構造、実写撮影、IMAXによる没入感を大作映画の中心に据えた。",
     "country": "UK",
     "source": "https://en.wikipedia.org/wiki/Christopher_Nolan",
     "links": [
