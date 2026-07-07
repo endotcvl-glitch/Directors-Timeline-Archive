@@ -1,5 +1,6 @@
 function initializeNavigation() {
     const headerShells = document.querySelectorAll('.header-shell');
+    const menuCloseDelay = 360;
 
     headerShells.forEach(shell => {
         const toggle = shell.querySelector('.nav-toggle');
@@ -29,8 +30,30 @@ function initializeNavigation() {
             }
         });
 
+        function shouldDelayNavigation(event, link) {
+            const isMenuOpen = shell.classList.contains('is-nav-open');
+            const isMobile = window.matchMedia('(max-width: 599px)').matches;
+            const opensNewContext = link.target && link.target !== '_self';
+            const isModifiedClick = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0;
+
+            return isMenuOpen && isMobile && !opensNewContext && !isModifiedClick && link.href;
+        }
+
         nav.addEventListener('click', event => {
-            if (event.target.closest('a')) {
+            const link = event.target.closest('a');
+
+            if (link) {
+                if (shouldDelayNavigation(event, link)) {
+                    event.preventDefault();
+                    closeMenu();
+
+                    window.setTimeout(() => {
+                        window.location.href = link.href;
+                    }, menuCloseDelay);
+
+                    return;
+                }
+
                 closeMenu();
             }
         });
