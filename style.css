@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Karla:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Karla:wght@700&family=Roboto:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;700&display=swap');
 
 :root {
     --bg-color: #f0f0f0;
@@ -19,6 +19,7 @@
     --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
     --font-serif: 'Playfair Display', serif;
     --font-title: 'Karla', 'Inter', 'Noto Sans JP', sans-serif;
+    --font-number: 'Roboto', 'Noto Sans JP', 'Inter', sans-serif;
     --title-letter-spacing: 0.12em;
     --global-nav-font-size: 13pt;
 }
@@ -239,6 +240,7 @@ header {
 }
 
 .site-footer p {
+    font-family: var(--font-number);
     margin: 0;
 }
 
@@ -301,7 +303,7 @@ header {
 }
 
 .year-label {
-    font-family: var(--font-serif);
+    font-family: var(--font-number);
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--accent-color);
@@ -429,7 +431,7 @@ header {
 .jump-nav button {
     background: none;
     border: none;
-    font-family: var(--font-sans);
+    font-family: var(--font-number);
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     color: var(--button-color);
@@ -973,7 +975,7 @@ header {
     font-family: var(--font-sans);
     font-size: 1.25rem;
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     line-height: 1.5;
     margin-bottom: 0.45rem;
 }
@@ -1148,7 +1150,7 @@ header {
     border-radius: 999px;
     background: transparent;
     color: var(--button-color);
-    font-family: var(--font-serif);
+    font-family: var(--font-number);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -1186,7 +1188,7 @@ header {
 }
 
 .year-results-header h2 {
-    font-family: var(--font-serif);
+    font-family: var(--font-number);
     font-size: 2.45rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -1278,7 +1280,7 @@ header {
 .year-film-item h4 {
     font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
     line-height: 1.5;
 }
 
@@ -1339,7 +1341,7 @@ header {
 
 .today-date-panel h2 {
     color: var(--text-color);
-    font-family: var(--font-serif);
+    font-family: var(--font-number);
     font-size: clamp(1.7rem, 4vw, 2.6rem);
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -1382,11 +1384,15 @@ header {
     color: var(--button-color);
 }
 
+.today-event-year {
+    font-family: var(--font-number);
+}
+
 .today-event-card h2 {
     max-width: 760px;
     font-size: clamp(1.2rem, 2.5vw, 1.65rem);
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     line-height: 1.45;
     margin-bottom: 0.8rem;
 }
@@ -1587,7 +1593,7 @@ header {
 
 .notice-item time {
     color: var(--secondary-text);
-    font-family: var(--font-serif);
+    font-family: var(--font-number);
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -1597,7 +1603,7 @@ header {
 .notice-item h3 {
     font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     line-height: 1.6;
     margin-bottom: 0.35rem;
 }
@@ -1714,7 +1720,7 @@ header {
     font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     line-height: 1.5;
     margin-bottom: 0.6rem;
 }
@@ -1724,7 +1730,7 @@ header {
     font-family: var(--font-sans);
     font-size: clamp(1.12rem, 1.8vw, 1.38rem);
     font-weight: 700;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.04em;
     line-height: 1.35;
     margin-bottom: 1rem;
 }
@@ -1754,6 +1760,7 @@ header {
 
 .note-featured-film span {
     color: var(--secondary-text);
+    font-family: var(--font-number);
     font-size: 0.86rem;
     font-weight: 400;
     letter-spacing: 0.08em;
@@ -1861,7 +1868,7 @@ header {
     font-family: var(--font-sans);
     font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1893,7 +1900,7 @@ header {
 /* --- Scalable & Responsive List Styles --- */
 
 .director-category-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-number);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--accent-color);
@@ -2914,7 +2921,7 @@ header {
     .item-name-ja {
         font-size: 1.05rem;
         line-height: 1.45;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.04em;
         overflow: visible;
         text-overflow: clip;
         white-space: normal;

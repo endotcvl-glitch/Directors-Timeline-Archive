@@ -72,6 +72,7 @@
     --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
     --font-serif: 'Playfair Display', serif;
     --font-title: 'Karla', 'Inter', 'Noto Sans JP', sans-serif;
+    --font-number: 'Roboto', 'Noto Sans JP', 'Inter', sans-serif;
     --title-letter-spacing: 0.12em;
     --global-nav-font-size: 13pt;
 }
@@ -81,6 +82,7 @@
 
 - 日本語本文と通常UIは `--font-sans` を使う。
 - サイトタイトルや強い英字ロゴ表現は `--font-title` を使う。
+- 年号、日付、作品年など数字を見せる場面は `--font-number` を使う。
 - `--font-serif` は英語・数字に限定して使う。日本語など英数字以外の文字には serif を使わない。
 - `--font-serif` は装飾的に見えやすいため、Editor's Notes の一覧カードなどでは主役にしない。
 - 文字の強弱は、サイズ、太さ、色、余白で作る。
@@ -89,11 +91,27 @@
 ### 主な階層
 
 - サイトタイトル: `--font-title`、大文字、広めの letter-spacing。
-- ページタイトル: `--font-sans`、太字、ページ内で最も強い階層。
+- ページタイトル: `--font-sans`、太字、ページ内で最も強い階層。基本は日本語表記にする。
 - セクション見出し: `1.5rem`、`font-weight: 600`、`#a08257`、letter-spacing `0.04em`。
+- 数字: `--font-number`、監督一覧の年代見出し、timelineの年号、年代ページの年号、今日は何の日の日付、NEWSの日付、コラム作品年など、年号や日付に使う。letter-spacing は文脈に応じてやや広めにする。
 - 本文: `--font-sans`、読みやすい行間を優先。
 - 補助テキスト: `--secondary-text`、小さめ。
 - 操作リンク: 太字、小さめ、letter-spacing をやや広くする。
+
+### 使用箇所別のサイズ
+
+主な画面上の見出し・年号は以下を基準にする。
+
+| 用途 | セレクタ | サイズ / ウエイト / 字間 |
+| --- | --- | --- |
+| ページタイトル | `.page-hero h1` | `clamp(1.65rem, 4vw, 2.35rem)` / `700` / `0.02em` |
+| セクション見出し | `.section-heading h2` | `1.5rem` / `600` / `0.04em` |
+| カード / リスト見出し | `.explore-path-title` / `.theme-item h3` / `.item-name-ja` / `.year-film-item h4` / `.today-event-card h2` / `.notice-item h3` / `.note-card-*` | サイズは用途別 / `700` / `0.04em` |
+| timeline 監督名 | `.label-surname` | `1.35rem` / `700` / `0.06em` |
+| timeline 作品タイトル | `.film-title` | `1.6rem` / `700` / `0` |
+| timeline 年号 | `.year-label` | `1.4rem` / `700` / `--font-number` |
+| 今日は何の日の日付 | `.today-date-panel h2` | `clamp(1.7rem, 4vw, 2.6rem)` / `700` / `--font-number` |
+| Editor's Notes 作品名 | `.note-featured-film` | `1.35rem` / `700` / `0.02em` |
 
 ## レイアウト幅
 

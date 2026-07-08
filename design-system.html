@@ -15,7 +15,7 @@
     <title>Design System | Directors Timeline Archive</title>
     <meta name="description" content="Directors Timeline Archive のカラー、タイポグラフィ、余白、コンポーネントを確認するためのデザインシステム資料です。">
     <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="stylesheet" href="style.css?v=explore-hover-20260708">
+    <link rel="stylesheet" href="style.css?v=card-heading-spacing-20260708">
     <style>
         .design-system-container {
             width: min(100%, 1100px);
@@ -154,6 +154,15 @@
             line-height: 1.5;
         }
 
+        .ds-type-number {
+            color: var(--accent-color);
+            font-family: var(--font-number);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            line-height: 1.35;
+        }
+
         .ds-type-body {
             max-width: 760px;
             font-size: 0.98rem;
@@ -195,6 +204,98 @@
 
         .ds-type-specs dd {
             margin: 0;
+        }
+
+        .ds-type-usage {
+            display: grid;
+            gap: 0;
+            border-top: 1px solid var(--line-color);
+        }
+
+        .ds-type-usage-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1.25fr);
+            gap: 1.25rem;
+            align-items: baseline;
+            padding: 0.95rem 0;
+            border-bottom: 1px solid var(--line-color);
+        }
+
+        .ds-type-usage-sample {
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.45;
+        }
+
+        .ds-type-usage-meta {
+            color: var(--secondary-text);
+            font-size: 0.74rem;
+            letter-spacing: 0.04em;
+            line-height: 1.7;
+        }
+
+        .ds-type-usage-note {
+            color: var(--secondary-text);
+            font-size: 0.76rem;
+            letter-spacing: 0.04em;
+            line-height: 1.75;
+        }
+
+        .ds-use-page-title {
+            font-size: clamp(1.65rem, 4vw, 2.35rem);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .ds-use-section {
+            color: #a08257;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .ds-use-card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .ds-use-director-label {
+            color: var(--accent-color);
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .ds-use-film-title {
+            color: var(--link-color);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            line-height: 1.25;
+        }
+
+        .ds-use-year {
+            color: var(--accent-color);
+            font-family: var(--font-number);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .ds-use-today {
+            font-family: var(--font-number);
+            font-size: clamp(1.7rem, 4vw, 2.6rem);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            line-height: 1.2;
+        }
+
+        .ds-use-note-film {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
         }
 
         .ds-widths {
@@ -296,7 +397,7 @@
             color: var(--text-color);
             font-size: 1.25rem;
             font-weight: 700;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.04em;
             line-height: 1.5;
             margin-bottom: 0.45rem;
         }
@@ -410,7 +511,7 @@
         .ds-note-card-sample .director {
             font-size: 1rem;
             font-weight: 700;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.04em;
             line-height: 1.5;
             margin-bottom: 0.6rem;
         }
@@ -418,7 +519,7 @@
         .ds-note-card-sample .film {
             font-size: clamp(1.12rem, 1.8vw, 1.38rem);
             font-weight: 700;
-            letter-spacing: 0.01em;
+            letter-spacing: 0.04em;
             line-height: 1.35;
         }
 
@@ -472,6 +573,11 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
+            .ds-type-usage-row {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 0.45rem;
+            }
+
             .ds-grid,
             .ds-principles {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -493,6 +599,10 @@
             .ds-note-card-sample .link {
                 grid-column: 1;
                 grid-row: auto;
+            }
+
+            .ds-type-usage-row {
+                padding: 1rem 0;
             }
         }
     </style>
@@ -608,7 +718,7 @@
         <section class="ds-section">
             <div class="ds-section-header">
                 <h2>Typography</h2>
-                <p>通常UIと日本語本文はゴシック体を基本にします。セリフ体は英語・数字に限定して使い、日本語など英数字以外の文字には使いません。</p>
+                <p>通常UIと日本語本文はゴシック体を基本にします。数字は専用の指定を持たせ、セリフ体は英語・数字に限定して使います。</p>
             </div>
             <div class="ds-type-list">
                 <div class="ds-type-sample">
@@ -646,7 +756,7 @@
                 <div class="ds-type-sample">
                     <h3>Page Title</h3>
                     <div class="ds-type-content">
-                        <p class="ds-type-page-title">Editor's Notes</p>
+                        <p class="ds-type-page-title">映画監督から選ぶ</p>
                         <dl class="ds-type-specs" aria-label="Page Title typography specs">
                             <div>
                                 <dt>Font</dt>
@@ -699,6 +809,38 @@
                             <div>
                                 <dt>Color</dt>
                                 <dd>#a08257</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="ds-type-sample">
+                    <h3>Number</h3>
+                    <div class="ds-type-content">
+                        <p class="ds-type-number">1977 / 1984 / 2026.07.08</p>
+                        <dl class="ds-type-specs" aria-label="Number typography specs">
+                            <div>
+                                <dt>Font</dt>
+                                <dd>Roboto / Noto Sans JP / Inter</dd>
+                            </div>
+                            <div>
+                                <dt>Size</dt>
+                                <dd>1.5rem</dd>
+                            </div>
+                            <div>
+                                <dt>Weight</dt>
+                                <dd>700</dd>
+                            </div>
+                            <div>
+                                <dt>Line Height</dt>
+                                <dd>1.35</dd>
+                            </div>
+                            <div>
+                                <dt>Spacing</dt>
+                                <dd>0.08em</dd>
+                            </div>
+                            <div>
+                                <dt>Variable</dt>
+                                <dd>--font-number</dd>
                             </div>
                         </dl>
                     </div>
@@ -767,6 +909,54 @@
                         </dl>
                     </div>
                 </div>
+                <div class="ds-type-sample">
+                    <h3>Type Usage</h3>
+                    <div class="ds-type-content">
+                        <p class="ds-type-meta">実際のページで使っている主な見出し・年号のサイズ設定。</p>
+                        <div class="ds-type-usage" aria-label="Typography usage examples">
+                            <div class="ds-type-usage-row">
+                                <p class="ds-type-usage-sample ds-use-page-title">映画監督から選ぶ</p>
+                                <p class="ds-type-usage-meta">Page title<br>.page-hero h1</p>
+                                <p class="ds-type-usage-note">clamp(1.65rem, 4vw, 2.35rem) / 700 / 0.02em</p>
+                            </div>
+                            <div class="ds-type-usage-row">
+                                <p class="ds-type-usage-sample ds-use-section">テーマから比較してみる</p>
+                                <p class="ds-type-usage-meta">Section heading<br>.section-heading h2</p>
+                                <p class="ds-type-usage-note">1.5rem / 600 / 0.04em / #a08257</p>
+                            </div>
+                            <div class="ds-type-usage-row">
+                                <p class="ds-type-usage-sample ds-use-card-title">映画監督から選ぶ / 現代SFのかたち</p>
+                                <p class="ds-type-usage-meta">Card / list title<br>.explore-path-title / .theme-item h3 / .item-name-ja / .year-film-item h4 / .today-event-card h2 / .notice-item h3 / .note-card-*</p>
+                                <p class="ds-type-usage-note">size varies / 700 / 0.04em</p>
+                            </div>
+                            <div class="ds-type-usage-row">
+                                <p class="ds-type-usage-sample ds-use-director-label">クリストファー・ノーラン</p>
+                                <p class="ds-type-usage-meta">Timeline director name<br>.label-surname</p>
+                                <p class="ds-type-usage-note">1.35rem / 700 / 0.06em</p>
+                            </div>
+                            <div class="ds-type-usage-row">
+                                <p class="ds-type-usage-sample ds-use-film-title">インターステラー</p>
+                                <p class="ds-type-usage-meta">Timeline film title<br>.film-title</p>
+                                <p class="ds-type-usage-note">1.6rem / 700 / 0</p>
+                            </div>
+                            <div class="ds-type-usage-row">
+                                <p class="ds-type-usage-sample ds-use-year">1977</p>
+                                <p class="ds-type-usage-meta">Timeline year<br>.year-label</p>
+                                <p class="ds-type-usage-note">1.4rem / 700 / --font-number</p>
+                            </div>
+                            <div class="ds-type-usage-row">
+                                <p class="ds-type-usage-sample ds-use-today">7月8日</p>
+                                <p class="ds-type-usage-meta">Today date<br>.today-date-panel h2</p>
+                                <p class="ds-type-usage-note">clamp(1.7rem, 4vw, 2.6rem) / 700 / --font-number</p>
+                            </div>
+                            <div class="ds-type-usage-row">
+                                <p class="ds-type-usage-sample ds-use-note-film">イレイザーヘッド</p>
+                                <p class="ds-type-usage-meta">Editor's Notes film<br>.note-featured-film</p>
+                                <p class="ds-type-usage-note">1.35rem / 700 / 0.02em</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -826,8 +1016,8 @@
                 <div class="ds-component-sample">
                     <h3>Page Hero</h3>
                     <div class="ds-page-hero-sample">
-                        <h3>Editor's Notes</h3>
-                        <p>この監督のこの一本</p>
+                        <h3>映画監督から選ぶ</h3>
+                        <p>作品年表から、映画監督の歩みを眺める。</p>
                     </div>
                 </div>
                 <div class="ds-component-sample">

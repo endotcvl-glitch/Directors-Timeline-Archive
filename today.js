@@ -91,7 +91,7 @@
             <div class="today-event-main">
                 <div class="today-event-meta">
                     <span class="today-type-label">${TYPE_LABELS[event.type] || event.type}</span>
-                    <span>${event.year}</span>
+                    <span class="today-event-year">${event.year}</span>
                     ${event.country ? `<span>${event.country}</span>` : ''}
                 </div>
                 <h2>${escapeHtml(event.title)}</h2>
