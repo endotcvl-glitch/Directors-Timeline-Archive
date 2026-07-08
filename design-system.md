@@ -26,8 +26,9 @@
     --text-color: #1a1a1a;
     --accent-color: #57545b;
     --accent-hover-color: #48434c;
+    --text-hover-color: #c1ac88;
     --link-color: var(--accent-color);
-    --link-hover-color: var(--accent-hover-color);
+    --link-hover-color: var(--text-hover-color);
     --button-color: var(--accent-color);
     --button-hover-color: var(--accent-hover-color);
     --timeline-color: var(--accent-color);
@@ -44,7 +45,8 @@
 - `--bg-color`: ページ背景。サイト全体のライトグレー。
 - `--text-color`: 主要テキスト。見出し、本文。
 - `--accent-color`: 強い操作、選択状態、強調線など。現在はグレイッシュな `#57545b`。
-- `--accent-hover-color`: ホバー時に使う、少し濃いグレイッシュカラー。
+- `--accent-hover-color`: ボタン背景など、濃色のhover状態に使うグレイッシュカラー。
+- `--text-hover-color`: リンクやテキストのhover色。現在は `#c1ac88`。
 - `--link-color`: 本文内リンクや操作リンク。
 - `--button-color`: ボタン、選択状態、大きな導線。
 - `--timeline-color`: タイムラインの軸線や現在年の強調。

@@ -5,8 +5,9 @@
     --text-color: #1a1a1a;
     --accent-color: #57545b;
     --accent-hover-color: #48434c;
+    --text-hover-color: #c1ac88;
     --link-color: var(--accent-color);
-    --link-hover-color: var(--accent-hover-color);
+    --link-hover-color: var(--text-hover-color);
     --button-color: var(--accent-color);
     --button-hover-color: var(--accent-hover-color);
     --timeline-color: var(--accent-color);
@@ -147,7 +148,11 @@ header {
     transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-.header-nav a:hover,
+.header-nav a:hover {
+    color: var(--link-hover-color);
+    opacity: 1;
+}
+
 .header-nav a.is-active {
     color: #ffffff;
     opacity: 1;
@@ -435,7 +440,7 @@ header {
 
 .jump-nav button:hover {
     opacity: 1;
-    color: var(--accent-hover-color);
+    color: var(--link-hover-color);
     transform: translateY(-2px);
 }
 
@@ -586,7 +591,7 @@ header {
 .index-page .footer-title:hover,
 .index-page .footer-nav a:hover,
 .index-page .editor-note-link:hover {
-    color: #ffffff;
+    color: var(--link-hover-color);
 }
 
 .home-container.directors-page-container {
@@ -801,7 +806,7 @@ header {
 .explore-path-card:hover {
     border-color: var(--button-hover-color, var(--accent-hover-color));
     background: rgba(255,255,255,0.58);
-    color: var(--accent-hover-color);
+    color: var(--link-hover-color);
     transform: translateY(-2px);
 }
 
@@ -1127,7 +1132,12 @@ header {
     transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 }
 
-.year-picker button:hover,
+.year-picker button:hover {
+    border-color: var(--accent-color);
+    color: var(--link-hover-color);
+    background: rgba(255,255,255,0.42);
+}
+
 .year-picker button.active {
     border-color: var(--accent-color);
     color: var(--accent-hover-color);
@@ -1423,7 +1433,7 @@ header {
 
 .copy-post-button:hover {
     border-color: var(--accent-color);
-    color: var(--button-hover-color);
+    color: var(--link-hover-color);
 }
 
 .today-post-box textarea {
@@ -2253,7 +2263,7 @@ header {
     }
 
     .mobile-nav-secondary a:hover {
-        color: #ffffff;
+        color: var(--link-hover-color);
     }
 
     .nav-toggle {

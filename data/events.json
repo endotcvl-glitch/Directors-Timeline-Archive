@@ -44,6 +44,96 @@
     ]
   },
   {
+    "id": "george-a-romero-birthday",
+    "date": "02-04",
+    "year": 1940,
+    "type": "director_birthday",
+    "title": "ジョージ・A・ロメロ誕生日",
+    "movie": "",
+    "director": "George A. Romero",
+    "description": "『ナイト・オブ・ザ・リビングデッド』『ゾンビ』などで知られる映画監督。現代ゾンビ映画の原型を作り、ホラーに社会風刺を刻んだ。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/George_A._Romero",
+    "links": [
+      {
+        "label": "ロメロの年表を見る",
+        "url": "timeline.html?d1=romero"
+      }
+    ]
+  },
+  {
+    "id": "videodrome-us-canada-release",
+    "date": "02-04",
+    "year": 1983,
+    "type": "movie_release",
+    "title": "『ヴィデオドローム』米加公開",
+    "movie": "Videodrome",
+    "director": "David Cronenberg",
+    "description": "映像メディアと肉体が融合していく悪夢を描き、クローネンバーグのボディホラーとメディア批評を象徴する重要作。",
+    "country": "US/CA",
+    "source": "https://en.wikipedia.org/wiki/Videodrome",
+    "links": [
+      {
+        "label": "クローネンバーグの年表を見る",
+        "url": "timeline.html?d1=cronenberg"
+      }
+    ]
+  },
+  {
+    "id": "taxi-driver-us-release",
+    "date": "02-08",
+    "year": 1976,
+    "type": "movie_release",
+    "title": "『タクシードライバー』全米公開",
+    "movie": "Taxi Driver",
+    "director": "Martin Scorsese",
+    "description": "都会の孤独と暴力を鋭く描き、スコセッシとロバート・デ・ニーロの代表的な協働として映画史に残る重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Taxi_Driver",
+    "links": [
+      {
+        "label": "スコセッシの年表を見る",
+        "url": "timeline.html?d1=scorsese"
+      }
+    ]
+  },
+  {
+    "id": "departed-oscars-best-picture-director",
+    "date": "02-25",
+    "year": 2007,
+    "type": "award",
+    "title": "『ディパーテッド』がアカデミー賞作品賞・監督賞を受賞",
+    "movie": "The Departed",
+    "director": "Martin Scorsese",
+    "description": "第79回アカデミー賞で『ディパーテッド』が作品賞、マーティン・スコセッシが監督賞を受賞。長いキャリアで初の監督賞となった。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/2007",
+    "links": [
+      {
+        "label": "スコセッシの年表を見る",
+        "url": "timeline.html?d1=scorsese"
+      }
+    ]
+  },
+  {
+    "id": "lethal-weapon-us-release",
+    "date": "03-06",
+    "year": 1987,
+    "type": "movie_release",
+    "title": "『リーサル・ウェポン』全米公開",
+    "movie": "Lethal Weapon",
+    "director": "Richard Donner",
+    "description": "対照的な刑事コンビを中心に、アクションとユーモア、人物の関係性を結びつけたバディアクションの代表作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Lethal_Weapon",
+    "links": [
+      {
+        "label": "ドナーの年表を見る",
+        "url": "timeline.html?d1=donner"
+      }
+    ]
+  },
+  {
     "id": "oppenheimer-oscars-best-picture-director",
     "date": "03-10",
     "year": 2024,
@@ -58,6 +148,24 @@
       {
         "label": "ノーランの年表を見る",
         "url": "timeline.html?d1=nolan"
+      }
+    ]
+  },
+  {
+    "id": "david-cronenberg-birthday",
+    "date": "03-15",
+    "year": 1943,
+    "type": "director_birthday",
+    "title": "デヴィッド・クローネンバーグ誕生日",
+    "movie": "",
+    "director": "David Cronenberg",
+    "description": "『シーバース』『ヴィデオドローム』『ザ・フライ』などで知られる映画監督。身体変容、感染、テクノロジーへの不安を冷徹に描いてきた。",
+    "country": "CA",
+    "source": "https://en.wikipedia.org/wiki/David_Cronenberg",
+    "links": [
+      {
+        "label": "クローネンバーグの年表を見る",
+        "url": "timeline.html?d1=cronenberg"
       }
     ]
   },
@@ -80,6 +188,104 @@
     ]
   },
   {
+    "id": "eraserhead-filmex-premiere",
+    "date": "03-19",
+    "year": 1977,
+    "type": "movie_release",
+    "title": "『イレイザーヘッド』Filmexで初上映",
+    "movie": "Eraserhead",
+    "director": "David Lynch",
+    "description": "デイヴィッド・リンチの長編デビュー作。深夜上映から広がり、悪夢のような映像と音響でカルト映画として語られるようになった。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Eraserhead",
+    "links": [
+      {
+        "label": "デイヴィッド・リンチの年表を見る",
+        "url": "timeline.html?d1=lynch"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/david-lynch.html"
+      }
+    ]
+  },
+  {
+    "id": "schindlers-list-oscars-best-picture-director",
+    "date": "03-21",
+    "year": 1994,
+    "type": "award",
+    "title": "『シンドラーのリスト』がアカデミー賞作品賞・監督賞を受賞",
+    "movie": "Schindler's List",
+    "director": "Steven Spielberg",
+    "description": "第66回アカデミー賞で『シンドラーのリスト』が作品賞、スティーヴン・スピルバーグが監督賞を受賞。キャリアの大きな転機となった。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/1994",
+    "links": [
+      {
+        "label": "スピルバーグの年表を見る",
+        "url": "timeline.html?d1=spielberg"
+      }
+    ]
+  },
+  {
+    "id": "twin-peaks-us-premiere",
+    "date": "04-08",
+    "year": 1990,
+    "type": "film_history",
+    "title": "『ツイン・ピークス』全米放送開始",
+    "movie": "Twin Peaks",
+    "director": "David Lynch",
+    "description": "デイヴィッド・リンチとマーク・フロストが創作したテレビシリーズ。郊外の謎と夢の論理をテレビ表現へ持ち込んだ。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Twin_Peaks",
+    "links": [
+      {
+        "label": "デイヴィッド・リンチの年表を見る",
+        "url": "timeline.html?d1=lynch"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/david-lynch.html"
+      }
+    ]
+  },
+  {
+    "id": "dawn-of-the-dead-us-premiere",
+    "date": "04-07",
+    "year": 1979,
+    "type": "movie_release",
+    "title": "『ゾンビ』米国版プレミア",
+    "movie": "Dawn of the Dead",
+    "director": "George A. Romero",
+    "description": "ショッピングモールを舞台に消費社会とゾンビを結びつけ、ロメロのゾンビ映画をさらに社会的寓話として押し広げた。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Dawn_of_the_Dead_(1978_film)",
+    "links": [
+      {
+        "label": "ロメロの年表を見る",
+        "url": "timeline.html?d1=romero"
+      }
+    ]
+  },
+  {
+    "id": "richard-donner-birthday",
+    "date": "04-24",
+    "year": 1930,
+    "type": "director_birthday",
+    "title": "リチャード・ドナー誕生日",
+    "movie": "",
+    "director": "Richard Donner",
+    "description": "『オーメン』『スーパーマン』『グーニーズ』『リーサル・ウェポン』などで知られる映画監督。大衆娯楽映画の骨格を力強く支えた。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Richard_Donner",
+    "links": [
+      {
+        "label": "ドナーの年表を見る",
+        "url": "timeline.html?d1=donner"
+      }
+    ]
+  },
+  {
     "id": "star-wars-us-release",
     "date": "05-25",
     "year": 1977,
@@ -91,6 +297,60 @@
     "country": "US",
     "source": "https://en.wikipedia.org/wiki/Star_Wars_(film)",
     "links": []
+  },
+  {
+    "id": "et-us-release",
+    "date": "06-11",
+    "year": 1982,
+    "type": "movie_release",
+    "title": "『E.T.』全米公開",
+    "movie": "E.T. the Extra-Terrestrial",
+    "director": "Steven Spielberg",
+    "description": "少年と異星人の出会いと別れを描いたスピルバーグの代表作。世界的な大ヒットとなり、長く愛されるファミリーSFになった。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial",
+    "links": [
+      {
+        "label": "スピルバーグの年表を見る",
+        "url": "timeline.html?d1=spielberg"
+      }
+    ]
+  },
+  {
+    "id": "jurassic-park-us-release",
+    "date": "06-11",
+    "year": 1993,
+    "type": "movie_release",
+    "title": "『ジュラシック・パーク』全米公開",
+    "movie": "Jurassic Park",
+    "director": "Steven Spielberg",
+    "description": "恐竜を現代によみがえらせる映像表現で、VFXと大作映画の見え方を大きく変えたスピルバーグの代表作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Jurassic_Park",
+    "links": [
+      {
+        "label": "スピルバーグの年表を見る",
+        "url": "timeline.html?d1=spielberg"
+      }
+    ]
+  },
+  {
+    "id": "raiders-of-the-lost-ark-us-release",
+    "date": "06-12",
+    "year": 1981,
+    "type": "movie_release",
+    "title": "『レイダース/失われたアーク』全米公開",
+    "movie": "Raiders of the Lost Ark",
+    "director": "Steven Spielberg",
+    "description": "インディ・ジョーンズを登場させ、冒険映画の楽しさを現代的なテンポで再構築したスピルバーグの重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Raiders_of_the_Lost_Ark",
+    "links": [
+      {
+        "label": "スピルバーグの年表を見る",
+        "url": "timeline.html?d1=spielberg"
+      }
+    ]
   },
   {
     "id": "jaws-us-release",
@@ -107,6 +367,60 @@
       {
         "label": "スピルバーグの年表を見る",
         "url": "timeline.html?d1=spielberg"
+      }
+    ]
+  },
+  {
+    "id": "the-omen-us-release",
+    "date": "06-25",
+    "year": 1976,
+    "type": "movie_release",
+    "title": "『オーメン』全米公開",
+    "movie": "The Omen",
+    "director": "Richard Donner",
+    "description": "悪魔の子をめぐる不吉な予感をクラシックな語り口で恐怖へ高め、ドナーの映画監督としての大きな転機となった。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/The_Omen",
+    "links": [
+      {
+        "label": "ドナーの年表を見る",
+        "url": "timeline.html?d1=donner"
+      }
+    ]
+  },
+  {
+    "id": "richard-donner-deathday",
+    "date": "07-05",
+    "year": 2021,
+    "type": "director_deathday",
+    "title": "リチャード・ドナー命日",
+    "movie": "",
+    "director": "Richard Donner",
+    "description": "ヒーロー映画、ホラー、冒険映画、バディアクションを横断し、ハリウッド娯楽映画に大きな足跡を残した映画監督。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Richard_Donner",
+    "links": [
+      {
+        "label": "ドナーの年表を見る",
+        "url": "timeline.html?d1=donner"
+      }
+    ]
+  },
+  {
+    "id": "george-a-romero-deathday",
+    "date": "07-16",
+    "year": 2017,
+    "type": "director_deathday",
+    "title": "ジョージ・A・ロメロ命日",
+    "movie": "",
+    "director": "George A. Romero",
+    "description": "現代ゾンビ映画の原型を作り、終末の恐怖に人間社会への批評を重ねた映画監督。ホラー表現に大きな影響を残した。",
+    "country": "CA",
+    "source": "https://en.wikipedia.org/wiki/George_A._Romero",
+    "links": [
+      {
+        "label": "ロメロの年表を見る",
+        "url": "timeline.html?d1=romero"
       }
     ]
   },
@@ -205,6 +519,242 @@
     ]
   },
   {
+    "id": "the-fly-us-release",
+    "date": "08-15",
+    "year": 1986,
+    "type": "movie_release",
+    "title": "『ザ・フライ』全米公開",
+    "movie": "The Fly",
+    "director": "David Cronenberg",
+    "description": "科学者の身体変容を愛と崩壊の悲劇として描き、クローネンバーグのボディホラーを広い観客へ届かせた代表作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/The_Fly_(1986_film)",
+    "links": [
+      {
+        "label": "クローネンバーグの年表を見る",
+        "url": "timeline.html?d1=cronenberg"
+      }
+    ]
+  },
+  {
+    "id": "wes-craven-deathday",
+    "date": "08-30",
+    "year": 2015,
+    "type": "director_deathday",
+    "title": "ウェス・クレイヴン命日",
+    "movie": "",
+    "director": "Wes Craven",
+    "description": "『エルム街の悪夢』『スクリーム』などでホラー映画を更新し続けた映画監督。夢、暴力、メタ的な視点をジャンルに刻んだ。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Wes_Craven",
+    "links": [
+      {
+        "label": "ウェス・クレイヴンの年表を見る",
+        "url": "timeline.html?d1=craven"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/wes-craven.html"
+      }
+    ]
+  },
+  {
+    "id": "blue-velvet-us-release",
+    "date": "09-19",
+    "year": 1986,
+    "type": "movie_release",
+    "title": "『ブルーベルベット』全米公開",
+    "movie": "Blue Velvet",
+    "director": "David Lynch",
+    "description": "郊外の平穏な風景の裏側に潜む暴力と欲望を描き、リンチ作品の不穏なアメリカ像を強く印象づけた重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Blue_Velvet_(film)",
+    "links": [
+      {
+        "label": "デイヴィッド・リンチの年表を見る",
+        "url": "timeline.html?d1=lynch"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/david-lynch.html"
+      }
+    ]
+  },
+  {
+    "id": "goodfellas-north-america-release",
+    "date": "09-21",
+    "year": 1990,
+    "type": "movie_release",
+    "title": "『グッドフェローズ』北米公開",
+    "movie": "Goodfellas",
+    "director": "Martin Scorsese",
+    "description": "マフィアの生活と崩壊を疾走感ある編集と語りで描き、犯罪映画の語り口を更新したスコセッシの重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Goodfellas",
+    "links": [
+      {
+        "label": "スコセッシの年表を見る",
+        "url": "timeline.html?d1=scorsese"
+      }
+    ]
+  },
+  {
+    "id": "night-of-the-living-dead-pittsburgh-premiere",
+    "date": "10-01",
+    "year": 1968,
+    "type": "movie_release",
+    "title": "『ナイト・オブ・ザ・リビングデッド』ピッツバーグ初公開",
+    "movie": "Night of the Living Dead",
+    "director": "George A. Romero",
+    "description": "低予算の独立映画から現代ゾンビ映画の原型を生み出し、ホラー映画に社会的な読みを重ねる流れを作った記念碑的作品。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Night_of_the_Living_Dead",
+    "links": [
+      {
+        "label": "ロメロの年表を見る",
+        "url": "timeline.html?d1=romero"
+      }
+    ]
+  },
+  {
+    "id": "departed-us-release",
+    "date": "10-06",
+    "year": 2006,
+    "type": "movie_release",
+    "title": "『ディパーテッド』全米公開",
+    "movie": "The Departed",
+    "director": "Martin Scorsese",
+    "description": "潜入捜査官と内通者の二重構造を描いた犯罪映画。のちにアカデミー賞作品賞とスコセッシの監督賞につながった。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/The_Departed",
+    "links": [
+      {
+        "label": "スコセッシの年表を見る",
+        "url": "timeline.html?d1=scorsese"
+      }
+    ]
+  },
+  {
+    "id": "shivers-montreal-release",
+    "date": "10-10",
+    "year": 1975,
+    "type": "movie_release",
+    "title": "『シーバース』モントリオール公開",
+    "movie": "Shivers",
+    "director": "David Cronenberg",
+    "description": "寄生生物が欲望と感染を拡散させる初期作。クローネンバーグ的な身体恐怖の出発点となった。",
+    "country": "CA",
+    "source": "https://en.wikipedia.org/wiki/Shivers_(1975_film)",
+    "links": [
+      {
+        "label": "クローネンバーグの年表を見る",
+        "url": "timeline.html?d1=cronenberg"
+      }
+    ]
+  },
+  {
+    "id": "mulholland-drive-us-release",
+    "date": "10-12",
+    "year": 2001,
+    "type": "movie_release",
+    "title": "『マルホランド・ドライブ』全米公開",
+    "movie": "Mulholland Drive",
+    "director": "David Lynch",
+    "description": "夢と現実、欲望と喪失が溶け合うハリウッドの悪夢。リンチ後期を代表する作品のひとつ。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Mulholland_Drive_(film)",
+    "links": [
+      {
+        "label": "デイヴィッド・リンチの年表を見る",
+        "url": "timeline.html?d1=lynch"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/david-lynch.html"
+      }
+    ]
+  },
+  {
+    "id": "wes-cravens-new-nightmare-us-release",
+    "date": "10-14",
+    "year": 1994,
+    "type": "movie_release",
+    "title": "『エルム街の悪夢 ザ・リアルナイトメア』全米公開",
+    "movie": "Wes Craven's New Nightmare",
+    "director": "Wes Craven",
+    "description": "映画と現実の境界を崩し、フレディという存在をメタホラーとして再構築したクレイヴンの重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Wes_Craven%27s_New_Nightmare",
+    "links": [
+      {
+        "label": "ウェス・クレイヴンの年表を見る",
+        "url": "timeline.html?d1=craven"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/wes-craven.html"
+      }
+    ]
+  },
+  {
+    "id": "nightmare-on-elm-street-us-release",
+    "date": "11-09",
+    "year": 1984,
+    "type": "movie_release",
+    "title": "『エルム街の悪夢』全米公開",
+    "movie": "A Nightmare on Elm Street",
+    "director": "Wes Craven",
+    "description": "夢の中で襲うフレディ・クルーガーを生み出し、スラッシャー映画に超現実的な恐怖を持ち込んだ代表作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/A_Nightmare_on_Elm_Street",
+    "links": [
+      {
+        "label": "ウェス・クレイヴンの年表を見る",
+        "url": "timeline.html?d1=craven"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/wes-craven.html"
+      }
+    ]
+  },
+  {
+    "id": "martin-scorsese-birthday",
+    "date": "11-17",
+    "year": 1942,
+    "type": "director_birthday",
+    "title": "マーティン・スコセッシ誕生日",
+    "movie": "",
+    "director": "Martin Scorsese",
+    "description": "『タクシードライバー』『グッドフェローズ』『ディパーテッド』などで知られる映画監督。犯罪、信仰、罪と救済をアメリカ映画の中で描き続けている。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Martin_Scorsese",
+    "links": [
+      {
+        "label": "スコセッシの年表を見る",
+        "url": "timeline.html?d1=scorsese"
+      }
+    ]
+  },
+  {
+    "id": "superman-us-release",
+    "date": "12-15",
+    "year": 1978,
+    "type": "movie_release",
+    "title": "『スーパーマン』全米公開",
+    "movie": "Superman",
+    "director": "Richard Donner",
+    "description": "コミックヒーローを壮大で誠実な映画体験へ変え、後のスーパーヒーロー映画の重要な原点となった大作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Superman_(1978_film)",
+    "links": [
+      {
+        "label": "ドナーの年表を見る",
+        "url": "timeline.html?d1=donner"
+      }
+    ]
+  },
+  {
     "id": "steven-spielberg-birthday",
     "date": "12-18",
     "year": 1946,
@@ -219,6 +769,28 @@
       {
         "label": "スピルバーグの年表を見る",
         "url": "timeline.html?d1=spielberg"
+      }
+    ]
+  },
+  {
+    "id": "scream-us-canada-release",
+    "date": "12-20",
+    "year": 1996,
+    "type": "movie_release",
+    "title": "『スクリーム』米加公開",
+    "movie": "Scream",
+    "director": "Wes Craven",
+    "description": "ホラー映画のルールを登場人物自身に語らせ、90年代のスラッシャー映画をメタな視点から再起動した代表作。",
+    "country": "US/CA",
+    "source": "https://en.wikipedia.org/wiki/Scream_(1996_film)",
+    "links": [
+      {
+        "label": "ウェス・クレイヴンの年表を見る",
+        "url": "timeline.html?d1=craven"
+      },
+      {
+        "label": "Editor's Notes",
+        "url": "notes/wes-craven.html"
       }
     ]
   }
