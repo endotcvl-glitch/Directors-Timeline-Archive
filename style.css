@@ -1094,26 +1094,27 @@ header {
 
 .director-search input {
     width: 100%;
-    border: 0;
-    border-bottom: 1px solid var(--line-color);
-    border-radius: 0;
-    background: transparent;
-    padding: 0.85rem 0;
+    border: 1px solid rgba(87, 84, 91, 0.32);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.34);
+    padding: 0.85rem 1rem;
     color: var(--text-color);
     font-family: var(--font-sans);
     font-size: 0.95rem;
     letter-spacing: 0.04em;
     outline: none;
-    transition: border-color 0.25s ease;
+    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .director-search input::placeholder {
     color: var(--secondary-text);
-    opacity: 0.55;
+    opacity: 0.68;
 }
 
 .director-search input:focus {
-    border-bottom-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background: rgba(255,255,255,0.56);
+    box-shadow: 0 0 0 3px rgba(87, 84, 91, 0.08);
 }
 
 /* --- Explore by Year Page --- */
