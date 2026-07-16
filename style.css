@@ -1355,9 +1355,6 @@ header {
 }
 
 .today-event-card {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
-    gap: clamp(1.25rem, 4vw, 3rem);
     border-top: 1px solid var(--line-color);
     padding: 1.7rem 0;
 }
@@ -1427,70 +1424,11 @@ header {
     color: var(--link-hover-color);
 }
 
-.today-post-box {
-    border-top: 1px solid var(--line-color);
-    padding-top: 0.9rem;
-}
-
-.today-post-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 0.7rem;
-}
-
-.today-post-header h3 {
-    color: var(--secondary-text);
-    font-size: 0.76rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    line-height: 1.5;
-}
-
-.copy-post-button {
-    border: 1px solid rgba(87, 84, 91, 0.36);
-    border-radius: 999px;
-    background: transparent;
-    color: var(--button-color);
-    font-family: var(--font-sans);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    line-height: 1;
-    padding: 0.45rem 0.75rem;
-    cursor: pointer;
-}
-
-.copy-post-button:hover {
-    border-color: var(--accent-color);
-    color: var(--link-hover-color);
-}
-
-.today-post-box textarea {
-    width: 100%;
-    min-height: 11rem;
-    border: 1px solid var(--line-color);
-    background: rgba(255,255,255,0.34);
-    color: var(--text-color);
-    font-family: var(--font-sans);
-    font-size: 0.82rem;
-    letter-spacing: 0.03em;
-    line-height: 1.75;
-    padding: 0.9rem;
-    resize: vertical;
-}
-
-.copy-status,
 .today-empty {
     color: var(--secondary-text);
     font-size: 0.78rem;
     letter-spacing: 0.05em;
     line-height: 1.8;
-}
-
-.copy-status {
-    margin-top: 0.5rem;
 }
 
 .today-empty {
@@ -2784,8 +2722,7 @@ header {
         margin-top: 0.35rem;
     }
 
-    .today-date-panel,
-    .today-event-card {
+    .today-date-panel {
         grid-template-columns: minmax(0, 1fr);
         gap: 0.9rem;
     }
@@ -2809,15 +2746,6 @@ header {
     .today-event-card p {
         font-size: 0.82rem;
         line-height: 1.8;
-    }
-
-    .today-post-header {
-        align-items: flex-start;
-    }
-
-    .today-post-box textarea {
-        min-height: 12rem;
-        font-size: 0.78rem;
     }
 
     .info-section {

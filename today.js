@@ -1,6 +1,5 @@
 (function () {
     const EVENTS_URL = 'data/events.json';
-    const SITE_URL = 'https://directors-timeline-archive.com';
     const TYPE_LABELS = {
         movie_release: '公開日',
         director_birthday: '誕生日',
@@ -84,7 +83,6 @@
         const article = document.createElement('article');
         article.className = 'today-event-card';
 
-        const postText = createPostText(event);
         const links = Array.isArray(event.links) ? event.links : [];
 
         article.innerHTML = `
@@ -102,50 +100,9 @@
                     </div>
                 ` : ''}
             </div>
-            <div class="today-post-box">
-                <div class="today-post-header">
-                    <h3>X投稿文</h3>
-                    <button type="button" class="copy-post-button">Copy post</button>
-                </div>
-                <textarea readonly rows="8">${escapeHtml(postText)}</textarea>
-                <p class="copy-status" aria-live="polite"></p>
-            </div>
         `;
 
-        const button = article.querySelector('.copy-post-button');
-        const textarea = article.querySelector('textarea');
-        const status = article.querySelector('.copy-status');
-
-        button.addEventListener('click', () => copyPost(textarea.value, status));
-
         return article;
-    }
-
-    function createPostText(event) {
-        const firstLine = event.type === 'movie_release'
-            ? `今日は${event.title}の日。`
-            : `今日は${event.title}。`;
-
-        return [
-            firstLine,
-            '',
-            event.description || '',
-            '',
-            "Directors' Timeline Archive",
-            SITE_URL,
-            '',
-            '#映画 #映画監督 #Cinema #Film'
-        ].join('\n');
-    }
-
-    async function copyPost(text, statusEl) {
-        try {
-            await navigator.clipboard.writeText(text);
-            statusEl.textContent = 'コピーしました';
-        } catch (error) {
-            console.error(error);
-            statusEl.textContent = 'コピーできませんでした。テキストを選択してコピーしてください。';
-        }
     }
 
     function escapeHtml(value) {
