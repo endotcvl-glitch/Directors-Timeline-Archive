@@ -1326,9 +1326,7 @@ header {
 
 .today-date-panel {
     display: grid;
-    grid-template-columns: minmax(0, 0.35fr) minmax(0, 1fr);
-    gap: 1.5rem;
-    align-items: baseline;
+    gap: 0.45rem;
     padding: 1.25rem 0 1.5rem;
 }
 
@@ -1340,13 +1338,13 @@ header {
     line-height: 1.6;
 }
 
-.today-date-panel h2 {
+.today-date-panel h3 {
     color: var(--text-color);
     font-family: var(--font-number);
-    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-size: clamp(1.15rem, 2.3vw, 1.45rem);
     font-weight: 700;
     letter-spacing: 0.04em;
-    line-height: 1.2;
+    line-height: 1.45;
 }
 
 .today-events-list {
@@ -2723,16 +2721,11 @@ header {
     }
 
     .today-date-panel {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0.9rem;
-    }
-
-    .today-date-panel {
         padding: 1rem 0 1.35rem;
     }
 
-    .today-date-panel h2 {
-        font-size: 2rem;
+    .today-date-panel h3 {
+        font-size: 1.1rem;
     }
 
     .today-event-card {
