@@ -7,7 +7,7 @@
 ## 作業開始時のルール
 
 - 作業を始める前に、必ず `project-notes.md` を読む。
-- デザインやUIに関わる作業では、必要に応じて `design-system.md` / `design-system.html` も確認する。
+- デザインやUIに関わる作業では、必要に応じて `docs/design-system.md` / `design-system.html` も確認する。
 - 既存の文脈を読まずに、大きな構造変更やデザイン変更をしない。
 - ユーザーの変更済みファイルを勝手に戻さない。
 

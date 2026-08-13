@@ -41,6 +41,7 @@ const directorsInfo = {
     'peele': { fullNameEn: 'JORDAN PEELE', nameJa: 'ジョーダン・ピール', surname: 'PEELE' },
     'aster': { fullNameEn: 'ARI ASTER', nameJa: 'アリ・アスター', surname: 'ASTER' },
     'wan': { fullNameEn: 'JAMES WAN', nameJa: 'ジェームズ・ワン', surname: 'WAN' },
+    'derrickson': { fullNameEn: 'SCOTT DERRICKSON', nameJa: 'スコット・デリクソン', surname: 'DERRICKSON' },
     'favreau': { fullNameEn: 'JON FAVREAU', nameJa: 'ジョン・ファヴロー', surname: 'FAVREAU' },
     'lordmiller': { fullNameEn: 'PHIL LORD & CHRISTOPHER MILLER', nameJa: 'フィル・ロード＆クリス・ミラー', surname: 'LORD & MILLER' },
     'gunn': { fullNameEn: 'JAMES GUNN', nameJa: 'ジェームズ・ガン', surname: 'GUNN' },
@@ -54,6 +55,8 @@ const directorsInfo = {
     'watts': { fullNameEn: 'JON WATTS', nameJa: 'ジョン・ワッツ', surname: 'WATTS' },
     'reeves': { fullNameEn: 'MATT REEVES', nameJa: 'マット・リーヴス', surname: 'REEVES' },
     'flanagan': { fullNameEn: 'MIKE FLANAGAN', nameJa: 'マイク・フラナガン', surname: 'FLANAGAN' },
+    'muschietti': { fullNameEn: 'ANDY MUSCHIETTI', nameJa: 'アンディ・ムスキエティ', surname: 'MUSCHIETTI' },
+    'cretton': { fullNameEn: 'DESTIN DANIEL CRETTON', nameJa: 'デスティン・ダニエル・クレットン', surname: 'CRETTON' },
     'trachtenberg': { fullNameEn: 'DAN TRACHTENBERG', nameJa: 'ダン・トラクテンバーグ', surname: 'TRACHTENBERG' },
     'zemeckis': { fullNameEn: 'ROBERT ZEMECKIS', nameJa: 'ロバート・ゼメキス', surname: 'ZEMECKIS' },
     'lanthimos': { fullNameEn: 'YORGOS LANTHIMOS', nameJa: 'ヨルゴス・ランティモス', surname: 'LANTHIMOS' },
@@ -734,6 +737,22 @@ const filmsData = [
     { year: 2023, type: 'flanagan', title: "アッシャー家の崩壊", context: "エドガー・アラン・ポー作品を現代企業一族の崩壊へ再構成したゴシックホラーシリーズ。", medium: "Series" },
     { year: 2024, type: 'flanagan', title: "The Life of Chuck", context: "スティーヴン・キングの中編を、人生の終わりから始まりへさかのぼる温かなファンタジードラマとして映画化。" },
 
+    // Andy Muschietti
+    { year: 2013, type: 'muschietti', title: "MAMA", context: "森で発見された姉妹と彼女たちを追う母性的な怪異を、家族の喪失と執着の物語として描いた長編デビュー作。" },
+    { year: 2017, type: 'muschietti', title: "IT/イット “それ”が見えたら、終わり。", context: "少年少女の友情と町に巣食う恐怖を結びつけ、スティーヴン・キング原作を青春ホラーとして再構築。" },
+    { year: 2019, type: 'muschietti', title: "IT/イット THE END “それ”が見えたら、終わり。", context: "大人になった仲間たちの帰郷を通じて、幼少期の傷とペニーワイズとの決着を描いた完結編。" },
+    { year: 2023, type: 'muschietti', title: "ザ・フラッシュ", context: "時間改変と複数世界を疾走しながら、喪失を受け入れる選択を描いたDCヒーロー映画。" },
+    { year: 2025, type: 'muschietti', title: "IT/イット ウェルカム・トゥ・デリー", context: "映画版以前のデリーを舞台に、町が繰り返してきた恐怖の歴史をたどる前日譚シリーズ。", medium: "Series" },
+
+    // Destin Daniel Cretton
+    { year: 2012, type: 'cretton', title: "I Am Not a Hipster", context: "喪失を抱えた音楽家と家族の再会を、サンディエゴのインディー音楽文化の中で描いた長編デビュー作。" },
+    { year: 2013, type: 'cretton', title: "ショート・ターム", context: "児童保護施設で働く若者たちを通じ、傷を抱えた人々の支え合いを繊細に描いた人間ドラマ。" },
+    { year: 2017, type: 'cretton', title: "ガラスの城の約束", context: "自由奔放な両親のもとで育った女性の記憶を通じ、家族への愛と距離を描いた実話ドラマ。" },
+    { year: 2019, type: 'cretton', title: "黒い司法 0%からの奇跡", context: "死刑囚の冤罪に挑む弁護士の実話をもとに、制度的不正義と尊厳を描いた社会派ドラマ。" },
+    { year: 2021, type: 'cretton', title: "シャン・チー/テン・リングスの伝説", context: "家族の確執と東洋武術を融合し、新たなヒーローの自己受容を描いたMCU作品。" },
+    { year: 2026, type: 'cretton', title: "ワンダーマン", context: "俳優を目指すサイモン・ウィリアムズの挑戦を、ハリウッド業界への視線とともに描くシリーズ。", medium: "Series" },
+    { year: 2026, type: 'cretton', title: "スパイダーマン：ブランド・ニュー・デイ", context: "新たな生活へ進んだピーター・パーカーの孤独と再出発を描く、MCU版スパイダーマンの新章。" },
+
     // James Wan
     { year: 2004, type: 'wan', title: "ソウ", context: "低予算ながら世界を震撼させた、ソリッド・シチュエーション・スリラーの金字塔。" },
     { year: 2007, type: 'wan', title: "デッド・サイレンス", context: "腹話術人形を題材にした、古典的で不気味なゴシック・ホラー。" },
@@ -746,6 +765,17 @@ const filmsData = [
     { year: 2018, type: 'wan', title: "アクアマン", context: "海底の未知なる視覚体験。DCヒーローの新たな地平を切り拓いた大作。" },
     { year: 2021, type: 'wan', title: "マリグナント 狂暴な悪夢", context: "ジャンルの枠を超えた驚愕の展開。ジェームズ・ワンの狂気が炸裂する。" },
     { year: 2023, type: 'wan', title: "アクアマン/失われた王国", context: "失われた文明と家族の絆。ド派手な海洋アクション・アドベンチャー完結編。" },
+
+    // Scott Derrickson
+    { year: 2000, type: 'derrickson', title: "ヘルレイザー ゲート・オブ・インフェルノ", context: "罪と幻覚に囚われた刑事を通じ、シリーズの地獄を心理的な悪夢として描いた長編監督デビュー作。" },
+    { year: 2005, type: 'derrickson', title: "エミリー・ローズ", context: "悪魔祓いをめぐる裁判を通じて、信仰と合理、超常現象の境界を問いかける法廷ホラー。" },
+    { year: 2008, type: 'derrickson', title: "地球が静止する日", context: "人類への警告を携えた宇宙からの訪問者を、環境危機の時代に置き換えたSFリメイク。" },
+    { year: 2012, type: 'derrickson', title: "フッテージ", context: "発見された映像と家族を侵食する怪異を結びつけ、見ることそのものを恐怖へ変えたホラー。" },
+    { year: 2014, type: 'derrickson', title: "NY心霊捜査官", context: "実在の元警察官の記録をもとに、犯罪捜査と悪魔祓いを融合させたオカルトスリラー。" },
+    { year: 2016, type: 'derrickson', title: "ドクター・ストレンジ", context: "魔術によって折り畳まれる都市と多元宇宙を、ヒーロー映画の視覚体験として構築したMCU作品。" },
+    { year: 2021, type: 'derrickson', title: "ブラック・フォン", context: "誘拐された少年と死者からの電話を通じ、連続殺人の恐怖と子どもの抵抗を描いたサイコホラー。" },
+    { year: 2025, type: 'derrickson', title: "The Gorge", context: "深い峡谷を隔てた二人の工作員が、地下に潜む脅威へ立ち向かうSFアクションスリラー。" },
+    { year: 2025, type: 'derrickson', title: "ブラックフォン 2", context: "前作の生存者である兄妹を、雪に閉ざされたキャンプと過去の悪夢が再び襲う続編。" },
 
     // Jon Favreau
     { year: 2001, type: 'favreau', title: "Made", context: "俳優仲間との軽妙な会話劇から始まる、ファヴローの長編監督デビュー作。" },

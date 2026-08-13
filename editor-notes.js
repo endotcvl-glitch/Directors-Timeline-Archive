@@ -34,6 +34,18 @@ const editorNotes = [
         ],
         heading: "この監督のこの一本",
         excerpt: "『エルム街の悪夢』と『スクリーム』。ホラー映画史に残るこの二つのシリーズを生み出しただけでも、ウェス・クレイヴンという映画監督の存在は特別です。"
+    },
+    {
+        slug: "edgar-wright",
+        director: "Edgar Wright",
+        directorJa: "エドガー・ライト",
+        featuredFilm: {
+            title: "The World's End",
+            titleJa: "ワールズ・エンド 酔っぱらいが世界を救う！",
+            year: 2013
+        },
+        heading: "この監督のこの一本",
+        excerpt: "『ワールズ・エンド』は、スピーディーなアクションとユーモア、緻密な伏線、そして大胆なジャンル転換にエドガー・ライトらしさが詰まった一本です。"
     }
 ];
 

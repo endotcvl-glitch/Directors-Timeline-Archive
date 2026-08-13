@@ -4,7 +4,7 @@
 
 人間とAIの両方が、サイトの目的、デザイン思想、ページ構成、データ構造、運用ルールを共有するために使います。
 
-AIの作業ルールは `AGENTS.md`、デザインの詳細な視覚基準は `design-system.md` / `design-system.html` を参照してください。
+AIの作業ルールは `AGENTS.md`、デザインの詳細な視覚基準は `docs/design-system.md` / `design-system.html` を参照してください。
 
 ## サイトコンセプト
 
@@ -21,7 +21,7 @@ Directors' Timeline Archive は、映画監督たちの作品年表を軸に、�
 Directors’ Timeline Archive は、映画監督たちの作品と、時代背景を重ねて眺めるためのアーカイブです。
 ```
 
-トップページのヒーローロゴは `assets/logo_top.svg` を使い、説明キャプションは画像内に含めずHTMLテキストとして扱う。
+トップページのヒーローロゴは `assets/logo-top.svg` を使い、説明キャプションは画像内に含めずHTMLテキストとして扱う。
 
 ## デザイン思想
 
@@ -33,7 +33,7 @@ Directors’ Timeline Archive は、映画監督たちの作品と、時代背�
 - PC表示の見た目は大きく崩さない。
 - スマホでは無理に詰め込まず、文字サイズ、余白、情報量、表示順を調整する。
 
-詳細なカラー、フォント、幅、コンポーネント例は `design-system.md` / `design-system.html` を参照する。
+詳細なカラー、フォント、幅、コンポーネント例は `docs/design-system.md` / `design-system.html` を参照する。
 
 ### 共通ナビゲーション / footer
 
@@ -44,8 +44,9 @@ Directors’ Timeline Archive は、映画監督たちの作品と、時代背�
 - 年代から探す
 - 今日は何の日
 - テーマで比較
+- Editor's Notes
 
-footerには `assets/footer-logo.svg` のロゴ、上記導線に加えて、`このサイトについて`、`お問合せ`、Xアカウントへのリンクを置く。基本的に公開ページには共通footerを配置する。
+footerには `assets/logo-top.svg` のロゴ、上記導線に加えて、`このサイトについて`、`お問合せ`、Xアカウントへのリンクを置く。基本的に公開ページには共通footerを配置する。
 
 グローバルメニューはPCでは横並び、スマホではロゴとハンバーガーボタンを表示し、開いたときに同じ主要導線を縦並びで表示する。スマホメニューでは主要導線のあとに少し間を開けて、`このサイトについて`、`お問合せ`、`@DTAarchive` も表示する。開閉処理は `navigation.js` で管理する。
 
@@ -95,7 +96,6 @@ PC / スマホともに、以下の構造を維持する。
 ├── design-system.html
 ├── AGENTS.md
 ├── project-notes.md
-├── design-system.md
 ├── style.css
 ├── home.js
 ├── main.js
@@ -110,10 +110,15 @@ PC / スマホともに、以下の構造を維持する。
 │   ├── header_logo.svg
 │   ├── footer-logo.svg
 │   ├── logo.svg
-│   ├── logo_top.svg
-│   └── ogp-20260703.png
+│   ├── logo-top.svg
+│   ├── ogp-20260703.png
+│   └── portraits/
+│       └── README.md
 ├── data/
 │   └── events.json
+├── docs/
+│   ├── design-system.md
+│   └── directors-portrait-style-guide.md
 └── notes/
     ├── index.html
     ├── david-lynch.html
@@ -372,6 +377,17 @@ Editor's Notes のトップページプレビューと一覧表示は、`editor-
 `featuredFilms` がある場合は、一覧表示で複数作品をまとめて表示できる。
 
 ## 追加コンテンツのルール
+
+### 監督ポートレートを生成する場合
+
+- 生成直後の画像はプレビューとして扱い、自動的に `assets/portraits/` へ格納しない。
+- ユーザーが明示的に「保存して」と指示した画像だけを `assets/portraits/` へ格納する。
+- 新規生成・再生成・バリエーション生成のたびに、前回や既存ポートレートとは異なるポーズを指定する。固定の構図と頭部スケールは維持する。
+- 今後の油彩タッチと仕上げは `assets/portraits/ari-aster.png` を主要な基準画像とする。人物固有の顔立ちやポーズは引き継がず、筆致、面構成、輪郭処理、衣服の省略度を参照する。
+- 筆数を減らし、額、頬、鼻、顎、首は少数の大きな明暗面と大胆で方向性のある筆使いで構成する。髭は連結した大きな面、衣服は少数の暗い形へ簡略化する。この大きな面構成を生成・再生成時の必須条件とする。
+- 髪は人物本来の生え際、輪郭、長さ、ボリュームを保ち、まず5〜10程度の太い方向性のある塊で構成する。その内部に自然な流れを示す中程度の毛束を少数だけ重ねてよいが、一本ずつの毛や細かな反復線にはしない。髪だけは顔面・髭・衣服より一段細かい情報量を許容する。
+- 今後生成・再生成する全ポートレートの背景色は、正確な `#1E1E1E`（RGB `30, 30, 30`）に固定する。背景にはグラデーション、粒子、筆致、テクスチャ、色むら、ビネット、光彩を加えない。
+- 保存時は `assets/portraits/README.md` と `docs/directors-portrait-style-guide.md` のルールに従う。
 
 ### 監督を追加する場合
 

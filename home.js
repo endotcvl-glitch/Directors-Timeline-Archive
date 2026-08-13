@@ -57,6 +57,7 @@ const directors = [
         { id: 'russo', surname: 'RUSSOS', nameJa: 'アンソニー＆ジョー・ルッソ', nameEn: 'ANTHONY & JOE RUSSO', keywords: '大規模群像劇 / 緊迫のアクション / MCUの集大成' },
         { id: 'levy', surname: 'LEVY', nameJa: 'ショーン・レヴィ', nameEn: 'SHAWN LEVY', keywords: 'ファミリー娯楽 / 軽快なテンポ / ポップな冒険' },
         { id: 'wan', surname: 'WAN', nameJa: 'ジェームズ・ワン', nameEn: 'JAMES WAN', keywords: 'ホラーの新帝王 / 恐怖の視覚化 / スリラーの極致' },
+        { id: 'derrickson', surname: 'DERRICKSON', nameJa: 'スコット・デリクソン', nameEn: 'SCOTT DERRICKSON', keywords: '超常ホラー / 信仰と恐怖 / ジャンル横断' },
         { id: 'chazelle', surname: 'CHAZELLE', nameJa: 'デイミアン・チャゼル', nameEn: 'DAMIEN CHAZELLE', keywords: '音楽と情熱 / 完璧なリズム / 夢と現実の交差' }
     ]},
     { category: '2010 -', items: [
@@ -70,6 +71,8 @@ const directors = [
         { id: 'watts', surname: 'WATTS', nameJa: 'ジョン・ワッツ', nameEn: 'JON WATTS', keywords: '青春ヒーロー / 軽やかな成長譚 / MCUの日常感' },
         { id: 'aster', surname: 'ASTER', nameJa: 'アリ・アスター', nameEn: 'ARI ASTER', keywords: '家族の崩壊 / 不安と喪失 / 現代神話' },
         { id: 'flanagan', surname: 'FLANAGAN', nameJa: 'マイク・フラナガン', nameEn: 'MIKE FLANAGAN', keywords: '情感あるホラー / 喪失と信仰 / スティーヴン・キング翻案' },
+        { id: 'muschietti', surname: 'MUSCHIETTI', nameJa: 'アンディ・ムスキエティ', nameEn: 'ANDY MUSCHIETTI', keywords: '少年期の恐怖 / 怪異の視覚化 / 大作ホラー' },
+        { id: 'cretton', surname: 'CRETTON', nameJa: 'デスティン・ダニエル・クレットン', nameEn: 'DESTIN DANIEL CRETTON', keywords: '親密な人物描写 / 家族と共同体 / ヒーロー映画' },
         { id: 'trachtenberg', surname: 'TRACHTENBERG', nameJa: 'ダン・トラクテンバーグ', nameEn: 'DAN TRACHTENBERG', keywords: 'ロジカルアクション演出 / サバイバルSF / シリーズ再解釈' }
     ]},
     { category: '2020 -', items: [
@@ -130,6 +133,25 @@ const comparisonThemes = [
     }
 ];
 
+const featuredPortraits = {
+    nolan: 'assets/portraits/christopher-nolan.png',
+    villeneuve: 'assets/portraits/denis-villeneuve.png',
+    spielberg: 'assets/portraits/steven-spielberg.png',
+    lucas: 'assets/portraits/george-lucas.png',
+    lynch: 'assets/portraits/david-lynch.png',
+    burton: 'assets/portraits/tim-burton.png',
+    raimi: 'assets/portraits/sam-raimi.png',
+    gunn: 'assets/portraits/james-gunn.png',
+    scorsese: 'assets/portraits/martin-scorsese.png',
+    wan: 'assets/portraits/james-wan.png',
+    aster: 'assets/portraits/ari-aster.png',
+    scott: 'assets/portraits/ridley-scott.png',
+    russo: 'assets/portraits/anthony-and-joe-russo.png',
+    gerwig: 'assets/portraits/greta-gerwig.png',
+    fennell: 'assets/portraits/emerald-fennell.png',
+    tonyscott: 'assets/portraits/tony-scott.png'
+};
+
 let selectedDirectors = [];
 let searchQuery = '';
 
@@ -181,7 +203,7 @@ function renderComparisonThemes() {
 
     container.innerHTML = '';
 
-    comparisonThemes.forEach(theme => {
+    comparisonThemes.slice(0, 9).forEach(theme => {
         const themeDirectors = theme.directorIds.map(getDirectorById).filter(Boolean);
 
         if (themeDirectors.length !== 2) {
@@ -191,15 +213,20 @@ function renderComparisonThemes() {
         const link = document.createElement('a');
         link.className = 'theme-item';
         link.href = `timeline.html?d1=${theme.directorIds[0]}&d2=${theme.directorIds[1]}`;
+        link.setAttribute('aria-label', `${theme.title}：${themeDirectors[0].nameJa}と${themeDirectors[1].nameJa}を比較`);
         link.innerHTML = `
-            <div>
-                <h3>${theme.title}</h3>
-                <p>${theme.description}</p>
-            </div>
-            <div class="theme-pair">
-                <span>${themeDirectors[0].nameJa}</span>
-                <span>${themeDirectors[1].nameJa}</span>
-            </div>
+            <span class="theme-pair">
+                ${themeDirectors.map((director, index) => `
+                    <span class="theme-director">
+                        <span class="theme-portrait">
+                            ${featuredPortraits[theme.directorIds[index]]
+                                ? `<img src="${featuredPortraits[theme.directorIds[index]]}" alt="" loading="lazy">`
+                                : ''}
+                        </span>
+                        <span class="theme-director-name">${director.nameJa}</span>
+                    </span>
+                `).join('')}
+            </span>
         `;
         container.appendChild(link);
     });

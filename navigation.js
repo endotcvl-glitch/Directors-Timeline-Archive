@@ -32,7 +32,7 @@ function initializeNavigation() {
 
         function shouldDelayNavigation(event, link) {
             const isMenuOpen = shell.classList.contains('is-nav-open');
-            const isMobile = window.matchMedia('(max-width: 599px)').matches;
+            const isMobile = window.matchMedia('(max-width: 1100px)').matches;
             const opensNewContext = link.target && link.target !== '_self';
             const isModifiedClick = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0;
 
@@ -65,7 +65,7 @@ function initializeNavigation() {
         });
 
         window.addEventListener('resize', () => {
-            if (window.matchMedia('(min-width: 600px)').matches) {
+            if (window.matchMedia('(min-width: 1101px)').matches) {
                 closeMenu();
             }
         });
