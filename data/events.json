@@ -296,7 +296,12 @@
     "description": "ジョージ・ルーカス監督によるスペースオペラ。映画興行、視覚効果、シリーズ映画のあり方を大きく変えた作品。",
     "country": "US",
     "source": "https://en.wikipedia.org/wiki/Star_Wars_(film)",
-    "links": []
+    "links": [
+      {
+        "label": "ジョージ・ルーカスの年表を見る",
+        "url": "timeline.html?d1=lucas"
+      }
+    ]
   },
   {
     "id": "et-us-release",
@@ -793,5 +798,533 @@
         "url": "notes/wes-craven.html"
       }
     ]
+  },
+  {
+    "id": "stanley-kubrick-birthday",
+    "date": "07-26",
+    "year": 1928,
+    "type": "director_birthday",
+    "title": "スタンリー・キューブリック誕生日",
+    "movie": "",
+    "director": "Stanley Kubrick",
+    "description": "緻密な構図と徹底した制作姿勢で、戦争、暴力、人間性、宇宙をめぐる作品を残した映画監督。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Stanley_Kubrick",
+    "links": [
+      {
+        "label": "キューブリックの年表を見る",
+        "url": "timeline.html?d1=kubrick"
+      }
+    ]
+  },
+  {
+    "id": "stanley-kubrick-deathday",
+    "date": "03-07",
+    "year": 1999,
+    "type": "director_deathday",
+    "title": "スタンリー・キューブリック命日",
+    "movie": "",
+    "director": "Stanley Kubrick",
+    "description": "『2001年宇宙の旅』『時計じかけのオレンジ』『シャイニング』など、映画表現の可能性を押し広げる作品を残した。",
+    "country": "GB",
+    "source": "https://en.wikipedia.org/wiki/Stanley_Kubrick",
+    "links": [
+      {
+        "label": "キューブリックの年表を見る",
+        "url": "timeline.html?d1=kubrick"
+      }
+    ]
+  },
+  {
+    "id": "2001-space-odyssey-us-release",
+    "date": "04-03",
+    "year": 1968,
+    "type": "movie_release",
+    "title": "『2001年宇宙の旅』ニューヨーク公開",
+    "movie": "2001: A Space Odyssey",
+    "director": "Stanley Kubrick",
+    "description": "人類の進化と宇宙の神秘を、革新的な映像と音響で描いたSF映画史の重要作。",
+    "country": "US",
+    "source": "https://catalog.afi.com/Film/23399-2001-ASPACEODYSSEY",
+    "links": [
+      {
+        "label": "キューブリックの年表を見る",
+        "url": "timeline.html?d1=kubrick"
+      }
+    ]
+  },
+  {
+    "id": "2001-space-odyssey-oscar-visual-effects",
+    "date": "04-14",
+    "year": 1969,
+    "type": "award",
+    "title": "キューブリックが『2001年宇宙の旅』でアカデミー賞を受賞",
+    "movie": "2001: A Space Odyssey",
+    "director": "Stanley Kubrick",
+    "description": "第41回アカデミー賞で特殊視覚効果賞を受賞。キューブリック自身にとって唯一のアカデミー賞受賞となった。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/1969",
+    "links": [
+      {
+        "label": "キューブリックの年表を見る",
+        "url": "timeline.html?d1=kubrick"
+      }
+    ]
+  },
+  {
+    "id": "the-shining-us-release",
+    "date": "05-23",
+    "year": 1980,
+    "type": "movie_release",
+    "title": "『シャイニング』全米公開",
+    "movie": "The Shining",
+    "director": "Stanley Kubrick",
+    "description": "閉ざされたホテルを舞台に、狂気と超自然的な恐怖を強烈な構図と運動で描いたホラー映画の重要作。",
+    "country": "US",
+    "source": "https://catalog.afi.com/Film/67203-THE-SHINING",
+    "links": [
+      {
+        "label": "キューブリックの年表を見る",
+        "url": "timeline.html?d1=kubrick"
+      }
+    ]
+  },
+  {
+    "id": "george-lucas-birthday",
+    "date": "05-14",
+    "year": 1944,
+    "type": "director_birthday",
+    "title": "ジョージ・ルーカス誕生日",
+    "movie": "",
+    "director": "George Lucas",
+    "description": "『アメリカン・グラフィティ』『スター・ウォーズ』を監督し、映画製作と視覚効果の技術革新にも大きな影響を与えた。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/George_Lucas",
+    "links": [
+      {
+        "label": "ジョージ・ルーカスの年表を見る",
+        "url": "timeline.html?d1=lucas"
+      }
+    ]
+  },
+  {
+    "id": "american-graffiti-us-release",
+    "date": "08-11",
+    "year": 1973,
+    "type": "movie_release",
+    "title": "『アメリカン・グラフィティ』全米公開",
+    "movie": "American Graffiti",
+    "director": "George Lucas",
+    "description": "1962年の一夜を通して若者たちの別れと選択を描き、音楽と青春映画の結びつきを印象づけた初期代表作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/American_Graffiti",
+    "links": [
+      {
+        "label": "ジョージ・ルーカスの年表を見る",
+        "url": "timeline.html?d1=lucas"
+      }
+    ]
+  },
+  {
+    "id": "george-lucas-thalberg-award",
+    "date": "03-30",
+    "year": 1992,
+    "type": "award",
+    "title": "ジョージ・ルーカスがアービング・G・タルバーグ賞を受賞",
+    "movie": "",
+    "director": "George Lucas",
+    "description": "第64回アカデミー賞で、質の高い映画製作を継続してきたプロデューサーに贈られる記念賞を受賞した。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/1992",
+    "links": [
+      {
+        "label": "ジョージ・ルーカスの年表を見る",
+        "url": "timeline.html?d1=lucas"
+      }
+    ]
+  },
+  {
+    "id": "clint-eastwood-birthday",
+    "date": "05-31",
+    "year": 1930,
+    "type": "director_birthday",
+    "title": "クリント・イーストウッド誕生日",
+    "movie": "",
+    "director": "Clint Eastwood",
+    "description": "西部劇や犯罪映画の伝統を受け継ぎながら、暴力、老い、贖罪を抑制された演出で描いてきた映画監督。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Clint_Eastwood",
+    "links": [
+      {
+        "label": "イーストウッドの年表を見る",
+        "url": "timeline.html?d1=eastwood"
+      }
+    ]
+  },
+  {
+    "id": "unforgiven-us-release",
+    "date": "08-07",
+    "year": 1992,
+    "type": "movie_release",
+    "title": "『許されざる者』全米公開",
+    "movie": "Unforgiven",
+    "director": "Clint Eastwood",
+    "description": "西部劇の英雄像と暴力の代償を問い直し、イーストウッドの監督作を代表する転換点となった。",
+    "country": "US",
+    "source": "https://catalog.afi.com/Film/67274-UNFORGIVEN",
+    "links": [
+      {
+        "label": "イーストウッドの年表を見る",
+        "url": "timeline.html?d1=eastwood"
+      }
+    ]
+  },
+  {
+    "id": "unforgiven-oscars-best-picture-director",
+    "date": "03-29",
+    "year": 1993,
+    "type": "award",
+    "title": "『許されざる者』がアカデミー賞作品賞・監督賞を受賞",
+    "movie": "Unforgiven",
+    "director": "Clint Eastwood",
+    "description": "第65回アカデミー賞で作品賞と監督賞を受賞。主演と監督を兼ねた作品でキャリアの大きな節目を迎えた。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/1993",
+    "links": [
+      {
+        "label": "イーストウッドの年表を見る",
+        "url": "timeline.html?d1=eastwood"
+      }
+    ]
+  },
+  {
+    "id": "million-dollar-baby-oscars-best-picture-director",
+    "date": "02-27",
+    "year": 2005,
+    "type": "award",
+    "title": "『ミリオンダラー・ベイビー』がアカデミー賞作品賞・監督賞を受賞",
+    "movie": "Million Dollar Baby",
+    "director": "Clint Eastwood",
+    "description": "第77回アカデミー賞で作品賞と監督賞を受賞。イーストウッドは当時、監督賞の史上最高齢受賞者となった。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/2005",
+    "links": [
+      {
+        "label": "イーストウッドの年表を見る",
+        "url": "timeline.html?d1=eastwood"
+      }
+    ]
+  },
+  {
+    "id": "tobe-hooper-birthday",
+    "date": "01-25",
+    "year": 1943,
+    "type": "director_birthday",
+    "title": "トビー・フーパー誕生日",
+    "movie": "",
+    "director": "Tobe Hooper",
+    "description": "低予算映画のざらついた質感とアメリカの風景を結びつけ、現代ホラーに大きな影響を与えた映画監督。",
+    "country": "US",
+    "source": "https://www.tshaonline.org/handbook/entries/hooper-willard-tobe",
+    "links": [{ "label": "フーパーの年表を見る", "url": "timeline.html?d1=hooper" }]
+  },
+  {
+    "id": "tobe-hooper-deathday",
+    "date": "08-26",
+    "year": 2017,
+    "type": "director_deathday",
+    "title": "トビー・フーパー命日",
+    "movie": "",
+    "director": "Tobe Hooper",
+    "description": "『悪魔のいけにえ』『ポルターガイスト』などを通して、日常のすぐそばにある恐怖を映画史に刻んだ。",
+    "country": "US",
+    "source": "https://www.theguardian.com/film/2017/aug/28/tobe-hooper-obituary",
+    "links": [{ "label": "フーパーの年表を見る", "url": "timeline.html?d1=hooper" }]
+  },
+  {
+    "id": "texas-chain-saw-massacre-us-release",
+    "date": "10-11",
+    "year": 1974,
+    "type": "movie_release",
+    "title": "『悪魔のいけにえ』全米公開",
+    "movie": "The Texas Chain Saw Massacre",
+    "director": "Tobe Hooper",
+    "description": "低予算の撮影が生む生々しい質感で、アメリカの田舎を逃げ場のない悪夢へ変えたホラー映画の金字塔。",
+    "country": "US",
+    "source": "https://www.tshaonline.org/handbook/entries/the-texas-chain-saw-massacre-1974",
+    "links": [{ "label": "フーパーの年表を見る", "url": "timeline.html?d1=hooper" }]
+  },
+  {
+    "id": "poltergeist-us-release",
+    "date": "06-04",
+    "year": 1982,
+    "type": "movie_release",
+    "title": "『ポルターガイスト』全米公開",
+    "movie": "Poltergeist",
+    "director": "Tobe Hooper",
+    "description": "郊外の家庭へ超常現象が侵入する恐怖を、大規模な視覚効果と家族ドラマで描いた80年代ホラーの代表作。",
+    "country": "US",
+    "source": "https://catalog.afi.com/Film/56862-POLTERGEIST",
+    "links": [{ "label": "フーパーの年表を見る", "url": "timeline.html?d1=hooper" }]
+  },
+  {
+    "id": "oliver-stone-birthday",
+    "date": "09-15",
+    "year": 1946,
+    "type": "director_birthday",
+    "title": "オリバー・ストーン誕生日",
+    "movie": "",
+    "director": "Oliver Stone",
+    "description": "戦争、政治、メディア、アメリカ社会の矛盾を、強烈な編集と主観的な映像で描いてきた映画監督。",
+    "country": "US",
+    "source": "https://www.pbs.org/moyers/journal/12042009/profile.html",
+    "links": [{ "label": "オリバー・ストーンの年表を見る", "url": "timeline.html?d1=stone" }]
+  },
+  {
+    "id": "platoon-us-release",
+    "date": "12-19",
+    "year": 1986,
+    "type": "movie_release",
+    "title": "『プラトーン』全米公開",
+    "movie": "Platoon",
+    "director": "Oliver Stone",
+    "description": "自身の従軍経験を背景に、ベトナム戦争の混乱と兵士たちの内部対立を描いた反戦映画の重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Platoon_(film)",
+    "links": [{ "label": "オリバー・ストーンの年表を見る", "url": "timeline.html?d1=stone" }]
+  },
+  {
+    "id": "platoon-oscars-best-picture-director",
+    "date": "03-30",
+    "year": 1987,
+    "type": "award",
+    "title": "『プラトーン』がアカデミー賞作品賞・監督賞を受賞",
+    "movie": "Platoon",
+    "director": "Oliver Stone",
+    "description": "第59回アカデミー賞で作品賞と監督賞を受賞。ストーンの個人的な戦争体験が映画史的評価へ結びついた。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/1987",
+    "links": [{ "label": "オリバー・ストーンの年表を見る", "url": "timeline.html?d1=stone" }]
+  },
+  {
+    "id": "born-fourth-july-oscar-director",
+    "date": "03-26",
+    "year": 1990,
+    "type": "award",
+    "title": "オリバー・ストーンが『7月4日に生まれて』でアカデミー監督賞を受賞",
+    "movie": "Born on the Fourth of July",
+    "director": "Oliver Stone",
+    "description": "第62回アカデミー賞で監督賞を受賞。帰還兵の挫折と反戦への転換を描き、2度目の監督賞となった。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/1990",
+    "links": [{ "label": "オリバー・ストーンの年表を見る", "url": "timeline.html?d1=stone" }]
+  },
+  {
+    "id": "dario-argento-birthday",
+    "date": "09-07",
+    "year": 1940,
+    "type": "director_birthday",
+    "title": "ダリオ・アルジェント誕生日",
+    "movie": "",
+    "director": "Dario Argento",
+    "description": "鮮烈な色彩、音楽、殺人の視覚化によって、ジャッロとイタリアンホラーを象徴する作風を築いた映画監督。",
+    "country": "IT",
+    "source": "https://en.wikipedia.org/wiki/Dario_Argento",
+    "links": [{ "label": "アルジェントの年表を見る", "url": "timeline.html?d1=argento" }]
+  },
+  {
+    "id": "suspiria-italy-release",
+    "date": "02-01",
+    "year": 1977,
+    "type": "movie_release",
+    "title": "『サスペリア』イタリア公開",
+    "movie": "Suspiria",
+    "director": "Dario Argento",
+    "description": "極彩色の照明とゴブリンの音楽で魔女の学院を悪夢へ変え、イタリアンホラーを世界へ印象づけた代表作。",
+    "country": "IT",
+    "source": "https://cineuropa.org/en/film/414812/",
+    "links": [{ "label": "アルジェントの年表を見る", "url": "timeline.html?d1=argento" }]
+  },
+  {
+    "id": "deep-red-italy-release",
+    "date": "03-07",
+    "year": 1975,
+    "type": "movie_release",
+    "title": "『サスペリアPART2』イタリア公開",
+    "movie": "Profondo rosso",
+    "director": "Dario Argento",
+    "description": "記憶の見落とし、複雑なカメラワーク、ゴブリンの音楽を結びつけ、ジャッロ表現を研ぎ澄ました重要作。",
+    "country": "IT",
+    "source": "https://en.wikipedia.org/wiki/Deep_Red",
+    "links": [{ "label": "アルジェントの年表を見る", "url": "timeline.html?d1=argento" }]
+  },
+  {
+    "id": "john-carpenter-birthday",
+    "date": "01-16",
+    "year": 1948,
+    "type": "director_birthday",
+    "title": "ジョン・カーペンター誕生日",
+    "movie": "",
+    "director": "John Carpenter",
+    "description": "ミニマルな演出と自作のシンセサウンドで、ホラー、SF、アクション映画に独自の緊張感を築いた映画監督。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/John_Carpenter",
+    "links": [{ "label": "カーペンターの年表を見る", "url": "timeline.html?d1=carpenter" }]
+  },
+  {
+    "id": "halloween-us-release",
+    "date": "10-25",
+    "year": 1978,
+    "type": "movie_release",
+    "title": "『ハロウィン』全米公開",
+    "movie": "Halloween",
+    "director": "John Carpenter",
+    "description": "静かな郊外に正体の見えない殺人鬼を持ち込み、低予算映画からスラッシャー映画の基準を作った。",
+    "country": "US",
+    "source": "https://theofficialjohncarpenter.com/halloween/",
+    "links": [{ "label": "カーペンターの年表を見る", "url": "timeline.html?d1=carpenter" }]
+  },
+  {
+    "id": "the-thing-us-release",
+    "date": "06-25",
+    "year": 1982,
+    "type": "movie_release",
+    "title": "『遊星からの物体X』全米公開",
+    "movie": "The Thing",
+    "director": "John Carpenter",
+    "description": "南極基地の閉鎖空間で、他者への疑念と身体変容の恐怖を極限まで高めたSFホラーの重要作。",
+    "country": "US",
+    "source": "https://theofficialjohncarpenter.com/the-thing/",
+    "links": [{ "label": "カーペンターの年表を見る", "url": "timeline.html?d1=carpenter" }]
+  },
+  {
+    "id": "george-miller-birthday",
+    "date": "03-03",
+    "year": 1945,
+    "type": "director_birthday",
+    "title": "ジョージ・ミラー誕生日",
+    "movie": "",
+    "director": "George Miller",
+    "description": "身体性の強いアクションと神話的な世界観を軸に、『マッドマックス』からアニメーションまで幅広く手がける映画監督。",
+    "country": "AU",
+    "source": "https://en.wikipedia.org/wiki/George_Miller_(filmmaker)",
+    "links": [{ "label": "ジョージ・ミラーの年表を見る", "url": "timeline.html?d1=miller" }]
+  },
+  {
+    "id": "mad-max-australia-release",
+    "date": "04-12",
+    "year": 1979,
+    "type": "movie_release",
+    "title": "『マッドマックス』オーストラリア公開",
+    "movie": "Mad Max",
+    "director": "George Miller",
+    "description": "低予算ながら迫力あるカーアクションと荒廃した近未来像を打ち出し、世界的シリーズの出発点となった。",
+    "country": "AU",
+    "source": "https://en.wikipedia.org/wiki/Mad_Max",
+    "links": [{ "label": "ジョージ・ミラーの年表を見る", "url": "timeline.html?d1=miller" }]
+  },
+  {
+    "id": "mad-max-fury-road-us-release",
+    "date": "05-15",
+    "year": 2015,
+    "type": "movie_release",
+    "title": "『マッドマックス 怒りのデス・ロード』全米公開",
+    "movie": "Mad Max: Fury Road",
+    "director": "George Miller",
+    "description": "実写スタントを軸にした圧倒的な運動と視覚的な語りで、現代アクション映画の基準を更新した重要作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Mad_Max:_Fury_Road",
+    "links": [{ "label": "ジョージ・ミラーの年表を見る", "url": "timeline.html?d1=miller" }]
+  },
+  {
+    "id": "ridley-scott-birthday",
+    "date": "11-30",
+    "year": 1937,
+    "type": "director_birthday",
+    "title": "リドリー・スコット誕生日",
+    "movie": "",
+    "director": "Ridley Scott",
+    "description": "光と影を生かした重厚な世界構築で、SF、歴史劇、犯罪映画など多様なジャンルを手がけてきた映画監督。",
+    "country": "GB",
+    "source": "https://en.wikipedia.org/wiki/Ridley_Scott",
+    "links": [{ "label": "リドリー・スコットの年表を見る", "url": "timeline.html?d1=scott" }]
+  },
+  {
+    "id": "alien-us-release",
+    "date": "05-25",
+    "year": 1979,
+    "type": "movie_release",
+    "title": "『エイリアン』全米公開",
+    "movie": "Alien",
+    "director": "Ridley Scott",
+    "description": "宇宙船の閉鎖空間へ身体的な恐怖を持ち込み、SFとホラーを結びつけた映画史上の重要作。",
+    "country": "US",
+    "source": "https://www.20thcenturystudios.com/movies/alien",
+    "links": [{ "label": "リドリー・スコットの年表を見る", "url": "timeline.html?d1=scott" }]
+  },
+  {
+    "id": "blade-runner-us-release",
+    "date": "06-25",
+    "year": 1982,
+    "type": "movie_release",
+    "title": "『ブレードランナー』全米公開",
+    "movie": "Blade Runner",
+    "director": "Ridley Scott",
+    "description": "雨とネオンに包まれた未来都市と人造人間の存在論を結びつけ、その後のSF映像へ決定的な影響を与えた。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Blade_Runner",
+    "links": [{ "label": "リドリー・スコットの年表を見る", "url": "timeline.html?d1=scott" }]
+  },
+  {
+    "id": "robert-zemeckis-birthday",
+    "date": "05-14",
+    "year": 1952,
+    "type": "director_birthday",
+    "title": "ロバート・ゼメキス誕生日",
+    "movie": "",
+    "director": "Robert Zemeckis",
+    "description": "ポップな物語と映像技術の革新を結びつけ、時間、記憶、アメリカ社会を描いてきた映画監督。",
+    "country": "US",
+    "source": "https://goldenglobes.com/person/robert-zemeckis/",
+    "links": [{ "label": "ゼメキスの年表を見る", "url": "timeline.html?d1=zemeckis" }]
+  },
+  {
+    "id": "back-to-the-future-us-release",
+    "date": "07-03",
+    "year": 1985,
+    "type": "movie_release",
+    "title": "『バック・トゥ・ザ・フューチャー』全米公開",
+    "movie": "Back to the Future",
+    "director": "Robert Zemeckis",
+    "description": "時間旅行、青春、家族の物語を精密な脚本で結びつけ、1980年代を代表するポップ映画となった。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Back_to_the_Future",
+    "links": [{ "label": "ゼメキスの年表を見る", "url": "timeline.html?d1=zemeckis" }]
+  },
+  {
+    "id": "forrest-gump-us-release",
+    "date": "07-06",
+    "year": 1994,
+    "type": "movie_release",
+    "title": "『フォレスト・ガンプ／一期一会』全米公開",
+    "movie": "Forrest Gump",
+    "director": "Robert Zemeckis",
+    "description": "一人の人生をアメリカ現代史へ重ね、デジタル合成を物語表現として大規模に活用した代表作。",
+    "country": "US",
+    "source": "https://en.wikipedia.org/wiki/Forrest_Gump",
+    "links": [{ "label": "ゼメキスの年表を見る", "url": "timeline.html?d1=zemeckis" }]
+  },
+  {
+    "id": "forrest-gump-oscars-best-picture-director",
+    "date": "03-27",
+    "year": 1995,
+    "type": "award",
+    "title": "『フォレスト・ガンプ／一期一会』がアカデミー賞作品賞・監督賞を受賞",
+    "movie": "Forrest Gump",
+    "director": "Robert Zemeckis",
+    "description": "第67回アカデミー賞で作品賞と監督賞を受賞。視覚効果、編集、脚色などを含む6部門受賞となった。",
+    "country": "US",
+    "source": "https://www.oscars.org/oscars/ceremonies/1995",
+    "links": [{ "label": "ゼメキスの年表を見る", "url": "timeline.html?d1=zemeckis" }]
   }
 ]

@@ -36,7 +36,6 @@
     --global-nav-bg: #48434c;
     --secondary-text: #666666;
     --line-color: #d8d8d8;
-    --card-bg: #ffffff;
 }
 ```
 
@@ -55,7 +54,6 @@
 - `--global-nav-bg`: 全ページ共通のグローバルナビ背景色。
 - `--secondary-text`: 補助情報、説明文、メタ情報。
 - `--line-color`: 区切り線、カード境界、静かなグルーピング。
-- `--card-bg`: カード背景が必要な場合に使う。ただしカード感を強くしすぎない。
 
 ### 避けること
 
@@ -65,22 +63,62 @@
 
 ## タイポグラフィ
 
-現在のフォントは `style.css` の `:root` で管理する。
+テキストデザインは Figma の `design-system`（node `45:5`）を基準にし、`style.css` の `:root` で管理する。
 
 ```css
 :root {
+    --font-interface: 'Gen Interface JP', 'Noto Sans JP', 'Inter', sans-serif;
     --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
     --font-serif: 'Playfair Display', serif;
     --font-title: 'Karla', 'Inter', 'Noto Sans JP', sans-serif;
     --font-number: 'Roboto', 'Noto Sans JP', 'Inter', sans-serif;
     --title-letter-spacing: 0.12em;
-    --global-nav-font-size: 13pt;
 }
 ```
 
+### Figmaテキストスケール
+
+見出しは `Gen Interface JP Bold`（`700`）、本文は `Gen Interface JP Regular`（`400`）を使用する。どちらも行間は `1.5`、字間は `0.04em` とする。
+
+| トークン | 見出し | 本文 |
+| --- | ---: | ---: |
+| XXXL | `56px` | — |
+| XXL | `44px` | — |
+| XL | `32px` | `18px` |
+| L | `28px` | `16px` |
+| M | `20px` | `15px` |
+| S | `18px` | `13px` |
+| XS | `16px` | `11px` |
+| XXS | `13px` | `10px` |
+
+CSS変数は以下を使う。
+
+```css
+:root {
+    --text-heading-xxxl: 56px;
+    --text-heading-xxl: 44px;
+    --text-heading-xl: 32px;
+    --text-heading-l: 28px;
+    --text-heading-m: 20px;
+    --text-heading-s: 18px;
+    --text-heading-xs: 16px;
+    --text-heading-xxs: 13px;
+    --text-body-xl: 18px;
+    --text-body-l: 16px;
+    --text-body-m: 15px;
+    --text-body-s: 13px;
+    --text-body-xs: 11px;
+    --text-body-xxs: 10px;
+    --text-line-height: 1.5;
+    --text-letter-spacing: 0.04em;
+}
+```
+
+既存サイトへの割り当ては、現状の見た目に最も近い段階を選ぶ。ページタイトルは見出し/XL、セクション見出しは見出し/L、カード見出しは見出し/MまたはS、標準本文は本文/LまたはM、補助文は本文/SまたはXSを基本とする。ヒーローロゴと数字・年号・日付のサイズ体系はこの変更の対象外とする。
+
 ### 基本方針
 
-- 日本語本文と通常UIは `--font-sans` を使う。
+- 日本語の見出し・本文・通常UIは `--font-interface` を使う。
 - サイトタイトルや強い英字ロゴ表現は `--font-title` を使う。
 - 年号、日付、作品年など数字を見せる場面は `--font-number` を使う。
 - `--font-serif` は英語・数字に限定して使う。日本語など英数字以外の文字には serif を使わない。
@@ -91,10 +129,10 @@
 ### 主な階層
 
 - サイトタイトル: `--font-title`、大文字、広めの letter-spacing。
-- ページタイトル: `--font-sans`、太字、ページ内で最も強い階層。基本は日本語表記にする。
-- セクション見出し: `1.5rem`、`font-weight: 600`、`#a08257`、letter-spacing `0.04em`。
+- ページタイトル: 見出し/XL（`32px`）。個別記事の大見出しなど、既存表示が大きい箇所は見出し/XXL（`44px`）。
+- セクション見出し: 見出し/L（`28px`）、`font-weight: 700`、`#a08257`、letter-spacing `0.04em`。
 - 数字: `--font-number`、監督一覧の年代見出し、timelineの年号、年代ページの年号、今日は何の日の日付、NEWSの日付、コラム作品年など、年号や日付に使う。letter-spacing は文脈に応じてやや広めにする。
-- 本文: `--font-sans`、読みやすい行間を優先。
+- 本文: `--font-interface`、読みやすい行間を優先。
 - 補助テキスト: `--secondary-text`、小さめ。
 - 操作リンク: 太字、小さめ、letter-spacing をやや広くする。
 
@@ -104,14 +142,16 @@
 
 | 用途 | セレクタ | サイズ / ウエイト / 字間 |
 | --- | --- | --- |
-| ページタイトル | `.page-hero h1` | `clamp(1.65rem, 4vw, 2.35rem)` / `700` / `0.02em` |
-| セクション見出し | `.section-heading h2` | `1.5rem` / `600` / `0.04em` |
+| ページタイトル | `.page-hero h1` | `32px`（見出し/XL）/ `700` / `0.04em` |
+| セクション見出し | `.section-heading h2` | `28px`（見出し/L）/ `700` / `0.04em` |
 | カード / リスト見出し | `.explore-path-title` / `.theme-item h3` / `.item-name-ja` / `.year-film-item h4` / `.today-event-card h2` / `.notice-item h3` / `.note-card-*` | サイズは用途別 / `700` / `0.04em` |
 | timeline 監督名 | `.label-surname` | `1.35rem` / `700` / `0.06em` |
 | timeline 作品タイトル | `.film-title` | `1.6rem` / `700` / `0` |
 | timeline 年号 | `.year-label` | `1.4rem` / `700` / `--font-number` |
 | 今日は何の日の日付 | `.today-date-panel h2` | `clamp(1.7rem, 4vw, 2.6rem)` / `700` / `--font-number` |
-| Editor's Notes 作品名 | `.note-featured-film` | `1.35rem` / `700` / `0.02em` |
+| Editor's Notes 作品名 | `.note-featured-film` | `20px`（見出し/M）/ `700` / `0.04em` |
+
+年号、日付、作品年など `--font-number` を使う要素は、既存のフォントサイズと字間を維持する。
 
 ## レイアウト幅
 
@@ -120,6 +160,7 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 対象:
 
 - `years.html` の `.year-container`
+- `today.html` の `.today-container`
 - `notes/index.html` の `.notes-index-container`
 - `notes/*.html` の `.note-container`
 
@@ -127,6 +168,7 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 
 ```css
 .year-container,
+.today-container,
 .notes-index-container,
 .note-container {
     width: min(100%, 1100px);
@@ -174,7 +216,7 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 - 背景は `--global-nav-bg`、文字は白寄りの低コントラスト。
 - ロゴは `assets/header_logo.svg` を使い、ブラウザ左側に配置する。
 - グローバルメニュー項目は `1100px` のコンテンツ幅内で左寄せにする。
-- メニュー項目は `ホーム`、`映画監督から選ぶ`、`年代から探す`、`今日は何の日`、`テーマで比較` を基本にする。
+- メニュー項目は `ホーム`、`映画監督から選ぶ`、`年代から探す`、`今日は何の日`、`テーマで比較`、`Editor's Notes` を基本にする。
 - 現在地は `is-active` で表現する。
 - モバイルでは主要導線のあとに少し間を開けて、`このサイトについて`、`お問合せ`、`@DTAarchive` を補助導線として表示する。
 - モバイルの主要導線は補助導線より大きく表示し、各項目の縦方向のタップ領域を広めに取る。
@@ -197,7 +239,7 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 
 - 主要導線を静かに再提示する。
 - サイト全体の終端として、強い装飾は使わない。
-- ロゴは `assets/footer-logo.svg` を使う。
+- ロゴは `assets/logo-top.svg` を使い、幅は `260px` を基準にする。
 - メインコンテンツとの間はゆったり取り、footerの上側余白で終端感を出す。
 
 関連クラス:
@@ -221,15 +263,6 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 - `.section-heading`
 - `.editor-note-subtitle`
 
-### Home Hero
-
-トップページのヒーローは、`assets/logo_top.svg` のロゴとテキスト扱いの説明キャプションで構成する。
-
-- 背景は `--global-nav-bg` を使い、ナビと連続した色面として見せる。
-- ロゴ左の縦軸はタイムラインを示す装飾として使う。
-- 説明キャプションは画像化せず、HTML上のテキストとして保持する。
-- スマホでは縦軸を省略し、ロゴと説明文の読みやすさを優先する。
-
 ### Year Page
 
 年代から探すページは、外側幅 `1100px` を基準にする。
@@ -239,7 +272,9 @@ PC表示では、主要な一覧・情報ページの外側コンテンツ幅を
 - `.year-container`
 - `.year-picker`
 - `.year-summary`
-- `.year-content-grid`
+- `.year-results`
+- `.year-events-panel`
+- `.year-films-panel`
 
 ### Editor's Notes Index
 
@@ -294,26 +329,6 @@ indexページではコラムを複数並べず、最新の1件だけをプレ�
 - `.note-featured-film`
 - `.note-body`
 - `.note-intent`
-
-### Cards
-
-カード感は強くしすぎない。
-
-使い方:
-
-- 一覧項目、選択肢、導線に使う。
-- 基本は罫線、余白、hover の opacity / transform で反応を示す。
-- 背景白の強いカードは必要な場所に限定する。
-- indexページの `探し方を選ぶ` と `テーマから比較してみる` のカード背景は `#dddddd`、hover は `#e6e6e6` にする。
-- indexページの `探し方を選ぶ` のカード hover では、背景に加えて枠線、見出し、ピクトグラムも `--text-hover-color` に寄せて反応させる。
-- `探し方を選ぶ` のカード幅は `comparison-themes` のカード幅に揃える。
-- indexページのカード内見出しは `1.25rem`、20px相当を基本にする。
-
-避けること:
-
-- 角丸や影を強くしすぎる。
-- カードを入れ子にする。
-- ページ全体をカードの集合に見せる。
 
 ## インタラクション
 

@@ -15,7 +15,7 @@
     <title>Design System | Directors Timeline Archive</title>
     <meta name="description" content="Directors Timeline Archive のカラー、タイポグラフィ、余白、コンポーネントを確認するためのデザインシステム資料です。">
     <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="stylesheet" href="style.css?v=light-footer-20260813">
+    <link rel="stylesheet" href="style.css?v=typography-system-20260813">
     <style>
         .design-system-container {
             width: min(100%, 1100px);
@@ -117,6 +117,26 @@
             gap: 1.2rem;
         }
 
+        .ds-token-table {
+            width: 100%;
+            margin-bottom: 2rem;
+            border-collapse: collapse;
+            font-family: var(--font-interface);
+            font-size: var(--text-body-s);
+            line-height: var(--text-line-height);
+        }
+
+        .ds-token-table th,
+        .ds-token-table td {
+            padding: 0.7rem 0.5rem;
+            border-bottom: 1px solid var(--line-color);
+            text-align: left;
+        }
+
+        .ds-token-table th {
+            font-weight: 700;
+        }
+
         .ds-type-sample {
             display: grid;
             grid-template-columns: minmax(0, 0.35fr) minmax(0, 1fr);
@@ -140,18 +160,20 @@
         }
 
         .ds-type-page-title {
-            font-size: clamp(1.65rem, 4vw, 2.35rem);
+            font-family: var(--font-interface);
+            font-size: var(--text-heading-xl);
             font-weight: 700;
-            letter-spacing: 0.02em;
-            line-height: 1.25;
+            letter-spacing: var(--text-letter-spacing);
+            line-height: var(--text-line-height);
         }
 
         .ds-type-section-title {
             color: #a08257;
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            line-height: 1.5;
+            font-family: var(--font-interface);
+            font-size: var(--text-heading-l);
+            font-weight: 700;
+            letter-spacing: var(--text-letter-spacing);
+            line-height: var(--text-line-height);
         }
 
         .ds-type-number {
@@ -165,16 +187,18 @@
 
         .ds-type-body {
             max-width: 760px;
-            font-size: 0.98rem;
-            letter-spacing: 0.02em;
-            line-height: 2.05;
+            font-family: var(--font-interface);
+            font-size: var(--text-body-l);
+            letter-spacing: var(--text-letter-spacing);
+            line-height: var(--text-line-height);
         }
 
         .ds-type-meta {
             color: var(--secondary-text);
-            font-size: 0.82rem;
-            letter-spacing: 0.06em;
-            line-height: 1.75;
+            font-family: var(--font-interface);
+            font-size: var(--text-body-s);
+            letter-spacing: var(--text-letter-spacing);
+            line-height: var(--text-line-height);
         }
 
         .ds-type-specs {
@@ -223,7 +247,7 @@
 
         .ds-type-usage-sample {
             color: var(--text-color);
-            font-family: var(--font-sans);
+            font-family: var(--font-interface);
             line-height: 1.45;
         }
 
@@ -242,20 +266,20 @@
         }
 
         .ds-use-page-title {
-            font-size: clamp(1.65rem, 4vw, 2.35rem);
+            font-size: var(--text-heading-xl);
             font-weight: 700;
-            letter-spacing: 0.02em;
+            letter-spacing: var(--text-letter-spacing);
         }
 
         .ds-use-section {
             color: #a08257;
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
+            font-size: var(--text-heading-l);
+            font-weight: 700;
+            letter-spacing: var(--text-letter-spacing);
         }
 
         .ds-use-card-title {
-            font-size: 1.25rem;
+            font-size: var(--text-heading-m);
             font-weight: 700;
             letter-spacing: 0.04em;
         }
@@ -293,9 +317,9 @@
         }
 
         .ds-use-note-film {
-            font-size: 1.35rem;
+            font-size: var(--text-heading-m);
             font-weight: 700;
-            letter-spacing: 0.02em;
+            letter-spacing: var(--text-letter-spacing);
         }
 
         .ds-widths {
@@ -376,39 +400,6 @@
             text-align: center;
         }
 
-        .ds-home-card-sample {
-            display: grid;
-            gap: 0.9rem;
-        }
-
-        .ds-home-card-sample a {
-            display: block;
-            min-height: 6.5rem;
-            padding: 1.25rem 1.35rem;
-            border: 1px solid rgba(87, 84, 91, 0.34);
-            border-radius: 8px;
-            background: #dddddd;
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .ds-home-card-sample strong {
-            display: block;
-            color: var(--text-color);
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            line-height: 1.5;
-            margin-bottom: 0.45rem;
-        }
-
-        .ds-home-card-sample span {
-            color: var(--secondary-text);
-            font-size: 0.76rem;
-            letter-spacing: 0.04em;
-            line-height: 1.7;
-        }
-
         .ds-timeline-axis-sample {
             position: relative;
             min-height: 11rem;
@@ -437,65 +428,6 @@
             font-size: 1.4rem;
             font-weight: 700;
             padding: 0.35rem 0.9rem;
-        }
-
-        .ds-home-hero-sample {
-            display: grid;
-            grid-template-columns: 2rem minmax(0, 1fr);
-            gap: 1.4rem;
-            align-items: center;
-            background: var(--global-nav-bg);
-            padding: 2.2rem;
-        }
-
-        .ds-home-axis {
-            position: relative;
-            width: 1rem;
-            height: 10rem;
-        }
-
-        .ds-home-axis::before {
-            content: "";
-            position: absolute;
-            top: 0.3rem;
-            bottom: 0.3rem;
-            left: 50%;
-            width: 1px;
-            background: rgba(160, 130, 87, 0.78);
-            transform: translateX(-50%);
-        }
-
-        .ds-home-axis span {
-            position: absolute;
-            left: 50%;
-            width: 0.45rem;
-            height: 0.45rem;
-            border-radius: 50%;
-            background: #a08257;
-            transform: translate(-50%, -50%);
-        }
-
-        .ds-home-axis span:first-child,
-        .ds-home-axis span:last-child {
-            width: 0.8rem;
-            height: 0.8rem;
-        }
-
-        .ds-home-axis span:nth-child(1) { top: 0; }
-        .ds-home-axis span:nth-child(2) { top: 34%; }
-        .ds-home-axis span:nth-child(3) { top: 66%; }
-        .ds-home-axis span:nth-child(4) { top: 100%; }
-
-        .ds-home-hero-sample img {
-            display: block;
-            width: min(100%, 320px);
-            height: auto;
-        }
-
-        .ds-home-hero-sample p {
-            margin-top: 1.3rem;
-            color: rgba(255,255,255,0.78);
-            letter-spacing: 0.1em;
         }
 
         .ds-note-card-sample {
@@ -719,8 +651,23 @@
         <section class="ds-section">
             <div class="ds-section-header">
                 <h2>Typography</h2>
-                <p>通常UIと日本語本文はゴシック体を基本にします。数字は専用の指定を持たせ、セリフ体は英語・数字に限定して使います。</p>
+                <p>Figmaのテキストシステムを基準に、見出しはGen Interface JP Bold、本文はGen Interface JP Regularを使用します。行間は1.5、字間は0.04emです。数字のサイズは既存設定を維持します。</p>
             </div>
+            <table class="ds-token-table" aria-label="Figma typography scale">
+                <thead>
+                    <tr><th>Token</th><th>Heading</th><th>Body</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th>XXXL</th><td>56px</td><td>—</td></tr>
+                    <tr><th>XXL</th><td>44px</td><td>—</td></tr>
+                    <tr><th>XL</th><td>32px</td><td>18px</td></tr>
+                    <tr><th>L</th><td>28px</td><td>16px</td></tr>
+                    <tr><th>M</th><td>20px</td><td>15px</td></tr>
+                    <tr><th>S</th><td>18px</td><td>13px</td></tr>
+                    <tr><th>XS</th><td>16px</td><td>11px</td></tr>
+                    <tr><th>XXS</th><td>13px</td><td>10px</td></tr>
+                </tbody>
+            </table>
             <div class="ds-type-list">
                 <div class="ds-type-sample">
                     <h3>Site Title</h3>
@@ -761,11 +708,11 @@
                         <dl class="ds-type-specs" aria-label="Page Title typography specs">
                             <div>
                                 <dt>Font</dt>
-                                <dd>Inter / Noto Sans JP</dd>
+                                <dd>Gen Interface JP / Noto Sans JP / Inter</dd>
                             </div>
                             <div>
                                 <dt>Size</dt>
-                                <dd>clamp(1.65rem, 4vw, 2.35rem)</dd>
+                                <dd>32px / Heading XL</dd>
                             </div>
                             <div>
                                 <dt>Weight</dt>
@@ -773,11 +720,11 @@
                             </div>
                             <div>
                                 <dt>Line Height</dt>
-                                <dd>1.25</dd>
+                                <dd>1.5</dd>
                             </div>
                             <div>
                                 <dt>Spacing</dt>
-                                <dd>0.02em</dd>
+                                <dd>0.04em</dd>
                             </div>
                         </dl>
                     </div>
@@ -789,15 +736,15 @@
                         <dl class="ds-type-specs" aria-label="Section typography specs">
                             <div>
                                 <dt>Font</dt>
-                                <dd>Inter / Noto Sans JP</dd>
+                                <dd>Gen Interface JP / Noto Sans JP / Inter</dd>
                             </div>
                             <div>
                                 <dt>Size</dt>
-                                <dd>1.5rem</dd>
+                                <dd>28px / Heading L</dd>
                             </div>
                             <div>
                                 <dt>Weight</dt>
-                                <dd>600</dd>
+                                <dd>700</dd>
                             </div>
                             <div>
                                 <dt>Line Height</dt>
@@ -853,11 +800,11 @@
                         <dl class="ds-type-specs" aria-label="Body typography specs">
                             <div>
                                 <dt>Font</dt>
-                                <dd>Inter / Noto Sans JP</dd>
+                                <dd>Gen Interface JP / Noto Sans JP / Inter</dd>
                             </div>
                             <div>
                                 <dt>Size</dt>
-                                <dd>0.98rem</dd>
+                                <dd>16px / Body L</dd>
                             </div>
                             <div>
                                 <dt>Weight</dt>
@@ -865,11 +812,11 @@
                             </div>
                             <div>
                                 <dt>Line Height</dt>
-                                <dd>2.05</dd>
+                                <dd>1.5</dd>
                             </div>
                             <div>
                                 <dt>Spacing</dt>
-                                <dd>0.02em</dd>
+                                <dd>0.04em</dd>
                             </div>
                             <div>
                                 <dt>Max Width</dt>
@@ -885,11 +832,11 @@
                         <dl class="ds-type-specs" aria-label="Meta typography specs">
                             <div>
                                 <dt>Font</dt>
-                                <dd>Inter / Noto Sans JP</dd>
+                                <dd>Gen Interface JP / Noto Sans JP / Inter</dd>
                             </div>
                             <div>
                                 <dt>Size</dt>
-                                <dd>0.82rem</dd>
+                                <dd>13px / Body S</dd>
                             </div>
                             <div>
                                 <dt>Weight</dt>
@@ -897,11 +844,11 @@
                             </div>
                             <div>
                                 <dt>Line Height</dt>
-                                <dd>1.75</dd>
+                                <dd>1.5</dd>
                             </div>
                             <div>
                                 <dt>Spacing</dt>
-                                <dd>0.06em</dd>
+                                <dd>0.04em</dd>
                             </div>
                             <div>
                                 <dt>Color</dt>
@@ -918,17 +865,17 @@
                             <div class="ds-type-usage-row">
                                 <p class="ds-type-usage-sample ds-use-page-title">映画監督から選ぶ</p>
                                 <p class="ds-type-usage-meta">Page title<br>.page-hero h1</p>
-                                <p class="ds-type-usage-note">clamp(1.65rem, 4vw, 2.35rem) / 700 / 0.02em</p>
+                                <p class="ds-type-usage-note">32px / Heading XL / 700 / 0.04em</p>
                             </div>
                             <div class="ds-type-usage-row">
                                 <p class="ds-type-usage-sample ds-use-section">テーマから比較してみる</p>
                                 <p class="ds-type-usage-meta">Section heading<br>.section-heading h2</p>
-                                <p class="ds-type-usage-note">1.5rem / 600 / 0.04em / #a08257</p>
+                                <p class="ds-type-usage-note">28px / Heading L / 700 / 0.04em / #a08257</p>
                             </div>
                             <div class="ds-type-usage-row">
                                 <p class="ds-type-usage-sample ds-use-card-title">映画監督から選ぶ / 現代SFのかたち</p>
                                 <p class="ds-type-usage-meta">Card / list title<br>.explore-path-title / .theme-item h3 / .item-name-ja / .year-film-item h4 / .today-event-card h2 / .notice-item h3 / .note-card-*</p>
-                                <p class="ds-type-usage-note">size varies / 700 / 0.04em</p>
+                                <p class="ds-type-usage-note">20px / Heading M / 700 / 0.04em</p>
                             </div>
                             <div class="ds-type-usage-row">
                                 <p class="ds-type-usage-sample ds-use-director-label">クリストファー・ノーラン</p>
@@ -953,7 +900,7 @@
                             <div class="ds-type-usage-row">
                                 <p class="ds-type-usage-sample ds-use-note-film">イレイザーヘッド</p>
                                 <p class="ds-type-usage-meta">Editor's Notes film<br>.note-featured-film</p>
-                                <p class="ds-type-usage-note">1.35rem / 700 / 0.02em</p>
+                                <p class="ds-type-usage-note">20px / Heading M / 700 / 0.04em</p>
                             </div>
                         </div>
                     </div>
@@ -970,7 +917,7 @@
                 <div class="ds-width-sample">
                     <h3>Outer Content / 1100px</h3>
                     <div class="ds-width-bar ds-width-1100"></div>
-                    <p>years.html、notes/index.html、notes/*.html の外側コンテナ。</p>
+                    <p>years.html、today.html、notes/index.html、notes/*.html の外側コンテナ。</p>
                 </div>
                 <div class="ds-width-sample">
                     <h3>Reading Width / 760px</h3>
@@ -1022,38 +969,10 @@
                     </div>
                 </div>
                 <div class="ds-component-sample">
-                    <h3>Home Hero</h3>
-                    <div class="ds-home-hero-sample">
-                        <div class="ds-home-axis" aria-hidden="true">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div>
-                            <img src="assets/logo_top.svg" alt="Directors' Timeline Archive">
-                            <p>映画監督のキャリアを、一本のタイムラインで。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="ds-component-sample">
                     <h3>Section Heading</h3>
                     <div class="ds-section-heading-sample">
                         <h3>この監督のこの一本</h3>
-                        <p>indexページのセクション見出しとEditor's Notesの小見出し。</p>
-                    </div>
-                </div>
-                <div class="ds-component-sample">
-                    <h3>Index Cards</h3>
-                    <div class="ds-home-card-sample">
-                        <a href="directors.html">
-                            <strong>映画監督から選ぶ</strong>
-                            <span>映画監督を1人または2人選んで、作品年表を見る。</span>
-                        </a>
-                        <a href="index.html#comparison-themes">
-                            <strong>現代SFのかたち</strong>
-                            <span>テーマから2人の映画監督の作品年表を比較する。</span>
-                        </a>
+                        <p>ページ内の主要セクションとEditor's Notesの小見出し。</p>
                     </div>
                 </div>
                 <div class="ds-component-sample">

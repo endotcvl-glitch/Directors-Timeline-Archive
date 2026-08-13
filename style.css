@@ -16,12 +16,29 @@
     --secondary-text: #666666;
     --line-color: #d8d8d8;
     --card-bg: #ffffff;
+    --font-interface: 'Gen Interface JP', 'Noto Sans JP', 'Inter', sans-serif;
     --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
     --font-serif: 'Playfair Display', serif;
     --font-title: 'Karla', 'Inter', 'Noto Sans JP', sans-serif;
     --font-number: 'Roboto', 'Noto Sans JP', 'Inter', sans-serif;
     --title-letter-spacing: 0.12em;
     --global-nav-font-size: 13pt;
+    --text-heading-xxxl: 56px;
+    --text-heading-xxl: 44px;
+    --text-heading-xl: 32px;
+    --text-heading-l: 28px;
+    --text-heading-m: 20px;
+    --text-heading-s: 18px;
+    --text-heading-xs: 16px;
+    --text-heading-xxs: 13px;
+    --text-body-xl: 18px;
+    --text-body-l: 16px;
+    --text-body-m: 15px;
+    --text-body-s: 13px;
+    --text-body-xs: 11px;
+    --text-body-xxs: 10px;
+    --text-line-height: 1.5;
+    --text-letter-spacing: 0.04em;
 }
 
 /* Figma home layout — 2026-08-12 */
@@ -3700,5 +3717,138 @@ body.index-page .site-footer p {
     .timeline-footer {
         min-height: 320px;
         padding: 64px 20px 40px;
+    }
+}
+
+/* Figma typography system — node 45:5 */
+.header-nav,
+.mobile-nav-secondary,
+.page-hero,
+.section-heading,
+.explore-path-card,
+.theme-item,
+.director-item,
+.year-film-item,
+.today-event-card,
+.notice-item,
+.editor-note-preview,
+.note-index-hero,
+.note-card,
+.note-article,
+.info-intro,
+.info-copy,
+.site-footer,
+.timeline-footer {
+    font-family: var(--font-interface);
+}
+
+.page-hero h1,
+.info-intro h1,
+.note-index-hero h1 {
+    font-family: var(--font-interface);
+    font-size: var(--text-heading-xl);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.note-article h1 {
+    font-family: var(--font-interface);
+    font-size: var(--text-heading-xxl);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.section-heading h2,
+.comparison-themes .section-heading h2,
+.editor-note-subtitle,
+.info-section h2 {
+    font-family: var(--font-interface);
+    font-size: var(--text-heading-l);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.explore-path-title,
+.theme-item h3,
+.item-name-ja,
+.year-film-item h4,
+.today-event-card h2,
+.notice-item h3,
+.note-card-film-ja,
+.editor-note-film-title,
+.editor-note-section-title,
+.note-featured-film {
+    font-family: var(--font-interface);
+    font-size: var(--text-heading-m);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.note-card-director-ja,
+.director-name,
+.theme-pair span {
+    font-family: var(--font-interface);
+    font-size: var(--text-heading-xs);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.page-hero > p:last-child,
+.info-intro p,
+.info-copy p,
+.note-body,
+.note-intent,
+.editor-note-excerpt,
+.notice-item p,
+.today-event-card p,
+.year-film-item p {
+    font-family: var(--font-interface);
+    font-size: var(--text-body-l);
+    font-weight: 400;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.section-heading p,
+.explore-path-copy small,
+.theme-item p,
+.item-keywords,
+.director-search-note,
+.note-card-link,
+.editor-note-link,
+.compare-action-note {
+    font-family: var(--font-interface);
+    font-size: var(--text-body-s);
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.header-nav,
+.mobile-nav-secondary {
+    font-size: var(--text-body-s);
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.site-footer,
+.timeline-footer {
+    font-size: var(--text-body-xs);
+}
+
+/* Years, dates and other numeric labels intentionally keep their existing sizes. */
+.note-featured-film span {
+    font-family: var(--font-number);
+    font-size: 0.86rem;
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 820px) {
+    .note-article h1 {
+        font-size: var(--text-heading-xl);
     }
 }
