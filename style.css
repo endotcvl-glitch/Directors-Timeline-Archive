@@ -258,6 +258,22 @@ body.index-page .theme-item:hover {
     transform: translateY(-2px);
 }
 
+body.index-page .theme-item:has(.theme-card-title) {
+    height: auto;
+    min-height: 301px;
+}
+
+body.index-page .theme-card-title {
+    margin: 0 0 14px;
+    color: #fff;
+    font-family: var(--font-interface);
+    font-size: var(--text-heading-s);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+    text-align: center;
+}
+
 body.index-page .theme-pair {
     display: grid;
     grid-template-columns: repeat(2, 180px);

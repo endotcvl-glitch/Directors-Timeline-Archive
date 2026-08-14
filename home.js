@@ -149,7 +149,9 @@ const featuredPortraits = {
     russo: 'assets/portraits/anthony-and-joe-russo.png',
     gerwig: 'assets/portraits/greta-gerwig.png',
     fennell: 'assets/portraits/emerald-fennell.png',
-    tonyscott: 'assets/portraits/tony-scott.png'
+    tonyscott: 'assets/portraits/tony-scott.png',
+    shyamalan: 'assets/portraits/m-night-shyamalan.png',
+    abrams: 'assets/portraits/j-j-abrams.png'
 };
 
 let selectedDirectors = [];
@@ -203,7 +205,7 @@ function renderComparisonThemes() {
 
     container.innerHTML = '';
 
-    comparisonThemes.slice(0, 9).forEach(theme => {
+    comparisonThemes.slice(0, 10).forEach(theme => {
         const themeDirectors = theme.directorIds.map(getDirectorById).filter(Boolean);
 
         if (themeDirectors.length !== 2) {
@@ -215,6 +217,7 @@ function renderComparisonThemes() {
         link.href = `timeline.html?d1=${theme.directorIds[0]}&d2=${theme.directorIds[1]}`;
         link.setAttribute('aria-label', `${theme.title}：${themeDirectors[0].nameJa}と${themeDirectors[1].nameJa}を比較`);
         link.innerHTML = `
+            <h3 class="theme-card-title">${theme.title}</h3>
             <span class="theme-pair">
                 ${themeDirectors.map((director, index) => `
                     <span class="theme-director">
