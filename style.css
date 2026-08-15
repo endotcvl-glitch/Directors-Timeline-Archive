@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Karla:wght@700&family=Roboto:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
     --bg-color: #f0f0f0;
@@ -16,11 +16,11 @@
     --secondary-text: #666666;
     --line-color: #d8d8d8;
     --card-bg: #ffffff;
-    --font-interface: 'Gen Interface JP', 'Noto Sans JP', 'Inter', sans-serif;
-    --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
-    --font-serif: 'Playfair Display', serif;
-    --font-title: 'Karla', 'Inter', 'Noto Sans JP', sans-serif;
-    --font-number: 'Roboto', 'Noto Sans JP', 'Inter', sans-serif;
+    --font-interface: 'Gen Interface JP', sans-serif;
+    --font-sans: 'Gen Interface JP', sans-serif;
+    --font-serif: 'Gen Interface JP', sans-serif;
+    --font-title: 'Gen Interface JP', sans-serif;
+    --font-number: 'Roboto', 'Gen Interface JP', sans-serif;
     --title-letter-spacing: 0.12em;
     --global-nav-font-size: 13pt;
     --text-heading-xxxl: 56px;

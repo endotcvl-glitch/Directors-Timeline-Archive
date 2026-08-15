@@ -65,13 +65,21 @@
 
 テキストデザインは Figma の `design-system`（node `45:5`）を基準にし、`style.css` の `:root` で管理する。
 
+Gen Interface JPは、全HTMLの`head`からjsDelivr CDN版のRegular（400）とBold（700）を読み込む。
+
+```html
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/700.css">
+```
+
 ```css
 :root {
-    --font-interface: 'Gen Interface JP', 'Noto Sans JP', 'Inter', sans-serif;
-    --font-sans: 'Inter', 'Noto Sans JP', sans-serif;
-    --font-serif: 'Playfair Display', serif;
-    --font-title: 'Karla', 'Inter', 'Noto Sans JP', sans-serif;
-    --font-number: 'Roboto', 'Noto Sans JP', 'Inter', sans-serif;
+    --font-interface: 'Gen Interface JP', sans-serif;
+    --font-sans: 'Gen Interface JP', sans-serif;
+    --font-serif: 'Gen Interface JP', sans-serif;
+    --font-title: 'Gen Interface JP', sans-serif;
+    --font-number: 'Roboto', 'Gen Interface JP', sans-serif;
     --title-letter-spacing: 0.12em;
 }
 ```
@@ -119,16 +127,15 @@ CSS変数は以下を使う。
 ### 基本方針
 
 - 日本語の見出し・本文・通常UIは `--font-interface` を使う。
-- サイトタイトルや強い英字ロゴ表現は `--font-title` を使う。
+- HTMLテキストは原則として `--font-interface` を使う。既存の `--font-sans`、`--font-serif`、`--font-title` は互換用の別名として同じフォントを参照する。
+- SVGで表示するサイトロゴはフォント統一の対象外とする。
 - 年号、日付、作品年など数字を見せる場面は `--font-number` を使う。
-- `--font-serif` は英語・数字に限定して使う。日本語など英数字以外の文字には serif を使わない。
-- `--font-serif` は装飾的に見えやすいため、Editor's Notes の一覧カードなどでは主役にしない。
 - 文字の強弱は、サイズ、太さ、色、余白で作る。
 - 文字間は基本的に詰めすぎない。負の letter-spacing は使わない。
 
 ### 主な階層
 
-- サイトタイトル: `--font-title`、大文字、広めの letter-spacing。
+- サイトタイトル: `--font-title`（Gen Interface JP）、大文字、広めの letter-spacing。
 - ページタイトル: 見出し/XL（`32px`）。個別記事の大見出しなど、既存表示が大きい箇所は見出し/XXL（`44px`）。
 - セクション見出し: 見出し/L（`28px`）、`font-weight: 700`、`#a08257`、letter-spacing `0.04em`。
 - 数字: `--font-number`、監督一覧の年代見出し、timelineの年号、年代ページの年号、今日は何の日の日付、NEWSの日付、コラム作品年など、年号や日付に使う。letter-spacing は文脈に応じてやや広めにする。
