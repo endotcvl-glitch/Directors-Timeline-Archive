@@ -1,3 +1,50 @@
+function getActiveNavigationKey() {
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    const fileName = pathParts[pathParts.length - 1] || 'index.html';
+    const isNotesPage = pathParts.includes('notes');
+
+    if (isNotesPage) return 'notes';
+    if (fileName === 'index.html') return 'home';
+    if (fileName === 'directors.html') return 'directors';
+    if (fileName === 'years.html') return 'years';
+    if (fileName === 'today.html') return 'today';
+
+    return '';
+}
+
+function renderSharedHeaders() {
+    const activeKey = getActiveNavigationKey();
+
+    document.querySelectorAll('[data-site-header]').forEach(shell => {
+        const root = shell.dataset.root || '';
+        const activeClass = key => key === activeKey ? ' class="is-active" aria-current="page"' : '';
+
+        shell.innerHTML = `
+            <a href="${root}index.html" class="site-title site-title-link" aria-label="Directors' Timeline Archive Home">
+                <img src="${root}assets/header_logo.svg" alt="" class="site-title-logo">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="header-nav" id="primary-navigation" aria-label="Primary navigation">
+                <a href="${root}index.html"${activeClass('home')}>ホーム</a>
+                <a href="${root}directors.html"${activeClass('directors')}>映画監督から選ぶ</a>
+                <a href="${root}years.html"${activeClass('years')}>年代から探す</a>
+                <a href="${root}today.html"${activeClass('today')}>今日は何の日</a>
+                <a href="${root}index.html#comparison-themes">テーマで比較</a>
+                <a href="${root}notes/index.html"${activeClass('notes')}>Editor's Notes</a>
+                <span class="mobile-nav-secondary" aria-label="Secondary navigation">
+                    <a href="${root}about.html">このサイトについて</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN7yUjTtm66DHwKF5QB96z2W-cMja4MveVtbeCkA46DR5BCQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">お問合せ</a>
+                    <a href="https://x.com/DTAarchive" target="_blank" rel="noopener noreferrer">@DTAarchive</a>
+                </span>
+            </nav>
+        `;
+    });
+}
+
 function initializeNavigation() {
     const headerShells = document.querySelectorAll('.header-shell');
     const menuCloseDelay = 360;
@@ -72,4 +119,5 @@ function initializeNavigation() {
     });
 }
 
+renderSharedHeaders();
 initializeNavigation();

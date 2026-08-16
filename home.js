@@ -130,6 +130,11 @@ const comparisonThemes = [
         title: '謎を仕掛ける語り手たち',
         description: '静かに伏線を積み上げるシャマランと、謎そのものを推進力にするエイブラムス。物語の引き込み方を比べます。',
         directorIds: ['shyamalan', 'abrams']
+    },
+    {
+        title: 'アメリカンホラーの革新者',
+        description: '生々しい悪夢を焼き付けたフーパーと、恐怖のルールを知的に書き換えたクレイヴン。アメリカンホラーを変えたふたりを比べます。',
+        directorIds: ['hooper', 'craven']
     }
 ];
 
@@ -151,7 +156,9 @@ const featuredPortraits = {
     fennell: 'assets/portraits/emerald-fennell.png',
     tonyscott: 'assets/portraits/tony-scott.png',
     shyamalan: 'assets/portraits/m-night-shyamalan.png',
-    abrams: 'assets/portraits/j-j-abrams.png'
+    abrams: 'assets/portraits/j-j-abrams.png',
+    hooper: 'assets/portraits/tobe-hooper.png',
+    craven: 'assets/portraits/wes-craven.png'
 };
 
 let selectedDirectors = [];
@@ -205,7 +212,7 @@ function renderComparisonThemes() {
 
     container.innerHTML = '';
 
-    comparisonThemes.slice(0, 10).forEach(theme => {
+    comparisonThemes.slice(0, 11).forEach(theme => {
         const themeDirectors = theme.directorIds.map(getDirectorById).filter(Boolean);
 
         if (themeDirectors.length !== 2) {
