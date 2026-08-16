@@ -102,14 +102,21 @@ body.index-page .home-lead {
     max-width: 548px;
     margin-top: 20px;
     color: var(--text-color);
-    font-size: 0.75rem;
-    letter-spacing: 0;
-    line-height: 2.25;
+    font-size: var(--text-body-s);
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
 }
 
 body.index-page .home-lead p:first-child {
     color: inherit;
     letter-spacing: inherit;
+}
+
+body.index-page .home-lead-heading {
+    font-size: var(--text-heading-s);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
 }
 
 body.index-page .explore-paths {
@@ -192,9 +199,10 @@ body.index-page .explore-path-title {
 
 body.index-page .explore-path-copy small {
     color: var(--text-color);
-    font-size: 0.75rem;
-    letter-spacing: 0;
-    line-height: 1.5;
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
 }
 
 body.index-page .explore-path-arrow {
