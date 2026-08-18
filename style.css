@@ -1028,20 +1028,6 @@ header {
     transform: translateY(-2px);
 }
 
-/* Timeline Highlight */
-.timeline-row.is-current {
-    background: var(--timeline-tint);
-    border-top: 2px solid var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
-    margin: 1rem 0;
-}
-
-.timeline-row.is-current .year-label {
-    background: var(--accent-color);
-    color: var(--bg-color);
-    transform: scale(1.2);
-}
-
 .label {
     font-family: var(--font-serif);
     color: var(--accent-color);
@@ -2991,14 +2977,6 @@ header {
         line-height: 1.45;
         max-height: none;
         overflow: visible;
-    }
-
-    .timeline-row.is-current {
-        margin: 0.5rem 0;
-    }
-
-    .timeline-row.is-current .year-label {
-        transform: none;
     }
 
     .other-films-container {

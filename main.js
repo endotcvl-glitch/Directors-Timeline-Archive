@@ -793,6 +793,7 @@ const filmsData = [
     { year: 2012, type: 'lordmiller', title: "21ジャンプストリート", context: "往年のテレビシリーズを、自己言及的な笑いとバディ映画の勢いで再構築したコメディ。" },
     { year: 2014, type: 'lordmiller', title: "LEGO ムービー", context: "玩具の世界をメタな物語とポップな映像で広げ、創造することの楽しさを描いたアニメーション。" },
     { year: 2014, type: 'lordmiller', title: "22ジャンプストリート", context: "続編映画そのものを笑いに変えながら、バディの関係をさらに押し広げたコメディ。" },
+    { year: 2026, type: 'lordmiller', title: "プロジェクト・ヘイル・メアリー", context: "記憶を失った科学者が人類を救う宇宙任務に挑む、科学と友情を軸にしたSFアドベンチャー。" },
 
     // James Gunn
     { year: 2006, type: 'gunn', title: "スリザー", context: "B級ホラーとブラックユーモアを融合した、ガンの長編監督デビュー作。" },
@@ -1208,11 +1209,9 @@ function renderTimeline() {
         }
     }
 
-    // Add future/now highlight
     for (let year = startYear; year <= endYear; year++) {
         const row = document.createElement('div');
-        const isNow = year === currentYear;
-        row.className = `timeline-row ${isNow ? 'is-current' : ''}`;
+        row.className = 'timeline-row';
         row.id = `year-${year}`;
 
         const worksLeft = filmsData.filter(f => f.year === year && f.type === d1);
@@ -1225,7 +1224,7 @@ function renderTimeline() {
             ? filmsData.filter(f => f.year === year && f.type !== d1)
             : [];
 
-        const episode = episodesData[year] || (isNow ? "THE PRESENT / AI ERA" : "");
+        const episode = episodesData[year] || "";
         row.innerHTML = `
             <div class="side nolan-side">
                 ${worksLeft.map(work => renderWorkCard(work, d1)).join('')}
