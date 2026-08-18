@@ -135,6 +135,11 @@ const comparisonThemes = [
         title: 'アメリカンホラーの革新者',
         description: '生々しい悪夢を焼き付けたフーパーと、恐怖のルールを知的に書き換えたクレイヴン。アメリカンホラーを変えたふたりを比べます。',
         directorIds: ['hooper', 'craven']
+    },
+    {
+        title: '制約から生まれた映画哲学',
+        description: '限られた予算を緊張と恐怖へ変えたカーペンターと、速度と身体性へ変えたミラー。制約を独自の映画言語にしたふたりを比べます。',
+        directorIds: ['carpenter', 'miller']
     }
 ];
 
@@ -158,7 +163,9 @@ const featuredPortraits = {
     shyamalan: 'assets/portraits/m-night-shyamalan.png',
     abrams: 'assets/portraits/j-j-abrams.png',
     hooper: 'assets/portraits/tobe-hooper.png',
-    craven: 'assets/portraits/wes-craven.png'
+    craven: 'assets/portraits/wes-craven.png',
+    carpenter: 'assets/portraits/john-carpenter.png',
+    miller: 'assets/portraits/george-miller.png'
 };
 
 let selectedDirectors = [];
@@ -212,7 +219,7 @@ function renderComparisonThemes() {
 
     container.innerHTML = '';
 
-    comparisonThemes.slice(0, 11).forEach(theme => {
+    comparisonThemes.slice(0, 12).forEach(theme => {
         const themeDirectors = theme.directorIds.map(getDirectorById).filter(Boolean);
 
         if (themeDirectors.length !== 2) {
