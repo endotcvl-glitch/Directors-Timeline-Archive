@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>流れる年表グリッド — Alpha</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/400.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/700.css">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --nav: #48434c;
+            --paper: #edeced;
+            --gold: #b39562;
+            --grid-opacity: 0.48;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body { margin: 0; min-height: 100%; }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "Gen Interface JP", sans-serif;
+        }
+
+        .alpha-header {
+            position: fixed;
+            inset: 0 0 auto;
+            z-index: 20;
+            height: 80px;
+            background: var(--nav);
+            color: #fff;
+        }
+
+        .alpha-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: min(calc(100% - 40px), 1100px);
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .alpha-header img { display: block; width: 40px; height: 40px; }
+
+        .alpha-label {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            opacity: 0.72;
+        }
+
+        .alpha-hero {
+            position: relative;
+            isolation: isolate;
+            min-height: 600px;
+            padding-top: 80px;
+            overflow: hidden;
+            background: var(--paper);
+        }
+
+        .timeline-motion {
+            position: absolute;
+            inset: 80px 0 0;
+            z-index: -2;
+            overflow: hidden;
+            opacity: var(--grid-opacity);
+            pointer-events: none;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 86%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 86%, transparent 100%);
+            transition: opacity 250ms ease;
+        }
+
+        .timeline-motion::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 27% 48%, rgba(237,236,237,0.995) 0 18%, rgba(237,236,237,0.9) 32%, rgba(237,236,237,0.34) 47%, transparent 58%),
+                radial-gradient(ellipse at 73% 48%, rgba(237,236,237,0.97) 0 21%, rgba(237,236,237,0.82) 35%, rgba(237,236,237,0.28) 49%, transparent 60%);
+        }
+
+        .timeline-track {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: var(--x);
+            z-index: var(--depth-layer, 1);
+            width: var(--axis-width, 1px);
+            background: rgb(72 67 76 / var(--axis-opacity, 0.16));
+            filter: blur(var(--axis-blur, 0));
+            opacity: var(--track-opacity, 1);
+        }
+
+        .timeline-stream {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 1px;
+            height: 300%;
+            animation: timeline-flow var(--speed) linear infinite;
+            animation-delay: var(--delay);
+        }
+
+        .timeline-event {
+            position: absolute;
+            top: var(--y);
+            left: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .timeline-event::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: var(--dot-size, 7px);
+            height: var(--dot-size, 7px);
+            border: 1px solid rgba(72,67,76,0.42);
+            border-radius: 50%;
+            background: var(--paper);
+            transform: translate(-50%, -50%);
+        }
+
+        .timeline-event.is-key::before {
+            border-color: rgba(179,149,98,0.72);
+            background: var(--gold);
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: 0;
+            left: 12px;
+            color: rgb(72 67 76 / var(--year-opacity, 0.66));
+            font-family: Arial, sans-serif;
+            font-size: var(--year-size, 18px);
+            font-weight: var(--year-weight, 400);
+            letter-spacing: var(--year-spacing, 0.12em);
+            white-space: nowrap;
+            transform: translateY(-55%);
+        }
+
+        .track-left .timeline-event { right: 0; left: auto; transform: scaleX(-1); transform-origin: left; }
+        .track-left .timeline-year { right: 12px; left: auto; transform: translateY(-55%) scaleX(-1); }
+
+        .depth-front {
+            --x: min(calc(100% - 70px), calc(50% + 440px));
+            --axis-width: 2px;
+            --axis-opacity: 0.28;
+            --event-opacity: 0.4;
+            --dot-size: 11px;
+            --year-size: clamp(36px, 3.75vw, 56px);
+            --year-weight: 700;
+            --year-spacing: 0.01em;
+            --year-opacity: 0.34;
+            --depth-layer: 4;
+        }
+
+        .depth-near {
+            --axis-width: 1.5px;
+            --axis-opacity: 0.22;
+            --event-opacity: 0.34;
+            --dot-size: 9px;
+            --year-size: clamp(42px, 4.2vw, 64px);
+            --year-weight: 700;
+            --year-spacing: 0.04em;
+            --year-opacity: 0.42;
+            --depth-layer: 3;
+        }
+
+        .depth-mid {
+            --axis-opacity: 0.15;
+            --event-opacity: 0.26;
+            --year-size: 24px;
+            --year-opacity: 0.5;
+            --depth-layer: 2;
+        }
+
+        .depth-far {
+            --axis-width: 0.5px;
+            --axis-opacity: 0.11;
+            --axis-blur: 0.35px;
+            --event-opacity: 0.18;
+            --dot-size: 5px;
+            --year-size: 12px;
+            --year-spacing: 0.16em;
+            --year-opacity: 0.46;
+            --track-opacity: 0.72;
+            --depth-layer: 1;
+        }
+
+        .depth-left {
+            --year-size: 18px;
+            --track-opacity: 0.82;
+        }
+
+        @keyframes timeline-flow {
+            from { transform: translateY(0); }
+            to { transform: translateY(-33.333%); }
+        }
+
+        .alpha-hero.is-paused .timeline-stream { animation-play-state: paused; }
+        .alpha-hero.is-strong { --grid-opacity: 0.72; }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: minmax(0, 460px) minmax(0, 540px);
+            gap: clamp(3rem, 6.1vw, 5.5rem);
+            align-items: center;
+            width: min(calc(100% - 40px), 1100px);
+            min-height: 520px;
+            margin: 0 auto;
+        }
+
+        .brand-block, .path-list { position: relative; z-index: 2; }
+
+        .brand-block::before,
+        .path-list::before {
+            content: "";
+            position: absolute;
+            inset: -44px -36px;
+            z-index: -1;
+            border-radius: 50%;
+            background: radial-gradient(ellipse, rgba(237,236,237,0.72) 0 46%, rgba(237,236,237,0.36) 63%, transparent 78%);
+            filter: blur(12px);
+            pointer-events: none;
+        }
+        .hero-logo { display: block; width: 100%; height: auto; }
+
+        .lead { margin-top: 20px; font-size: 13px; letter-spacing: 0.04em; line-height: 1.5; }
+        .lead strong { display: inline-block; font-size: 18px; line-height: 1.5; }
+
+        .path-list { display: grid; gap: 42px; }
+
+        .path-card {
+            display: grid;
+            grid-template-columns: 62px minmax(0, 1fr) 32px;
+            align-items: center;
+            gap: 24px;
+            min-height: 140px;
+            padding: 24px 30px 24px 40px;
+            border: 1px solid rgba(197,197,197,0.9);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 8px 26px rgba(72,67,76,0.04);
+            backdrop-filter: blur(9px);
+        }
+
+        .path-icon {
+            display: grid;
+            place-items: center;
+            width: 62px;
+            height: 62px;
+            border-radius: 5px;
+            background: #f3f3f3;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        .path-copy { display: grid; gap: 3px; }
+        .path-title { font-size: 24px; font-weight: 700; line-height: 1.35; }
+        .path-copy small { font-size: 13px; line-height: 1.5; letter-spacing: 0.04em; }
+        .path-arrow { font-size: 34px; font-weight: 400; text-align: center; }
+
+        .alpha-controls {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 30;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            border: 1px solid rgba(72,67,76,0.16);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 8px 28px rgba(72,67,76,0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        .alpha-controls span { padding: 0 5px; font-size: 10px; letter-spacing: 0.1em; color: #666; }
+        .alpha-controls button {
+            padding: 7px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+            color: var(--ink);
+            font: inherit;
+            font-size: 11px;
+            cursor: pointer;
+        }
+        .alpha-controls button[aria-pressed="true"] { border-color: var(--nav); background: var(--nav); color: #fff; }
+
+        @media (max-width: 820px) {
+            .alpha-hero { min-height: 100vh; }
+            .hero-content { grid-template-columns: 1fr; gap: 44px; min-height: 0; padding: 64px 20px 90px; }
+            .brand-block, .path-list { width: min(100%, 420px); margin: 0 auto; }
+            .path-list { gap: 16px; }
+            .path-card { grid-template-columns: 52px minmax(0,1fr) 24px; gap: 14px; min-height: 110px; padding: 20px; }
+            .path-icon { width: 52px; height: 52px; }
+            .path-title { font-size: 18.4px; }
+            .timeline-track.depth-far { display: none; }
+            .depth-front { --year-size: 32px; }
+            .depth-near { --year-size: 36px; }
+            .timeline-motion::after { background: linear-gradient(90deg, rgba(237,236,237,0.82), rgba(237,236,237,0.48), rgba(237,236,237,0.82)); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .timeline-stream { animation-play-state: paused; }
+        }
+    </style>
+</head>
+<body>
+    <header class="alpha-header">
+        <div class="alpha-header-inner">
+            <img src="assets/header_logo.svg" alt="Directors' Timeline Archive">
+            <span class="alpha-label">ALPHA / FLOWING TIMELINE GRID</span>
+        </div>
+    </header>
+
+    <main class="alpha-hero" id="alpha-hero">
+        <div class="timeline-motion" aria-hidden="true">
+            <div class="timeline-track depth-far depth-left" style="--x:4%; --speed:52s; --delay:-11s">
+                <div class="timeline-stream track-left">
+                    <span class="timeline-event is-key" style="--y:8%; --tick:66px"><b class="timeline-year">1953</b></span>
+                    <span class="timeline-event" style="--y:22%; --tick:38px"><b class="timeline-year">1968</b></span>
+                    <span class="timeline-event" style="--y:39%; --tick:72px"><b class="timeline-year">1977</b></span>
+                    <span class="timeline-event is-key" style="--y:57%; --tick:54px"><b class="timeline-year">1982</b></span>
+                    <span class="timeline-event" style="--y:75%; --tick:42px"><b class="timeline-year">1999</b></span>
+                    <span class="timeline-event" style="--y:92%; --tick:64px"><b class="timeline-year">2008</b></span>
+                </div>
+            </div>
+            <div class="timeline-track depth-near" style="--x:28%; --speed:25s; --delay:-24s">
+                <div class="timeline-stream">
+                    <span class="timeline-event" style="--y:4%; --tick:44px"><b class="timeline-year">1960</b></span>
+                    <span class="timeline-event is-key" style="--y:19%; --tick:78px"><b class="timeline-year">1975</b></span>
+                    <span class="timeline-event" style="--y:34%; --tick:50px"><b class="timeline-year">1984</b></span>
+                    <span class="timeline-event" style="--y:51%; --tick:35px"><b class="timeline-year">1994</b></span>
+                    <span class="timeline-event is-key" style="--y:69%; --tick:68px"><b class="timeline-year">2001</b></span>
+                    <span class="timeline-event" style="--y:88%; --tick:48px"><b class="timeline-year">2014</b></span>
+                </div>
+            </div>
+            <div class="timeline-track depth-mid" style="--x:50%; --speed:38s; --delay:-7s">
+                <div class="timeline-stream">
+                    <span class="timeline-event is-key" style="--y:2%; --tick:82px"><b class="timeline-year">1957</b></span>
+                    <span class="timeline-event" style="--y:18%; --tick:46px"><b class="timeline-year">1972</b></span>
+                    <span class="timeline-event" style="--y:36%; --tick:62px"><b class="timeline-year">1988</b></span>
+                    <span class="timeline-event is-key" style="--y:54%; --tick:74px"><b class="timeline-year">2000</b></span>
+                    <span class="timeline-event" style="--y:72%; --tick:44px"><b class="timeline-year">2010</b></span>
+                    <span class="timeline-event" style="--y:90%; --tick:58px"><b class="timeline-year">2026</b></span>
+                </div>
+            </div>
+            <div class="timeline-track depth-front" style="--speed:19s; --delay:-18s">
+                <div class="timeline-stream track-left">
+                    <span class="timeline-event" style="--y:7%; --tick:54px"><b class="timeline-year">1964</b></span>
+                    <span class="timeline-event" style="--y:24%; --tick:40px"><b class="timeline-year">1979</b></span>
+                    <span class="timeline-event is-key" style="--y:42%; --tick:76px"><b class="timeline-year">1991</b></span>
+                    <span class="timeline-event" style="--y:59%; --tick:48px"><b class="timeline-year">2005</b></span>
+                    <span class="timeline-event" style="--y:76%; --tick:62px"><b class="timeline-year">2015</b></span>
+                    <span class="timeline-event is-key" style="--y:94%; --tick:40px"><b class="timeline-year">2024</b></span>
+                </div>
+            </div>
+            <div class="timeline-track depth-far" style="--x:92%; --speed:58s; --delay:-29s">
+                <div class="timeline-stream track-left">
+                    <span class="timeline-event" style="--y:3%; --tick:46px"><b class="timeline-year">1959</b></span>
+                    <span class="timeline-event is-key" style="--y:21%; --tick:68px"><b class="timeline-year">1978</b></span>
+                    <span class="timeline-event" style="--y:38%; --tick:38px"><b class="timeline-year">1986</b></span>
+                    <span class="timeline-event" style="--y:56%; --tick:54px"><b class="timeline-year">1997</b></span>
+                    <span class="timeline-event is-key" style="--y:73%; --tick:72px"><b class="timeline-year">2012</b></span>
+                    <span class="timeline-event" style="--y:91%; --tick:44px"><b class="timeline-year">2022</b></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <section class="brand-block">
+                <img class="hero-logo" src="assets/logo-top.svg" alt="Directors' Timeline Archive">
+                <p class="lead"><strong>映画監督のキャリアを、一本のタイムラインで。</strong><br>Directors’ Timeline Archive は、映画監督たちの作品と、時代背景を重ねて眺めるためのアーカイブです。</p>
+            </section>
+            <section class="path-list" aria-label="探し方のプレビュー">
+                <article class="path-card">
+                    <span class="path-icon" aria-hidden="true">DC</span>
+                    <span class="path-copy"><b class="path-title">映画監督から探す</b><small>映画監督を1人または2人選んで、作品年表を見る。</small></span>
+                    <span class="path-arrow" aria-hidden="true">›</span>
+                </article>
+                <article class="path-card">
+                    <span class="path-icon" aria-hidden="true">TL</span>
+                    <span class="path-copy"><b class="path-title">年代から探す</b><small>年ごとの作品と、映画業界・社会の出来事を見る。</small></span>
+                    <span class="path-arrow" aria-hidden="true">›</span>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <div class="alpha-controls" aria-label="アルファ版の表示調整">
+        <span>GRID TEST</span>
+        <button id="motion-toggle" type="button" aria-pressed="false">一時停止</button>
+        <button id="contrast-toggle" type="button" aria-pressed="false">濃くする</button>
+    </div>
+
+    <script>
+        const hero = document.getElementById('alpha-hero');
+        const motionToggle = document.getElementById('motion-toggle');
+        const contrastToggle = document.getElementById('contrast-toggle');
+
+        document.querySelectorAll('.timeline-stream').forEach(stream => {
+            [...stream.querySelectorAll('.timeline-event')].forEach(event => {
+                const originalPosition = Number.parseFloat(event.style.getPropertyValue('--y')) / 3;
+                event.style.setProperty('--y', `${originalPosition}%`);
+
+                [1, 2].forEach(segment => {
+                    const clone = event.cloneNode(true);
+                    clone.style.setProperty('--y', `${originalPosition + (100 / 3) * segment}%`);
+                    stream.appendChild(clone);
+                });
+            });
+        });
+
+        motionToggle.addEventListener('click', () => {
+            const paused = hero.classList.toggle('is-paused');
+            motionToggle.textContent = paused ? '再生する' : '一時停止';
+            motionToggle.setAttribute('aria-pressed', String(paused));
+        });
+
+        contrastToggle.addEventListener('click', () => {
+            const strong = hero.classList.toggle('is-strong');
+            contrastToggle.textContent = strong ? '薄くする' : '濃くする';
+            contrastToggle.setAttribute('aria-pressed', String(strong));
+        });
+    </script>
+</body>
+</html>

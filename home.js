@@ -168,6 +168,45 @@ const featuredPortraits = {
     miller: 'assets/portraits/george-miller.png'
 };
 
+const heroTimelineTracks = [
+    { depth: 'far left', x: '4%', speed: '52s', delay: '-11s', side: 'left', years: [[1953, 8, true], [1968, 22], [1977, 39], [1982, 57, true], [1999, 75], [2008, 92]] },
+    { depth: 'near', x: '28%', speed: '25s', delay: '-24s', years: [[1960, 4], [1975, 19, true], [1984, 34], [1994, 51], [2001, 69, true], [2014, 88]] },
+    { depth: 'mid', x: '50%', speed: '38s', delay: '-7s', years: [[1957, 2, true], [1972, 18], [1988, 36], [2000, 54, true], [2010, 72], [2026, 90]] },
+    { depth: 'front', speed: '19s', delay: '-18s', side: 'left', years: [[1964, 7], [1979, 24], [1991, 42, true], [2005, 59], [2015, 76], [2024, 94, true]] },
+    { depth: 'far', x: '92%', speed: '58s', delay: '-29s', side: 'left', years: [[1959, 3], [1978, 21, true], [1986, 38], [1997, 56], [2012, 73, true], [2022, 91]] }
+];
+
+function renderHeroTimelineMotion() {
+    const container = document.getElementById('home-timeline-motion');
+
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML = heroTimelineTracks.map(track => {
+        const trackStyle = [
+            track.x ? `--motion-x:${track.x}` : '',
+            `--motion-speed:${track.speed}`,
+            `--motion-delay:${track.delay}`
+        ].filter(Boolean).join(';');
+
+        const events = [0, 1, 2].flatMap(segment => track.years.map(([year, position, isKey]) => {
+            const loopPosition = position / 3 + (100 / 3) * segment;
+            return `
+                <span class="home-motion-event${isKey ? ' is-key' : ''}" style="--motion-y:${loopPosition}%">
+                    <b class="home-motion-year">${year}</b>
+                </span>
+            `;
+        })).join('');
+
+        return `
+            <span class="home-motion-track depth-${track.depth.replace(' ', ' depth-')}" style="${trackStyle}">
+                <span class="home-motion-stream${track.side === 'left' ? ' track-left' : ''}">${events}</span>
+            </span>
+        `;
+    }).join('');
+}
+
 let selectedDirectors = [];
 let searchQuery = '';
 
@@ -445,6 +484,7 @@ if (directorSearchInput) {
 }
 
 // Initial Render
+renderHeroTimelineMotion();
 renderComparisonThemes();
 renderEditorNotePreview();
 renderList();
