@@ -229,7 +229,54 @@
             filter: blur(12px);
             pointer-events: none;
         }
-        .hero-logo { display: block; width: 100%; height: auto; }
+        .hero-logo-motion {
+            position: relative;
+            width: 100%;
+            transform-origin: 42% 54%;
+        }
+
+        .hero-logo {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-logo-base { opacity: 0; }
+
+        .hero-logo-layer {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .hero-logo-gold {
+            animation: logo-gold-arrive 520ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .hero-logo-copy {
+            animation: logo-copy-slide 720ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .logo-gold-d { clip-path: inset(0 88% 67% 0); animation-delay: 80ms; }
+        .logo-gold-t { clip-path: inset(33% 88% 31% 0); animation-delay: 220ms; }
+        .logo-gold-a { clip-path: inset(67% 88% 0 0); animation-delay: 360ms; }
+
+        .logo-copy-directors { clip-path: inset(0 0 67% 12%); animation-delay: 900ms; }
+        .logo-copy-timeline { clip-path: inset(33% 0 31% 12%); animation-delay: 1080ms; }
+        .logo-copy-archive { clip-path: inset(67% 0 0 12%); animation-delay: 1260ms; }
+
+        @keyframes logo-gold-arrive {
+            0% { opacity: 0; filter: blur(4px); transform: scale(0.82); }
+            70% { opacity: 1; filter: blur(0); transform: scale(1.035); }
+            100% { opacity: 1; filter: blur(0); transform: scale(1); }
+        }
+
+        @keyframes logo-copy-slide {
+            0% { opacity: 0; filter: blur(3px); transform: translate3d(-34px, 0, 0); }
+            55% { opacity: 1; filter: blur(0); }
+            100% { opacity: 1; filter: blur(0); transform: translate3d(0, 0, 0); }
+        }
 
         .lead { margin-top: 20px; font-size: 13px; letter-spacing: 0.04em; line-height: 1.5; }
         .lead strong { display: inline-block; font-size: 18px; line-height: 1.5; }
@@ -311,6 +358,7 @@
 
         @media (prefers-reduced-motion: reduce) {
             .timeline-stream { animation-play-state: paused; }
+            .hero-logo-layer { opacity: 1; filter: none; animation: none; }
         }
     </style>
 </head>
@@ -378,7 +426,15 @@
 
         <div class="hero-content">
             <section class="brand-block">
-                <img class="hero-logo" src="assets/logo-top.svg" alt="Directors' Timeline Archive">
+                <div class="hero-logo-motion" id="hero-logo-motion">
+                    <img class="hero-logo hero-logo-base" src="assets/logo-top.svg" alt="Directors' Timeline Archive">
+                    <img class="hero-logo hero-logo-layer hero-logo-gold logo-gold-d" src="assets/logo-top.svg" alt="" aria-hidden="true">
+                    <img class="hero-logo hero-logo-layer hero-logo-gold logo-gold-t" src="assets/logo-top.svg" alt="" aria-hidden="true">
+                    <img class="hero-logo hero-logo-layer hero-logo-gold logo-gold-a" src="assets/logo-top.svg" alt="" aria-hidden="true">
+                    <img class="hero-logo hero-logo-layer hero-logo-copy logo-copy-directors" src="assets/logo-top.svg" alt="" aria-hidden="true">
+                    <img class="hero-logo hero-logo-layer hero-logo-copy logo-copy-timeline" src="assets/logo-top.svg" alt="" aria-hidden="true">
+                    <img class="hero-logo hero-logo-layer hero-logo-copy logo-copy-archive" src="assets/logo-top.svg" alt="" aria-hidden="true">
+                </div>
                 <p class="lead"><strong>映画監督のキャリアを、一本のタイムラインで。</strong><br>Directors’ Timeline Archive は、映画監督たちの作品と、時代背景を重ねて眺めるためのアーカイブです。</p>
             </section>
             <section class="path-list" aria-label="探し方のプレビュー">
@@ -398,12 +454,15 @@
 
     <div class="alpha-controls" aria-label="アルファ版の表示調整">
         <span>GRID TEST</span>
+        <button id="logo-replay" type="button">ロゴを再生</button>
         <button id="motion-toggle" type="button" aria-pressed="false">一時停止</button>
         <button id="contrast-toggle" type="button" aria-pressed="false">濃くする</button>
     </div>
 
     <script>
         const hero = document.getElementById('alpha-hero');
+        let logoMotion = document.getElementById('hero-logo-motion');
+        const logoReplay = document.getElementById('logo-replay');
         const motionToggle = document.getElementById('motion-toggle');
         const contrastToggle = document.getElementById('contrast-toggle');
 
@@ -418,6 +477,12 @@
                     stream.appendChild(clone);
                 });
             });
+        });
+
+        logoReplay.addEventListener('click', () => {
+            const replacement = logoMotion.cloneNode(true);
+            logoMotion.replaceWith(replacement);
+            logoMotion = replacement;
         });
 
         motionToggle.addEventListener('click', () => {

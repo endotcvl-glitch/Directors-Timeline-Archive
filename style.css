@@ -1873,6 +1873,28 @@ header {
     box-shadow: 0 0 0 3px rgba(87, 84, 91, 0.08);
 }
 
+.director-decade-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    align-items: center;
+}
+
+.director-decade-nav a {
+    color: var(--secondary-text);
+    font-family: var(--font-number);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.director-decade-nav a:hover,
+.director-decade-nav a:focus-visible {
+    color: var(--accent-color);
+}
+
 /* --- Explore by Year Page --- */
 
 .year-container {
@@ -2603,6 +2625,7 @@ header {
     border-bottom: 2px solid var(--accent-color);
     margin-bottom: 1.75rem;
     text-transform: uppercase;
+    scroll-margin-top: 110px;
 }
 
 .director-item + .director-category-title {
@@ -3356,6 +3379,25 @@ header {
 
     .director-search {
         margin-bottom: 1.75rem;
+    }
+
+    .director-decade-nav {
+        flex-wrap: nowrap;
+        gap: 1.25rem;
+        margin-right: -1rem;
+        padding-right: 1rem;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: none;
+    }
+
+    .director-decade-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .director-decade-nav a {
+        flex: 0 0 auto;
+        font-size: 0.75rem;
     }
 
     .info-container {

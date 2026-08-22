@@ -360,10 +360,11 @@ function renderList() {
         container.appendChild(empty);
     }
 
-    directors.forEach(group => {
+    [...directors].reverse().forEach(group => {
         // Render Category Header
         const header = document.createElement('div');
         header.className = 'director-category-title';
+        header.id = `directors-${group.category.slice(0, 4)}`;
         header.textContent = group.category;
         container.appendChild(header);
 
