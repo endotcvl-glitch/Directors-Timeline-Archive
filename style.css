@@ -767,6 +767,10 @@ body.index-page .footer-nav {
         padding-left: clamp(20px, 11.11%, 60px);
     }
 
+    body.index-page .theme-item:has(.theme-card-title) {
+        min-height: 0;
+    }
+
     body.index-page .theme-pair {
         grid-template-columns: repeat(2, minmax(0, 180px));
         gap: clamp(20px, 11.11vw, 60px);
