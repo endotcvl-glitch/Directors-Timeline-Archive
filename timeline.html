@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/400.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/700.css">
-    <link rel="stylesheet" href="style.css?v=standard-year-row-20260818">
+    <link rel="stylesheet" href="style.css?v=mobile-text-caret-only-20260827">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -77,6 +77,21 @@
         <!-- Unified timeline will be injected here -->
     </main>
 
+    <div class="year-films-sheet" id="year-films-sheet" hidden>
+        <div class="year-films-backdrop" data-sheet-close></div>
+        <section class="year-films-dialog" role="dialog" aria-modal="true" aria-labelledby="year-films-title" tabindex="-1">
+            <div class="year-films-handle" aria-hidden="true"></div>
+            <div class="year-films-sheet-header">
+                <div>
+                    <h2 id="year-films-title"></h2>
+                    <p id="year-films-count"></p>
+                </div>
+                <button class="year-films-close" type="button" aria-label="作品リストを閉じる" data-sheet-close>&times;</button>
+            </div>
+            <div class="year-films-list" id="year-films-list"></div>
+        </section>
+    </div>
+
     <footer class="site-footer timeline-footer">
         <a href="index.html" class="footer-title" aria-label="Directors' Timeline Archive Home"><img src="assets/logo-top.svg" alt="" class="footer-logo"></a>
         <nav class="footer-nav" aria-label="Footer navigation">
@@ -98,7 +113,7 @@
         <p>&copy; 2026 Directors' Timeline Archive.</p>
     </footer>
 
-    <script src="main.js?v=standard-year-row-20260818"></script>
+    <script src="main.js?v=mobile-timeline-sheet-20260826"></script>
     <script src="navigation.js?v=shared-component-20260816"></script>
 </body>
 </html>

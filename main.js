@@ -63,6 +63,8 @@ const directorsInfo = {
     'scott': { fullNameEn: 'RIDLEY SCOTT', nameJa: 'リドリー・スコット', surname: 'SCOTT' },
     'abrams': { fullNameEn: 'J.J. ABRAMS', nameJa: 'J.J.エイブラムス', surname: 'ABRAMS' },
     'fennell': { fullNameEn: 'EMERALD FENNELL', nameJa: 'エメラルド・フェネル', surname: 'FENNELL' },
+    'cunningham': { fullNameEn: 'SEAN S. CUNNINGHAM', nameJa: 'ショーン・S・カニンガム', surname: 'CUNNINGHAM' },
+    'verhoeven': { fullNameEn: 'PAUL VERHOEVEN', nameJa: 'ポール・バーホーベン', surname: 'VERHOEVEN' },
 };
 
 const filmsData = [
@@ -320,6 +322,41 @@ const filmsData = [
     { year: 1998, type: 'carpenter', title: "ヴァンパイア/最期の聖戦", context: "吸血鬼狩りを西部劇的な荒々しさで描いた、血と砂埃のアクションホラー。" },
     { year: 2001, type: 'carpenter', title: "ゴースト・オブ・マーズ", context: "火星植民地を舞台に、包囲戦と憑依ホラーを組み合わせたSFアクション。" },
     { year: 2010, type: 'carpenter', title: "ザ・ウォード/監禁病棟", context: "精神病棟に閉じ込められた女性たちをめぐる、カーペンター後期の密室ホラー。" },
+
+    // Sean S. Cunningham
+    { year: 1970, type: 'cunningham', title: "The Art of Marriage", context: "低予算の疑似ドキュメンタリーとして制作された、カニンガムの長編監督デビュー作。" },
+    { year: 1971, type: 'cunningham', title: "Together", context: "性をめぐるアメリカ社会の意識を扱い、ウェス・クレイヴンも制作に参加した初期作。" },
+    { year: 1973, type: 'cunningham', title: "Case of the Full Moon Murders", context: "満月と奇妙な殺人事件を結びつけた、ミステリー仕立てのエクスプロイテーション・コメディ。" },
+    { year: 1978, type: 'cunningham', title: "Here Come the Tigers", context: "弱小少年野球チームの奮闘を描いた、低予算のスポーツコメディ。" },
+    { year: 1978, type: 'cunningham', title: "Manny's Orphans", context: "孤児たちのサッカーチームと指導者の交流を描いたスポーツドラマ。" },
+    { year: 1980, type: 'cunningham', title: "13日の金曜日", context: "湖畔のキャンプ場を舞台に連続殺人の恐怖を描き、スラッシャー映画の一時代を築いた代表作。" },
+    { year: 1982, type: 'cunningham', title: "誰かが見ている", context: "誘拐された少女と家族に迫る危機を、都市の閉塞感とともに描いたサスペンス。" },
+    { year: 1983, type: 'cunningham', title: "スプリング・ブレイク", context: "春休みのフロリダへ向かった若者たちの騒動を描く青春コメディ。" },
+    { year: 1985, type: 'cunningham', title: "The New Kids", context: "転校先で暴力的な集団に狙われた兄妹の反撃を描く青春スリラー。" },
+    { year: 1989, type: 'cunningham', title: "ザ・デプス", context: "深海基地で未知の生物に襲われる乗組員たちを描いた海洋SFホラー。" },
+    { year: 2001, type: 'cunningham', title: "XCU: Extreme Close Up", context: "大学構内のリアリティ番組を題材に、監視と欲望を扱ったスリラー。" },
+    { year: 2002, type: 'cunningham', title: "Terminal Invasion", context: "雪で閉ざされた空港に異星人が潜む、限定空間のSFホラー。" },
+    { year: 2006, type: 'cunningham', title: "デス・ルーム", context: "複数の監督による怪奇アンソロジーで、一篇の演出を担当したオムニバス作品。" },
+    { year: 2017, type: 'cunningham', title: "The Nurse with the Purple Hair", context: "終末期医療に携わるホスピス看護師たちを追ったドキュメンタリー。" },
+
+    // Paul Verhoeven
+    { year: 1971, type: 'verhoeven', title: "Business Is Business", context: "アムステルダムで生きる二人の女性を描いた、バーホーベンの長編監督デビュー作。" },
+    { year: 1973, type: 'verhoeven', title: "ルトガー・ハウアー/危険な愛", context: "若い男女の激しい恋愛と破局を通じ、欲望と階級を率直に描いたオランダ時代の代表作。" },
+    { year: 1975, type: 'verhoeven', title: "娼婦ケティ", context: "貧困から抜け出そうとする女性の人生を、19世紀末のオランダ社会とともに描く。" },
+    { year: 1977, type: 'verhoeven', title: "女王陛下の戦士", context: "第二次世界大戦下で異なる道を選ぶ若者たちを描いた、オランダ時代の戦争大作。" },
+    { year: 1980, type: 'verhoeven', title: "SPETTERS/スペッターズ", context: "モトクロスに夢を託す若者たちの欲望と挫折を、荒々しい現実感で描く。" },
+    { year: 1983, type: 'verhoeven', title: "4番目の男", context: "作家の妄想と性的欲望、死の予感が交錯する心理スリラー。" },
+    { year: 1985, type: 'verhoeven', title: "グレート・ウォリアーズ/欲望の剣", context: "中世ヨーロッパの傭兵たちを、暴力と信仰が渦巻く苛烈な世界として描いた。" },
+    { year: 1987, type: 'verhoeven', title: "ロボコップ", context: "企業に支配された近未来都市を舞台に、暴力的娯楽と鋭い社会風刺を融合したSF。" },
+    { year: 1990, type: 'verhoeven', title: "トータル・リコール", context: "記憶の売買と火星の反乱をめぐり、現実と虚構を揺さぶるSFアクション。" },
+    { year: 1992, type: 'verhoeven', title: "氷の微笑", context: "殺人事件を追う刑事と容疑者の駆け引きを、欲望と視線のゲームとして描く。" },
+    { year: 1995, type: 'verhoeven', title: "ショーガール", context: "ラスベガスのショービジネスを舞台に、成功への欲望と搾取を過剰な演出で描いた。" },
+    { year: 1997, type: 'verhoeven', title: "スターシップ・トゥルーパーズ", context: "昆虫型異星生物との戦争を、軍国主義とプロパガンダへの痛烈な風刺として描く。" },
+    { year: 2000, type: 'verhoeven', title: "インビジブル", context: "透明化実験に成功した科学者の暴走を描き、権力と欲望の恐怖を可視化したSFスリラー。" },
+    { year: 2006, type: 'verhoeven', title: "ブラックブック", context: "ナチス占領下のオランダでレジスタンスに加わる女性を描いた戦争サスペンス。" },
+    { year: 2012, type: 'verhoeven', title: "ポール・バーホーベン/トリック", context: "観客参加型の制作手法を取り入れ、家族と裏切りを描いた実験的な群像劇。" },
+    { year: 2016, type: 'verhoeven', title: "エル ELLE", context: "暴力に遭った女性の予測不能な行動を通じ、被害と支配の構図を挑発的に描く。" },
+    { year: 2021, type: 'verhoeven', title: "ベネデッタ", context: "17世紀イタリアの修道女をめぐる信仰、欲望、権力を大胆に描いた歴史劇。" },
 
     // Tim Burton
     { year: 1985, type: 'burton', title: "ピーウィーの大冒険", context: "大切な自転車を探すため、変わり者の男が全米を横断するコメディ。" },
@@ -1147,6 +1184,110 @@ function renderWorkCard(work, directorId) {
     `;
 }
 
+let yearFilmsSheetState = null;
+
+function closeYearFilmsSheet() {
+    const sheet = document.getElementById('year-films-sheet');
+    if (!sheet || sheet.hidden || !yearFilmsSheetState) return;
+
+    const { scrollY, trigger } = yearFilmsSheetState;
+    sheet.classList.remove('is-open');
+    document.body.classList.remove('year-films-sheet-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollY);
+
+    window.setTimeout(() => {
+        sheet.hidden = true;
+        trigger?.focus({ preventScroll: true });
+        yearFilmsSheetState = null;
+    }, 240);
+}
+
+function openYearFilmsSheet(year, films, selectedDirectorId, trigger) {
+    const sheet = document.getElementById('year-films-sheet');
+    const dialog = sheet?.querySelector('.year-films-dialog');
+    const title = document.getElementById('year-films-title');
+    const count = document.getElementById('year-films-count');
+    const list = document.getElementById('year-films-list');
+    if (!sheet || !dialog || !title || !count || !list) return;
+
+    title.textContent = `${year}年の同時代作品`;
+    count.textContent = `全${films.length}本`;
+    list.innerHTML = films.length ? films.map(film => `
+        <button class="year-film-sheet-item" type="button" data-director-id="${film.type}">
+            <span class="year-film-sheet-title">${film.title}</span>
+            <span class="year-film-sheet-director">${directorsInfo[film.type]?.nameJa || directorsInfo[film.type]?.fullNameEn || ''}</span>
+        </button>
+    `).join('') : '<p class="year-films-empty">この年の同時代作品はありません。</p>';
+
+    list.querySelectorAll('.year-film-sheet-item').forEach(item => {
+        item.addEventListener('click', () => {
+            window.location.href = `timeline.html?d1=${selectedDirectorId}&d2=${item.dataset.directorId}`;
+        });
+    });
+
+    const scrollY = window.scrollY;
+    yearFilmsSheetState = { scrollY, trigger };
+    document.body.style.top = `-${scrollY}px`;
+    document.body.classList.add('year-films-sheet-open');
+    sheet.hidden = false;
+    requestAnimationFrame(() => {
+        sheet.classList.add('is-open');
+        dialog.focus({ preventScroll: true });
+    });
+}
+
+function setupYearFilmsSheet() {
+    const sheet = document.getElementById('year-films-sheet');
+    const dialog = sheet?.querySelector('.year-films-dialog');
+    if (!sheet || !dialog) return;
+
+    sheet.querySelectorAll('[data-sheet-close]').forEach(control => {
+        control.addEventListener('click', closeYearFilmsSheet);
+    });
+
+    let touchStartY = 0;
+    let touchCurrentY = 0;
+    dialog.addEventListener('touchstart', event => {
+        if (dialog.scrollTop === 0) touchStartY = event.touches[0].clientY;
+    }, { passive: true });
+    dialog.addEventListener('touchmove', event => {
+        touchCurrentY = event.touches[0].clientY;
+        const distance = Math.max(0, touchCurrentY - touchStartY);
+        if (touchStartY && distance > 0 && dialog.scrollTop === 0) {
+            dialog.style.transform = `translateY(${Math.min(distance, 180)}px)`;
+        }
+    }, { passive: true });
+    dialog.addEventListener('touchend', () => {
+        const distance = touchCurrentY - touchStartY;
+        dialog.style.transform = '';
+        if (touchStartY && distance > 90) closeYearFilmsSheet();
+        touchStartY = 0;
+        touchCurrentY = 0;
+    });
+
+    document.addEventListener('keydown', event => {
+        if (sheet.hidden) return;
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeYearFilmsSheet();
+            return;
+        }
+        if (event.key !== 'Tab') return;
+        const focusable = [...dialog.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])')];
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
+    });
+}
+
 function renderTimeline() {
     const { d1, d2 } = getUrlParams();
     updateHeaderLabels(d1, d2);
@@ -1236,7 +1377,10 @@ function renderTimeline() {
             </div>
 
             <div class="side villeneuve-side">
-                ${d2 ? worksRight.map(work => renderWorkCard(work, d2)).join('') : (otherFilms.length > 0 ? `
+                ${d2 ? worksRight.map(work => renderWorkCard(work, d2)).join('') : `
+                    <button class="year-films-trigger" type="button" data-year="${year}" aria-haspopup="dialog">
+                        <span>この年の作品リスト</span><span>${otherFilms.length}本</span><span class="year-films-caret" aria-hidden="true">▼</span>
+                    </button>
                     <div class="other-films-container">
                         ${otherFilms.map(f => `
                             <div class="other-film-item" data-director-id="${f.type}" role="button" tabindex="0">
@@ -1244,7 +1388,7 @@ function renderTimeline() {
                             </div>
                         `).join('')}
                     </div>
-                ` : '')}
+                `}
             </div>
         `;
         row.querySelectorAll('.other-film-item').forEach(item => {
@@ -1260,10 +1404,14 @@ function renderTimeline() {
                 }
             });
         });
+        row.querySelector('.year-films-trigger')?.addEventListener('click', event => {
+            openYearFilmsSheet(year, otherFilms, d1, event.currentTarget);
+        });
         container.appendChild(row);
     }
 }
 if (document.getElementById('timeline-container')) {
     setupJumpNav();
+    setupYearFilmsSheet();
     renderTimeline();
 }

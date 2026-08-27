@@ -20,7 +20,9 @@ const directors = [
         { id: 'carpenter', surname: 'CARPENTER', nameJa: 'ジョン・カーペンター', nameEn: 'JOHN CARPENTER', keywords: 'ミニマルな恐怖 / シンセサウンド / ジャンル映画の職人' },
         { id: 'miller', surname: 'MILLER', nameJa: 'ジョージ・ミラー', nameEn: 'GEORGE MILLER', keywords: '身体性アクション / 神話的世界観 / 寓話的表現' },
         { id: 'scott', surname: 'SCOTT', nameJa: 'リドリー・スコット', nameEn: 'RIDLEY SCOTT', keywords: '重厚な世界構築 / 光と影の造形 /　神話性' },
-        { id: 'zemeckis', surname: 'ZEMECKIS', nameJa: 'ロバート・ゼメキス', nameEn: 'ROBERT ZEMECKIS', keywords: '技術革新 / ポップな物語 / 時間と記憶' }
+        { id: 'zemeckis', surname: 'ZEMECKIS', nameJa: 'ロバート・ゼメキス', nameEn: 'ROBERT ZEMECKIS', keywords: '技術革新 / ポップな物語 / 時間と記憶' },
+        { id: 'cunningham', surname: 'CUNNINGHAM', nameJa: 'ショーン・S・カニンガム', nameEn: 'SEAN S. CUNNINGHAM', keywords: 'スラッシャーホラー / 独立系映画 / 13日の金曜日' },
+        { id: 'verhoeven', surname: 'VERHOEVEN', nameJa: 'ポール・バーホーベン', nameEn: 'PAUL VERHOEVEN', keywords: '暴力と風刺 / 挑発的表現 / SFアクション' }
     ]},
     { category: '1980 -', items: [
         { id: 'bigelow', surname: 'BIGELOW', nameJa: 'キャスリン・ビグロー', nameEn: 'KATHRYN BIGELOW', keywords: '緊迫のリアリズム / 極限の暴力 / 骨太な演出' },

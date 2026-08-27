@@ -1293,6 +1293,11 @@ header {
     font-weight: 700;
 }
 
+.year-films-trigger,
+.year-films-sheet {
+    display: none;
+}
+
 /* Responsive */
 /* --- Home Page Specific Styles --- */
 
@@ -3710,6 +3715,366 @@ header {
     .episode-label {
         width: 56px;
         font-size: 0.54rem;
+    }
+}
+
+/* Mobile timeline — compact comparison and single-director year sheet */
+@media (max-width: 599px) {
+    body:has(.timeline-container) {
+        padding-bottom: 0;
+    }
+
+    .timeline-header .header-shell {
+        min-height: 72px;
+    }
+
+    .timeline-header .site-title-link {
+        left: 18px;
+        width: 38px;
+        height: 52px;
+    }
+
+    .timeline-header .site-title-logo {
+        height: 42px;
+    }
+
+    .timeline-header .nav-toggle {
+        right: 18px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .timeline-header .nav-toggle span {
+        width: 20px;
+        height: 2px;
+    }
+
+    .director-labels,
+    .director-labels.single-mode {
+        top: 72px;
+        grid-template-columns: minmax(0, 1fr) 52px minmax(0, 1fr);
+        min-height: 72px;
+        align-items: center;
+        padding: 12px 12px 10px;
+        column-gap: 4px;
+        border-bottom: 0;
+        box-shadow: 0 -72px 0 72px var(--bg-color);
+    }
+
+    .director-labels .label-surname,
+    .director-labels .label-en {
+        font-size: clamp(12px, 3.6vw, 15px);
+        line-height: 1.35;
+        letter-spacing: 0.03em;
+    }
+
+    .director-labels .contemporary-label-en {
+        max-width: 140px;
+        margin: 0 auto;
+        font-size: 12px;
+        line-height: 1.2;
+        letter-spacing: 0.09em;
+    }
+
+    .jump-nav {
+        top: 144px;
+        z-index: 95;
+        gap: 24px;
+        min-height: 46px;
+        padding: 7px 36px;
+        border-bottom: 0;
+    }
+
+    .jump-nav button {
+        min-height: 32px;
+        padding: 0;
+        font-size: 12px;
+        opacity: 0.85;
+    }
+
+    .timeline-container,
+    .timeline-container.single-mode {
+        padding: 190px 0 72px;
+    }
+
+    .timeline-row,
+    .timeline-container.single-mode .timeline-row {
+        grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+        column-gap: 4px;
+        min-height: 104px;
+        margin: 0;
+        padding: 8px 0;
+    }
+
+    .timeline-container::before {
+        top: 190px;
+        bottom: 0;
+        background: #a08257;
+    }
+
+    .timeline-row .side {
+        min-width: 0;
+        padding: 0 8px;
+        overflow: hidden;
+    }
+
+    .timeline-row .film-card,
+    .timeline-row .card-content,
+    .timeline-row .film-title,
+    .timeline-row .film-title a {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .timeline-container:not(.single-mode) .timeline-row .side {
+        align-items: center;
+        text-align: center;
+    }
+
+    .timeline-container:not(.single-mode) .timeline-row .film-card {
+        width: 100%;
+    }
+
+    .timeline-container:not(.single-mode) .timeline-row .card-content {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .timeline-container.single-mode .timeline-row .nolan-side {
+        align-items: center;
+        text-align: center;
+    }
+
+    .timeline-container.single-mode .timeline-row .nolan-side .film-card {
+        width: 100%;
+    }
+
+    .timeline-container.single-mode .timeline-row .nolan-side .card-content {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .timeline-row .film-card + .film-card {
+        margin-top: 9px;
+    }
+
+    .timeline-row .work-medium {
+        margin-bottom: 6px;
+        padding: 3px 7px 2px;
+        font-size: 9px;
+        letter-spacing: 0.1em;
+    }
+
+    .timeline-row .film-title {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.42;
+        overflow: hidden;
+    }
+
+    .timeline-row .film-title a {
+        display: -webkit-box;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+        word-break: normal;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+
+    .timeline-row .year-label {
+        padding: 4px 5px;
+        color: var(--text-color);
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.02em;
+    }
+
+    .timeline-container.single-mode .year-label {
+        font-size: 21px;
+        font-weight: 700;
+    }
+
+    .timeline-row .episode-label {
+        width: 112px;
+        margin-top: 7px;
+        padding: 0 3px;
+        background: var(--bg-color);
+        font-size: 10px;
+        line-height: 1.45;
+    }
+
+    .year-films-trigger {
+        display: grid;
+        grid-template-columns: auto auto 10px;
+        align-items: center;
+        justify-content: start;
+        gap: 8px;
+        width: max-content;
+        max-width: 100%;
+        min-height: 44px;
+        padding: 0 2px;
+        border: 0;
+        background: transparent;
+        color: var(--text-color);
+        font: 400 10px/1.25 var(--font-sans);
+        letter-spacing: 0;
+        text-align: left;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .year-films-caret {
+        font-size: 8px;
+        transform: translateY(1px);
+    }
+
+    .timeline-container.single-mode .other-films-container {
+        display: none;
+    }
+
+    .year-films-sheet {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 500;
+    }
+
+    .year-films-sheet[hidden] {
+        display: none;
+    }
+
+    .year-films-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 14, 16, 0.34);
+        opacity: 0;
+        transition: opacity 0.24s ease;
+    }
+
+    .year-films-dialog {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        max-height: min(72vh, 620px);
+        padding: 10px 20px calc(20px + env(safe-area-inset-bottom));
+        border-radius: 18px 18px 0 0;
+        outline: 0;
+        background: var(--bg-color);
+        box-shadow: 0 -12px 36px rgba(0,0,0,0.16);
+        overflow: hidden;
+        transform: translateY(100%);
+        transition: transform 0.24s ease;
+    }
+
+    .year-films-sheet.is-open .year-films-backdrop {
+        opacity: 1;
+    }
+
+    .year-films-sheet.is-open .year-films-dialog {
+        transform: translateY(0);
+    }
+
+    .year-films-handle {
+        width: 38px;
+        height: 4px;
+        margin: 0 auto 14px;
+        border-radius: 99px;
+        background: #aaa7ad;
+    }
+
+    .year-films-sheet-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--line-color);
+    }
+
+    .year-films-sheet-header h2 {
+        margin: 0 0 3px;
+        font-family: var(--font-sans);
+        font-size: 20px;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+    }
+
+    .year-films-sheet-header p {
+        margin: 0;
+        color: var(--secondary-text);
+        font-size: 12px;
+    }
+
+    .year-films-close {
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        margin: -8px -10px 0 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--text-color);
+        font: 300 30px/1 var(--font-sans);
+        cursor: pointer;
+    }
+
+    .year-films-list {
+        max-height: calc(min(72vh, 620px) - 116px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .year-film-sheet-item {
+        display: grid;
+        width: 100%;
+        min-height: 62px;
+        padding: 12px 0;
+        border: 0;
+        border-bottom: 1px solid var(--line-color);
+        background: transparent;
+        color: var(--text-color);
+        font-family: var(--font-sans);
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .year-film-sheet-title {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    .year-film-sheet-director {
+        margin-top: 3px;
+        color: var(--secondary-text);
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .year-films-empty {
+        margin: 0;
+        padding: 28px 0;
+        color: var(--secondary-text);
+        font-size: 14px;
+    }
+
+    body.year-films-sheet-open {
+        position: fixed;
+        right: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .year-films-backdrop,
+    .year-films-dialog {
+        transition: none;
     }
 }
 
