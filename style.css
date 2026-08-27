@@ -3749,8 +3749,7 @@ header {
         height: 2px;
     }
 
-    .director-labels,
-    .director-labels.single-mode {
+    .director-labels {
         top: 72px;
         grid-template-columns: minmax(0, 1fr) 52px minmax(0, 1fr);
         min-height: 72px;
@@ -3792,13 +3791,11 @@ header {
         opacity: 0.85;
     }
 
-    .timeline-container,
-    .timeline-container.single-mode {
+    .timeline-container {
         padding: 190px 0 72px;
     }
 
-    .timeline-row,
-    .timeline-container.single-mode .timeline-row {
+    .timeline-row {
         grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
         column-gap: 4px;
         min-height: 104px;
@@ -3831,11 +3828,11 @@ header {
         text-align: center;
     }
 
-    .timeline-container:not(.single-mode) .timeline-row .film-card {
+    .timeline-row .film-card {
         width: 100%;
     }
 
-    .timeline-container:not(.single-mode) .timeline-row .card-content {
+    .timeline-row .card-content {
         margin-right: auto;
         margin-left: auto;
     }
@@ -3843,15 +3840,6 @@ header {
     .timeline-container.single-mode .timeline-row .nolan-side {
         align-items: center;
         text-align: center;
-    }
-
-    .timeline-container.single-mode .timeline-row .nolan-side .film-card {
-        width: 100%;
-    }
-
-    .timeline-container.single-mode .timeline-row .nolan-side .card-content {
-        margin-right: auto;
-        margin-left: auto;
     }
 
     .timeline-row .film-card + .film-card {

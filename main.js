@@ -1233,14 +1233,15 @@ function openYearFilmsSheet(year, films, selectedDirectorId, trigger) {
     sheet.hidden = false;
     requestAnimationFrame(() => {
         sheet.classList.add('is-open');
-        dialog.focus({ preventScroll: true });
+        dialog.querySelector('.year-films-close')?.focus({ preventScroll: true });
     });
 }
 
 function setupYearFilmsSheet() {
     const sheet = document.getElementById('year-films-sheet');
     const dialog = sheet?.querySelector('.year-films-dialog');
-    if (!sheet || !dialog) return;
+    const list = document.getElementById('year-films-list');
+    if (!sheet || !dialog || !list) return;
 
     sheet.querySelectorAll('[data-sheet-close]').forEach(control => {
         control.addEventListener('click', closeYearFilmsSheet);
@@ -1249,12 +1250,12 @@ function setupYearFilmsSheet() {
     let touchStartY = 0;
     let touchCurrentY = 0;
     dialog.addEventListener('touchstart', event => {
-        if (dialog.scrollTop === 0) touchStartY = event.touches[0].clientY;
+        if (list.scrollTop === 0) touchStartY = event.touches[0].clientY;
     }, { passive: true });
     dialog.addEventListener('touchmove', event => {
         touchCurrentY = event.touches[0].clientY;
         const distance = Math.max(0, touchCurrentY - touchStartY);
-        if (touchStartY && distance > 0 && dialog.scrollTop === 0) {
+        if (touchStartY && distance > 0 && list.scrollTop === 0) {
             dialog.style.transform = `translateY(${Math.min(distance, 180)}px)`;
         }
     }, { passive: true });
@@ -1378,7 +1379,7 @@ function renderTimeline() {
 
             <div class="side villeneuve-side">
                 ${d2 ? worksRight.map(work => renderWorkCard(work, d2)).join('') : `
-                    <button class="year-films-trigger" type="button" data-year="${year}" aria-haspopup="dialog">
+                    <button class="year-films-trigger" type="button" aria-haspopup="dialog">
                         <span>この年の作品リスト</span><span>${otherFilms.length}本</span><span class="year-films-caret" aria-hidden="true">▼</span>
                     </button>
                     <div class="other-films-container">
