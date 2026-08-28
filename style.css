@@ -284,6 +284,83 @@ body.index-page .home-brand-block::before {
 
 body.index-page .home-logo {
     width: 100%;
+    color: #48434c;
+    font-family: 'Inter', sans-serif;
+    font-size: 62px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 63px;
+    text-transform: uppercase;
+}
+
+body.index-page .home-logo-line {
+    --home-logo-reveal-delay: 0.1s;
+    display: block;
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+body.index-page .home-logo-line:nth-child(2) { --home-logo-reveal-delay: 0.65s; }
+body.index-page .home-logo-line:nth-child(3) { --home-logo-reveal-delay: 1.2s; }
+
+body.index-page .home-logo-text {
+    display: inline-block;
+    opacity: 0;
+    animation: home-logo-text-reveal 1s var(--home-logo-reveal-delay) both;
+}
+
+body.index-page .home-logo-line::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: #48434c;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: home-logo-block-reveal 1s cubic-bezier(0.86, 0, 0.07, 1) var(--home-logo-reveal-delay) both;
+    pointer-events: none;
+}
+
+@keyframes home-logo-text-reveal {
+    0%, 49.9% { opacity: 0; }
+    50%, 100% { opacity: 1; }
+}
+
+@keyframes home-logo-block-reveal {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    50.1% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+body.index-page .home-logo-initial-d { color: #a08257; }
+body.index-page .home-logo-initial-t { color: #c6a87d; }
+body.index-page .home-logo-initial-a { color: #d7ba91; }
+
+@media (prefers-reduced-motion: reduce) {
+    body.index-page .home-logo-text {
+        opacity: 1;
+        animation: none;
+    }
+
+    body.index-page .home-logo-line::after {
+        display: none;
+        animation: none;
+    }
 }
 
 body.index-page .home-lead {
@@ -713,6 +790,11 @@ body.index-page .footer-nav {
         max-width: 420px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    body.index-page .home-logo {
+        font-size: clamp(39px, 7.35vw, 50px);
+        line-height: 1.0161;
     }
 
     body.index-page .explore-path-list {
@@ -1413,12 +1495,6 @@ header {
 
 .home-brand-block {
     min-width: 0;
-}
-
-.home-logo img {
-    display: block;
-    width: 100%;
-    height: auto;
 }
 
 .home-hero-axis {
@@ -3256,9 +3332,11 @@ header {
         display: none;
     }
 
-    .home-logo {
+    body.index-page .home-logo {
         width: min(100%, 360px);
         margin-inline: auto;
+        font-size: clamp(30px, 8vw, 39px);
+        line-height: 1.0161;
     }
 
     .home-lead {
