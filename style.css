@@ -286,10 +286,10 @@ body.index-page .home-logo {
     width: 100%;
     color: #48434c;
     font-family: 'Inter', sans-serif;
-    font-size: 62px;
+    font-size: 68px;
     font-weight: 700;
     letter-spacing: 0.04em;
-    line-height: 63px;
+    line-height: 69px;
     text-transform: uppercase;
 }
 
@@ -662,6 +662,22 @@ body.index-page .footer-title {
 body.index-page .footer-logo {
     height: auto;
     width: 260px;
+}
+
+body.index-page .footer-text-logo {
+    display: block;
+    color: #48434c;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.0161;
+    text-transform: uppercase;
+}
+
+body.index-page .footer-text-logo-line {
+    display: block;
+    white-space: nowrap;
 }
 
 body.index-page .footer-nav {
@@ -3335,7 +3351,7 @@ header {
     body.index-page .home-logo {
         width: min(100%, 360px);
         margin-inline: auto;
-        font-size: clamp(30px, 8vw, 39px);
+        font-size: clamp(36px, 10.25vw, 40px);
         line-height: 1.0161;
     }
 
