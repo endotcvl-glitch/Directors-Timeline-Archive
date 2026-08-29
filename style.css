@@ -1309,7 +1309,7 @@ header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) clamp(120px, 13vw, 180px) minmax(0, 1fr);
     padding: 0.75rem clamp(1.5rem, 4vw, 4rem) 0.85rem;
-    pointer-events: none;
+    pointer-events: auto;
     z-index: 90;
     background: var(--bg-color);
     box-shadow: 0 -140px 0 140px var(--bg-color);
