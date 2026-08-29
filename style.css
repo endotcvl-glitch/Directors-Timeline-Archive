@@ -1206,7 +1206,7 @@ header {
 
 .year-label {
     font-family: var(--font-number);
-    font-size: 1.4rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--accent-color);
     background: var(--bg-color);
