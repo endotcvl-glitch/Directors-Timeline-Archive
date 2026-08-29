@@ -601,6 +601,36 @@ body.index-page .theme-pair .theme-director-name {
     white-space: nowrap;
 }
 
+body.index-page .theme-pair .theme-director-copy {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+body.index-page .theme-pair .theme-director-name-en {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    color: var(--secondary-text);
+    font-family: var(--font-interface);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+    overflow-wrap: anywhere;
+    text-decoration: none;
+    text-transform: none;
+}
+
 @media (max-width: 1140px) and (min-width: 821px) {
     body.index-page .theme-list {
         grid-template-columns: repeat(2, minmax(0, 540px));
@@ -1458,10 +1488,6 @@ header {
 
 .index-page .theme-item:hover {
     background: #e6e6e6;
-}
-
-.index-page .theme-pair span {
-    background: rgba(255,255,255,0.72);
 }
 
 .index-page .site-footer,
@@ -2681,6 +2707,7 @@ header {
 }
 
 .item-name-ja {
+    display: block;
     font-family: var(--font-sans);
     font-size: 1.4rem;
     font-weight: 700;
@@ -2689,6 +2716,19 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.item-name-en {
+    display: block;
+    margin-top: 2px;
+    color: var(--secondary-text);
+    font-family: var(--font-interface);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+    text-decoration: none;
+    text-transform: none;
 }
 
 .item-keywords {

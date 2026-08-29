@@ -281,7 +281,10 @@ function renderComparisonThemes() {
                                 ? `<img src="${featuredPortraits[theme.directorIds[index]]}" alt="" loading="lazy">`
                                 : ''}
                         </span>
-                        <span class="theme-director-name">${director.nameJa}</span>
+                        <span class="theme-director-copy">
+                            <span class="theme-director-name">${director.nameJa}</span>
+                            <span class="theme-director-name-en">${director.nameEn}</span>
+                        </span>
                     </span>
                 `).join('')}
             </span>
@@ -381,8 +384,9 @@ function renderList() {
                 isSearching && !isMatch && !isSelected ? 'search-dimmed' : ''
             ].filter(Boolean).join(' ');
             item.innerHTML = `
-                <div class="item-name-ja">
-                    ${dir.nameJa}
+                <div class="item-name-copy">
+                    <span class="item-name-ja">${dir.nameJa}</span>
+                    <span class="item-name-en">${dir.nameEn}</span>
                     ${dir.keywords ? `<div class="item-keywords">${dir.keywords}</div>` : ''}
                 </div>
             `;
