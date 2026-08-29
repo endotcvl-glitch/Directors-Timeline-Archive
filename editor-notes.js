@@ -46,6 +46,18 @@ const editorNotes = [
         },
         heading: "この監督のこの一本",
         excerpt: "『ワールズ・エンド』は、スピーディーなアクションとユーモア、緻密な伏線、そして大胆なジャンル転換にエドガー・ライトらしさが詰まった一本です。"
+    },
+    {
+        slug: "john-carpenter",
+        director: "John Carpenter",
+        directorJa: "ジョン・カーペンター",
+        featuredFilm: {
+            title: "Escape from New York",
+            titleJa: "ニューヨーク1997",
+            year: 1981
+        },
+        heading: "この監督のこの一本",
+        excerpt: "『ニューヨーク1997』は、閉ざされた空間、シンセサイザーによる音楽、反権威的な主人公に、ジョン・カーペンターの揺るがないスタイルが表れた一本です。"
     }
 ];
 
