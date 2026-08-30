@@ -1094,13 +1094,119 @@ function normalizeDirectorId(id, fallback = 'nolan') {
 
 function getUrlParams() {
     const params = new URLSearchParams(window.location.search);
-    const d1 = normalizeDirectorId(params.get('d1'));
+    const rawD1 = params.get('d1');
     const d2Param = params.get('d2');
+    const invalidD1 = (rawD1 === null && d2Param !== null)
+        || (rawD1 !== null && !Object.prototype.hasOwnProperty.call(directorsInfo, rawD1));
+    const invalidD2 = d2Param !== null && !Object.prototype.hasOwnProperty.call(directorsInfo, d2Param);
+    const d1 = normalizeDirectorId(rawD1);
+    const d2 = d2Param ? normalizeDirectorId(d2Param, null) : null;
 
     return {
         d1,
-        d2: d2Param ? normalizeDirectorId(d2Param, null) : null
+        d2: d2 === d1 ? null : d2,
+        rawD1,
+        invalid: invalidD1 || invalidD2
     };
+}
+
+const SITE_URL = 'https://directors-timeline-archive.com/';
+const TIMELINE_URL = `${SITE_URL}timeline.html`;
+
+function setMetaContent(selector, content) {
+    const element = document.querySelector(selector);
+    if (element) element.setAttribute('content', content);
+}
+
+function setTimelineSeo(params) {
+    const { d1, d2, rawD1, invalid } = params;
+    const d1Info = directorsInfo[d1];
+    const d2Info = d2 ? directorsInfo[d2] : null;
+    const hasExplicitDirector = rawD1 !== null && !invalid;
+    let title = '映画監督タイムライン比較 | Directors Timeline Archive';
+    let description = '選択した映画監督の作品を公開年順に表示。1人の歩みや2人の監督比較を、同時代の映画・社会の出来事と並べて確認できます。';
+    let heading = '映画監督の作品年表';
+    let canonicalUrl = TIMELINE_URL;
+
+    if (hasExplicitDirector && d2Info) {
+        title = `${d1Info.nameJa}と${d2Info.nameJa}の監督作品年表比較 | Directors Timeline Archive`;
+        description = `${d1Info.nameJa}と${d2Info.nameJa}の監督作品を公開年順に比較。同じ年代軸で作品公開時期とキャリアの重なりを確認できます。`;
+        heading = `${d1Info.nameJa}と${d2Info.nameJa}の監督作品年表比較`;
+        canonicalUrl = `${TIMELINE_URL}?d1=${encodeURIComponent(d1)}&d2=${encodeURIComponent(d2)}`;
+    } else if (hasExplicitDirector) {
+        title = `${d1Info.nameJa}の監督作品年表 | Directors Timeline Archive`;
+        description = `${d1Info.nameJa}の監督作品を公開年順に紹介。代表作と同時代の映画・社会の出来事を作品年表で確認できます。`;
+        heading = `${d1Info.nameJa}の監督作品年表`;
+        canonicalUrl = `${TIMELINE_URL}?d1=${encodeURIComponent(d1)}`;
+    }
+
+    document.title = title;
+    document.getElementById('timeline-page-title').textContent = heading;
+    document.querySelector('link[rel="canonical"]').href = canonicalUrl;
+    setMetaContent('meta[name="description"]', description);
+    setMetaContent('meta[property="og:title"]', title);
+    setMetaContent('meta[property="og:description"]', description);
+    setMetaContent('meta[property="og:url"]', canonicalUrl);
+    setMetaContent('meta[name="twitter:title"]', title);
+    setMetaContent('meta[name="twitter:description"]', description);
+
+    let robots = document.querySelector('meta[name="robots"]');
+    if (invalid) {
+        if (!robots) {
+            robots = document.createElement('meta');
+            robots.name = 'robots';
+            document.head.appendChild(robots);
+        }
+        robots.content = 'noindex,follow';
+    } else if (robots) {
+        robots.remove();
+    }
+
+    const canonicalPath = canonicalUrl.replace(SITE_URL, '');
+    const currentPath = `${window.location.pathname.split('/').pop() || 'timeline.html'}${window.location.search}`;
+    if (!invalid && currentPath !== canonicalPath) {
+        window.history.replaceState(null, '', canonicalPath);
+    }
+
+    const works = hasExplicitDirector && !d2Info
+        ? filmsData.filter(work => work.type === d1)
+        : [];
+    const structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: heading,
+        url: canonicalUrl,
+        description,
+        isPartOf: {
+            '@type': 'WebSite',
+            name: "Directors' Timeline Archive",
+            url: SITE_URL
+        },
+        inLanguage: 'ja'
+    };
+    if (hasExplicitDirector && !d2Info) {
+        structuredData.about = {
+            '@type': 'Person',
+            name: d1Info.nameJa,
+            alternateName: d1Info.fullNameEn
+        };
+        structuredData.mainEntity = {
+            '@type': 'ItemList',
+            name: `${d1Info.nameJa}の監督作品一覧`,
+            numberOfItems: works.length,
+            itemListOrder: 'https://schema.org/ItemListOrderAscending',
+            itemListElement: works.map((work, index) => ({
+                '@type': 'ListItem',
+                position: index + 1,
+                item: {
+                    '@type': work.medium === 'Series' ? 'TVSeries' : 'Movie',
+                    name: work.title,
+                    dateCreated: String(work.year)
+                }
+            }))
+        };
+    }
+    document.getElementById('timeline-structured-data').textContent = JSON.stringify(structuredData);
 }
 
 function updateHeaderLabels(d1Id, d2Id) {
@@ -1290,7 +1396,9 @@ function setupYearFilmsSheet() {
 }
 
 function renderTimeline() {
-    const { d1, d2 } = getUrlParams();
+    const params = getUrlParams();
+    const { d1, d2 } = params;
+    setTimelineSeo(params);
     updateHeaderLabels(d1, d2);
 
     const container = document.getElementById('timeline-container');

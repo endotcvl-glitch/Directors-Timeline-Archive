@@ -377,12 +377,14 @@ function renderList() {
         group.items.forEach(dir => {
             const isSelected = selectedDirectors.includes(dir.id);
             const isMatch = matchesSearch(dir);
-            const item = document.createElement('div');
+            const item = document.createElement('a');
             item.className = [
                 'director-item',
                 isSelected ? 'selected' : '',
                 isSearching && !isMatch && !isSelected ? 'search-dimmed' : ''
             ].filter(Boolean).join(' ');
+            item.href = `timeline.html?d1=${encodeURIComponent(dir.id)}`;
+            item.setAttribute('aria-label', `${dir.nameJa}の監督作品年表（クリックで比較対象に選択）`);
             item.innerHTML = `
                 <div class="item-name-copy">
                     <span class="item-name-ja">${dir.nameJa}</span>
@@ -390,7 +392,16 @@ function renderList() {
                     ${dir.keywords ? `<div class="item-keywords">${dir.keywords}</div>` : ''}
                 </div>
             `;
-            item.onclick = () => toggleSelection(dir.id);
+            item.addEventListener('click', event => {
+                if (event.detail === 0) {
+                    return;
+                }
+                if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+                    return;
+                }
+                event.preventDefault();
+                toggleSelection(dir.id);
+            });
             container.appendChild(item);
 
             if (isSearching && isMatch && !firstMatchItem) {

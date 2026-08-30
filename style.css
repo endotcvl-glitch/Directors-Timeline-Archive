@@ -2679,7 +2679,14 @@ header {
     cursor: pointer;
     transition: all 0.3s;
     text-align: left;
+    color: inherit;
+    text-decoration: none;
     width: 100%;
+}
+
+.director-item:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
 }
 
 .director-item:first-child {
@@ -2839,7 +2846,7 @@ header {
         letter-spacing: 0.07em;
     }
 
-    .director-labels {
+.director-labels {
         top: 116px;
         grid-template-columns: minmax(0, 1fr) 112px minmax(0, 1fr);
         padding: 0.6rem 1.5rem 0.7rem;
@@ -2984,6 +2991,23 @@ header {
         grid-template-columns: 120px minmax(0, 1fr);
         gap: 1.5rem;
     }
+}
+
+.timeline-page-title {
+    position: absolute;
+    top: 252px;
+    left: 50%;
+    z-index: 3;
+    width: min(100% - 3rem, 1100px);
+    margin: 0;
+    transform: translateX(-50%);
+    color: var(--secondary-text);
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+    text-align: center;
 }
 
 /* --- Phone Layout: up to 599px --- */
@@ -3927,6 +3951,13 @@ header {
 
     .timeline-container {
         padding: 190px 0 72px;
+    }
+
+    .timeline-page-title {
+        top: 164px;
+        width: calc(100% - 24px);
+        font-size: 0.68rem;
+        letter-spacing: 0.04em;
     }
 
     .timeline-row {
