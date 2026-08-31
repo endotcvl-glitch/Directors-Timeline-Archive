@@ -3950,14 +3950,15 @@ header {
     }
 
     .timeline-container {
-        padding: 190px 0 72px;
+        padding: 250px 0 72px;
     }
 
     .timeline-page-title {
-        top: 164px;
+        top: 202px;
         width: calc(100% - 24px);
-        font-size: 0.68rem;
+        font-size: 0.72rem;
         letter-spacing: 0.04em;
+        line-height: 1.5;
     }
 
     .timeline-row {
@@ -3969,7 +3970,7 @@ header {
     }
 
     .timeline-container::before {
-        top: 190px;
+        top: 250px;
         bottom: 0;
         background: #a08257;
     }
