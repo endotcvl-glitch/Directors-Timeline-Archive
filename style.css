@@ -2998,15 +2998,19 @@ header {
     top: 252px;
     left: 50%;
     z-index: 3;
-    width: min(100% - 3rem, 1100px);
+    width: fit-content;
+    max-width: min(calc(100% - 3rem), 1100px);
     margin: 0;
+    padding: 0.55rem 1rem;
     transform: translateX(-50%);
-    color: var(--secondary-text);
+    border-radius: 999px;
+    background: #48434c;
+    color: #ffffff;
     font-family: var(--font-sans);
     font-size: 0.82rem;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    line-height: 1.6;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
     text-align: center;
 }
 
@@ -3925,7 +3929,7 @@ header {
         letter-spacing: 0.03em;
     }
 
-    .director-labels .contemporary-label-en {
+    .director-labels .contemporary-label-ja {
         max-width: 140px;
         margin: 0 auto;
         font-size: 12px;
@@ -3950,12 +3954,14 @@ header {
     }
 
     .timeline-container {
-        padding: 250px 0 72px;
+        padding: 270px 0 72px;
     }
 
     .timeline-page-title {
         top: 202px;
-        width: calc(100% - 24px);
+        width: fit-content;
+        max-width: calc(100% - 24px);
+        padding: 0.5rem 0.8rem;
         font-size: 0.72rem;
         letter-spacing: 0.04em;
         line-height: 1.5;
@@ -3970,7 +3976,7 @@ header {
     }
 
     .timeline-container::before {
-        top: 250px;
+        top: 270px;
         bottom: 0;
         background: #a08257;
     }
