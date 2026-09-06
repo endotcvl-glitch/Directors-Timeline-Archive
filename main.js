@@ -423,6 +423,7 @@ const filmsData = [
     { year: 2024, type: 'emmerich', title: "Those About to Die", context: "古代ローマの競技と権力闘争を、大規模な歴史ドラマとして描いた配信シリーズ。", medium: "Series" },
 
     // James Cameron
+    { year: 1982, type: 'cameron', title: "殺人魚フライングキラー", context: "低予算の続編映画を手がけた、ジェームズ・キャメロン初期の長編監督作。" },
     { year: 1984, type: 'cameron', title: "ターミネーター", context: "低予算SFを、機械の悪夢と追跡劇の強度で神話化した出発点。" },
     { year: 1986, type: 'cameron', title: "エイリアン2", context: "ホラーを戦争映画へ拡張し、リプリーの母性と戦闘を結びつけた続編。" },
     { year: 1989, type: 'cameron', title: "アビス", context: "深海を舞台に、人類と未知の知性との接触を描いたSF大作。" },
