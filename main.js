@@ -1119,6 +1119,21 @@ function setMetaContent(selector, content) {
     if (element) element.setAttribute('content', content);
 }
 
+function setCanonicalUrl(url) {
+    let canonical = document.querySelector('link[rel="canonical"]');
+
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute('href', url);
+    document.querySelectorAll('link[rel="canonical"]').forEach(element => {
+        if (element !== canonical) element.remove();
+    });
+}
+
 function setTimelineSeo(params) {
     const { d1, d2, rawD1, invalid } = params;
     const d1Info = directorsInfo[d1];
@@ -1143,7 +1158,7 @@ function setTimelineSeo(params) {
 
     document.title = title;
     document.getElementById('timeline-page-title').textContent = heading;
-    document.querySelector('link[rel="canonical"]').href = canonicalUrl;
+    setCanonicalUrl(canonicalUrl);
     setMetaContent('meta[name="description"]', description);
     setMetaContent('meta[property="og:title"]', title);
     setMetaContent('meta[property="og:description"]', description);
