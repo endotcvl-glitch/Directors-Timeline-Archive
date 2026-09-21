@@ -33,7 +33,8 @@ const directors = [
         { id: 'emmerich', surname: 'EMMERICH', nameJa: 'ローランド・エメリッヒ', nameEn: 'ROLAND EMMERICH', keywords: 'ディザスター映画 / 巨大スケール / 破壊のスペクタクル' },
         { id: 'coen', surname: 'COENS', nameJa: 'ジョエル＆イーサン・コーエン', nameEn: 'JOEL & ETHAN COEN', keywords: 'ブラックユーモア / 皮肉な運命 / 緻密な脚本' },
         { id: 'burton', surname: 'BURTON', nameJa: 'ティム・バートン', nameEn: 'TIM BURTON', keywords: 'ゴシック幻想 / 異形の愛 / ダークファンタジー' },
-        { id: 'raimi', surname: 'RAIMI', nameJa: 'サム・ライミ', nameEn: 'SAM RAIMI', keywords: 'スピード感のある演出 / コミック的映像 / ホラーとユーモア' }
+        { id: 'raimi', surname: 'RAIMI', nameJa: 'サム・ライミ', nameEn: 'SAM RAIMI', keywords: 'スピード感のある演出 / コミック的映像 / ホラーとユーモア' },
+        { id: 'mctiernan', surname: 'MCTIERNAN', nameJa: 'ジョン・マクティアナン', nameEn: 'JOHN MCTIERNAN', keywords: '空間設計 / 緊迫のアクション / 肉体と知略' }
     ]},
     { category: '1990 -', items: [
         { id: 'fincher', surname: 'FINCHER', nameJa: 'デイヴィッド・フィンチャー', nameEn: 'DAVID FINCHER', keywords: '精密演出 / 執着と狂気 / 冷徹な世界観' },
@@ -60,7 +61,8 @@ const directors = [
         { id: 'levy', surname: 'LEVY', nameJa: 'ショーン・レヴィ', nameEn: 'SHAWN LEVY', keywords: 'ファミリー娯楽 / 軽快なテンポ / ポップな冒険' },
         { id: 'wan', surname: 'WAN', nameJa: 'ジェームズ・ワン', nameEn: 'JAMES WAN', keywords: 'ホラーの新帝王 / 恐怖の視覚化 / スリラーの極致' },
         { id: 'derrickson', surname: 'DERRICKSON', nameJa: 'スコット・デリクソン', nameEn: 'SCOTT DERRICKSON', keywords: '超常ホラー / 信仰と恐怖 / ジャンル横断' },
-        { id: 'chazelle', surname: 'CHAZELLE', nameJa: 'デイミアン・チャゼル', nameEn: 'DAMIEN CHAZELLE', keywords: '音楽と情熱 / 完璧なリズム / 夢と現実の交差' }
+        { id: 'chazelle', surname: 'CHAZELLE', nameJa: 'デイミアン・チャゼル', nameEn: 'DAMIEN CHAZELLE', keywords: '音楽と情熱 / 完璧なリズム / 夢と現実の交差' },
+        { id: 'davidgordongreen', surname: 'GREEN', nameJa: 'デヴィッド・ゴードン・グリーン', nameEn: 'DAVID GORDON GREEN', keywords: '南部の風景 / コメディと哀感 / ホラー再構築' }
     ]},
     { category: '2010 -', items: [
         { id: 'garland', surname: 'GARLAND', nameJa: 'アレックス・ガーランド', nameEn: 'ALEX GARLAND', keywords: '知的SF / 不穏な身体感覚 / 人間とテクノロジー' },

@@ -65,6 +65,8 @@ const directorsInfo = {
     'fennell': { fullNameEn: 'EMERALD FENNELL', nameJa: 'エメラルド・フェネル', surname: 'FENNELL' },
     'cunningham': { fullNameEn: 'SEAN S. CUNNINGHAM', nameJa: 'ショーン・S・カニンガム', surname: 'CUNNINGHAM' },
     'verhoeven': { fullNameEn: 'PAUL VERHOEVEN', nameJa: 'ポール・バーホーベン', surname: 'VERHOEVEN' },
+    'mctiernan': { fullNameEn: 'JOHN MCTIERNAN', nameJa: 'ジョン・マクティアナン', surname: 'MCTIERNAN' },
+    'davidgordongreen': { fullNameEn: 'DAVID GORDON GREEN', nameJa: 'デヴィッド・ゴードン・グリーン', surname: 'GREEN' },
 };
 
 const filmsData = [
@@ -357,6 +359,38 @@ const filmsData = [
     { year: 2012, type: 'verhoeven', title: "ポール・バーホーベン/トリック", context: "観客参加型の制作手法を取り入れ、家族と裏切りを描いた実験的な群像劇。" },
     { year: 2016, type: 'verhoeven', title: "エル ELLE", context: "暴力に遭った女性の予測不能な行動を通じ、被害と支配の構図を挑発的に描く。" },
     { year: 2021, type: 'verhoeven', title: "ベネデッタ", context: "17世紀イタリアの修道女をめぐる信仰、欲望、権力を大胆に描いた歴史劇。" },
+
+    // John McTiernan
+    { year: 1986, type: 'mctiernan', title: "ノーマッズ", context: "都市をさまよう謎の集団を追う人類学者を描いた、幻想的な長編監督デビュー作。" },
+    { year: 1987, type: 'mctiernan', title: "プレデター", context: "密林の特殊部隊を未知の生命体が狩る、肉体と知略を極限まで競わせたSFアクション。" },
+    { year: 1988, type: 'mctiernan', title: "ダイ・ハード", context: "高層ビルという限定空間を生かし、孤立した刑事の反撃を緻密に組み立てたアクション映画。" },
+    { year: 1990, type: 'mctiernan', title: "レッド・オクトーバーを追え！", context: "ソ連の原子力潜水艦をめぐる駆け引きを、静かな緊張と知略で描いた軍事サスペンス。" },
+    { year: 1992, type: 'mctiernan', title: "メディシン・マン", context: "熱帯雨林で新薬を研究する科学者を通じ、自然、文明、喪失を描いた冒険ドラマ。" },
+    { year: 1993, type: 'mctiernan', title: "ラスト・アクション・ヒーロー", context: "映画世界へ入り込んだ少年を主人公に、アクション映画の定型を自己言及的に解体した。" },
+    { year: 1995, type: 'mctiernan', title: "ダイ・ハード3", context: "ニューヨーク全体を舞台に、爆弾犯の謎と追跡を都市規模へ広げたシリーズ第3作。" },
+    { year: 1999, type: 'mctiernan', title: "トーマス・クラウン・アフェアー", context: "富豪と保険調査員の駆け引きを、洗練された映像とロマンスで描いた犯罪映画。" },
+    { year: 1999, type: 'mctiernan', title: "13ウォーリアーズ", context: "北欧の戦士たちと異邦人の旅を、荒々しい戦闘と神話的な冒険として描いた。" },
+    { year: 2002, type: 'mctiernan', title: "ローラーボール", context: "暴力的な未来スポーツを題材に、企業支配と見世物化された競技を描いたリメイク。" },
+    { year: 2003, type: 'mctiernan', title: "閉ざされた森", context: "軍事演習中の失踪事件を、証言が反転し続ける密室的なミステリーとして描いた。" },
+
+    // David Gordon Green
+    { year: 2000, type: 'davidgordongreen', title: "George Washington", context: "アメリカ南部の小さな町で暮らす子どもたちを、静かな風景と記憶の感触で描いた長編デビュー作。" },
+    { year: 2003, type: 'davidgordongreen', title: "All the Real Girls", context: "南部の町を舞台に、不器用な若者たちの恋愛と成長を繊細に描いた青春ドラマ。" },
+    { year: 2004, type: 'davidgordongreen', title: "Undertow", context: "父と暮らす兄弟が暴力的な叔父から逃れる姿を、南部ゴシックの空気で描く。" },
+    { year: 2007, type: 'davidgordongreen', title: "Snow Angels", context: "雪深い町の人間関係と喪失を、複数の世代を通して静かに描いた群像劇。" },
+    { year: 2008, type: 'davidgordongreen', title: "スモーキング・ハイ", context: "偶然殺人を目撃した二人の逃走を、友情と騒動に満ちたストーナー・コメディとして描く。" },
+    { year: 2011, type: 'davidgordongreen', title: "ロード・オブ・クエスト ドラゴンとユニコーンの剣", context: "中世ファンタジーの冒険を、脱力したユーモアと下品な笑いで崩したコメディ。" },
+    { year: 2011, type: 'davidgordongreen', title: "ピンチ・シッター", context: "子守を任された青年と三人の子どもが、夜の街で騒動に巻き込まれるコメディ。" },
+    { year: 2013, type: 'davidgordongreen', title: "セルフィッシュ・サマー", context: "山火事後の道路で働く二人の男の距離を、自然と静かなユーモアの中で描く。" },
+    { year: 2013, type: 'davidgordongreen', title: "Joe", context: "荒れた過去を持つ男と少年の交流を、南部の厳しい生活とともに描いたドラマ。" },
+    { year: 2014, type: 'davidgordongreen', title: "Manglehorn", context: "過去の恋に囚われた鍵職人の孤独と再生を、静かな日常の中で見つめる。" },
+    { year: 2015, type: 'davidgordongreen', title: "選挙の勝ち方教えます", context: "南米の大統領選を舞台に、選挙戦略と政治の空虚さを描いた風刺ドラマ。" },
+    { year: 2017, type: 'davidgordongreen', title: "ボストン ストロング ダメな僕だから英雄になれた", context: "爆弾事件で両脚を失った男性の回復を、家族や恋人との関係を通して描く。" },
+    { year: 2018, type: 'davidgordongreen', title: "ハロウィン", context: "第1作から40年後のローリーとマイケルの対決を描き、シリーズを新たに接続した。" },
+    { year: 2021, type: 'davidgordongreen', title: "ハロウィン KILLS", context: "恐怖と怒りが町全体へ広がり、集団心理が暴走していくシリーズ第2作。" },
+    { year: 2022, type: 'davidgordongreen', title: "ハロウィン THE END", context: "ローリーとマイケルの長い因縁に決着をつける、新三部作の最終章。" },
+    { year: 2023, type: 'davidgordongreen', title: "エクソシスト 信じる者", context: "二人の少女に起きた異変を通じ、信仰と悪魔祓いの物語を現代へつないだ。" },
+    { year: 2024, type: 'davidgordongreen', title: "Nutcrackers", context: "突然四人の甥を預かることになった男と家族の変化を描いたクリスマス・コメディ。" },
 
     // Tim Burton
     { year: 1985, type: 'burton', title: "ピーウィーの大冒険", context: "大切な自転車を探すため、変わり者の男が全米を横断するコメディ。" },
