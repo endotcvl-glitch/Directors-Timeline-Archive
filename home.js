@@ -116,6 +116,11 @@ const comparisonThemes = [
         directorIds: ['wan', 'aster']
     },
     {
+        title: 'スティーヴン・キングを映す',
+        description: '恐怖の奥にある喪失や再生を丁寧にすくうフラナガンと、『IT／イット』で少年期の悪夢を壮大な娯楽へ広げるムスキエティ。キング作品への異なる向き合い方を比べます。',
+        directorIds: ['flanagan', 'muschietti']
+    },
+    {
         title: 'チームヒーローの時代',
         description: '仲間が集まり、ぶつかり、ひとつの物語になっていく。チームで描くヒーロー像を比べます。',
         directorIds: ['russo', 'gunn']
@@ -169,7 +174,9 @@ const featuredPortraits = {
     hooper: 'assets/portraits/tobe-hooper.png',
     craven: 'assets/portraits/wes-craven.png',
     carpenter: 'assets/portraits/john-carpenter.png',
-    miller: 'assets/portraits/george-miller.png'
+    miller: 'assets/portraits/george-miller.png',
+    flanagan: 'assets/portraits/mike-flanagan.png',
+    muschietti: 'assets/portraits/andy-muschietti.png'
 };
 
 const heroTimelineTracks = [
@@ -262,7 +269,7 @@ function renderComparisonThemes() {
 
     container.innerHTML = '';
 
-    comparisonThemes.slice(0, 12).forEach(theme => {
+    comparisonThemes.forEach(theme => {
         const themeDirectors = theme.directorIds.map(getDirectorById).filter(Boolean);
 
         if (themeDirectors.length !== 2) {

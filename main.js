@@ -808,6 +808,7 @@ const filmsData = [
     { year: 2022, type: 'flanagan', title: "ミッドナイト・クラブ", context: "余命を抱えた若者たちの語りと恐怖を、物語ることの力として描いたシリーズ。", medium: "Series" },
     { year: 2023, type: 'flanagan', title: "アッシャー家の崩壊", context: "エドガー・アラン・ポー作品を現代企業一族の崩壊へ再構成したゴシックホラーシリーズ。", medium: "Series" },
     { year: 2024, type: 'flanagan', title: "The Life of Chuck", context: "スティーヴン・キングの中編を、人生の終わりから始まりへさかのぼる温かなファンタジードラマとして映画化。" },
+    { year: 2026, type: 'flanagan', title: "キャリー", context: "スティーヴン・キングのデビュー小説を全8話で再構成し、現代の高校生活とテレキネシスの恐怖を描くPrime Videoシリーズ。", medium: "Series" },
 
     // Andy Muschietti
     { year: 2013, type: 'muschietti', title: "MAMA", context: "森で発見された姉妹と彼女たちを追う母性的な怪異を、家族の喪失と執着の物語として描いた長編デビュー作。" },
