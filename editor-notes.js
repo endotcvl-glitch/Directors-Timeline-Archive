@@ -58,6 +58,18 @@ const editorNotes = [
         },
         heading: "この監督のこの一本",
         excerpt: "『ニューヨーク1997』は、閉ざされた空間、シンセサイザーによる音楽、反権威的な主人公に、ジョン・カーペンターの揺るがないスタイルが表れた一本です。"
+    },
+    {
+        slug: "james-cameron",
+        director: "James Cameron",
+        directorJa: "ジェームズ・キャメロン",
+        featuredFilm: {
+            title: "The Terminator",
+            titleJa: "ターミネーター",
+            year: 1984
+        },
+        heading: "この監督のこの一本",
+        excerpt: "『ターミネーター』は、限られた条件の中で想像力を形にし、映画史に残る世界を作り上げた作品です。以降続いていくジェームズ・キャメロンの技術への執念のスタートとも言える一本として、この映画を選びました。"
     }
 ];
 

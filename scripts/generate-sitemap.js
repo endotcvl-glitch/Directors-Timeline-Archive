@@ -11,17 +11,18 @@ if (!directorsBlock) {
 
 const directorIds = [...directorsBlock[1].matchAll(/^\s*'([^']+)':\s*\{/gm)].map(match => match[1]);
 const staticUrls = [
-    ['', '2026-09-26'],
+    ['', '2026-10-14'],
     ['directors.html', '2026-09-26'],
     ['timeline.html', '2026-09-26'],
     ['years.html', '2026-09-26'],
     ['today.html', '2026-07-07'],
     ['about.html', '2026-07-07'],
-    ['notes/', '2026-08-29'],
+    ['notes/', '2026-10-14'],
     ['notes/david-lynch.html', '2026-07-07'],
     ['notes/wes-craven.html', '2026-07-07'],
     ['notes/edgar-wright.html', '2026-08-13'],
-    ['notes/john-carpenter.html', '2026-08-29']
+    ['notes/john-carpenter.html', '2026-08-29'],
+    ['notes/james-cameron.html', '2026-10-14']
 ];
 const timelineUrls = directorIds.map(id => [`timeline.html?d1=${id}`, '2026-09-26']);
 const escapeXml = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
