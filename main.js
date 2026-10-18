@@ -1174,6 +1174,14 @@ function setTimelineSeo(params) {
     const d1Info = directorsInfo[d1];
     const d2Info = d2 ? directorsInfo[d2] : null;
     const hasExplicitDirector = rawD1 !== null && !invalid;
+    const singleDirectorWorks = hasExplicitDirector && !d2Info
+        ? filmsData.filter(work => work.type === d1)
+        : [];
+    const includesFilms = singleDirectorWorks.some(work => work.medium !== 'Series');
+    const includesSeries = singleDirectorWorks.some(work => work.medium === 'Series');
+    const workTypes = includesFilms && includesSeries
+        ? '映画やシリーズ'
+        : includesSeries ? 'シリーズ' : '映画';
     let title = '映画監督タイムライン比較 | Directors Timeline Archive';
     let description = '選択した映画監督の作品を公開年順に表示。1人の歩みや2人の監督比較を、同時代の映画・社会の出来事と並べて確認できます。';
     let heading = '映画監督の作品年表';
@@ -1185,8 +1193,8 @@ function setTimelineSeo(params) {
         heading = `${d1Info.nameJa}と${d2Info.nameJa}の監督作品年表比較`;
         canonicalUrl = `${TIMELINE_URL}?d1=${encodeURIComponent(d1)}&d2=${encodeURIComponent(d2)}`;
     } else if (hasExplicitDirector) {
-        title = `${d1Info.nameJa}の監督作品年表 | Directors Timeline Archive`;
-        description = `${d1Info.nameJa}の監督作品を公開年順に紹介。代表作と同時代の映画・社会の出来事を作品年表で確認できます。`;
+        title = `${d1Info.nameJa}の監督作品一覧・年表 | Directors Timeline Archive`;
+        description = `${d1Info.nameJa}の掲載作品${singleDirectorWorks.length}本を公開年順に紹介。${workTypes}をDTA独自の年表形式で閲覧し、監督キャリアの流れをたどれます。`;
         heading = `${d1Info.nameJa}の監督作品年表`;
         canonicalUrl = `${TIMELINE_URL}?d1=${encodeURIComponent(d1)}`;
     }
@@ -1219,9 +1227,7 @@ function setTimelineSeo(params) {
         window.history.replaceState(null, '', canonicalPath);
     }
 
-    const works = hasExplicitDirector && !d2Info
-        ? filmsData.filter(work => work.type === d1)
-        : [];
+    const works = singleDirectorWorks;
     const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
