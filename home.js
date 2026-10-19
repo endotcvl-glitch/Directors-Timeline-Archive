@@ -53,6 +53,7 @@ const directors = [
         { id: 'favreau', surname: 'FAVREAU', nameJa: 'ジョン・ファヴロー', nameEn: 'JON FAVREAU', keywords: 'ポップな娯楽性 / MCUの起点 / 実写とCGの融合' },
         { id: 'lordmiller', surname: 'LORD & MILLER', nameJa: 'フィル・ロード＆クリス・ミラー', nameEn: 'PHIL LORD & CHRISTOPHER MILLER', keywords: 'メタユーモア / ジャンル解体 / ポップな発明力' },
         { id: 'gunn', surname: 'GUNN', nameJa: 'ジェームズ・ガン', nameEn: 'JAMES GUNN', keywords: '異端のチーム劇 / 音楽とユーモア / 感情の爆発' },
+        { id: 'cregger', surname: 'CREGGER', nameJa: 'ザック・クレッガー', nameEn: 'ZACH CREGGER', keywords: '予測不能な恐怖 / 不穏な構成 / ホラーとユーモア' },
         { id: 'abrams', surname: 'ABRAMS', nameJa: 'J.J.エイブラムス', nameEn: 'J.J. ABRAMS', keywords: 'ミステリーボックス哲学 / 臨場感演出 /　過去作へのリスペクトと再構築' },
         { id: 'whedon', surname: 'WHEDON', nameJa: 'ジョス・ウェドン', nameEn: 'JOSS WHEDON', keywords: 'アンサンブル劇 / 軽快な会話 / ヒーロー群像' },
         { id: 'waititi', surname: 'WAITITI', nameJa: 'タイカ・ワイティティ', nameEn: 'TAIKA WAITITI', keywords: '脱力ユーモア / 孤独 / カラフル' },

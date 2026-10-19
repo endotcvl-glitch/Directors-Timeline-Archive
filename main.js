@@ -45,6 +45,7 @@ const directorsInfo = {
     'favreau': { fullNameEn: 'JON FAVREAU', nameJa: 'ジョン・ファヴロー', surname: 'FAVREAU' },
     'lordmiller': { fullNameEn: 'PHIL LORD & CHRISTOPHER MILLER', nameJa: 'フィル・ロード＆クリス・ミラー', surname: 'LORD & MILLER' },
     'gunn': { fullNameEn: 'JAMES GUNN', nameJa: 'ジェームズ・ガン', surname: 'GUNN' },
+    'cregger': { fullNameEn: 'ZACH CREGGER', nameJa: 'ザック・クレッガー', surname: 'CREGGER' },
     'whedon': { fullNameEn: 'JOSS WHEDON', nameJa: 'ジョス・ウェドン', surname: 'WHEDON' },
     'waititi': { fullNameEn: 'TAIKA WAITITI', nameJa: 'タイカ・ワイティティ', surname: 'WAITITI' },
     'russo': { fullNameEn: 'ANTHONY & JOE RUSSO', nameJa: 'アンソニー＆ジョー・ルッソ', surname: 'RUSSOS' },
@@ -877,6 +878,13 @@ const filmsData = [
     { year: 2022, type: 'gunn', title: "ピースメイカー", context: "『ザ・スーサイド・スクワッド』から続く、暴力と不器用な自己探求を描いたDCシリーズ。", medium: "Series" },
     { year: 2023, type: 'gunn', title: "ガーディアンズ・オブ・ギャラクシー:VOLUME 3", context: "チームの終章として、痛みを抱えた者たちの救済を描く。" },
     { year: 2025, type: 'gunn', title: "スーパーマン", context: "新たなDCユニバースの起点として、理想と優しさを背負うヒーロー像を再提示。" },
+
+    // Zach Cregger
+    { year: 2009, type: 'cregger', title: "お願い！プレイメイト", context: "トレヴァー・ムーアと共同で監督・脚本・主演を務めた、長編監督デビュー作となるロードコメディ。" },
+    { year: 2011, type: 'cregger', title: "The Civil War on Drugs", context: "コメディグループの連作スケッチを長編として構成し、南北戦争を大胆な風刺へ変えた共同監督作。" },
+    { year: 2022, type: 'cregger', title: "バーバリアン", context: "二重予約された家を起点に、予測不能な展開と恐怖、ブラックユーモアを重ねたホラー。" },
+    { year: 2025, type: 'cregger', title: "WEAPONS／ウェポンズ", context: "同じクラスの子どもたちが一夜にして姿を消す事件を、複数の視点から描くミステリーホラー。" },
+    { year: 2026, type: 'cregger', title: "バイオハザード", context: "ゲームの世界を舞台に新たな物語を描き、悪夢の一夜を疾走感あるサバイバルへ変えた再映画化。" },
 
     // Joss Whedon
     { year: 1997, type: 'whedon', title: "バフィー 〜恋する十字架〜", context: "高校生活と怪物退治を重ね、若者の成長をジャンル横断の連続ドラマとして描いた代表作。", medium: "Series" },
