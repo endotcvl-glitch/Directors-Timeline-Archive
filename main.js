@@ -508,7 +508,7 @@ const filmsData = [
     { year: 2017, type: 'nolan', title: "ダンケルク", context: "映像と音響で描く「生」の体験。" },
     { year: 2020, type: 'nolan', title: "TENET テネット", context: "時間の逆転と世界の救済。" },
     { year: 2023, type: 'nolan', title: "オッペンハイマー", context: "科学者の苦悩と原子の爆発。" },
-    { year: 2026, type: 'nolan', title: "The Odyssey", context: "公開予定。ホメロスの叙事詩を基にした神話的アクション大作。IMAXフィルムカメラで撮影。" },
+    { year: 2026, type: 'nolan', title: "オデュッセイア", context: "公開予定。ホメロスの叙事詩を基にした神話的アクション大作。IMAXフィルムカメラで撮影。" },
 
     // Denis Villeneuve
     { year: 1998, type: 'villeneuve', title: "8月32日、地球。", context: "交通事故を機に運命を模索する女性。" },
