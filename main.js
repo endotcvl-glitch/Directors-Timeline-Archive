@@ -760,6 +760,7 @@ const filmsData = [
     // Emerald Fennell
     { year: 2020, type: 'fennell', title: "プロミシング・ヤング・ウーマン", context: "復讐とケア、怒りとポップな色彩を交差させた長編監督デビュー作。" },
     { year: 2023, type: 'fennell', title: "Saltburn", context: "階級、欲望、視線のねじれをブラックユーモアで描く心理劇。" },
+    { year: 2026, type: 'fennell', title: "嵐が丘", context: "エミリー・ブロンテの名作を、欲望と階級が渦巻く激しい愛の物語として再構築。" },
 
     // Damien Chazelle
     { year: 2009, type: 'chazelle', title: "ガイ・アンド・マデリン", context: "ヌーヴェルヴァーグへのオマージュを込めたジャズ・ミュージカル。" },
