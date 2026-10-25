@@ -75,6 +75,8 @@ const directors = [
         { id: 'zhao', surname: 'ZHAO', nameJa: 'クロエ・ジャオ', nameEn: 'CHLOÉ ZHAO', keywords: '圧倒的な自然美の映像 / ドキュメンタリータッチ / 静かなリアリズム' },
         { id: 'watts', surname: 'WATTS', nameJa: 'ジョン・ワッツ', nameEn: 'JON WATTS', keywords: '青春ヒーロー / 軽やかな成長譚 / MCUの日常感' },
         { id: 'aster', surname: 'ASTER', nameJa: 'アリ・アスター', nameEn: 'ARI ASTER', keywords: '家族の崩壊 / 不安と喪失 / 現代神話' },
+        { id: 'roseglass', surname: 'GLASS', nameJa: 'ローズ・グラス', nameEn: 'ROSE GLASS', keywords: '信仰と執着 / クィアな欲望 / 身体と変容' },
+        { id: 'fargeat', surname: 'FARGEAT', nameJa: 'コラリー・ファルジャ', nameEn: 'CORALIE FARGEAT', keywords: 'ボディホラー / 女性の怒り / 鮮烈な映像' },
         { id: 'flanagan', surname: 'FLANAGAN', nameJa: 'マイク・フラナガン', nameEn: 'MIKE FLANAGAN', keywords: '情感あるホラー / 喪失と信仰 / スティーヴン・キング翻案' },
         { id: 'muschietti', surname: 'MUSCHIETTI', nameJa: 'アンディ・ムスキエティ', nameEn: 'ANDY MUSCHIETTI', keywords: '少年期の恐怖 / 怪異の視覚化 / 大作ホラー' },
         { id: 'cretton', surname: 'CRETTON', nameJa: 'デスティン・ダニエル・クレットン', nameEn: 'DESTIN DANIEL CRETTON', keywords: '親密な人物描写 / 家族と共同体 / ヒーロー映画' },
@@ -115,6 +117,11 @@ const comparisonThemes = [
         title: '新時代のホラー牽引者',
         description: 'ただ驚かせるだけではない、今の時代の怖さ。ジャンルの広げ方をふたりの作品から見ていきます。',
         directorIds: ['wan', 'aster']
+    },
+    {
+        title: '身体をめぐる欲望と恐怖',
+        description: '愛と執着を肉体の変容へつなげるグラスと、若さや美への欲望を過激なボディホラーへ変えるファルジャ。女性の身体をめぐる異なる悪夢を比べます。',
+        directorIds: ['roseglass', 'fargeat']
     },
     {
         title: 'スティーヴン・キングを映す',
@@ -169,6 +176,8 @@ const featuredPortraits = {
     russo: 'assets/portraits/anthony-and-joe-russo.png',
     gerwig: 'assets/portraits/greta-gerwig.png',
     fennell: 'assets/portraits/emerald-fennell.png',
+    roseglass: 'assets/portraits/rose-glass.png',
+    fargeat: 'assets/portraits/coralie-fargeat.png',
     tonyscott: 'assets/portraits/tony-scott.png',
     shyamalan: 'assets/portraits/m-night-shyamalan.png',
     abrams: 'assets/portraits/j-j-abrams.png',

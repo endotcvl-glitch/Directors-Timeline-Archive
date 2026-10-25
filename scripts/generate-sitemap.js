@@ -11,12 +11,12 @@ if (!directorsBlock) {
 
 const directorIds = [...directorsBlock[1].matchAll(/^\s*'([^']+)':\s*\{/gm)].map(match => match[1]);
 const staticUrls = [
-    ['', '2026-10-14'],
-    ['directors.html', '2026-10-19'],
-    ['timeline.html', '2026-10-19'],
-    ['years.html', '2026-10-19'],
+    ['', '2026-10-25'],
+    ['directors.html', '2026-10-25'],
+    ['timeline.html', '2026-10-25'],
+    ['years.html', '2026-10-25'],
     ['today.html', '2026-07-07'],
-    ['about.html', '2026-10-19'],
+    ['about.html', '2026-10-25'],
     ['notes/', '2026-10-14'],
     ['notes/david-lynch.html', '2026-07-07'],
     ['notes/wes-craven.html', '2026-07-07'],
@@ -24,7 +24,7 @@ const staticUrls = [
     ['notes/john-carpenter.html', '2026-08-29'],
     ['notes/james-cameron.html', '2026-10-14']
 ];
-const timelineUrls = directorIds.map(id => [`timeline.html?d1=${id}`, '2026-10-19']);
+const timelineUrls = directorIds.map(id => [`timeline.html?d1=${id}`, '2026-10-25']);
 const escapeXml = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const urls = [...staticUrls, ...timelineUrls];
 const entries = urls.map(([pathname, lastmod]) => `    <url>\n        <loc>${escapeXml(`https://directors-timeline-archive.com/${pathname}`)}</loc>\n        <lastmod>${lastmod}</lastmod>\n    </url>`).join('\n');

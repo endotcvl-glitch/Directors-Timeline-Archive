@@ -64,6 +64,8 @@ const directorsInfo = {
     'scott': { fullNameEn: 'RIDLEY SCOTT', nameJa: 'リドリー・スコット', surname: 'SCOTT' },
     'abrams': { fullNameEn: 'J.J. ABRAMS', nameJa: 'J.J.エイブラムス', surname: 'ABRAMS' },
     'fennell': { fullNameEn: 'EMERALD FENNELL', nameJa: 'エメラルド・フェネル', surname: 'FENNELL' },
+    'roseglass': { fullNameEn: 'ROSE GLASS', nameJa: 'ローズ・グラス', surname: 'GLASS' },
+    'fargeat': { fullNameEn: 'CORALIE FARGEAT', nameJa: 'コラリー・ファルジャ', surname: 'FARGEAT' },
     'cunningham': { fullNameEn: 'SEAN S. CUNNINGHAM', nameJa: 'ショーン・S・カニンガム', surname: 'CUNNINGHAM' },
     'verhoeven': { fullNameEn: 'PAUL VERHOEVEN', nameJa: 'ポール・バーホーベン', surname: 'VERHOEVEN' },
     'mctiernan': { fullNameEn: 'JOHN MCTIERNAN', nameJa: 'ジョン・マクティアナン', surname: 'MCTIERNAN' },
@@ -761,6 +763,14 @@ const filmsData = [
     { year: 2020, type: 'fennell', title: "プロミシング・ヤング・ウーマン", context: "復讐とケア、怒りとポップな色彩を交差させた長編監督デビュー作。" },
     { year: 2023, type: 'fennell', title: "Saltburn", context: "階級、欲望、視線のねじれをブラックユーモアで描く心理劇。" },
     { year: 2026, type: 'fennell', title: "嵐が丘", context: "エミリー・ブロンテの名作を、欲望と階級が渦巻く激しい愛の物語として再構築。" },
+
+    // Rose Glass
+    { year: 2019, type: 'roseglass', title: "セイント・モード／狂信", context: "患者の魂を救う使命に取り憑かれた看護師を通じ、信仰と孤独が狂気へ変わる瞬間を描いた長編監督デビュー作。" },
+    { year: 2024, type: 'roseglass', title: "愛はステロイド", context: "女性たちの破滅的な愛と暴力を、肉体の変容とブラックユーモアを交えて描くクィア・ロマンス・スリラー。" },
+
+    // Coralie Fargeat
+    { year: 2017, type: 'fargeat', title: "REVENGE リベンジ", context: "砂漠で死の淵に追いやられた女性の反撃を、鮮烈な色彩と身体性で描いた長編監督デビュー作。" },
+    { year: 2024, type: 'fargeat', title: "サブスタンス", context: "若さと美への執着が生む分身と崩壊を、過激なボディホラーと風刺で描く。" },
 
     // Damien Chazelle
     { year: 2009, type: 'chazelle', title: "ガイ・アンド・マデリン", context: "ヌーヴェルヴァーグへのオマージュを込めたジャズ・ミュージカル。" },
