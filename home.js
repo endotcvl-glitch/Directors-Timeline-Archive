@@ -90,72 +90,72 @@ const directors = [
 const comparisonThemes = [
     {
         title: '現代SFのかたち',
-        description: '時間を組み替えるノーランと、静かに世界を広げるヴィルヌーヴ。現代SFの見え方が少し変わるふたりです。',
+        description: 'ふたりがSF映画を撮るまでに、どんな作品を撮ってきたか比べてみます。',
         directorIds: ['nolan', 'villeneuve']
     },
     {
         title: 'ブロックバスターの原点',
-        description: '映画館で物語を観ることの大切さを教えてくれたふたり。その始まりと広がりをたどります。',
+        description: '『ジョーズ』と『スター・ウォーズ』の前後に、ふたりが撮った作品を見比べます。',
         directorIds: ['spielberg', 'lucas']
     },
     {
         title: '幻想と異形',
-        description: '奇妙で、少しこわくて、どこか愛おしい世界。夢と悪夢のあいだを歩くふたりを比べます。',
+        description: '不思議な世界を描くふたりが、同じ時代にどんな映画を撮っていたか見てみます。',
         directorIds: ['lynch', 'burton']
     },
     {
         title: 'ヒーロー映画の変化',
-        description: 'ヒーローはどう変わってきたのか。熱さ、ユーモア、チーム感の違いを見比べられます。',
+        description: 'ホラー映画からヒーロー映画へ、ふたりが進んだ道を比べてみます。',
         directorIds: ['raimi', 'gunn']
     },
     {
         title: '多作の巨匠たち',
-        description: '長いキャリアの中で、何度も映画の風景を変えてきたふたり。作品の多さと変化を眺めます。',
+        description: '長く映画を撮り続けてきたふたりの、作品の数や公開ペースを見比べます。',
         directorIds: ['spielberg', 'scorsese']
     },
     {
         title: '新時代のホラー牽引者',
-        description: 'ただ驚かせるだけではない、今の時代の怖さ。ジャンルの広げ方をふたりの作品から見ていきます。',
+        description: 'ホラー映画で注目を集めたふたりが、その後に選んだ作品を見比べます。',
         directorIds: ['wan', 'aster']
     },
     {
         title: '身体をめぐる欲望と恐怖',
-        description: '愛と執着を肉体の変容へつなげるグラスと、若さや美への欲望を過激なボディホラーへ変えるファルジャ。女性の身体をめぐる異なる悪夢を比べます。',
+        description: '身体をテーマにした映画を撮るふたりの、デビュー作と次の作品を見比べます。',
         directorIds: ['roseglass', 'fargeat']
     },
     {
         title: 'スティーヴン・キングを映す',
-        description: '恐怖の奥にある喪失や再生を丁寧にすくうフラナガンと、『IT／イット』で少年期の悪夢を壮大な娯楽へ広げるムスキエティ。キング作品への異なる向き合い方を比べます。',
+        description: 'キング作品を映画化する前と後に、ふたりが何を撮っていたか見てみます。',
         directorIds: ['flanagan', 'muschietti']
     },
     {
         title: 'チームヒーローの時代',
-        description: '仲間が集まり、ぶつかり、ひとつの物語になっていく。チームで描くヒーロー像を比べます。',
+        description: '大勢のヒーローを描く映画まで、ふたりがどんな作品を撮ってきたか比べます。',
         directorIds: ['russo', 'gunn']
     },
     {
         title: '女性の自立と世界の違和感',
-        description: '自分らしく生きようとする人たちと、どこか居心地の悪い世界。その描き方の違いを見ていきます。',
+        description: '俳優としても活動するふたりが、監督として撮ってきた作品を見比べます。',
         directorIds: ['gerwig', 'fennell']
     },
     {
         title: 'スコット兄弟の映像美',
-        description: '重厚な世界を築くリドリーと、速度と熱で駆け抜けるトニー。兄弟それぞれの映像感覚を比べます。',
+        description: '同じ時代に映画を撮っていた兄弟の、作品の並びやジャンルの違いを見比べます。',
         directorIds: ['scott', 'tonyscott']
     },
     {
         title: '謎を仕掛ける語り手たち',
-        description: '静かに伏線を積み上げるシャマランと、謎そのものを推進力にするエイブラムス。物語の引き込み方を比べます。',
+        description: '謎のある物語を得意とするふたりが、次にどんな映画を撮ったか見てみます。',
         directorIds: ['shyamalan', 'abrams']
     },
     {
         title: 'アメリカンホラーの革新者',
-        description: '生々しい悪夢を焼き付けたフーパーと、恐怖のルールを知的に書き換えたクレイヴン。アメリカンホラーを変えたふたりを比べます。',
+        description: 'ホラーの名作を生んだふたりが、同じ時代に撮っていた作品を見比べます。',
         directorIds: ['hooper', 'craven']
     },
     {
         title: '制約から生まれた映画哲学',
-        description: '限られた予算を緊張と恐怖へ変えたカーペンターと、速度と身体性へ変えたミラー。制約を独自の映画言語にしたふたりを比べます。',
+        description: '低予算の映画から始まったふたりの、その後の作品を並べて見てみます。',
         directorIds: ['carpenter', 'miller']
     }
 ];
@@ -307,6 +307,7 @@ function renderComparisonThemes() {
                     </span>
                 `).join('')}
             </span>
+            <p class="theme-comparison-reason">${theme.description}</p>
         `;
         container.appendChild(link);
     });
