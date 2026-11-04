@@ -516,11 +516,11 @@ body.index-page .theme-list {
 }
 
 body.index-page .theme-item {
-    display: block;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
     width: 540px;
-    height: 260px;
-    min-height: 260px;
-    padding: 20px 60px;
+    min-height: 252px;
+    padding: 28px 32px 24px;
     border: 0;
     border-radius: 10px;
     background: #1e1e1e;
@@ -531,13 +531,8 @@ body.index-page .theme-item:hover {
     transform: translateY(-2px);
 }
 
-body.index-page .theme-item:has(.theme-card-title) {
-    height: auto;
-    min-height: 301px;
-}
-
 body.index-page .theme-card-title {
-    margin: 0 0 14px;
+    margin: 0 0 8px;
     color: #fff;
     font-family: var(--font-interface);
     font-size: var(--text-heading-s);
@@ -548,51 +543,35 @@ body.index-page .theme-card-title {
 }
 
 body.index-page .theme-item .theme-comparison-reason {
-    margin: 20px 0 0;
+    margin: 0 0 18px;
     color: #c9c9c9;
     font-family: var(--font-interface);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.8;
     letter-spacing: 0;
-    text-align: left;
+    text-align: center;
     overflow-wrap: anywhere;
 }
 
 body.index-page .theme-pair {
     display: grid;
-    grid-template-columns: repeat(2, 180px);
-    gap: 60px;
+    grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 body.index-page .theme-pair .theme-director {
     display: grid;
-    gap: 12px;
+    gap: 0;
     min-width: 0;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
-}
-
-body.index-page .theme-pair .theme-portrait {
-    display: block;
-    width: 180px;
-    height: 180px;
-    min-height: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    overflow: hidden;
-    background: #d9d9d9;
-}
-
-body.index-page .theme-pair .theme-portrait img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(1);
 }
 
 body.index-page .theme-pair .theme-director-name {
@@ -601,15 +580,16 @@ body.index-page .theme-pair .theme-director-name {
     padding: 0;
     border: 0;
     border-radius: 0;
-    overflow: hidden;
+    overflow: visible;
     background: none;
     box-shadow: none;
     color: #ddd;
-    font-size: 0.75rem;
+    font-size: 1.1rem;
     font-weight: 700;
+    letter-spacing: 0.06em;
     line-height: 1.5;
-    text-align: center;
-    text-overflow: ellipsis;
+    text-align: inherit;
+    overflow-wrap: anywhere;
     white-space: nowrap;
 }
 
@@ -622,6 +602,27 @@ body.index-page .theme-pair .theme-director-copy {
     border-radius: 0;
     background: none;
     box-shadow: none;
+    text-align: left;
+}
+
+body.index-page .theme-pair .theme-director:last-child .theme-director-copy {
+    text-align: right;
+}
+
+body.index-page .theme-versus {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #a08257;
+    font-family: var(--font-interface);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
     text-align: center;
 }
 
@@ -643,6 +644,17 @@ body.index-page .theme-pair .theme-director-name-en {
     text-transform: none;
 }
 
+body.index-page .theme-card-action {
+    justify-self: end;
+    margin-top: 18px;
+    color: #fff;
+    font-family: var(--font-interface);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
 @media (max-width: 1140px) and (min-width: 821px) {
     body.index-page .theme-list {
         grid-template-columns: repeat(2, minmax(0, 540px));
@@ -654,15 +666,10 @@ body.index-page .theme-pair .theme-director-name-en {
     }
 
     body.index-page .theme-pair {
-        grid-template-columns: repeat(2, minmax(0, 180px));
-        gap: 60px;
+        grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
+        gap: 12px;
     }
 
-    body.index-page .theme-pair .theme-portrait {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1;
-    }
 }
 
 body.index-page .editor-note-preview {
@@ -903,23 +910,18 @@ body.index-page .footer-nav {
         width: min(100%, 540px);
         height: auto;
         min-height: 0;
-        padding-right: clamp(20px, 11.11%, 60px);
-        padding-left: clamp(20px, 11.11%, 60px);
-    }
-
-    body.index-page .theme-item:has(.theme-card-title) {
-        min-height: 0;
+        padding: 24px 20px 20px;
     }
 
     body.index-page .theme-pair {
-        grid-template-columns: repeat(2, minmax(0, 180px));
-        gap: clamp(20px, 11.11vw, 60px);
+        grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr);
+        gap: 8px;
     }
 
-    body.index-page .theme-pair .theme-portrait {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1;
+    body.index-page .theme-pair .theme-director-name {
+        font-size: var(--text-heading-xs);
+        letter-spacing: var(--text-letter-spacing);
+        white-space: normal;
     }
 
     body.index-page .editor-note-preview {
@@ -2748,6 +2750,11 @@ header {
     line-height: var(--text-line-height);
     text-decoration: none;
     text-transform: none;
+}
+
+/* 特徴は一時的に非表示。データと検索対象は維持する。 */
+.directors-page-container .item-keywords {
+    display: none;
 }
 
 .item-keywords {

@@ -160,35 +160,6 @@ const comparisonThemes = [
     }
 ];
 
-const featuredPortraits = {
-    nolan: 'assets/portraits/christopher-nolan.png',
-    villeneuve: 'assets/portraits/denis-villeneuve.png',
-    spielberg: 'assets/portraits/steven-spielberg.png',
-    lucas: 'assets/portraits/george-lucas.png',
-    lynch: 'assets/portraits/david-lynch.png',
-    burton: 'assets/portraits/tim-burton.png',
-    raimi: 'assets/portraits/sam-raimi.png',
-    gunn: 'assets/portraits/james-gunn.png',
-    scorsese: 'assets/portraits/martin-scorsese.png',
-    wan: 'assets/portraits/james-wan.png',
-    aster: 'assets/portraits/ari-aster.png',
-    scott: 'assets/portraits/ridley-scott.png',
-    russo: 'assets/portraits/anthony-and-joe-russo.png',
-    gerwig: 'assets/portraits/greta-gerwig.png',
-    fennell: 'assets/portraits/emerald-fennell.png',
-    roseglass: 'assets/portraits/rose-glass.png',
-    fargeat: 'assets/portraits/coralie-fargeat.png',
-    tonyscott: 'assets/portraits/tony-scott.png',
-    shyamalan: 'assets/portraits/m-night-shyamalan.png',
-    abrams: 'assets/portraits/j-j-abrams.png',
-    hooper: 'assets/portraits/tobe-hooper.png',
-    craven: 'assets/portraits/wes-craven.png',
-    carpenter: 'assets/portraits/john-carpenter.png',
-    miller: 'assets/portraits/george-miller.png',
-    flanagan: 'assets/portraits/mike-flanagan.png',
-    muschietti: 'assets/portraits/andy-muschietti.png'
-};
-
 const heroTimelineTracks = [
     { depth: 'far left', x: '4%', speed: '52s', delay: '-11s', side: 'left', years: [[1953, 8, true], [1968, 22], [1977, 39], [1982, 57, true], [1999, 75], [2008, 92]] },
     { depth: 'near', x: '28%', speed: '25s', delay: '-24s', years: [[1960, 4], [1975, 19, true], [1984, 34], [1994, 51], [2001, 69, true], [2014, 88]] },
@@ -292,14 +263,11 @@ function renderComparisonThemes() {
         link.setAttribute('aria-label', `${theme.title}：${themeDirectors[0].nameJa}と${themeDirectors[1].nameJa}を比較`);
         link.innerHTML = `
             <h3 class="theme-card-title">${theme.title}</h3>
+            <p class="theme-comparison-reason">${theme.description}</p>
             <span class="theme-pair">
                 ${themeDirectors.map((director, index) => `
+                    ${index === 1 ? '<span class="theme-versus" aria-hidden="true">VS</span>' : ''}
                     <span class="theme-director">
-                        <span class="theme-portrait">
-                            ${featuredPortraits[theme.directorIds[index]]
-                                ? `<img src="${featuredPortraits[theme.directorIds[index]]}" alt="" loading="lazy">`
-                                : ''}
-                        </span>
                         <span class="theme-director-copy">
                             <span class="theme-director-name">${director.nameJa}</span>
                             <span class="theme-director-name-en">${director.nameEn}</span>
@@ -307,7 +275,7 @@ function renderComparisonThemes() {
                     </span>
                 `).join('')}
             </span>
-            <p class="theme-comparison-reason">${theme.description}</p>
+            <span class="theme-card-action">年表で比較 <span aria-hidden="true">→</span></span>
         `;
         container.appendChild(link);
     });
