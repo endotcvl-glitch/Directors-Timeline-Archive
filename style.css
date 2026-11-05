@@ -480,9 +480,9 @@ body.index-page .explore-path-arrow {
 
 body.index-page .comparison-themes {
     width: 100%;
-    min-height: 675px;
+    min-height: 610px;
     margin: 0;
-    padding: 66px max(20px, calc((100% - 1100px) / 2)) 70px;
+    padding: 58px max(20px, calc((100% - 1100px) / 2)) 70px;
     background: var(--global-nav-bg);
 }
 
@@ -490,7 +490,7 @@ body.index-page .comparison-themes .section-heading {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    margin-bottom: 26px;
+    margin-bottom: 48px;
 }
 
 body.index-page .comparison-themes .section-heading h2 {
@@ -505,35 +505,52 @@ body.index-page .comparison-all-link {
     grid-column: 3;
     justify-self: end;
     color: #fff;
-    font-size: 0.75rem;
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
     text-decoration: none;
+}
+
+body.index-page .comparison-all-link:hover {
+    color: rgba(255, 255, 255, 0.72);
 }
 
 body.index-page .theme-list {
     grid-template-columns: repeat(2, 540px);
+    grid-auto-rows: 1fr;
     justify-content: space-between;
-    gap: 32px 20px;
+    gap: 20px;
 }
 
 body.index-page .theme-item {
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto 143px auto;
+    gap: 0;
     width: 540px;
-    min-height: 252px;
-    padding: 28px 32px 24px;
+    height: 287px;
+    min-height: 287px;
+    padding: 28px 58px 10px;
     border: 0;
-    border-radius: 10px;
-    background: #1e1e1e;
+    border-radius: 6px;
+    background: #edeced;
+    color: var(--text-color);
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 body.index-page .theme-item:hover {
-    background: #272727;
+    background: #f4f3f4;
     transform: translateY(-2px);
 }
 
+body.index-page .theme-item:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
 body.index-page .theme-card-title {
-    margin: 0 0 8px;
-    color: #fff;
+    margin: 0;
+    color: var(--text-color);
     font-family: var(--font-interface);
     font-size: var(--text-heading-s);
     font-weight: 700;
@@ -543,35 +560,87 @@ body.index-page .theme-card-title {
 }
 
 body.index-page .theme-item .theme-comparison-reason {
-    margin: 0 0 18px;
-    color: #c9c9c9;
+    margin: 0;
+    color: var(--text-color);
     font-family: var(--font-interface);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 1.8;
-    letter-spacing: 0;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing);
     text-align: center;
     overflow-wrap: anywhere;
 }
 
 body.index-page .theme-pair {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
-    align-items: center;
-    gap: 12px;
-    padding: 14px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+    margin-top: 20px;
+    padding: 0;
+    border: 0;
 }
 
 body.index-page .theme-pair .theme-director {
     display: grid;
+    grid-template-rows: auto 1fr;
     gap: 0;
     min-width: 0;
+    height: 143px;
+    min-height: 143px;
+    padding: 5px 5px 3px;
+    border: 0;
+    border-radius: 6px;
+    background: #fff;
+}
+
+body.index-page .theme-director-gradient {
+    display: block;
+    width: 100%;
+    height: 84px;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--director-gradient-start), var(--director-gradient-end));
+    box-shadow: none;
+}
+
+body.index-page .theme-pair .theme-director-copy {
+    display: grid;
+    align-content: end;
+    gap: 1px;
+    min-width: 0;
+    padding: 5px 4px 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+body.index-page .theme-pair .theme-director:last-child .theme-director-copy {
+    text-align: center;
+}
+
+body.index-page .theme-pair .theme-director-name-en {
+    display: block;
+    min-height: 0;
     padding: 0;
     border: 0;
     border-radius: 0;
-    background: transparent;
+    background: none;
+    box-shadow: none;
+    color: var(--text-color);
+    font-family: var(--font-interface);
+    font-size: var(--text-heading-xs);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+    overflow-wrap: anywhere;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
 }
 
 body.index-page .theme-pair .theme-director-name {
@@ -580,79 +649,160 @@ body.index-page .theme-pair .theme-director-name {
     padding: 0;
     border: 0;
     border-radius: 0;
-    overflow: visible;
     background: none;
     box-shadow: none;
-    color: #ddd;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    line-height: 1.5;
-    text-align: inherit;
-    overflow-wrap: anywhere;
-    white-space: nowrap;
-}
-
-body.index-page .theme-pair .theme-director-copy {
-    display: grid;
-    gap: 2px;
-    min-width: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
-    text-align: left;
-}
-
-body.index-page .theme-pair .theme-director:last-child .theme-director-copy {
-    text-align: right;
-}
-
-body.index-page .theme-versus {
-    display: block;
-    min-height: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-    color: #a08257;
-    font-family: var(--font-interface);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    line-height: 1;
-    text-align: center;
-}
-
-body.index-page .theme-pair .theme-director-name-en {
-    display: block;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: none;
-    box-shadow: none;
-    color: var(--secondary-text);
+    color: var(--text-color);
     font-family: var(--font-interface);
     font-size: 12px;
     font-weight: 400;
     letter-spacing: var(--text-letter-spacing);
     line-height: var(--text-line-height);
     overflow-wrap: anywhere;
-    text-decoration: none;
-    text-transform: none;
+    text-align: center;
+    white-space: normal;
 }
 
 body.index-page .theme-card-action {
     justify-self: end;
-    margin-top: 18px;
-    color: #fff;
+    margin-top: 19px;
+    color: var(--text-color);
     font-family: var(--font-interface);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: var(--text-letter-spacing);
     line-height: var(--text-line-height);
+}
+
+/* 注目の対比: 監督ごとの色は、この4組のカスタムプロパティだけで調整する。 */
+body.index-page .theme-director--nolan {
+    --director-gradient-start: #49616e;
+    --director-gradient-end: #98b9cb;
+}
+
+body.index-page .theme-director--villeneuve {
+    --director-gradient-start: #807865;
+    --director-gradient-end: #e5d3af;
+}
+
+body.index-page .theme-director--spielberg {
+    --director-gradient-start: #61a4ce;
+    --director-gradient-end: #bbd7e6;
+}
+
+body.index-page .theme-director--lucas {
+    --director-gradient-start: #171d29;
+    --director-gradient-end: #5d7fb9;
+}
+
+/* 以下は仮配色。各監督の2色が決まったら、この値だけを差し替える。 */
+body.index-page .theme-director--lynch {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--burton {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--raimi {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--gunn {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--scorsese {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--wan {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--aster {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--roseglass {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--fargeat {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--flanagan {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--muschietti {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--russo {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--gerwig {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--fennell {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--scott {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--tonyscott {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--shyamalan {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--abrams {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--hooper {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--craven {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--carpenter {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
+}
+
+body.index-page .theme-director--miller {
+    --director-gradient-start: #5f5d66;
+    --director-gradient-end: #aaa7b2;
 }
 
 @media (max-width: 1140px) and (min-width: 821px) {
@@ -666,8 +816,8 @@ body.index-page .theme-card-action {
     }
 
     body.index-page .theme-pair {
-        grid-template-columns: minmax(0, 1fr) 32px minmax(0, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
     }
 
 }
@@ -884,11 +1034,13 @@ body.index-page .footer-nav {
 
     body.index-page .comparison-themes {
         min-height: 0;
-        padding: 48px 20px 56px;
+        padding: 48px 16px 56px;
     }
 
     body.index-page .comparison-themes .section-heading {
         grid-template-columns: 1fr auto;
+        gap: 16px;
+        margin-bottom: 30px;
     }
 
     body.index-page .comparison-themes .section-heading h2 {
@@ -899,29 +1051,58 @@ body.index-page .footer-nav {
 
     body.index-page .comparison-all-link {
         grid-column: 2;
+        font-size: var(--text-body-xs);
+        text-align: right;
     }
 
     body.index-page .theme-list {
         grid-template-columns: 1fr;
         justify-items: center;
+        gap: 16px;
     }
 
     body.index-page .theme-item {
         width: min(100%, 540px);
         height: auto;
         min-height: 0;
-        padding: 24px 20px 20px;
+        padding: 28px 16px 20px;
     }
 
     body.index-page .theme-pair {
-        grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr);
-        gap: 8px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    body.index-page .theme-pair .theme-director {
+        height: auto;
+        min-height: 0;
+        padding: 6px 6px 12px;
+    }
+
+    body.index-page .theme-director-gradient {
+        height: auto;
+        aspect-ratio: 2.15 / 1;
+    }
+
+    body.index-page .theme-pair .theme-director-copy {
+        padding: 12px 2px 0;
+    }
+
+    body.index-page .theme-pair .theme-director-name-en {
+        font-size: 14px;
+        letter-spacing: var(--text-letter-spacing);
+        white-space: normal;
     }
 
     body.index-page .theme-pair .theme-director-name {
-        font-size: var(--text-heading-xs);
-        letter-spacing: var(--text-letter-spacing);
+        font-size: 12px;
+        letter-spacing: 0;
         white-space: normal;
+    }
+
+    body.index-page .theme-card-action {
+        margin-top: 20px;
     }
 
     body.index-page .editor-note-preview {

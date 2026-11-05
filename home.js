@@ -90,12 +90,12 @@ const directors = [
 const comparisonThemes = [
     {
         title: '現代SFのかたち',
-        description: 'ふたりがSF映画を撮るまでに、どんな作品を撮ってきたか比べてみます。',
+        description: 'ふたりがSF映画を撮るまでに、どんな作品を撮ってきたか比べてみます',
         directorIds: ['nolan', 'villeneuve']
     },
     {
         title: 'ブロックバスターの原点',
-        description: '『ジョーズ』と『スター・ウォーズ』の前後に、ふたりが撮った作品を見比べます。',
+        description: '『ジョーズ』と『スター・ウォーズ』の前後に、ふたりが撮った作品を見比べます',
         directorIds: ['spielberg', 'lucas']
     },
     {
@@ -159,6 +159,33 @@ const comparisonThemes = [
         directorIds: ['carpenter', 'miller']
     }
 ];
+
+const featuredComparisonNames = {
+    nolan: 'C. NOLAN',
+    villeneuve: 'D. VILLENEUVE',
+    spielberg: 'S. SPIELBERG',
+    lucas: 'G. LUCAS'
+};
+
+function getFeaturedComparisonName(director) {
+    if (featuredComparisonNames[director.id]) {
+        return featuredComparisonNames[director.id];
+    }
+
+    const nameParts = director.nameEn.trim().split(/\s+/);
+    const surnameParts = director.surname.trim().split(/\s+/);
+    const givenNameParts = nameParts.slice(0, Math.max(0, nameParts.length - surnameParts.length));
+    const initials = givenNameParts.map(part => {
+        if (part === '&') {
+            return '&';
+        }
+
+        const initial = part.replace(/[^A-Z]/gi, '').charAt(0);
+        return initial ? `${initial}.` : '';
+    }).filter(Boolean).join(' ');
+
+    return `${initials}${initials ? ' ' : ''}${director.surname}`;
+}
 
 const heroTimelineTracks = [
     { depth: 'far left', x: '4%', speed: '52s', delay: '-11s', side: 'left', years: [[1953, 8, true], [1968, 22], [1977, 39], [1982, 57, true], [1999, 75], [2008, 92]] },
@@ -265,12 +292,12 @@ function renderComparisonThemes() {
             <h3 class="theme-card-title">${theme.title}</h3>
             <p class="theme-comparison-reason">${theme.description}</p>
             <span class="theme-pair">
-                ${themeDirectors.map((director, index) => `
-                    ${index === 1 ? '<span class="theme-versus" aria-hidden="true">VS</span>' : ''}
-                    <span class="theme-director">
+                ${themeDirectors.map(director => `
+                    <span class="theme-director theme-director--${director.id}">
+                        <span class="theme-director-gradient" aria-hidden="true"></span>
                         <span class="theme-director-copy">
+                            <span class="theme-director-name-en">${getFeaturedComparisonName(director)}</span>
                             <span class="theme-director-name">${director.nameJa}</span>
-                            <span class="theme-director-name-en">${director.nameEn}</span>
                         </span>
                     </span>
                 `).join('')}
