@@ -690,64 +690,64 @@ body.index-page .theme-director--spielberg {
 }
 
 body.index-page .theme-director--lucas {
-    --director-gradient-start: #171d29;
-    --director-gradient-end: #5d7fb9;
+    --director-gradient-start: #704214;
+    --director-gradient-end: #cfa171;
 }
 
 /* 以下は仮配色。各監督の2色が決まったら、この値だけを差し替える。 */
 body.index-page .theme-director--lynch {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #781f35;
+    --director-gradient-end: #344d88;
 }
 
 body.index-page .theme-director--burton {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #35283f;
+    --director-gradient-end: #a18aaf;
 }
 
 body.index-page .theme-director--raimi {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #681f24;
+    --director-gradient-end: #d78a43;
 }
 
 body.index-page .theme-director--gunn {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #963c83;
+    --director-gradient-end: #56b8c4;
 }
 
 body.index-page .theme-director--scorsese {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #42483a;
+    --director-gradient-end: #c2a34f;
 }
 
 body.index-page .theme-director--wan {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #233b3d;
+    --director-gradient-end: #8ca99f;
 }
 
 body.index-page .theme-director--aster {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #a99b43;
+    --director-gradient-end: #eee2a6;
 }
 
 body.index-page .theme-director--roseglass {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #304f50;
+    --director-gradient-end: #c16670;
 }
 
 body.index-page .theme-director--fargeat {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #cc3c85;
+    --director-gradient-end: #d9d65a;
 }
 
 body.index-page .theme-director--flanagan {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #43352f;
+    --director-gradient-end: #c39b65;
 }
 
 body.index-page .theme-director--muschietti {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #35262c;
+    --director-gradient-end: #c44349;
 }
 
 body.index-page .theme-director--russo {
