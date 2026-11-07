@@ -602,7 +602,7 @@ body.index-page .theme-director-gradient {
     padding: 0;
     border: 0;
     border-radius: 3px;
-    background: linear-gradient(90deg, var(--director-gradient-start), var(--director-gradient-end));
+    background: linear-gradient(to right, var(--director-gradient-stops, var(--director-gradient-start), var(--director-gradient-end)));
     box-shadow: none;
 }
 
@@ -677,132 +677,158 @@ body.index-page .theme-card-action {
 body.index-page .theme-director--nolan {
     --director-gradient-start: #49616e;
     --director-gradient-end: #98b9cb;
+    --director-gradient-stops: var(--director-gradient-start), #5c7684, #6f8c9b, #83a2b3, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--villeneuve {
     --director-gradient-start: #807865;
     --director-gradient-end: #e5d3af;
+    --director-gradient-stops: var(--director-gradient-start), #988e77, #b1a489, #cbbb9c, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--spielberg {
     --director-gradient-start: #61a4ce;
     --director-gradient-end: #bbd7e6;
+    --director-gradient-stops: var(--director-gradient-start), #78b1d4, #8fbeda, #a5cae0, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--lucas {
     --director-gradient-start: #704214;
     --director-gradient-end: #cfa171;
+    --director-gradient-stops: var(--director-gradient-start), #87592a, #9f7041, #b78859, var(--director-gradient-end);
 }
 
 /* 以下は仮配色。各監督の2色が決まったら、この値だけを差し替える。 */
 body.index-page .theme-director--lynch {
-    --director-gradient-start: #781f35;
+    --director-gradient-start: #72001c;
     --director-gradient-end: #344d88;
+    --director-gradient-stops: var(--director-gradient-start), #760d3f, #6d2660, #573b79, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--burton {
     --director-gradient-start: #35283f;
     --director-gradient-end: #a18aaf;
+    --director-gradient-stops: var(--director-gradient-start), #4e3f59, #685775, #847091, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--raimi {
     --director-gradient-start: #681f24;
     --director-gradient-end: #d78a43;
+    --director-gradient-stops: var(--director-gradient-start), #86372d, #a35035, #bf6c3c, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--gunn {
     --director-gradient-start: #963c83;
     --director-gradient-end: #56b8c4;
+    --director-gradient-stops: var(--director-gradient-start), #7964b1, #4d86c9, #34a1cc, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--scorsese {
     --director-gradient-start: #42483a;
     --director-gradient-end: #c2a34f;
+    --director-gradient-stops: var(--director-gradient-start), #596041, #767746, #998e4a, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--wan {
     --director-gradient-start: #233b3d;
     --director-gradient-end: #8ca99f;
+    --director-gradient-stops: var(--director-gradient-start), #3b5554, #54706d, #6f8c86, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--aster {
     --director-gradient-start: #a99b43;
     --director-gradient-end: #eee2a6;
+    --director-gradient-stops: var(--director-gradient-start), #baac5c, #cbbe74, #ddd08d, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--roseglass {
     --director-gradient-start: #304f50;
     --director-gradient-end: #c16670;
+    --director-gradient-stops: var(--director-gradient-start), #325c72, #5c628c, #97618c, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--fargeat {
     --director-gradient-start: #cc3c85;
     --director-gradient-end: #d9d65a;
+    --director-gradient-stops: var(--director-gradient-start), #ed5769, #f78050, #efac46, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--flanagan {
     --director-gradient-start: #43352f;
     --director-gradient-end: #c39b65;
+    --director-gradient-stops: var(--director-gradient-start), #644b3d, #84644b, #a47e58, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--muschietti {
     --director-gradient-start: #35262c;
     --director-gradient-end: #c44349;
+    --director-gradient-stops: var(--director-gradient-start), #572e3b, #7b3545, #a03b4a, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--russo {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #46709a;
+    --director-gradient-end: #c68454;
+    --director-gradient-stops: var(--director-gradient-start), #7e6ea1, #ae6a91, #c87072, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--gerwig {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #a94f62;
+    --director-gradient-end: #e8b6a1;
+    --director-gradient-stops: var(--director-gradient-start), #bb686d, #cb827b, #da9c8c, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--fennell {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #c85c88;
+    --director-gradient-end: #b8d8cb;
+    --director-gradient-stops: var(--director-gradient-start), #d27e6a, #c2a371, #b2c29a, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--scott {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #343c40;
+    --director-gradient-end: #bca474;
+    --director-gradient-stops: var(--director-gradient-start), #3e5959, #557565, #808f69, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--tonyscott {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #87432e;
+    --director-gradient-end: #e8ad62;
+    --director-gradient-stops: var(--director-gradient-start), #a15b3a, #ba7546, #d29054, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--shyamalan {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #44282b;
+    --director-gradient-end: #b65348;
+    --director-gradient-stops: var(--director-gradient-start), #603235, #7c3c3d, #994743, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--abrams {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #285580;
+    --director-gradient-end: #b7dfea;
+    --director-gradient-stops: var(--director-gradient-start), #46769b, #6899b5, #8ebccf, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--hooper {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #421818;
+    --director-gradient-end: #9f2724;
+    --director-gradient-stops: var(--director-gradient-start), #581c1c, #702020, #872322, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--craven {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #292b50;
+    --director-gradient-end: #a46588;
+    --director-gradient-stops: var(--director-gradient-start), #473961, #664770, #85557d, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--carpenter {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #172b46;
+    --director-gradient-end: #9fcbd9;
+    --director-gradient-stops: var(--director-gradient-start), #344f6a, #54778e, #78a0b3, var(--director-gradient-end);
 }
 
 body.index-page .theme-director--miller {
-    --director-gradient-start: #5f5d66;
-    --director-gradient-end: #aaa7b2;
+    --director-gradient-start: #866020;
+    --director-gradient-end: #f0ca58;
+    --director-gradient-stops: var(--director-gradient-start), #a1792d, #bb933b, #d6ae49, var(--director-gradient-end);
 }
 
 @media (max-width: 1140px) and (min-width: 821px) {
