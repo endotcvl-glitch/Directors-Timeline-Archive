@@ -70,6 +70,7 @@ const directors = [
         { id: 'kosinski', surname: 'KOSINSKI', nameJa: 'ジョセフ・コシンスキー', nameEn: 'JOSEPH KOSINSKI', keywords: '精密な映像設計 / 速度と機械美 / 大作エンタメ' },
         { id: 'gerwig', surname: 'GERWIG', nameJa: 'グレタ・ガーウィグ', nameEn: 'GRETA GERWIG', keywords: '現代女性の肖像 / 知的なユーモア / 瑞々しい感性' },
         { id: 'peele', surname: 'PEELE', nameJa: 'ジョーダン・ピール', nameEn: 'JORDAN PEELE', keywords: '社会派ホラー / 緻密な伏線 / 異質な恐怖' },
+        { id: 'davidrobertmitchell', surname: 'MITCHELL', nameJa: 'デヴィッド・ロバート・ミッチェル', nameEn: 'DAVID ROBERT MITCHELL', keywords: '郊外の不穏 / 青春と孤独 / 夢のような恐怖' },
         { id: 'coogler', surname: 'COOGLER', nameJa: 'ライアン・クーグラー', nameEn: 'RYAN COOGLER', keywords: 'アイデンティティ / 魂の継承 / 圧倒的躍動感' },
         { id: 'dacosta', surname: 'DACOSTA', nameJa: 'ニア・ダコスタ', nameEn: 'NIA DACOSTA', keywords: '社会的寓話 / ジャンル横断 / 鋭い視点' },
         { id: 'zhao', surname: 'ZHAO', nameJa: 'クロエ・ジャオ', nameEn: 'CHLOÉ ZHAO', keywords: '圧倒的な自然美の映像 / ドキュメンタリータッチ / 静かなリアリズム' },

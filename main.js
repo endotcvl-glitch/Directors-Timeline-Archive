@@ -39,6 +39,7 @@ const directorsInfo = {
     'gerwig': { fullNameEn: 'GRETA GERWIG', nameJa: 'グレタ・ガーウィグ', surname: 'GERWIG' },
     'chazelle': { fullNameEn: 'DAMIEN CHAZELLE', nameJa: 'デイミアン・チャゼル', surname: 'CHAZELLE' },
     'peele': { fullNameEn: 'JORDAN PEELE', nameJa: 'ジョーダン・ピール', surname: 'PEELE' },
+    'davidrobertmitchell': { fullNameEn: 'DAVID ROBERT MITCHELL', nameJa: 'デヴィッド・ロバート・ミッチェル', surname: 'MITCHELL' },
     'aster': { fullNameEn: 'ARI ASTER', nameJa: 'アリ・アスター', surname: 'ASTER' },
     'wan': { fullNameEn: 'JAMES WAN', nameJa: 'ジェームズ・ワン', surname: 'WAN' },
     'derrickson': { fullNameEn: 'SCOTT DERRICKSON', nameJa: 'スコット・デリクソン', surname: 'DERRICKSON' },
@@ -1002,6 +1003,12 @@ const filmsData = [
     { year: 2022, type: 'trachtenberg', title: "プレデター：ザ・プレイ", context: "18世紀のコマンチ族の戦士を主人公に、プレデター神話をサバイバル映画として鮮やかに再起動した作品。" },
     { year: 2025, type: 'trachtenberg', title: "プレデター：最凶頂上決戦", context: "異なる時代の戦士たちとプレデターの戦いを描く、アンソロジー形式のアニメーション映画。" },
     { year: 2025, type: 'trachtenberg', title: "プレデター：バッドランド", context: "若きプレデターを主人公に据え、狩る側の視点からシリーズの世界を広げたSFアクション。" },
+
+    // David Robert Mitchell
+    { year: 2010, type: 'davidrobertmitchell', title: "アメリカン・スリープオーバー", context: "夏の終わりの一夜を過ごす若者たちを通じ、郊外の孤独と淡い恋を描いた長編監督デビュー作。" },
+    { year: 2014, type: 'davidrobertmitchell', title: "イット・フォローズ", context: "正体の見えない存在に追われ続ける恐怖を、静かな郊外と青春の不安に重ねたホラー映画。" },
+    { year: 2018, type: 'davidrobertmitchell', title: "アンダー・ザ・シルバーレイク", context: "失踪した女性を追う青年の視点から、ロサンゼルスに潜む暗号と陰謀を描いたネオノワール。" },
+    { year: 2026, type: 'davidrobertmitchell', title: "オークストリートの異変", context: "突然の異変に見舞われた家族のサバイバルを描く、SFと怪獣映画の感触を備えた作品。" },
 
     // Robert Zemeckis
     { year: 1978, type: 'zemeckis', title: "抱きしめたい", context: "ビートルズ来米の熱狂を背景に、若者たちの一夜を描いた長編監督デビュー作。" },
