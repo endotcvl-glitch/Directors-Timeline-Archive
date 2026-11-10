@@ -91,72 +91,72 @@ const directors = [
 const comparisonThemes = [
     {
         title: '現代SFのかたち',
-        description: 'ふたりがSF映画を撮るまでに、どんな作品を撮ってきたか比べてみます',
+        description: 'SF映画へ至るまでの歩みを比べます',
         directorIds: ['nolan', 'villeneuve']
     },
     {
         title: 'ブロックバスターの原点',
-        description: '『ジョーズ』と『スター・ウォーズ』の前後に、ふたりが撮った作品を見比べます',
+        description: '大作誕生前後の歩みを比べます',
         directorIds: ['spielberg', 'lucas']
     },
     {
         title: '幻想と異形',
-        description: '不思議な世界を描くふたりが、同じ時代にどんな映画を撮っていたか見てみます。',
+        description: '異形の世界を描く歩みを比べます',
         directorIds: ['lynch', 'burton']
     },
     {
         title: 'ヒーロー映画の変化',
-        description: 'ホラー映画からヒーロー映画へ、ふたりが進んだ道を比べてみます。',
+        description: 'ホラーからヒーローへの歩みを比べます',
         directorIds: ['raimi', 'gunn']
     },
     {
         title: '多作の巨匠たち',
-        description: '長く映画を撮り続けてきたふたりの、作品の数や公開ペースを見比べます。',
+        description: '作品数と公開ペースを比べます',
         directorIds: ['spielberg', 'scorsese']
     },
     {
         title: '新時代のホラー牽引者',
-        description: 'ホラー映画で注目を集めたふたりが、その後に選んだ作品を見比べます。',
+        description: 'ホラー以後の作品選びを比べます',
         directorIds: ['wan', 'aster']
     },
     {
         title: '身体をめぐる欲望と恐怖',
-        description: '身体をテーマにした映画を撮るふたりの、デビュー作と次の作品を見比べます。',
+        description: '身体を描く初期作品を比べます',
         directorIds: ['roseglass', 'fargeat']
     },
     {
         title: 'スティーヴン・キングを映す',
-        description: 'キング作品を映画化する前と後に、ふたりが何を撮っていたか見てみます。',
+        description: 'キング映画化前後の歩みを比べます',
         directorIds: ['flanagan', 'muschietti']
     },
     {
         title: 'チームヒーローの時代',
-        description: '大勢のヒーローを描く映画まで、ふたりがどんな作品を撮ってきたか比べます。',
+        description: 'チーム映画へ至る歩みを比べます',
         directorIds: ['russo', 'gunn']
     },
     {
         title: '女性の自立と世界の違和感',
-        description: '俳優としても活動するふたりが、監督として撮ってきた作品を見比べます。',
+        description: '監督としての歩みを比べます',
         directorIds: ['gerwig', 'fennell']
     },
     {
         title: 'スコット兄弟の映像美',
-        description: '同じ時代に映画を撮っていた兄弟の、作品の並びやジャンルの違いを見比べます。',
+        description: '兄弟の作風とジャンルを比べます',
         directorIds: ['scott', 'tonyscott']
     },
     {
         title: '謎を仕掛ける語り手たち',
-        description: '謎のある物語を得意とするふたりが、次にどんな映画を撮ったか見てみます。',
+        description: '謎を描く作品の歩みを比べます',
         directorIds: ['shyamalan', 'abrams']
     },
     {
         title: 'アメリカンホラーの革新者',
-        description: 'ホラーの名作を生んだふたりが、同じ時代に撮っていた作品を見比べます。',
+        description: '同時代のホラー作品を比べます',
         directorIds: ['hooper', 'craven']
     },
     {
         title: '制約から生まれた映画哲学',
-        description: '低予算の映画から始まったふたりの、その後の作品を並べて見てみます。',
+        description: '低予算からの歩みを比べます',
         directorIds: ['carpenter', 'miller']
     }
 ];

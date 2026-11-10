@@ -616,11 +616,11 @@ body.index-page .theme-pair .theme-director-copy {
     border-radius: 0;
     background: none;
     box-shadow: none;
-    text-align: center;
+    text-align: left;
 }
 
 body.index-page .theme-pair .theme-director:last-child .theme-director-copy {
-    text-align: center;
+    text-align: left;
 }
 
 body.index-page .theme-pair .theme-director-name-en {
@@ -638,7 +638,7 @@ body.index-page .theme-pair .theme-director-name-en {
     letter-spacing: var(--text-letter-spacing);
     line-height: var(--text-line-height);
     overflow-wrap: anywhere;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     text-transform: none;
 }
@@ -658,7 +658,7 @@ body.index-page .theme-pair .theme-director-name {
     letter-spacing: var(--text-letter-spacing);
     line-height: var(--text-line-height);
     overflow-wrap: anywhere;
-    text-align: center;
+    text-align: left;
     white-space: normal;
 }
 
@@ -698,7 +698,6 @@ body.index-page .theme-director--lucas {
     --director-gradient-stops: var(--director-gradient-start), #87592a, #9f7041, #b78859, var(--director-gradient-end);
 }
 
-/* 以下は仮配色。各監督の2色が決まったら、この値だけを差し替える。 */
 body.index-page .theme-director--lynch {
     --director-gradient-start: #72001c;
     --director-gradient-end: #344d88;
