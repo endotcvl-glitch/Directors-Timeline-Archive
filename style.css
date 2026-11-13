@@ -65,9 +65,7 @@ body.index-page .home-hero {
     margin: 0;
     padding: 80px 0 0;
     overflow: hidden;
-    background:
-        radial-gradient(circle at 18% 18%, rgba(255,255,255,0.72) 0, rgba(255,255,255,0) 44%),
-        linear-gradient(135deg, #f7f6f7 0%, #ebe9ec 48%, #d7d4da 100%);
+    background: var(--background-color-2);
 }
 
 body.index-page .home-timeline-motion {
@@ -86,8 +84,8 @@ body.index-page .home-timeline-motion::after {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 27% 48%, rgba(237,236,237,0.995) 0 18%, rgba(237,236,237,0.9) 32%, rgba(237,236,237,0.34) 47%, transparent 58%),
-        radial-gradient(ellipse at 73% 48%, rgba(237,236,237,0.97) 0 21%, rgba(237,236,237,0.82) 35%, rgba(237,236,237,0.28) 49%, transparent 60%);
+        radial-gradient(ellipse at 27% 48%, rgba(238,236,232,0.995) 0 18%, rgba(238,236,232,0.9) 32%, rgba(238,236,232,0.34) 47%, transparent 58%),
+        radial-gradient(ellipse at 73% 48%, rgba(238,236,232,0.97) 0 21%, rgba(238,236,232,0.82) 35%, rgba(238,236,232,0.28) 49%, transparent 60%);
 }
 
 body.index-page .home-motion-track {
@@ -132,7 +130,7 @@ body.index-page .home-motion-event::before {
     height: var(--motion-dot-size, 7px);
     border: 1px solid rgba(72,67,76,0.42);
     border-radius: 50%;
-    background: #edeced;
+    background: var(--background-color-2);
     transform: translate(-50%, -50%);
 }
 
@@ -492,7 +490,7 @@ body.index-page .comparison-themes {
     min-height: 610px;
     margin: 0;
     padding: 58px max(20px, calc((100% - 1100px) / 2)) 70px;
-    background: var(--global-nav-bg);
+    background: var(--background-color-2);
 }
 
 body.index-page .comparison-themes .section-heading {
@@ -504,7 +502,7 @@ body.index-page .comparison-themes .section-heading {
 
 body.index-page .comparison-themes .section-heading h2 {
     grid-column: 2;
-    color: var(--text-color-2);
+    color: var(--text-color-1);
     font-size: 1.75rem;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -513,7 +511,7 @@ body.index-page .comparison-themes .section-heading h2 {
 body.index-page .comparison-all-link {
     grid-column: 3;
     justify-self: end;
-    color: var(--text-color-2);
+    color: var(--text-color-1);
     font-size: var(--text-body-s);
     font-weight: 400;
     letter-spacing: var(--text-letter-spacing);
@@ -522,7 +520,7 @@ body.index-page .comparison-all-link {
 }
 
 body.index-page .comparison-all-link:hover {
-    color: rgba(255, 255, 255, 0.72);
+    color: var(--key-color);
 }
 
 body.index-page .theme-list {
