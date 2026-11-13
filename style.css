@@ -683,193 +683,305 @@ body.index-page .theme-card-action {
 }
 
 /* 監督ごとの比較カラー。トップページと比較タイムラインで共有する。 */
-body.index-page .theme-director--nolan,
+.theme-director--nolan,
 .timeline-head-card--nolan {
     --director-gradient-start: #49616e;
     --director-gradient-end: #98b9cb;
     --director-gradient-stops: var(--director-gradient-start), #5c7684, #6f8c9b, #83a2b3, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--villeneuve,
+.theme-director--villeneuve,
 .timeline-head-card--villeneuve {
     --director-gradient-start: #807865;
     --director-gradient-end: #e5d3af;
     --director-gradient-stops: var(--director-gradient-start), #988e77, #b1a489, #cbbb9c, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--spielberg,
+.theme-director--spielberg,
 .timeline-head-card--spielberg {
     --director-gradient-start: #61a4ce;
     --director-gradient-end: #bbd7e6;
     --director-gradient-stops: var(--director-gradient-start), #78b1d4, #8fbeda, #a5cae0, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--lucas,
+.theme-director--lucas,
 .timeline-head-card--lucas {
     --director-gradient-start: #704214;
     --director-gradient-end: #cfa171;
     --director-gradient-stops: var(--director-gradient-start), #87592a, #9f7041, #b78859, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--lynch,
+.theme-director--lynch,
 .timeline-head-card--lynch {
     --director-gradient-start: #72001c;
     --director-gradient-end: #344d88;
     --director-gradient-stops: var(--director-gradient-start), #760d3f, #6d2660, #573b79, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--burton,
+.theme-director--burton,
 .timeline-head-card--burton {
     --director-gradient-start: #35283f;
     --director-gradient-end: #a18aaf;
     --director-gradient-stops: var(--director-gradient-start), #4e3f59, #685775, #847091, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--raimi,
+.theme-director--raimi,
 .timeline-head-card--raimi {
     --director-gradient-start: #681f24;
     --director-gradient-end: #d78a43;
     --director-gradient-stops: var(--director-gradient-start), #86372d, #a35035, #bf6c3c, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--gunn,
+.theme-director--gunn,
 .timeline-head-card--gunn {
     --director-gradient-start: #963c83;
     --director-gradient-end: #56b8c4;
     --director-gradient-stops: var(--director-gradient-start), #7964b1, #4d86c9, #34a1cc, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--scorsese,
+.theme-director--scorsese,
 .timeline-head-card--scorsese {
     --director-gradient-start: #42483a;
     --director-gradient-end: #c2a34f;
     --director-gradient-stops: var(--director-gradient-start), #596041, #767746, #998e4a, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--wan,
+.theme-director--wan,
 .timeline-head-card--wan {
     --director-gradient-start: #233b3d;
     --director-gradient-end: #8ca99f;
     --director-gradient-stops: var(--director-gradient-start), #3b5554, #54706d, #6f8c86, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--aster,
+.theme-director--aster,
 .timeline-head-card--aster {
     --director-gradient-start: #a99b43;
     --director-gradient-end: #eee2a6;
     --director-gradient-stops: var(--director-gradient-start), #baac5c, #cbbe74, #ddd08d, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--roseglass,
+.theme-director--roseglass,
 .timeline-head-card--roseglass {
     --director-gradient-start: #304f50;
     --director-gradient-end: #c16670;
     --director-gradient-stops: var(--director-gradient-start), #325c72, #5c628c, #97618c, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--fargeat,
+.theme-director--fargeat,
 .timeline-head-card--fargeat {
     --director-gradient-start: #cc3c85;
     --director-gradient-end: #d9d65a;
     --director-gradient-stops: var(--director-gradient-start), #ed5769, #f78050, #efac46, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--flanagan,
+.theme-director--flanagan,
 .timeline-head-card--flanagan {
     --director-gradient-start: #43352f;
     --director-gradient-end: #c39b65;
     --director-gradient-stops: var(--director-gradient-start), #644b3d, #84644b, #a47e58, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--muschietti,
+.theme-director--muschietti,
 .timeline-head-card--muschietti {
     --director-gradient-start: #35262c;
     --director-gradient-end: #c44349;
     --director-gradient-stops: var(--director-gradient-start), #572e3b, #7b3545, #a03b4a, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--russo,
+.theme-director--russo,
 .timeline-head-card--russo {
     --director-gradient-start: #46709a;
     --director-gradient-end: #c68454;
     --director-gradient-stops: var(--director-gradient-start), #7e6ea1, #ae6a91, #c87072, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--gerwig,
+.theme-director--gerwig,
 .timeline-head-card--gerwig {
     --director-gradient-start: #a94f62;
     --director-gradient-end: #e8b6a1;
     --director-gradient-stops: var(--director-gradient-start), #bb686d, #cb827b, #da9c8c, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--fennell,
+.theme-director--fennell,
 .timeline-head-card--fennell {
     --director-gradient-start: #c85c88;
     --director-gradient-end: #b8d8cb;
     --director-gradient-stops: var(--director-gradient-start), #d27e6a, #c2a371, #b2c29a, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--scott,
+.theme-director--scott,
 .timeline-head-card--scott {
     --director-gradient-start: #343c40;
     --director-gradient-end: #bca474;
     --director-gradient-stops: var(--director-gradient-start), #3e5959, #557565, #808f69, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--tonyscott,
+.theme-director--tonyscott,
 .timeline-head-card--tonyscott {
     --director-gradient-start: #87432e;
     --director-gradient-end: #e8ad62;
     --director-gradient-stops: var(--director-gradient-start), #a15b3a, #ba7546, #d29054, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--shyamalan,
+.theme-director--shyamalan,
 .timeline-head-card--shyamalan {
     --director-gradient-start: #44282b;
     --director-gradient-end: #b65348;
     --director-gradient-stops: var(--director-gradient-start), #603235, #7c3c3d, #994743, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--abrams,
+.theme-director--abrams,
 .timeline-head-card--abrams {
     --director-gradient-start: #285580;
     --director-gradient-end: #b7dfea;
     --director-gradient-stops: var(--director-gradient-start), #46769b, #6899b5, #8ebccf, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--hooper,
+.theme-director--hooper,
 .timeline-head-card--hooper {
     --director-gradient-start: #421818;
     --director-gradient-end: #9f2724;
     --director-gradient-stops: var(--director-gradient-start), #581c1c, #702020, #872322, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--craven,
+.theme-director--craven,
 .timeline-head-card--craven {
     --director-gradient-start: #292b50;
     --director-gradient-end: #a46588;
     --director-gradient-stops: var(--director-gradient-start), #473961, #664770, #85557d, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--carpenter,
+.theme-director--carpenter,
 .timeline-head-card--carpenter {
     --director-gradient-start: #172b46;
     --director-gradient-end: #9fcbd9;
     --director-gradient-stops: var(--director-gradient-start), #344f6a, #54778e, #78a0b3, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--miller,
+.theme-director--miller,
 .timeline-head-card--miller {
     --director-gradient-start: #866020;
     --director-gradient-end: #f0ca58;
     --director-gradient-stops: var(--director-gradient-start), #a1792d, #bb933b, #d6ae49, var(--director-gradient-end);
 }
 
-body.index-page .theme-director--snyder,
+.theme-director--snyder,
 .timeline-head-card--snyder {
     --director-gradient-start: #30231f;
     --director-gradient-end: #b79867;
     --director-gradient-stops: var(--director-gradient-start), #523c31, #755843, #977755, var(--director-gradient-end);
+}
+
+.theme-director--garland,
+.timeline-head-card--garland {
+    --director-gradient-start: #333932;
+    --director-gradient-end: #b6c956;
+    --director-gradient-stops: var(--director-gradient-start), #4a5c40, #66804b, #8ba452, var(--director-gradient-end);
+}
+
+.theme-director--kosinski,
+.timeline-head-card--kosinski {
+    --director-gradient-start: #101d32;
+    --director-gradient-end: #58d9f0;
+    --director-gradient-stops: var(--director-gradient-start), #234562, #337394, #42a4c4, var(--director-gradient-end);
+}
+
+.theme-director--davidrobertmitchell,
+.timeline-head-card--davidrobertmitchell {
+    --director-gradient-start: #76b0bd;
+    --director-gradient-end: #3a7d8c;
+    --director-gradient-stops: var(--director-gradient-start), #67a3b0, #5996a4, #4a8998, var(--director-gradient-end);
+}
+
+.theme-director--peele,
+.timeline-head-card--peele {
+    --director-gradient-start: #301c25;
+    --director-gradient-end: #bba16c;
+    --director-gradient-stops: var(--director-gradient-start), #5c2330, #8c2d39, #a55d48, var(--director-gradient-end);
+}
+
+.theme-director--coogler,
+.timeline-head-card--coogler {
+    --director-gradient-start: #171623;
+    --director-gradient-end: #9465c8;
+    --director-gradient-stops: var(--director-gradient-start), #2f2348, #4d336e, #704999, var(--director-gradient-end);
+}
+
+.theme-director--kubrick,
+.timeline-head-card--kubrick {
+    --director-gradient-start: #16191e;
+    --director-gradient-end: #d8322e;
+    --director-gradient-stops: var(--director-gradient-start), #322127, #60252d, #982b31, var(--director-gradient-end);
+}
+
+.theme-director--waititi,
+.timeline-head-card--waititi {
+    --director-gradient-start: #962f43;
+    --director-gradient-end: #f2c46b;
+    --director-gradient-stops: var(--director-gradient-start), #b55148, #cf754e, #e49c59, var(--director-gradient-end);
+}
+
+.theme-director--dacosta,
+.timeline-head-card--dacosta {
+    --director-gradient-start: #231c18;
+    --director-gradient-end: #d9a33e;
+    --director-gradient-stops: var(--director-gradient-start), #513825, #7f582f, #ad7c38, var(--director-gradient-end);
+}
+
+.theme-director--wright,
+.timeline-head-card--wright {
+    --director-gradient-start: #a52b68;
+    --director-gradient-end: #f3d5a5;
+    --director-gradient-stops: var(--director-gradient-start), #c55566, #da806d, #e8ab82, var(--director-gradient-end);
+}
+
+.theme-director--favreau,
+.timeline-head-card--favreau {
+    --director-gradient-start: #a43b32;
+    --director-gradient-end: #f2e1be;
+    --director-gradient-stops: var(--director-gradient-start), #b96848, #cb9167, #deba8f, var(--director-gradient-end);
+}
+
+.theme-director--anderson,
+.timeline-head-card--anderson {
+    --director-gradient-start: #ee8ac0;
+    --director-gradient-end: #a7d5ff;
+    --director-gradient-stops: var(--director-gradient-start), #db9fe0, #c4b3f5, #b0c6ff, var(--director-gradient-end);
+}
+
+.theme-director--fincher,
+.timeline-head-card--fincher {
+    --director-gradient-start: #1c2427;
+    --director-gradient-end: #88928a;
+    --director-gradient-stops: var(--director-gradient-start), #333d3f, #4c5857, #697570, var(--director-gradient-end);
+}
+
+.theme-director--bigelow,
+.timeline-head-card--bigelow {
+    --director-gradient-start: #353a33;
+    --director-gradient-end: #c9bda4;
+    --director-gradient-stops: var(--director-gradient-start), #54594d, #787969, #9f9b85, var(--director-gradient-end);
+}
+
+.theme-director--cameron,
+.timeline-head-card--cameron {
+    --director-gradient-start: #101e2b;
+    --director-gradient-end: #90c8d2;
+    --director-gradient-stops: var(--director-gradient-start), #2c4353, #4b6d7c, #6c99a7, var(--director-gradient-end);
+}
+
+.theme-director--romero,
+.timeline-head-card--romero {
+    --director-gradient-start: #1c1618;
+    --director-gradient-end: #c35445;
+    --director-gradient-stops: var(--director-gradient-start), #43242b, #6d323a, #994143, var(--director-gradient-end);
+}
+
+.theme-director--mann,
+.timeline-head-card--mann {
+    --director-gradient-start: #151e32;
+    --director-gradient-end: #708ba8;
+    --director-gradient-stops: var(--director-gradient-start), #2a374d, #41516a, #586d89, var(--director-gradient-end);
 }
 
 @media (max-width: 1140px) and (min-width: 821px) {
@@ -5165,5 +5277,135 @@ body.timeline-featured-comparison .timeline-row .episode-label {
         overflow: visible;
         -webkit-line-clamp: unset;
         line-clamp: unset;
+    }
+}
+
+/* 監督一覧カード */
+.director-category-title--cards {
+    padding-bottom: 0;
+    border-bottom: 0;
+    color: var(--text-color-1);
+    font-size: var(--text-heading-xl);
+    font-weight: 400;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+}
+
+.director-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 290px);
+    justify-content: space-between;
+    gap: 40px 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.director-card-grid + .director-category-title {
+    margin-top: 4rem;
+}
+
+.director-item--card {
+    display: grid;
+    grid-template-rows: 134px minmax(0, 1fr);
+    gap: 0;
+    width: 290px;
+    height: 217px;
+    min-height: 217px;
+    padding: 8px 8px 11px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(26, 26, 26, 0.06);
+    color: var(--text-color-1);
+    text-align: left;
+    transition: box-shadow 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.director-item--card:first-child {
+    border-top: 0;
+}
+
+.director-item--card:hover {
+    padding: 8px 8px 11px;
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(26, 26, 26, 0.1);
+    transform: translateY(-2px);
+}
+
+.director-item--card:focus-visible {
+    outline: 3px solid var(--key-color);
+    outline-offset: 4px;
+}
+
+.director-item--card.selected {
+    padding: 8px 8px 11px;
+    border: 0;
+    background: #fff;
+    box-shadow: 0 0 0 3px var(--key-color), 0 6px 16px rgba(26, 26, 26, 0.1);
+}
+
+.director-item-gradient {
+    display: block;
+    width: 100%;
+    height: 134px;
+    border-radius: 3px;
+    background: linear-gradient(
+        to right,
+        var(
+            --director-gradient-stops,
+            var(--director-gradient-start, #6f7074),
+            var(--director-gradient-end, #d0d1d4)
+        )
+    );
+}
+
+.director-card-name-copy {
+    display: grid;
+    align-content: end;
+    gap: 3px;
+    min-width: 0;
+    padding: 10px 4px 0;
+}
+
+.director-card-name-en {
+    font-family: var(--font-interface);
+    font-size: var(--text-heading-s);
+    font-weight: 700;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.director-card-name-ja {
+    font-family: var(--font-interface);
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 899px) {
+    .director-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 290px));
+        gap: 32px;
+    }
+}
+
+@media (max-width: 599px) {
+    .director-category-title--cards {
+        font-size: var(--text-heading-l);
+    }
+
+    .director-card-grid {
+        grid-template-columns: minmax(0, 290px);
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .director-item--card {
+        width: 100%;
+        padding: 8px 8px 11px;
     }
 }

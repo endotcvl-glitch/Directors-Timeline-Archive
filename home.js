@@ -171,7 +171,11 @@ const featuredComparisonNames = {
     nolan: 'C. NOLAN',
     villeneuve: 'D. VILLENEUVE',
     spielberg: 'S. SPIELBERG',
-    lucas: 'G. LUCAS'
+    lucas: 'G. LUCAS',
+    lordmiller: 'LORD & MILLER',
+    abrams: 'J.J. ABRAMS',
+    russo: 'RUSSO BROTHERS',
+    davidgordongreen: 'D. G. GREEN'
 };
 
 function getFeaturedComparisonName(director) {
@@ -390,10 +394,13 @@ function renderList() {
     [...directors].reverse().forEach(group => {
         // Render Category Header
         const header = document.createElement('div');
-        header.className = 'director-category-title';
+        header.className = 'director-category-title director-category-title--cards';
         header.id = `directors-${group.category.slice(0, 4)}`;
-        header.textContent = group.category;
+        header.textContent = group.category.slice(0, 4);
         container.appendChild(header);
+
+        const groupContainer = document.createElement('div');
+        groupContainer.className = 'director-card-grid';
 
         // Render Directors in Group
         group.items.forEach(dir => {
@@ -402,17 +409,19 @@ function renderList() {
             const item = document.createElement('a');
             item.className = [
                 'director-item',
+                'director-item--card',
+                `theme-director--${dir.id}`,
                 isSelected ? 'selected' : '',
                 isSearching && !isMatch && !isSelected ? 'search-dimmed' : ''
             ].filter(Boolean).join(' ');
             item.href = `timeline.html?d1=${encodeURIComponent(dir.id)}`;
             item.setAttribute('aria-label', `${dir.nameJa}の監督作品年表（クリックで比較対象に選択）`);
             item.innerHTML = `
-                <div class="item-name-copy">
-                    <span class="item-name-ja">${dir.nameJa}</span>
-                    <span class="item-name-en">${dir.nameEn}</span>
-                    ${dir.keywords ? `<div class="item-keywords">${dir.keywords}</div>` : ''}
-                </div>
+                <span class="director-item-gradient" aria-hidden="true"></span>
+                <span class="item-name-copy director-card-name-copy">
+                    <span class="director-card-name-en">${getFeaturedComparisonName(dir)}</span>
+                    <span class="director-card-name-ja">${dir.nameJa}</span>
+                </span>
             `;
             item.addEventListener('click', event => {
                 if (event.detail === 0) {
@@ -424,12 +433,14 @@ function renderList() {
                 event.preventDefault();
                 toggleSelection(dir.id);
             });
-            container.appendChild(item);
+            groupContainer.appendChild(item);
 
             if (isSearching && isMatch && !firstMatchItem) {
                 firstMatchItem = item;
             }
         });
+
+        container.appendChild(groupContainer);
     });
 
     if (firstMatchItem) {

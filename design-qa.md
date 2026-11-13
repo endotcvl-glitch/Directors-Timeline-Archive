@@ -40,6 +40,39 @@ final result: passed
 
 ---
 
+# Design QA — Directors card layout for all decades (latest)
+
+- Source visual truth: `/Users/endohiroyuki/Desktop/スクリーンショット 2026-11-13 20.02.18.png`
+- Implementation: `http://127.0.0.1:8767/directors.html#directors-2020`
+- Browser checks: default desktop viewport and `390 × 844` mobile viewport.
+- Scope: all eight decade groups from the 2020s through the 1950s.
+
+## Full-view comparison evidence
+
+- Every decade uses equal `290 × 217px` cards, arranged in three columns on desktop.
+- Each card uses a `134px` gradient panel, white surface, left-aligned English and Japanese names, and subtle shadow.
+- Registered director colors are reused; directors without a defined color use the requested neutral gray placeholder gradient.
+- The `2000` heading and card rhythm follow the supplied reference while preserving the existing page header and selection controls.
+
+## Responsive and interaction evidence
+
+- At `390px`, cards form one centered column and retain the intended `290 × 217px` dimensions.
+- No document-level horizontal overflow was detected on desktop or mobile.
+- The existing selection interaction was verified with James Gunn; the selected state and comparison action updated correctly.
+- All 72 registered directors use the shared card markup across eight decade groups.
+- Browser console check returned no warnings or errors.
+
+## Findings
+
+- No actionable P0, P1, or P2 mismatch remains in the requested trial scope.
+- P3: exact gradient colors remain intentionally provisional for directors whose palette has not been defined.
+
+## Final result
+
+final result: passed
+
+---
+
 # Design QA — Typography system revision (latest)
 
 - Source visual truth: `/Users/endohiroyuki/Desktop/スクリーンショット 2026-11-13 10.56.54.png` and `/Users/endohiroyuki/Desktop/スクリーンショット 2026-11-13 11.02.35.png`
