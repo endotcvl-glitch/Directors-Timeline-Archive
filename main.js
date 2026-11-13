@@ -46,6 +46,7 @@ const directorsInfo = {
     'favreau': { fullNameEn: 'JON FAVREAU', nameJa: 'ジョン・ファヴロー', surname: 'FAVREAU' },
     'lordmiller': { fullNameEn: 'PHIL LORD & CHRISTOPHER MILLER', nameJa: 'フィル・ロード＆クリス・ミラー', surname: 'LORD & MILLER' },
     'gunn': { fullNameEn: 'JAMES GUNN', nameJa: 'ジェームズ・ガン', surname: 'GUNN' },
+    'snyder': { fullNameEn: 'ZACK SNYDER', nameJa: 'ザック・スナイダー', surname: 'SNYDER' },
     'cregger': { fullNameEn: 'ZACH CREGGER', nameJa: 'ザック・クレッガー', surname: 'CREGGER' },
     'whedon': { fullNameEn: 'JOSS WHEDON', nameJa: 'ジョス・ウェドン', surname: 'WHEDON' },
     'waititi': { fullNameEn: 'TAIKA WAITITI', nameJa: 'タイカ・ワイティティ', surname: 'WAITITI' },
@@ -754,6 +755,20 @@ const filmsData = [
     { year: 2021, type: 'shyamalan', title: "オールド", context: "急速に時間が進む浜辺で、家族と身体の変化をサスペンスとして描く。" },
     { year: 2023, type: 'shyamalan', title: "ノック 終末の訪問者", context: "世界の終わりを告げる訪問者たちと家族の選択を、閉鎖空間の緊張で描く。" },
     { year: 2024, type: 'shyamalan', title: "トラップ", context: "コンサート会場を舞台に、逃げ場のない罠と父娘関係を絡めたスリラー。" },
+
+    // Zack Snyder
+    { year: 2004, type: 'snyder', title: "ドーン・オブ・ザ・デッド", context: "ショッピングモールへ逃げ込んだ生存者たちを、疾走するゾンビとスピード感ある映像で描いた長編監督デビュー作。" },
+    { year: 2006, type: 'snyder', title: "300 ＜スリーハンドレッド＞", context: "テルモピュライの戦いを、コミックの構図と大胆なデジタル映像で神話的なスペクタクルへ変えた作品。" },
+    { year: 2009, type: 'snyder', title: "ウォッチメン", context: "ヒーローの倫理と政治を、重厚な映像と暴力の陰影で描いたグラフィックノベルの映画化。" },
+    { year: 2010, type: 'snyder', title: "ガフールの伝説", context: "フクロウたちの冒険を、緻密なCGアニメーションと英雄神話の語り口で描いたファンタジー。" },
+    { year: 2011, type: 'snyder', title: "エンジェル ウォーズ", context: "抑圧された少女の空想世界を、ジャンルを横断するアクションと幻想的な映像で描いたオリジナル作品。" },
+    { year: 2013, type: 'snyder', title: "マン・オブ・スティール", context: "スーパーマンの誕生を、異星人としての孤独と神話的なスケールから再構築したヒーロー映画。" },
+    { year: 2016, type: 'snyder', title: "バットマン vs スーパーマン ジャスティスの誕生", context: "二人のヒーローの対立を通じて、力への恐怖と神話的な英雄像を暗く重厚に描いた作品。" },
+    { year: 2017, type: 'snyder', title: "ジャスティス・リーグ", context: "世界を守るためにヒーローたちが集結する、DCのチームアップ映画。" },
+    { year: 2021, type: 'snyder', title: "ジャスティス・リーグ：ザック・スナイダーカット", context: "独自の構想と長尺の物語によって、ヒーローたちの結集を再編集したディレクターズカット。" },
+    { year: 2021, type: 'snyder', title: "アーミー・オブ・ザ・デッド", context: "ゾンビが支配するラスベガスでの強盗計画を、ホラーと大規模アクションとして描いた作品。" },
+    { year: 2023, type: 'snyder', title: "REBEL MOON — パート1：炎の子", context: "圧政に立ち向かう戦士たちの結集を、宇宙神話と戦争映画のスケールで描いたスペースオペラ。" },
+    { year: 2024, type: 'snyder', title: "REBEL MOON — パート2：傷跡を刻む者", context: "故郷を守る反乱者たちの決戦を描き、二部作の戦いを大規模なアクションで締めくくる。" },
 
     // Greta Gerwig
     { year: 2017, type: 'gerwig', title: "レディ・バード", context: "誰もが経験する、故郷との決別と母への愛。" },

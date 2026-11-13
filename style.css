@@ -506,7 +506,7 @@ body.index-page .comparison-themes .section-heading h2 {
     grid-column: 2;
     color: var(--text-color-2);
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.04em;
 }
 
@@ -864,6 +864,13 @@ body.index-page .theme-director--miller,
     --director-gradient-start: #866020;
     --director-gradient-end: #f0ca58;
     --director-gradient-stops: var(--director-gradient-start), #a1792d, #bb933b, #d6ae49, var(--director-gradient-end);
+}
+
+body.index-page .theme-director--snyder,
+.timeline-head-card--snyder {
+    --director-gradient-start: #30231f;
+    --director-gradient-end: #b79867;
+    --director-gradient-stops: var(--director-gradient-start), #523c31, #755843, #977755, var(--director-gradient-end);
 }
 
 @media (max-width: 1140px) and (min-width: 821px) {
