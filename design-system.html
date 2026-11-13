@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/400.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/700.css">
-    <link rel="stylesheet" href="style.css?v=nav-spacing-20260816">
+    <link rel="stylesheet" href="style.css?v=typography-groups-20261113">
     <style>
         .design-system-container {
             width: min(100%, 1100px);
@@ -62,7 +62,7 @@
         }
 
         .ds-section h2 {
-            color: #a08257;
+            color: var(--key-color);
             font-size: 1.5rem;
             font-weight: 600;
             letter-spacing: 0.04em;
@@ -140,6 +140,12 @@
             font-weight: 700;
         }
 
+        .ds-token-table .ds-token-gap td {
+            height: 1rem;
+            padding: 0;
+            border: 0;
+        }
+
         .ds-type-sample {
             display: grid;
             grid-template-columns: minmax(0, 0.35fr) minmax(0, 1fr);
@@ -171,7 +177,7 @@
         }
 
         .ds-type-section-title {
-            color: #a08257;
+            color: var(--key-color);
             font-family: var(--font-interface);
             font-size: var(--text-heading-l);
             font-weight: 700;
@@ -275,7 +281,7 @@
         }
 
         .ds-use-section {
-            color: #a08257;
+            color: var(--key-color);
             font-size: var(--text-heading-l);
             font-weight: 700;
             letter-spacing: var(--text-letter-spacing);
@@ -297,7 +303,7 @@
 
         .ds-use-film-title {
             color: var(--link-color);
-            font-size: 1.6rem;
+            font-size: var(--text-heading-m);
             font-weight: 700;
             letter-spacing: 0;
             line-height: 1.25;
@@ -306,7 +312,7 @@
         .ds-use-year {
             color: var(--accent-color);
             font-family: var(--font-number);
-            font-size: 1.4rem;
+            font-size: var(--text-heading-l);
             font-weight: 700;
             letter-spacing: 0.04em;
         }
@@ -388,7 +394,7 @@
         }
 
         .ds-section-heading-sample h3 {
-            color: #a08257;
+            color: var(--key-color);
             font-size: 1.5rem;
             font-weight: 600;
             letter-spacing: 0.04em;
@@ -418,7 +424,7 @@
             bottom: 0;
             left: 50%;
             width: 1px;
-            background: #a08257;
+            background: var(--key-color);
             transform: translateX(-50%);
         }
 
@@ -582,49 +588,44 @@
             </div>
             <div class="ds-grid">
                 <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: #48434c;"></div>
+                    <div class="ds-color" style="--swatch: var(--key-color);"></div>
                     <h3>Key Color</h3>
-                    <p>#48434c<br>site key color</p>
+                    <p>#a08257<br>--key-color</p>
                 </div>
                 <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: var(--bg-color);"></div>
-                    <h3>Background</h3>
-                    <p>#f0f0f0<br>--bg-color</p>
+                    <div class="ds-color" style="--swatch: var(--background-color-1);"></div>
+                    <h3>Background 1</h3>
+                    <p>#48434c<br>--background-color-1</p>
                 </div>
                 <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: var(--text-color);"></div>
-                    <h3>Text</h3>
-                    <p>#1a1a1a<br>--text-color</p>
+                    <div class="ds-color" style="--swatch: var(--background-color-2);"></div>
+                    <h3>Background 2</h3>
+                    <p>#eeece8<br>--background-color-2</p>
                 </div>
                 <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: var(--secondary-text);"></div>
-                    <h3>Secondary</h3>
-                    <p>#666666<br>--secondary-text</p>
+                    <div class="ds-color" style="--swatch: var(--background-color-3);"></div>
+                    <h3>Background 3</h3>
+                    <p>#cfcfd1<br>--background-color-3</p>
                 </div>
                 <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: var(--line-color);"></div>
-                    <h3>Line</h3>
-                    <p>#d8d8d8<br>--line-color</p>
+                    <div class="ds-color" style="--swatch: var(--background-color-4);"></div>
+                    <h3>Background 4</h3>
+                    <p>#f9f9f9<br>--background-color-4</p>
                 </div>
                 <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: var(--accent-color);"></div>
-                    <h3>Accent</h3>
-                    <p>#57545b<br>--accent-color</p>
+                    <div class="ds-color" style="--swatch: var(--point-color);"></div>
+                    <h3>Point Color</h3>
+                    <p>#c3b7a7<br>--point-color</p>
                 </div>
                 <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: var(--text-hover-color);"></div>
-                    <h3>Hover</h3>
-                    <p>#b39562<br>--text-hover-color</p>
+                    <div class="ds-color" style="--swatch: var(--text-color-1);"></div>
+                    <h3>Text 1</h3>
+                    <p>#353535<br>--text-color-1</p>
                 </div>
                 <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: var(--global-nav-bg);"></div>
-                    <h3>Global Nav</h3>
-                    <p>#48434c<br>--global-nav-bg</p>
-                </div>
-                <div class="ds-swatch">
-                    <div class="ds-color" style="--swatch: #a08257;"></div>
-                    <h3>Logo Gold</h3>
-                    <p>#a08257<br>heading / axis</p>
+                    <div class="ds-color" style="--swatch: var(--text-color-2);"></div>
+                    <h3>Text 2</h3>
+                    <p>#efefef<br>--text-color-2</p>
                 </div>
             </div>
         </section>
@@ -632,261 +633,34 @@
         <section class="ds-section">
             <div class="ds-section-header">
                 <h2>Typography</h2>
-                <p>Figmaのテキストシステムを基準に、見出しはGen Interface JP Bold、本文はGen Interface JP Regularを使用します。行間は1.5、字間は0.04emです。数字のサイズは既存設定を維持します。</p>
+                <p>使用フォントは Gen Interface JP、行間はすべて150%です。</p>
             </div>
-            <table class="ds-token-table" aria-label="Figma typography scale">
+            <table class="ds-token-table" aria-label="Typography scale">
                 <thead>
-                    <tr><th>Token</th><th>Heading</th><th>Body</th></tr>
+                    <tr><th>分類</th><th>スタイル</th><th>サイズ / 行間</th></tr>
                 </thead>
                 <tbody>
-                    <tr><th>XXXL</th><td>56px</td><td>—</td></tr>
-                    <tr><th>XXL</th><td>44px</td><td>—</td></tr>
-                    <tr><th>XL</th><td>32px</td><td>18px</td></tr>
-                    <tr><th>L</th><td>28px</td><td>16px</td></tr>
-                    <tr><th>M</th><td>20px</td><td>15px</td></tr>
-                    <tr><th>S</th><td>18px</td><td>13px</td></tr>
-                    <tr><th>XS</th><td>16px</td><td>11px</td></tr>
-                    <tr><th>XXS</th><td>13px</td><td>10px</td></tr>
+                    <tr><th>見出し</th><td>XXXL</td><td>56px / 150%</td></tr>
+                    <tr><th>見出し</th><td>XXL</td><td>44px / 150%</td></tr>
+                    <tr><th>見出し</th><td>XL</td><td>32px / 150%</td></tr>
+                    <tr><th>見出し</th><td>L</td><td>28px / 150%</td></tr>
+                    <tr><th>見出し</th><td>M</td><td>20px / 150%</td></tr>
+                    <tr><th>見出し</th><td>S</td><td>18px / 150%</td></tr>
+                    <tr><th>見出し</th><td>XS</td><td>16px / 150%</td></tr>
+                    <tr><th>見出し</th><td>XXS</td><td>13px / 150%</td></tr>
+                    <tr class="ds-token-gap" aria-hidden="true"><td colspan="3"></td></tr>
+                    <tr><th>本文</th><td>XL</td><td>18px / 150%</td></tr>
+                    <tr><th>本文</th><td>L</td><td>16px / 150%</td></tr>
+                    <tr><th>本文</th><td>M</td><td>15px / 150%</td></tr>
+                    <tr><th>本文</th><td>S</td><td>13px / 150%</td></tr>
+                    <tr><th>本文</th><td>XS</td><td>11px / 150%</td></tr>
+                    <tr><th>本文</th><td>XXS</td><td>10px / 150%</td></tr>
+                    <tr class="ds-token-gap" aria-hidden="true"><td colspan="3"></td></tr>
+                    <tr><th>英数</th><td>M</td><td>24px / 150%</td></tr>
+                    <tr><th>英数</th><td>S</td><td>18px / 150%</td></tr>
+                    <tr><th>英数</th><td>XS</td><td>14px / 150%</td></tr>
                 </tbody>
             </table>
-            <div class="ds-type-list">
-                <div class="ds-type-sample">
-                    <h3>Site Title</h3>
-                    <div class="ds-type-content">
-                        <p class="ds-type-site-title">DIRECTORS' TIMELINE ARCHIVE</p>
-                        <dl class="ds-type-specs" aria-label="Site Title typography specs">
-                            <div>
-                                <dt>Font</dt>
-                                <dd>Gen Interface JP</dd>
-                            </div>
-                            <div>
-                                <dt>Size</dt>
-                                <dd>1.1rem</dd>
-                            </div>
-                            <div>
-                                <dt>Weight</dt>
-                                <dd>700</dd>
-                            </div>
-                            <div>
-                                <dt>Line Height</dt>
-                                <dd>1.4</dd>
-                            </div>
-                            <div>
-                                <dt>Spacing</dt>
-                                <dd>0.12em</dd>
-                            </div>
-                            <div>
-                                <dt>Case</dt>
-                                <dd>Uppercase</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-                <div class="ds-type-sample">
-                    <h3>Page Title</h3>
-                    <div class="ds-type-content">
-                        <p class="ds-type-page-title">映画監督から選ぶ</p>
-                        <dl class="ds-type-specs" aria-label="Page Title typography specs">
-                            <div>
-                                <dt>Font</dt>
-                                <dd>Gen Interface JP</dd>
-                            </div>
-                            <div>
-                                <dt>Size</dt>
-                                <dd>32px / Heading XL</dd>
-                            </div>
-                            <div>
-                                <dt>Weight</dt>
-                                <dd>700</dd>
-                            </div>
-                            <div>
-                                <dt>Line Height</dt>
-                                <dd>1.5</dd>
-                            </div>
-                            <div>
-                                <dt>Spacing</dt>
-                                <dd>0.04em</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-                <div class="ds-type-sample">
-                    <h3>Section</h3>
-                    <div class="ds-type-content">
-                        <p class="ds-type-section-title">テーマから比較してみる</p>
-                        <dl class="ds-type-specs" aria-label="Section typography specs">
-                            <div>
-                                <dt>Font</dt>
-                                <dd>Gen Interface JP</dd>
-                            </div>
-                            <div>
-                                <dt>Size</dt>
-                                <dd>28px / Heading L</dd>
-                            </div>
-                            <div>
-                                <dt>Weight</dt>
-                                <dd>700</dd>
-                            </div>
-                            <div>
-                                <dt>Line Height</dt>
-                                <dd>1.5</dd>
-                            </div>
-                            <div>
-                                <dt>Spacing</dt>
-                                <dd>0.04em</dd>
-                            </div>
-                            <div>
-                                <dt>Color</dt>
-                                <dd>#a08257</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-                <div class="ds-type-sample">
-                    <h3>Number</h3>
-                    <div class="ds-type-content">
-                        <p class="ds-type-number">1977 / 1984 / 2026.07.08</p>
-                        <dl class="ds-type-specs" aria-label="Number typography specs">
-                            <div>
-                                <dt>Font</dt>
-                                <dd>Roboto / Gen Interface JP</dd>
-                            </div>
-                            <div>
-                                <dt>Size</dt>
-                                <dd>1.5rem</dd>
-                            </div>
-                            <div>
-                                <dt>Weight</dt>
-                                <dd>700</dd>
-                            </div>
-                            <div>
-                                <dt>Line Height</dt>
-                                <dd>1.35</dd>
-                            </div>
-                            <div>
-                                <dt>Spacing</dt>
-                                <dd>0.08em</dd>
-                            </div>
-                            <div>
-                                <dt>Variable</dt>
-                                <dd>--font-number</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-                <div class="ds-type-sample">
-                    <h3>Body</h3>
-                    <div class="ds-type-content">
-                        <p class="ds-type-body">映画監督の作品を年表で比較し、作品の流れ、公開時期、時代背景を同じ時間軸で眺めるための本文スタイルです。</p>
-                        <dl class="ds-type-specs" aria-label="Body typography specs">
-                            <div>
-                                <dt>Font</dt>
-                                <dd>Gen Interface JP</dd>
-                            </div>
-                            <div>
-                                <dt>Size</dt>
-                                <dd>16px / Body L</dd>
-                            </div>
-                            <div>
-                                <dt>Weight</dt>
-                                <dd>400</dd>
-                            </div>
-                            <div>
-                                <dt>Line Height</dt>
-                                <dd>1.5</dd>
-                            </div>
-                            <div>
-                                <dt>Spacing</dt>
-                                <dd>0.04em</dd>
-                            </div>
-                            <div>
-                                <dt>Max Width</dt>
-                                <dd>760px</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-                <div class="ds-type-sample">
-                    <h3>Meta</h3>
-                    <div class="ds-type-content">
-                        <p class="ds-type-meta">補助情報、説明文、キャプション、メタ情報に使う控えめなテキスト。</p>
-                        <dl class="ds-type-specs" aria-label="Meta typography specs">
-                            <div>
-                                <dt>Font</dt>
-                                <dd>Gen Interface JP</dd>
-                            </div>
-                            <div>
-                                <dt>Size</dt>
-                                <dd>13px / Body S</dd>
-                            </div>
-                            <div>
-                                <dt>Weight</dt>
-                                <dd>400</dd>
-                            </div>
-                            <div>
-                                <dt>Line Height</dt>
-                                <dd>1.5</dd>
-                            </div>
-                            <div>
-                                <dt>Spacing</dt>
-                                <dd>0.04em</dd>
-                            </div>
-                            <div>
-                                <dt>Color</dt>
-                                <dd>--secondary-text</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-                <div class="ds-type-sample">
-                    <h3>Type Usage</h3>
-                    <div class="ds-type-content">
-                        <p class="ds-type-meta">実際のページで使っている主な見出し・年号のサイズ設定。</p>
-                        <div class="ds-type-usage" aria-label="Typography usage examples">
-                            <div class="ds-type-usage-row">
-                                <p class="ds-type-usage-sample ds-use-page-title">映画監督から選ぶ</p>
-                                <p class="ds-type-usage-meta">Page title<br>.page-hero h1</p>
-                                <p class="ds-type-usage-note">32px / Heading XL / 700 / 0.04em</p>
-                            </div>
-                            <div class="ds-type-usage-row">
-                                <p class="ds-type-usage-sample ds-use-section">テーマから比較してみる</p>
-                                <p class="ds-type-usage-meta">Section heading<br>.section-heading h2</p>
-                                <p class="ds-type-usage-note">28px / Heading L / 700 / 0.04em / #a08257</p>
-                            </div>
-                            <div class="ds-type-usage-row">
-                                <p class="ds-type-usage-sample ds-use-card-title">映画監督から選ぶ / 現代SFのかたち</p>
-                                <p class="ds-type-usage-meta">Card / list title<br>.explore-path-title / .theme-item h3 / .item-name-ja / .year-film-item h4 / .today-event-card h2 / .notice-item h3 / .note-card-*</p>
-                                <p class="ds-type-usage-note">20px / Heading M / 700 / 0.04em</p>
-                            </div>
-                            <div class="ds-type-usage-row">
-                                <p class="ds-type-usage-sample ds-use-director-label">クリストファー・ノーラン</p>
-                                <p class="ds-type-usage-meta">Timeline director name<br>.label-surname</p>
-                                <p class="ds-type-usage-note">1.35rem / 700 / 0.06em</p>
-                            </div>
-                            <div class="ds-type-usage-row">
-                                <p class="ds-type-usage-sample ds-use-film-title">インターステラー</p>
-                                <p class="ds-type-usage-meta">Timeline film title<br>.film-title</p>
-                                <p class="ds-type-usage-note">1.6rem / 700 / 0</p>
-                            </div>
-                            <div class="ds-type-usage-row">
-                                <p class="ds-type-usage-sample ds-use-year">1977</p>
-                                <p class="ds-type-usage-meta">Timeline year<br>.year-label</p>
-                                <p class="ds-type-usage-note">1.4rem / 700 / --font-number</p>
-                            </div>
-                            <div class="ds-type-usage-row">
-                                <p class="ds-type-usage-sample ds-use-today">7月8日</p>
-                                <p class="ds-type-usage-meta">Today date<br>.today-date-panel h2</p>
-                                <p class="ds-type-usage-note">clamp(1.7rem, 4vw, 2.6rem) / 700 / --font-number</p>
-                            </div>
-                            <div class="ds-type-usage-row">
-                                <p class="ds-type-usage-sample ds-use-note-film">イレイザーヘッド</p>
-                                <p class="ds-type-usage-meta">Editor's Notes film<br>.note-featured-film</p>
-                                <p class="ds-type-usage-note">20px / Heading M / 700 / 0.04em</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <section class="ds-section">

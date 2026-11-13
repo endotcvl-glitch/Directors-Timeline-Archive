@@ -1292,24 +1292,86 @@ function setTimelineSeo(params) {
     document.getElementById('timeline-structured-data').textContent = JSON.stringify(structuredData);
 }
 
-function updateHeaderLabels(d1Id, d2Id) {
+const comparisonTimelineNames = {
+    nolan: 'C. NOLAN',
+    villeneuve: 'D. VILLENEUVE',
+    spielberg: 'S. SPIELBERG',
+    lucas: 'G. LUCAS'
+};
+
+function getComparisonTimelineName(directorId, directorInfo) {
+    if (comparisonTimelineNames[directorId]) {
+        return comparisonTimelineNames[directorId];
+    }
+
+    const nameParts = directorInfo.fullNameEn.trim().split(/\s+/);
+    const surnameParts = directorInfo.surname.trim().split(/\s+/);
+    const givenNameParts = nameParts.slice(0, Math.max(0, nameParts.length - surnameParts.length));
+    const initials = givenNameParts.map(part => {
+        if (part === '&') return '&';
+        const initial = part.replace(/[^A-Z]/gi, '').charAt(0);
+        return initial ? `${initial}.` : '';
+    }).filter(Boolean).join(' ');
+
+    return `${initials}${initials ? ' ' : ''}${directorInfo.surname}`;
+}
+
+function renderComparisonTimelineCard(directorId, directorInfo) {
+    return `
+        <div class="timeline-head-card timeline-head-card--${directorId}">
+            <span class="timeline-head-card-gradient" aria-hidden="true"></span>
+            <span class="timeline-head-card-copy">
+                <span class="timeline-head-card-name-en">${getComparisonTimelineName(directorId, directorInfo)}</span>
+                <span class="timeline-head-card-name-ja">${directorInfo.nameJa}</span>
+            </span>
+        </div>
+    `;
+}
+
+function renderContemporaryTimelineCard() {
+    return `
+        <div class="timeline-head-card timeline-head-card--contemporary">
+            <span class="timeline-head-card-gradient" aria-hidden="true"></span>
+            <span class="timeline-head-card-copy">
+                <span class="timeline-head-card-name-en">CONTEMPORARY WORKS</span>
+                <span class="timeline-head-card-name-ja">同時代の作品</span>
+            </span>
+        </div>
+    `;
+}
+
+function updateHeaderLabels(d1Id, d2Id, useCardLayout = false) {
     const d1Info = directorsInfo[d1Id] || directorsInfo['nolan'];
     const d2Info = d2Id ? directorsInfo[d2Id] : null;
 
     const labels = document.querySelectorAll('.label');
     if (labels.length < 1) return;
 
+    document.body.classList.toggle('timeline-featured-comparison', useCardLayout);
+
+    if (useCardLayout) {
+        document.getElementById('timeline-page-title').innerHTML = d2Info
+            ? `<span>${d1Info.nameJa}と${d2Info.nameJa}の</span><span>監督作品年表比較</span>`
+            : `<span>${d1Info.nameJa}の</span><span>監督作品年表</span>`;
+    }
+
     // Left Label
-    labels[0].innerHTML = `<div class="label-surname">${d1Info.nameJa}</div><div class="label-ja">${d1Info.fullNameEn}</div>`;
+    labels[0].innerHTML = useCardLayout
+        ? renderComparisonTimelineCard(d1Id, d1Info)
+        : `<div class="label-surname">${d1Info.nameJa}</div><div class="label-ja">${d1Info.fullNameEn}</div>`;
 
     // Right Label
     if (labels.length > 1) {
         if (d2Info) {
             labels[1].style.display = 'block';
-            labels[1].innerHTML = `<div class="label-surname">${d2Info.nameJa}</div><div class="label-ja">${d2Info.fullNameEn}</div>`;
+            labels[1].innerHTML = useCardLayout
+                ? renderComparisonTimelineCard(d2Id, d2Info)
+                : `<div class="label-surname">${d2Info.nameJa}</div><div class="label-ja">${d2Info.fullNameEn}</div>`;
         } else {
             labels[1].style.display = 'block';
-            labels[1].innerHTML = `<div class="label-surname contemporary-label-ja">同時代の作品</div><div class="label-ja contemporary-label-en">CONTEMPORARY WORKS</div>`;
+            labels[1].innerHTML = useCardLayout
+                ? renderContemporaryTimelineCard()
+                : `<div class="label-surname contemporary-label-ja">同時代の作品</div><div class="label-ja contemporary-label-en">CONTEMPORARY WORKS</div>`;
         }
     }
 }
@@ -1481,8 +1543,9 @@ function setupYearFilmsSheet() {
 function renderTimeline() {
     const params = getUrlParams();
     const { d1, d2 } = params;
+    const hasExplicitDirector = params.rawD1 !== null && !params.invalid;
     setTimelineSeo(params);
-    updateHeaderLabels(d1, d2);
+    updateHeaderLabels(d1, d2, hasExplicitDirector);
 
     const container = document.getElementById('timeline-container');
     const labels = document.querySelector('.director-labels');

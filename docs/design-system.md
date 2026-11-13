@@ -22,38 +22,53 @@
 
 ```css
 :root {
-    --bg-color: #f0f0f0;
-    --text-color: #1a1a1a;
-    --accent-color: #57545b;
-    --accent-hover-color: #48434c;
-    --text-hover-color: #b39562;
+    --key-color: #a08257;
+    --background-color-1: #48434c;
+    --background-color-2: #eeece8;
+    --background-color-3: #cfcfd1;
+    --background-color-4: #f9f9f9;
+    --point-color: #c3b7a7;
+    --text-color-1: #353535;
+    --text-color-2: #efefef;
+    --bg-color: var(--background-color-2);
+    --text-color: var(--text-color-1);
+    --accent-color: var(--background-color-1);
+    --accent-hover-color: var(--text-color-1);
+    --text-hover-color: var(--key-color);
     --link-color: var(--accent-color);
     --link-hover-color: var(--text-hover-color);
     --button-color: var(--accent-color);
     --button-hover-color: var(--accent-hover-color);
-    --timeline-color: var(--accent-color);
-    --timeline-tint: rgba(87, 84, 91, 0.06);
-    --global-nav-bg: #48434c;
-    --secondary-text: #666666;
-    --line-color: #d8d8d8;
+    --timeline-color: var(--key-color);
+    --timeline-tint: rgba(160, 130, 87, 0.06);
+    --global-nav-bg: var(--background-color-1);
+    --secondary-text: var(--text-color-1);
+    --line-color: var(--background-color-3);
 }
 ```
 
 ### 使い分け
 
-- `--bg-color`: ページ背景。サイト全体のライトグレー。
-- `--text-color`: 主要テキスト。見出し、本文。
-- `--accent-color`: 強い操作、選択状態、強調線など。現在はグレイッシュな `#57545b`。
-- `--accent-hover-color`: ボタン背景など、濃色のhover状態に使うグレイッシュカラー。
-- `--text-hover-color`: リンクやテキストのhover色。現在は `#b39562`。
+- `--key-color`: ロゴ、見出し、年代軸に使うキーカラー `#a08257`。
+- `--background-color-1`: グローバルナビなどの濃色背景 `#48434c`。
+- `--background-color-2`: サイト全体の基本背景 `#eeece8`。
+- `--background-color-3`: 罫線や区切りに使うグレー `#cfcfd1`。
+- `--background-color-4`: カード群やタイムラインの明るいコンテンツ面に使うオフホワイト `#f9f9f9`。
+- `--point-color`: 控えめなポイント面に使うベージュ `#c3b7a7`。
+- `--text-color-1`: 明るい背景上の主要テキスト `#353535`。
+- `--text-color-2`: 濃色背景上の明るいテキスト `#efefef`。
+- `--bg-color` / `--text-color`: Background 2 / Text 1を参照する互換用セマンティック変数。
+- `--accent-color`: 強い操作、選択状態、強調線にBackground 1を使用する。
+- `--accent-hover-color`: hover時の濃色にText 1を使用する。
+- `--text-hover-color`: リンクのhoverにKey Colorを使用する。
 - `--link-color`: 本文内リンクや操作リンク。
 - `--button-color`: ボタン、選択状態、大きな導線。
 - `--timeline-color`: タイムラインの軸線や現在年の強調。
-- `timeline.html` の中央年代軸の縦ラインは、ロゴ色に合わせて `#a08257` を使う。
-- `#a08257`: ロゴ色。トップページのセクション見出し、Editor's Notes の「この監督のこの一本」、timelineページの中央年代軸に使う。
+- `timeline.html` の中央年代軸の縦ラインは `--key-color` を使う。
+- `--key-color`: トップページのセクション見出し、Editor's Notes の「この監督のこの一本」、timelineページの中央年代軸に使う。
 - `--global-nav-bg`: 全ページ共通のグローバルナビ背景色。
-- `--secondary-text`: 補助情報、説明文、メタ情報。
-- `--line-color`: 区切り線、カード境界、静かなグルーピング。
+- `--secondary-text`: Text 1を基準に、各コンポーネントのopacityで強弱をつける。
+- `--line-color`: Background 3を参照し、区切り線、カード境界、静かなグルーピングに使う。
 
 ### 避けること
 
@@ -63,102 +78,27 @@
 
 ## タイポグラフィ
 
-テキストデザインは Figma の `design-system`（node `45:5`）を基準にし、`style.css` の `:root` で管理する。
+使用フォントは `Gen Interface JP`、行間はすべて `150%` とする。
 
-Gen Interface JPは、全HTMLの`head`からjsDelivr CDN版のRegular（400）とBold（700）を読み込む。
-
-```html
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/700.css">
-```
-
-```css
-:root {
-    --font-interface: 'Gen Interface JP', sans-serif;
-    --font-sans: 'Gen Interface JP', sans-serif;
-    --font-serif: 'Gen Interface JP', sans-serif;
-    --font-title: 'Gen Interface JP', sans-serif;
-    --font-number: 'Roboto', 'Gen Interface JP', sans-serif;
-    --title-letter-spacing: 0.12em;
-}
-```
-
-### Figmaテキストスケール
-
-見出しは `Gen Interface JP Bold`（`700`）、本文は `Gen Interface JP Regular`（`400`）を使用する。どちらも行間は `1.5`、字間は `0.04em` とする。
-
-| トークン | 見出し | 本文 |
-| --- | ---: | ---: |
-| XXXL | `56px` | — |
-| XXL | `44px` | — |
-| XL | `32px` | `18px` |
-| L | `28px` | `16px` |
-| M | `20px` | `15px` |
-| S | `18px` | `13px` |
-| XS | `16px` | `11px` |
-| XXS | `13px` | `10px` |
-
-CSS変数は以下を使う。
-
-```css
-:root {
-    --text-heading-xxxl: 56px;
-    --text-heading-xxl: 44px;
-    --text-heading-xl: 32px;
-    --text-heading-l: 28px;
-    --text-heading-m: 20px;
-    --text-heading-s: 18px;
-    --text-heading-xs: 16px;
-    --text-heading-xxs: 13px;
-    --text-body-xl: 18px;
-    --text-body-l: 16px;
-    --text-body-m: 15px;
-    --text-body-s: 13px;
-    --text-body-xs: 11px;
-    --text-body-xxs: 10px;
-    --text-line-height: 1.5;
-    --text-letter-spacing: 0.04em;
-}
-```
-
-既存サイトへの割り当ては、現状の見た目に最も近い段階を選ぶ。ページタイトルは見出し/XL、セクション見出しは見出し/L、カード見出しは見出し/MまたはS、標準本文は本文/LまたはM、補助文は本文/SまたはXSを基本とする。ヒーローロゴと数字・年号・日付のサイズ体系はこの変更の対象外とする。
-
-### 基本方針
-
-- 日本語の見出し・本文・通常UIは `--font-interface` を使う。
-- HTMLテキストは原則として `--font-interface` を使う。既存の `--font-sans`、`--font-serif`、`--font-title` は互換用の別名として同じフォントを参照する。
-- SVGで表示するサイトロゴはフォント統一の対象外とする。
-- 年号、日付、作品年など数字を見せる場面は `--font-number` を使う。
-- 文字の強弱は、サイズ、太さ、色、余白で作る。
-- 文字間は基本的に詰めすぎない。負の letter-spacing は使わない。
-
-### 主な階層
-
-- サイトタイトル: `--font-title`（Gen Interface JP）、大文字、広めの letter-spacing。
-- ページタイトル: 見出し/XL（`32px`）。個別記事の大見出しなど、既存表示が大きい箇所は見出し/XXL（`44px`）。
-- セクション見出し: 見出し/L（`28px`）、`font-weight: 700`、`#a08257`、letter-spacing `0.04em`。
-- 数字: `--font-number`、監督一覧の年代見出し、timelineの年号、年代ページの年号、今日は何の日の日付、NEWSの日付、コラム作品年など、年号や日付に使う。letter-spacing は文脈に応じてやや広めにする。
-- 本文: `--font-interface`、読みやすい行間を優先。
-- 補助テキスト: `--secondary-text`、小さめ。
-- 操作リンク: 太字、小さめ、letter-spacing をやや広くする。
-
-### 使用箇所別のサイズ
-
-主な画面上の見出し・年号は以下を基準にする。
-
-| 用途 | セレクタ | サイズ / ウエイト / 字間 |
-| --- | --- | --- |
-| ページタイトル | `.page-hero h1` | `32px`（見出し/XL）/ `700` / `0.04em` |
-| セクション見出し | `.section-heading h2` | `28px`（見出し/L）/ `700` / `0.04em` |
-| カード / リスト見出し | `.explore-path-title` / `.theme-item h3` / `.item-name-ja` / `.year-film-item h4` / `.today-event-card h2` / `.notice-item h3` / `.note-card-*` | サイズは用途別 / `700` / `0.04em` |
-| timeline 監督名 | `.label-surname` | `1.35rem` / `700` / `0.06em` |
-| timeline 作品タイトル | `.film-title` | `1.6rem` / `700` / `0` |
-| timeline 年号 | `.year-label` | `1.4rem` / `700` / `--font-number` |
-| 今日は何の日の日付 | `.today-date-panel h2` | `clamp(1.7rem, 4vw, 2.6rem)` / `700` / `--font-number` |
-| Editor's Notes 作品名 | `.note-featured-film` | `20px`（見出し/M）/ `700` / `0.04em` |
-
-年号、日付、作品年など `--font-number` を使う要素は、既存のフォントサイズと字間を維持する。
+| 分類 | スタイル | サイズ / 行間 |
+| --- | --- | ---: |
+| 見出し | XXXL | `56px / 150%` |
+| 見出し | XXL | `44px / 150%` |
+| 見出し | XL | `32px / 150%` |
+| 見出し | L | `28px / 150%` |
+| 見出し | M | `20px / 150%` |
+| 見出し | S | `18px / 150%` |
+| 見出し | XS | `16px / 150%` |
+| 見出し | XXS | `13px / 150%` |
+| 本文 | XL | `18px / 150%` |
+| 本文 | L | `16px / 150%` |
+| 本文 | M | `15px / 150%` |
+| 本文 | S | `13px / 150%` |
+| 本文 | XS | `11px / 150%` |
+| 本文 | XXS | `10px / 150%` |
+| 英数 | M | `24px / 150%` |
+| 英数 | S | `18px / 150%` |
+| 英数 | XS | `14px / 150%` |
 
 ## レイアウト幅
 
