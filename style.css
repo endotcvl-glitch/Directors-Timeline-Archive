@@ -909,9 +909,9 @@ body.index-page .theme-card-action {
 
 .theme-director--kubrick,
 .timeline-head-card--kubrick {
-    --director-gradient-start: #16191e;
-    --director-gradient-end: #d8322e;
-    --director-gradient-stops: var(--director-gradient-start), #322127, #60252d, #982b31, var(--director-gradient-end);
+    --director-gradient-start: #8a1818;
+    --director-gradient-end: #d27f00;
+    --director-gradient-stops: var(--director-gradient-start), #9f3217, #b34b13, #c4650b, var(--director-gradient-end);
 }
 
 .theme-director--waititi,
@@ -1101,6 +1101,90 @@ body.index-page .theme-card-action {
     --director-gradient-start: #182539;
     --director-gradient-end: #df7c40;
     --director-gradient-stops: var(--director-gradient-start), #49375c, #89426a, #c2545e, var(--director-gradient-end);
+}
+
+.theme-director--derrickson,
+.timeline-head-card--derrickson {
+    --director-gradient-start: #171a1c;
+    --director-gradient-end: #b8b3a4;
+    --director-gradient-stops: var(--director-gradient-start), #353d3e, #58635f, #848b80, var(--director-gradient-end);
+}
+
+.theme-director--chazelle,
+.timeline-head-card--chazelle {
+    --director-gradient-start: #292953;
+    --director-gradient-end: #ebd47e;
+    --director-gradient-stops: var(--director-gradient-start), #4e427e, #8267a7, #b99caa, var(--director-gradient-end);
+}
+
+.theme-director--eastwood,
+.timeline-head-card--eastwood {
+    --director-gradient-start: #1f2830;
+    --director-gradient-end: #b0b4b0;
+    --director-gradient-stops: var(--director-gradient-start), #3c494d, #5f6b6b, #868f8c, var(--director-gradient-end);
+}
+
+.theme-director--argento,
+.timeline-head-card--argento {
+    --director-gradient-start: #501236;
+    --director-gradient-end: #f35ca8;
+    --director-gradient-stops: var(--director-gradient-start), #752351, #9d356d, #c7488a, var(--director-gradient-end);
+}
+
+.theme-director--donner,
+.timeline-head-card--donner {
+    --director-gradient-start: #173b87;
+    --director-gradient-end: #c4dce9;
+    --director-gradient-stops: var(--director-gradient-start), #285eae, #4786c7, #79b0da, var(--director-gradient-end);
+}
+
+.theme-director--cronenberg,
+.timeline-head-card--cronenberg {
+    --director-gradient-start: #182721;
+    --director-gradient-end: #aeb459;
+    --director-gradient-stops: var(--director-gradient-start), #2c4935, #4c6d45, #779150, var(--director-gradient-end);
+}
+
+.theme-director--zemeckis,
+.timeline-head-card--zemeckis {
+    --director-gradient-start: #193264;
+    --director-gradient-end: #f6a341;
+    --director-gradient-stops: var(--director-gradient-start), #713e7a, #b94a76, #e96c5d, var(--director-gradient-end);
+}
+
+.theme-director--jackson,
+.timeline-head-card--jackson {
+    --director-gradient-start: #293b2d;
+    --director-gradient-end: #d1b568;
+    --director-gradient-stops: var(--director-gradient-start), #465a3d, #6b794a, #9a9858, var(--director-gradient-end);
+}
+
+.theme-director--coen,
+.timeline-head-card--coen {
+    --director-gradient-start: #332923;
+    --director-gradient-end: #cfb38f;
+    --director-gradient-stops: var(--director-gradient-start), #58483c, #7e6957, #a68d72, var(--director-gradient-end);
+}
+
+.theme-director--lordmiller,
+.timeline-head-card--lordmiller {
+    --director-gradient-start: #0b0e24;
+    --director-gradient-end: #ffc15a;
+    --director-gradient-stops: var(--director-gradient-start) 0%, #272c70 28%, #6545a0 54%, #cb488b 76%, var(--director-gradient-end) 100%;
+}
+
+.theme-director--whedon,
+.timeline-head-card--whedon {
+    --director-gradient-start: #14223e;
+    --director-gradient-end: #b6edf1;
+    --director-gradient-stops: var(--director-gradient-start), #314f6b, #568199, #82b6c5, var(--director-gradient-end);
+}
+
+.theme-director--watts,
+.timeline-head-card--watts {
+    --director-gradient-start: #243c77;
+    --director-gradient-end: #d43b44;
+    --director-gradient-stops: var(--director-gradient-start), #603a81, #93327a, #bc2c64, var(--director-gradient-end);
 }
 
 @media (max-width: 1140px) and (min-width: 821px) {
