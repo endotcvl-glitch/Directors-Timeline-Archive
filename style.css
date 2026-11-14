@@ -5399,13 +5399,41 @@ body.timeline-featured-comparison .timeline-row .episode-label {
     }
 
     .director-card-grid {
-        grid-template-columns: minmax(0, 290px);
-        justify-content: center;
-        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: stretch;
+        gap: 16px 12px;
     }
 
     .director-item--card {
+        grid-template-rows: 76px minmax(0, 1fr);
         width: 100%;
-        padding: 8px 8px 11px;
+        height: 176px;
+        min-height: 176px;
+        padding: 6px 6px 9px;
+    }
+
+    .director-item--card:hover,
+    .director-item--card.selected {
+        padding: 6px 6px 9px;
+    }
+
+    .director-item-gradient {
+        height: 76px;
+    }
+
+    .director-card-name-copy {
+        align-content: start;
+        gap: 2px;
+        padding: 8px 3px 0;
+    }
+
+    .director-card-name-en {
+        font-size: var(--text-alphanumeric-xs);
+        line-height: 1.25;
+    }
+
+    .director-card-name-ja {
+        font-size: var(--text-body-xs);
+        line-height: 1.4;
     }
 }

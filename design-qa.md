@@ -56,7 +56,7 @@ final result: passed
 
 ## Responsive and interaction evidence
 
-- At `390px`, cards form one centered column and retain the intended `290 × 217px` dimensions.
+- At `390px`, cards form two equal columns; each card is `165.5 × 176px` with no clipped director names.
 - No document-level horizontal overflow was detected on desktop or mobile.
 - The existing selection interaction was verified with James Gunn; the selected state and comparison action updated correctly.
 - All 72 registered directors use the shared card markup across eight decade groups.
