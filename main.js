@@ -22,7 +22,7 @@ const directorsInfo = {
     'cameron': { fullNameEn: 'JAMES CAMERON', nameJa: 'ジェームズ・キャメロン', surname: 'CAMERON' },
     'jackson': { fullNameEn: 'PETER JACKSON', nameJa: 'ピーター・ジャクソン', surname: 'JACKSON' },
     'emmerich': { fullNameEn: 'ROLAND EMMERICH', nameJa: 'ローランド・エメリッヒ', surname: 'EMMERICH' },
-    'pta': { fullNameEn: 'PAUL THOMAS ANDERSON', nameJa: 'ポール・トーマス・アンダーソン', surname: 'PTA' },
+    'pta': { fullNameEn: 'PAUL THOMAS ANDERSON', nameJa: 'ポール・トーマス・アンダーソン', surname: 'ANDERSON' },
     'miller': { fullNameEn: 'GEORGE MILLER', nameJa: 'ジョージ・ミラー', surname: 'MILLER' },
     'wright': { fullNameEn: 'EDGAR WRIGHT', nameJa: 'エドガー・ライト', surname: 'WRIGHT' },
     'coogler': { fullNameEn: 'RYAN COOGLER', nameJa: 'ライアン・クーグラー', surname: 'COOGLER' },

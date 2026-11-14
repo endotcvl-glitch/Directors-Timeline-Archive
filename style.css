@@ -984,6 +984,125 @@ body.index-page .theme-card-action {
     --director-gradient-stops: var(--director-gradient-start), #2a374d, #41516a, #586d89, var(--director-gradient-end);
 }
 
+.theme-director--lanthimos,
+.timeline-head-card--lanthimos {
+    --director-gradient-start: #51406d;
+    --director-gradient-end: #e0d794;
+    --director-gradient-stops: var(--director-gradient-start), #935676, #c27776, #dca47a, var(--director-gradient-end);
+}
+
+.theme-director--cregger,
+.timeline-head-card--cregger {
+    --director-gradient-start: #202b4d;
+    --director-gradient-end: #c54f50;
+    --director-gradient-stops: var(--director-gradient-start), #4b3361, #7a3868, #a53e62, var(--director-gradient-end);
+}
+
+.theme-director--trachtenberg,
+.timeline-head-card--trachtenberg {
+    --director-gradient-start: #233a30;
+    --director-gradient-end: #d9b45e;
+    --director-gradient-stops: var(--director-gradient-start), #3d5a3f, #657b49, #999951, var(--director-gradient-end);
+}
+
+.theme-director--zhao,
+.timeline-head-card--zhao {
+    --director-gradient-start: #38465b;
+    --director-gradient-end: #d8ae8c;
+    --director-gradient-stops: var(--director-gradient-start), #675a75, #997083, #c18b87, var(--director-gradient-end);
+}
+
+.theme-director--levy,
+.timeline-head-card--levy {
+    --director-gradient-start: #286bc3;
+    --director-gradient-end: #f4bd67;
+    --director-gradient-stops: var(--director-gradient-start), #3996d2, #75b7ce, #c6c5a0, var(--director-gradient-end);
+}
+
+.theme-director--davidgordongreen,
+.timeline-head-card--davidgordongreen {
+    --director-gradient-start: #3f4b36;
+    --director-gradient-end: #d8cb80;
+    --director-gradient-stops: var(--director-gradient-start), #5e6a48, #828a5b, #abaa6d, var(--director-gradient-end);
+}
+
+.theme-director--pta,
+.timeline-head-card--pta {
+    --director-gradient-start: #a44c42;
+    --director-gradient-end: #f0cb83;
+    --director-gradient-stops: var(--director-gradient-start), #bb6a4d, #cf8a5b, #e1aa6d, var(--director-gradient-end);
+}
+
+.theme-director--wachowskis,
+.timeline-head-card--wachowskis {
+    --director-gradient-start: #101c17;
+    --director-gradient-end: #70c77b;
+    --director-gradient-stops: var(--director-gradient-start), #204232, #346c4c, #4f9964, var(--director-gradient-end);
+}
+
+.theme-director--reeves,
+.timeline-head-card--reeves {
+    --director-gradient-start: #30383c;
+    --director-gradient-end: #c6cbc6;
+    --director-gradient-stops: var(--director-gradient-start), #505a5c, #757e7d, #9ca4a1, var(--director-gradient-end);
+}
+
+.theme-director--mendes,
+.timeline-head-card--mendes {
+    --director-gradient-start: #20252b;
+    --director-gradient-end: #da9d57;
+    --director-gradient-stops: var(--director-gradient-start), #473f56, #87536d, #c16e68, var(--director-gradient-end);
+}
+
+.theme-director--verhoeven,
+.timeline-head-card--verhoeven {
+    --director-gradient-start: #1d2334;
+    --director-gradient-end: #aabcd0;
+    --director-gradient-stops: var(--director-gradient-start), #3d4558, #5f6a7e, #8392a6, var(--director-gradient-end);
+}
+
+.theme-director--stone,
+.timeline-head-card--stone {
+    --director-gradient-start: #242023;
+    --director-gradient-end: #e6b642;
+    --director-gradient-stops: var(--director-gradient-start), #5e3944, #9d5551, #cf7e4c, var(--director-gradient-end);
+}
+
+.theme-director--emmerich,
+.timeline-head-card--emmerich {
+    --director-gradient-start: #1e3855;
+    --director-gradient-end: #d7e9ed;
+    --director-gradient-stops: var(--director-gradient-start), #456179, #718d9e, #a2bac4, var(--director-gradient-end);
+}
+
+.theme-director--cunningham,
+.timeline-head-card--cunningham {
+    --director-gradient-start: #182620;
+    --director-gradient-end: #9cafb6;
+    --director-gradient-stops: var(--director-gradient-start), #344542, #536767, #768a8e, var(--director-gradient-end);
+}
+
+.theme-director--cretton,
+.timeline-head-card--cretton {
+    --director-gradient-start: #465d48;
+    --director-gradient-end: #efe1b7;
+    --director-gradient-stops: var(--director-gradient-start), #6b7d61, #949e7b, #c0bf98, var(--director-gradient-end);
+}
+
+.theme-director--tarantino,
+.timeline-head-card--tarantino {
+    --director-gradient-start: #b62f2f;
+    --director-gradient-end: #f2bc73;
+    --director-gradient-stops: var(--director-gradient-start), #c85738, #d77a46, #e59b59, var(--director-gradient-end);
+}
+
+.theme-director--mctiernan,
+.timeline-head-card--mctiernan {
+    --director-gradient-start: #182539;
+    --director-gradient-end: #df7c40;
+    --director-gradient-stops: var(--director-gradient-start), #49375c, #89426a, #c2545e, var(--director-gradient-end);
+}
+
 @media (max-width: 1140px) and (min-width: 821px) {
     body.index-page .theme-list {
         grid-template-columns: repeat(2, minmax(0, 540px));
@@ -5405,7 +5524,7 @@ body.timeline-featured-comparison .timeline-row .episode-label {
     }
 
     .director-item--card {
-        grid-template-rows: 76px minmax(0, 1fr);
+        grid-template-rows: 96px minmax(0, 1fr);
         width: 100%;
         height: 176px;
         min-height: 176px;
@@ -5418,7 +5537,7 @@ body.timeline-featured-comparison .timeline-row .episode-label {
     }
 
     .director-item-gradient {
-        height: 76px;
+        height: 96px;
     }
 
     .director-card-name-copy {

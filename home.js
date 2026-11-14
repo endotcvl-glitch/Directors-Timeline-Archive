@@ -42,7 +42,7 @@ const directors = [
         { id: 'shyamalan', surname: 'SHYAMALAN', nameJa: 'M・ナイト・シャマラン', nameEn: 'M. NIGHT SHYAMALAN', keywords: '不穏な日常 / ツイスト / 信仰と恐怖' },
         { id: 'tarantino', surname: 'TARANTINO', nameJa: 'クエンティン・タランティーノ', nameEn: 'QUENTIN TARANTINO', keywords: '饒舌な会話劇 / 映画へのオマージュ / 鮮烈な暴力' },
         { id: 'wright', surname: 'WRIGHT', nameJa: 'エドガー・ライト', nameEn: 'EDGAR WRIGHT', keywords: '音楽との同期 / 高速カット割 / 究極のジャンル愛' },
-        { id: 'pta', surname: 'PTA', nameJa: 'ポール・トーマス・アンダーソン', nameEn: 'PAUL THOMAS ANDERSON', keywords: '重厚な人間ドラマ / 狂気と愛 / 圧倒的演出力' },
+        { id: 'pta', surname: 'ANDERSON', nameJa: 'ポール・トーマス・アンダーソン', nameEn: 'PAUL THOMAS ANDERSON', keywords: '重厚な人間ドラマ / 狂気と愛 / 圧倒的演出力' },
         { id: 'anderson', surname: 'ANDERSON', nameJa: 'ウェス・アンダーソン', nameEn: 'WES ANDERSON', keywords: 'シンメトリー構図 / 色彩設計 / 独自世界観' },
         { id: 'nolan', surname: 'NOLAN', nameJa: 'クリストファー・ノーラン', nameEn: 'CHRISTOPHER NOLAN', keywords: '時間構造/ 実写至上主義 / 究極の没入体験' },
         { id: 'reeves', surname: 'REEVES', nameJa: 'マット・リーヴス', nameEn: 'MATT REEVES', keywords: '感情的スケール / ダークな再解釈 / 緊張の演出' },
