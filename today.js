@@ -1,5 +1,5 @@
 (function () {
-    const EVENTS_URL = 'data/events.json?v=mann-scott-cameron-20261109';
+    const EVENTS_URL = 'data/events.json?v=mctiernan-20261115';
     const TYPE_LABELS = {
         movie_release: '公開日',
         director_birthday: '誕生日',
