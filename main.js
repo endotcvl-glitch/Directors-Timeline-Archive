@@ -991,6 +991,7 @@ const filmsData = [
     { year: 2017, type: 'zhao', title: "ザ・ライダー", context: "負傷した若きロデオ選手の生を、ドキュメンタリー的な繊細さで描く。" },
     { year: 2020, type: 'zhao', title: "ノマドランド", context: "車上生活者たちの風景と孤独を、静かな詩情で捉えた作品。" },
     { year: 2021, type: 'zhao', title: "エターナルズ", context: "神話的ヒーロー群像を、時間と人間性の物語として描いたMCU作品。" },
+    { year: 2025, type: 'zhao', title: "ハムネット", context: "シェイクスピア夫妻の愛と喪失を通して、『ハムレット』誕生の背景を静かな詩情で描いた作品。" },
 
     // Jon Watts
     { year: 2014, type: 'watts', title: "クラウン", context: "ピエロの衣装に呪われた男を描く、ワッツ初期のホラー。" },

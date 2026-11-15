@@ -811,9 +811,9 @@ body.index-page .theme-card-action {
 
 .theme-director--okuno,
 .timeline-head-card--okuno {
-    --director-gradient-start: #202832;
-    --director-gradient-end: #aebbc0;
-    --director-gradient-stops: var(--director-gradient-start), #3f4953, #626d75, #87939a, var(--director-gradient-end);
+    --director-gradient-start: #555350;
+    --director-gradient-end: #a38e7e;
+    --director-gradient-stops: var(--director-gradient-start), #67625b, #7a7066, #8e7f72, var(--director-gradient-end);
 }
 
 .theme-director--scott,
