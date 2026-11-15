@@ -66,6 +66,7 @@ const directorsInfo = {
     'scott': { fullNameEn: 'RIDLEY SCOTT', nameJa: 'リドリー・スコット', surname: 'SCOTT' },
     'abrams': { fullNameEn: 'J.J. ABRAMS', nameJa: 'J.J.エイブラムス', surname: 'ABRAMS' },
     'fennell': { fullNameEn: 'EMERALD FENNELL', nameJa: 'エメラルド・フェネル', surname: 'FENNELL' },
+    'okuno': { fullNameEn: 'CHLOE OKUNO', nameJa: 'クロエ・オクノ', surname: 'OKUNO' },
     'roseglass': { fullNameEn: 'ROSE GLASS', nameJa: 'ローズ・グラス', surname: 'GLASS' },
     'fargeat': { fullNameEn: 'CORALIE FARGEAT', nameJa: 'コラリー・ファルジャ', surname: 'FARGEAT' },
     'cunningham': { fullNameEn: 'SEAN S. CUNNINGHAM', nameJa: 'ショーン・S・カニンガム', surname: 'CUNNINGHAM' },
@@ -779,6 +780,12 @@ const filmsData = [
     { year: 2020, type: 'fennell', title: "プロミシング・ヤング・ウーマン", context: "復讐とケア、怒りとポップな色彩を交差させた長編監督デビュー作。" },
     { year: 2023, type: 'fennell', title: "Saltburn", context: "階級、欲望、視線のねじれをブラックユーモアで描く心理劇。" },
     { year: 2026, type: 'fennell', title: "嵐が丘", context: "エミリー・ブロンテの名作を、欲望と階級が渦巻く激しい愛の物語として再構築。" },
+
+    // Chloe Okuno
+    { year: 2014, type: 'okuno', title: "Slut", context: "郊外で暮らす孤独な少女を通して、自己像と他者の視線が恐怖へ変わる瞬間を描いた短編。" },
+    { year: 2021, type: 'okuno', title: "V/H/S/94「Storm Drain」", context: "地下水路を取材するテレビクルーが異形の存在へ近づいていく、ファウンド・フッテージ形式の一編。" },
+    { year: 2022, type: 'okuno', title: "ウォッチャー/視線", context: "見知らぬ土地で向かいの窓から監視されていると感じる女性の孤独と恐怖を、抑制された演出で描いた長編監督デビュー作。" },
+    { year: 2024, type: 'okuno', title: "Teacup", context: "孤立した農場で未知の脅威に直面する人々を描いたホラーシリーズ。", medium: "Series" },
 
     // Rose Glass
     { year: 2019, type: 'roseglass', title: "セイント・モード／狂信", context: "患者の魂を救う使命に取り憑かれた看護師を通じ、信仰と孤独が狂気へ変わる瞬間を描いた長編監督デビュー作。" },

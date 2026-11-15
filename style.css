@@ -809,6 +809,13 @@ body.index-page .theme-card-action {
     --director-gradient-stops: var(--director-gradient-start), #d27e6a, #c2a371, #b2c29a, var(--director-gradient-end);
 }
 
+.theme-director--okuno,
+.timeline-head-card--okuno {
+    --director-gradient-start: #202832;
+    --director-gradient-end: #aebbc0;
+    --director-gradient-stops: var(--director-gradient-start), #3f4953, #626d75, #87939a, var(--director-gradient-end);
+}
+
 .theme-director--scott,
 .timeline-head-card--scott {
     --director-gradient-start: #343c40;
@@ -5270,8 +5277,8 @@ body.timeline-featured-comparison .timeline-container::before {
 }
 
 .timeline-head-card--contemporary {
-    --director-gradient-start: #6f7074;
-    --director-gradient-end: #d0d1d4;
+    --director-gradient-start: #b9bbc1;
+    --director-gradient-end: #e7e8eb;
 }
 
 .timeline-head-card-copy {
