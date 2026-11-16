@@ -1,5 +1,5 @@
 (function () {
-    const EVENTS_URL = 'data/events.json?v=mctiernan-20261115';
+    const EVENTS_URL = 'data/events.json?v=reeves-villeneuve-wachowskis-20261116';
     const TYPE_LABELS = {
         movie_release: '公開日',
         director_birthday: '誕生日',

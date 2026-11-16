@@ -706,7 +706,7 @@ const filmsData = [
     { year: 2014, type: 'pta', title: "インヒアレント・ヴァイス", context: "ヒッピー文化の終焉。混迷を極めるサイケデリック・ミステリー。" },
     { year: 2017, type: 'pta', title: "ファントム・スレッド", context: "完璧主義の仕立て屋と若きミューズ。究極の支配と愛。" },
     { year: 2021, type: 'pta', title: "リコリス・ピザ", context: "1970年代サンフェルナンド・バレー。若さと恋の狂騒曲。" },
-    { year: 2025, type: 'pta', title: "One Battle After Another", context: "トマス・ピンチョンの小説を原作とした、PTA初のIMAX公開アクションコメディ。" },
+    { year: 2025, type: 'pta', title: "ワン・バトル・アフター・アナザー", context: "トマス・ピンチョンの小説を原作とした、PTA初のIMAX公開アクションコメディ。" },
 
     // George Miller
     { year: 1979, type: 'miller', title: "マッドマックス", context: "荒廃した近未来。家族を殺された警官の復讐劇。" },
