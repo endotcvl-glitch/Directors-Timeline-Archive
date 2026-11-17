@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/400.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/700.css">
-    <link rel="stylesheet" href="style.css?v=okuno-gradient-20261115-2">
+    <link rel="stylesheet" href="style.css?v=director-comparison-tray-20261117-10">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -99,10 +99,32 @@
             <p>&copy; 2026 Directors' Timeline Archive.</p>
         </footer>
 
-        <button class="compare-action" id="compare-btn">映画監督を選択してください</button>
+        <aside class="comparison-tray" id="comparison-tray" aria-label="選択中の映画監督" aria-live="polite">
+            <div class="comparison-tray-slots" aria-label="比較する監督">
+                <button type="button" class="comparison-tray-slot" data-comparison-slot="0" disabled>
+                    <span class="comparison-tray-slot-number" aria-hidden="true">1</span>
+                    <span class="comparison-tray-slot-gradient" aria-hidden="true"></span>
+                    <span class="comparison-tray-slot-name">監督を選択</span>
+                    <span class="comparison-tray-slot-remove" aria-hidden="true">×</span>
+                </button>
+                <button type="button" class="comparison-tray-slot" data-comparison-slot="1" disabled>
+                    <span class="comparison-tray-slot-number" aria-hidden="true">2</span>
+                    <span class="comparison-tray-slot-gradient" aria-hidden="true"></span>
+                    <span class="comparison-tray-slot-name">監督を選択</span>
+                    <span class="comparison-tray-slot-remove" aria-hidden="true">×</span>
+                </button>
+            </div>
+            <button type="button" class="compare-action" id="compare-btn" disabled>
+                <span class="compare-action-copy">
+                    <span class="compare-action-main">映画監督を選択してください</span>
+                    <span class="compare-action-note">2人選ぶと作品年表を比較できます</span>
+                </span>
+                <span class="compare-action-arrow" aria-hidden="true">→</span>
+            </button>
+        </aside>
     </div>
 
-    <script src="home.js?v=add-chloe-okuno-20261115"></script>
+    <script src="home.js?v=director-comparison-tray-20261117-5"></script>
     <script src="navigation.js?v=x-icon-only-20260901"></script>
 </body>
 

@@ -240,6 +240,7 @@ function renderHeroTimelineMotion() {
 
 let selectedDirectors = [];
 let searchQuery = '';
+let selectionLimitTimer = null;
 
 function normalizeText(value) {
     return String(value || '')
@@ -416,7 +417,12 @@ function renderList() {
                 isSearching && !isMatch && !isSelected ? 'search-dimmed' : ''
             ].filter(Boolean).join(' ');
             item.href = `timeline.html?d1=${encodeURIComponent(dir.id)}`;
-            item.setAttribute('aria-label', `${dir.nameJa}の監督作品年表（クリックで比較対象に選択）`);
+            item.setAttribute('role', 'checkbox');
+            item.setAttribute('aria-label', isSelected
+                ? `${dir.nameJa}を比較対象から外す`
+                : `${dir.nameJa}を比較対象に選択する`
+            );
+            item.setAttribute('aria-checked', String(isSelected));
             item.innerHTML = `
                 <span class="director-item-gradient" aria-hidden="true"></span>
                 <span class="item-name-copy director-card-name-copy">
@@ -425,14 +431,17 @@ function renderList() {
                 </span>
             `;
             item.addEventListener('click', event => {
-                if (event.detail === 0) {
-                    return;
-                }
                 if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
                     return;
                 }
                 event.preventDefault();
                 toggleSelection(dir.id);
+            });
+            item.addEventListener('keydown', event => {
+                if (event.key === ' ') {
+                    event.preventDefault();
+                    toggleSelection(dir.id);
+                }
             });
             groupContainer.appendChild(item);
 
@@ -455,6 +464,14 @@ function renderList() {
 }
 
 function toggleSelection(id) {
+    const tray = document.getElementById('comparison-tray');
+
+    if (selectionLimitTimer) {
+        window.clearTimeout(selectionLimitTimer);
+        selectionLimitTimer = null;
+    }
+    tray?.classList.remove('selection-limit');
+
     const index = selectedDirectors.indexOf(id);
     if (index > -1) {
         selectedDirectors.splice(index, 1);
@@ -462,9 +479,8 @@ function toggleSelection(id) {
         if (selectedDirectors.length < 2) {
             selectedDirectors.push(id);
         } else {
-            // 3人目は選ばせず、2人まで
-            selectedDirectors.shift();
-            selectedDirectors.push(id);
+            showSelectionLimitMessage();
+            return;
         }
     }
     
@@ -472,45 +488,101 @@ function toggleSelection(id) {
 }
 
 function setCompareButtonContent(button, mainText, noteText = '') {
-    button.innerHTML = '';
+    let main = button.querySelector('.compare-action-main');
+    let note = button.querySelector('.compare-action-note');
 
-    const main = document.createElement('span');
-    main.className = 'compare-action-main';
+    if (!main) {
+        main = document.createElement('span');
+        main.className = 'compare-action-main';
+        button.prepend(main);
+    }
     main.textContent = mainText;
-    button.appendChild(main);
 
     if (noteText) {
-        const note = document.createElement('span');
-        note.className = 'compare-action-note';
+        if (!note) {
+            note = document.createElement('span');
+            note.className = 'compare-action-note';
+            main.insertAdjacentElement('afterend', note);
+        }
         note.textContent = noteText;
-        button.appendChild(note);
+        note.hidden = false;
+    } else if (note) {
+        note.hidden = true;
     }
+}
+
+function showSelectionLimitMessage() {
+    const tray = document.getElementById('comparison-tray');
+    const btn = document.getElementById('compare-btn');
+
+    if (!tray || !btn) {
+        return;
+    }
+
+    tray.classList.remove('selection-limit');
+    void tray.offsetWidth;
+    tray.classList.add('selection-limit');
+    setCompareButtonContent(btn, '監督を入れ替える場合にはどちらかを×で外してください');
+
+    selectionLimitTimer = window.setTimeout(() => {
+        tray.classList.remove('selection-limit');
+        selectionLimitTimer = null;
+
+        if (selectedDirectors.length === 2) {
+            setCompareButtonContent(btn, '2人の年表を比較する');
+        } else {
+            updateUI();
+        }
+    }, 2200);
 }
 
 function updateUI() {
     renderList();
     const btn = document.getElementById('compare-btn');
+    const tray = document.getElementById('comparison-tray');
+    const slots = Array.from(document.querySelectorAll('[data-comparison-slot]'));
 
-    if (!btn) {
+    if (!btn || !tray) {
         return;
     }
 
     const allItems = getAllDirectors();
+    const selectedItems = selectedDirectors.map(id => allItems.find(d => d.id === id)).filter(Boolean);
+
+    slots.forEach((slot, index) => {
+        const director = selectedItems[index];
+        const name = slot.querySelector('.comparison-tray-slot-name');
+
+        slot.className = 'comparison-tray-slot';
+        slot.disabled = !director;
+
+        if (director) {
+            slot.classList.add('is-filled', `theme-director--${director.id}`);
+            slot.setAttribute('aria-label', `${director.nameJa}を選択から外す`);
+            name.textContent = director.nameJa;
+            slot.onclick = () => toggleSelection(director.id);
+        } else {
+            slot.setAttribute('aria-label', `${index + 1}人目の監督は未選択です`);
+            name.textContent = '監督を選択';
+            slot.onclick = null;
+        }
+    });
+
+    tray.classList.toggle('visible', selectedItems.length > 0);
+    document.body.classList.toggle('has-director-selection', selectedItems.length > 0);
+    btn.disabled = selectedItems.length === 0;
 
     if (selectedDirectors.length === 1) {
-        const d1 = allItems.find(d => d.id === selectedDirectors[0]);
+        const d1 = selectedItems[0];
         setCompareButtonContent(
             btn,
-            `${d1.nameJa} の作品年表を見る`,
-            'もう1人映画監督を選ぶと2人の映画監督の作品年表の比較ができます'
+            `${d1.nameJa}の年表を見る`,
+            'もう1人選ぶと比較できます'
         );
-        btn.classList.add('visible');
     } else if (selectedDirectors.length === 2) {
-        const names = selectedDirectors.map(id => allItems.find(d => d.id === id).nameJa);
-        setCompareButtonContent(btn, `${names[0]} と ${names[1]} を比較する`);
-        btn.classList.add('visible');
+        setCompareButtonContent(btn, '2人の年表を比較する');
     } else {
-        btn.classList.remove('visible');
+        setCompareButtonContent(btn, '映画監督を選択してください', '2人選ぶと作品年表を比較できます');
     }
 }
 
