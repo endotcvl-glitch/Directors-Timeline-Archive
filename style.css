@@ -611,7 +611,7 @@ body.index-page .theme-director-gradient {
     padding: 0;
     border: 0;
     border-radius: 3px;
-    background: linear-gradient(to right, var(--director-gradient-stops, var(--director-gradient-start), var(--director-gradient-end)));
+    background: linear-gradient(var(--director-gradient-direction, to right), var(--director-gradient-stops, var(--director-gradient-start), var(--director-gradient-end)));
     box-shadow: none;
 }
 
@@ -1192,6 +1192,28 @@ body.index-page .theme-card-action {
     --director-gradient-start: #243c77;
     --director-gradient-end: #d43b44;
     --director-gradient-stops: var(--director-gradient-start), #603a81, #93327a, #bc2c64, var(--director-gradient-end);
+}
+
+.theme-director--krasinski,
+.timeline-head-card--krasinski {
+    --director-gradient-direction: to right;
+    --director-gradient-start: #302022;
+    --director-gradient-end: #c56850;
+    --director-gradient-stops: var(--director-gradient-start), #543032, #79413f, #9f5349, var(--director-gradient-end);
+}
+
+.theme-director--whannell,
+.timeline-head-card--whannell {
+    --director-gradient-start: #17283d;
+    --director-gradient-end: #dc514f;
+    --director-gradient-stops: var(--director-gradient-start), #3e365f, #773c71, #b23e6a, var(--director-gradient-end);
+}
+
+.theme-director--sandberg,
+.timeline-head-card--sandberg {
+    --director-gradient-start: #151d2b;
+    --director-gradient-end: #9eafb9;
+    --director-gradient-stops: var(--director-gradient-start), #333e4c, #54616e, #788793, var(--director-gradient-end);
 }
 
 @media (max-width: 1140px) and (min-width: 821px) {
@@ -3286,7 +3308,7 @@ header {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        to right,
+        var(--director-gradient-direction, to right),
         var(
             --director-gradient-stops,
             var(--director-gradient-start, transparent),
@@ -5441,7 +5463,7 @@ body.timeline-featured-comparison .timeline-container::before {
     width: 100%;
     height: clamp(112px, 11vw, 148px);
     border-radius: 3px;
-    background: linear-gradient(to right, var(--director-gradient-stops, var(--director-gradient-start, #6f7074), var(--director-gradient-end, #d0d1d4)));
+    background: linear-gradient(var(--director-gradient-direction, to right), var(--director-gradient-stops, var(--director-gradient-start, #6f7074), var(--director-gradient-end, #d0d1d4)));
 }
 
 .timeline-head-card--contemporary {
@@ -5730,7 +5752,7 @@ body.timeline-featured-comparison .timeline-row .episode-label {
     height: 100%;
     border-radius: 3px;
     background: linear-gradient(
-        to right,
+        var(--director-gradient-direction, to right),
         var(
             --director-gradient-stops,
             var(--director-gradient-start, #6f7074),
