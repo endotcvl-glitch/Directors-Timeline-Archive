@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/400.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/700.css">
-    <link rel="stylesheet" href="style.css?v=director-comparison-tray-20261117-10">
+    <link rel="stylesheet" href="style.css?v=director-sort-20261119">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -64,7 +64,12 @@
             <input type="text" id="director-search" placeholder="監督名で検索" aria-label="監督名で検索" autocomplete="off">
         </div>
 
-        <nav class="director-decade-nav" aria-label="年代から監督を探す">
+        <div class="director-view-tabs" role="tablist" aria-label="監督一覧の並び順">
+            <button type="button" id="director-tab-decade" role="tab" aria-selected="true" aria-controls="director-grid" data-director-view="decade">年代別</button>
+            <button type="button" id="director-tab-kana" role="tab" aria-selected="false" aria-controls="director-grid" tabindex="-1" data-director-view="kana">五十音順（姓）</button>
+        </div>
+
+        <nav class="director-decade-nav" id="director-group-nav" aria-label="年代から監督を探す">
             <a href="#directors-2020">2020年代</a>
             <a href="#directors-2010">2010年代</a>
             <a href="#directors-2000">2000年代</a>
@@ -75,7 +80,7 @@
             <a href="#directors-1950">1950年代</a>
         </nav>
 
-        <main class="director-grid" id="director-grid">
+        <main class="director-grid" id="director-grid" role="tabpanel" aria-labelledby="director-tab-decade" tabindex="0">
             <!-- Director cards will be injected here -->
         </main>
 
@@ -124,7 +129,7 @@
         </aside>
     </div>
 
-    <script src="home.js?v=director-comparison-tray-20261117-5"></script>
+    <script src="home.js?v=director-sort-20261119"></script>
     <script src="navigation.js?v=x-icon-only-20260901"></script>
 </body>
 
