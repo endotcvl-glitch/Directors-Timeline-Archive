@@ -1,5 +1,6 @@
 // --- Master Data ---
 const directorsInfo = {
+    'krasinski': { fullNameEn: 'JOHN KRASINSKI', nameJa: 'ジョン・クラシンスキー', surname: 'KRASINSKI' },
     'whannell': { fullNameEn: 'LEIGH WHANNELL', nameJa: 'リー・ワネル', surname: 'WHANNELL' },
     'sandberg': { fullNameEn: 'DAVID F. SANDBERG', nameJa: 'デヴィッド・F・サンドバーグ', surname: 'SANDBERG' },
     'kubrick': { fullNameEn: 'STANLEY KUBRICK', nameJa: 'スタンリー・キューブリック', surname: 'KUBRICK' },
@@ -78,6 +79,13 @@ const directorsInfo = {
 };
 
 const filmsData = [
+    // John Krasinski
+    { year: 2009, type: 'krasinski', title: "Brief Interviews with Hideous Men", context: "デヴィッド・フォスター・ウォレスの短編集をもとに、男性たちへのインタビューを通して人間関係を描いた長編監督デビュー作。" },
+    { year: 2016, type: 'krasinski', title: "最高の家族の見つけかた", context: "母の病気をきっかけに故郷へ戻った男性が、家族との関係や自分の将来に向き合うコメディドラマ。" },
+    { year: 2018, type: 'krasinski', title: "クワイエット・プレイス", context: "音に反応する怪物がいる世界で、声を出さずに暮らす家族のサバイバルを描いたホラー。" },
+    { year: 2021, type: 'krasinski', title: "クワイエット・プレイス 破られた沈黙", context: "家を離れた家族が外の世界へ踏み出し、新たな生存者と脅威に出会う続編。" },
+    { year: 2024, type: 'krasinski', title: "ブルー きみは大丈夫", context: "空想の友達が見える少女が、忘れられた彼らと子どもたちを再び結びつけようとするファンタジー。" },
+
     // Leigh Whannell
     { year: 2015, type: 'whannell', title: "インシディアス 序章", context: "霊能力者エリーズと少女の出会いを描く、シリーズの前日譚にあたる長編監督デビュー作。" },
     { year: 2018, type: 'whannell', title: "アップグレード", context: "身体に埋め込まれたAIの力を借りて復讐する男を描く、SFアクションスリラー。" },

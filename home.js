@@ -50,6 +50,7 @@ const directors = [
         { id: 'wachowskis', surname: 'WACHOWSKIS', surnameJa: 'ウォシャウスキー', nameJa: 'ラナ＆リリー・ウォシャウスキー', nameEn: 'THE WACHOWSKIS', keywords: '革新的ビジュアル / 仮想現実 / 運命と解放' }
     ]},
     { category: '2000 -', items: [
+        { id: 'krasinski', surname: 'KRASINSKI', surnameJa: 'クラシンスキー', nameJa: 'ジョン・クラシンスキー', nameEn: 'JOHN KRASINSKI', keywords: '俳優と監督 / 静寂のホラー / 家族と想像力' },
         { id: 'favreau', surname: 'FAVREAU', surnameJa: 'ファヴロー', nameJa: 'ジョン・ファヴロー', nameEn: 'JON FAVREAU', keywords: 'ポップな娯楽性 / MCUの起点 / 実写とCGの融合' },
         { id: 'lordmiller', surname: 'LORD & MILLER', surnameJa: 'ロード', nameJa: 'フィル・ロード＆クリス・ミラー', nameEn: 'PHIL LORD & CHRISTOPHER MILLER', keywords: 'メタユーモア / ジャンル解体 / ポップな発明力' },
         { id: 'gunn', surname: 'GUNN', surnameJa: 'ガン', nameJa: 'ジェームズ・ガン', nameEn: 'JAMES GUNN', keywords: '異端のチーム劇 / 音楽とユーモア / 感情の爆発' },
