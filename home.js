@@ -67,6 +67,8 @@ const directors = [
         { id: 'davidgordongreen', surname: 'GREEN', surnameJa: 'グリーン', nameJa: 'デヴィッド・ゴードン・グリーン', nameEn: 'DAVID GORDON GREEN', keywords: '南部の風景 / コメディと哀感 / ホラー再構築' }
     ]},
     { category: '2010 -', items: [
+        { id: 'whannell', surname: 'WHANNELL', surnameJa: 'ワネル', nameJa: 'リー・ワネル', nameEn: 'LEIGH WHANNELL', keywords: 'SFホラー / 身体とテクノロジー / 古典モンスターの再解釈' },
+        { id: 'sandberg', surname: 'SANDBERG', surnameJa: 'サンドバーグ', nameJa: 'デヴィッド・F・サンドバーグ', nameEn: 'DAVID F. SANDBERG', keywords: '暗闇の恐怖 / 短編から長編へ / ホラーとヒーロー映画' },
         { id: 'garland', surname: 'GARLAND', surnameJa: 'ガーランド', nameJa: 'アレックス・ガーランド', nameEn: 'ALEX GARLAND', keywords: '知的SF / 不穏な身体感覚 / 人間とテクノロジー' },
         { id: 'kosinski', surname: 'KOSINSKI', surnameJa: 'コシンスキー', nameJa: 'ジョセフ・コシンスキー', nameEn: 'JOSEPH KOSINSKI', keywords: '精密な映像設計 / 速度と機械美 / 大作エンタメ' },
         { id: 'gerwig', surname: 'GERWIG', surnameJa: 'ガーウィグ', nameJa: 'グレタ・ガーウィグ', nameEn: 'GRETA GERWIG', keywords: '現代女性の肖像 / 知的なユーモア / 瑞々しい感性' },

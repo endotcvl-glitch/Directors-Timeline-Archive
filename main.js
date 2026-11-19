@@ -1,5 +1,7 @@
 // --- Master Data ---
 const directorsInfo = {
+    'whannell': { fullNameEn: 'LEIGH WHANNELL', nameJa: 'リー・ワネル', surname: 'WHANNELL' },
+    'sandberg': { fullNameEn: 'DAVID F. SANDBERG', nameJa: 'デヴィッド・F・サンドバーグ', surname: 'SANDBERG' },
     'kubrick': { fullNameEn: 'STANLEY KUBRICK', nameJa: 'スタンリー・キューブリック', surname: 'KUBRICK' },
     'lucas': { fullNameEn: 'GEORGE LUCAS', nameJa: 'ジョージ・ルーカス', surname: 'LUCAS' },
     'spielberg': { fullNameEn: 'STEVEN SPIELBERG', nameJa: 'スティーヴン・スピルバーグ', surname: 'SPIELBERG' },
@@ -76,6 +78,19 @@ const directorsInfo = {
 };
 
 const filmsData = [
+    // Leigh Whannell
+    { year: 2015, type: 'whannell', title: "インシディアス 序章", context: "霊能力者エリーズと少女の出会いを描く、シリーズの前日譚にあたる長編監督デビュー作。" },
+    { year: 2018, type: 'whannell', title: "アップグレード", context: "身体に埋め込まれたAIの力を借りて復讐する男を描く、SFアクションスリラー。" },
+    { year: 2020, type: 'whannell', title: "透明人間", context: "見えない脅威に追われる女性を通して、支配と暴力の恐怖を描いた古典ホラーの再映画化。" },
+    { year: 2025, type: 'whannell', title: "ウルフマン", context: "傷を負って変貌していく父親とその家族を描き、狼男の物語を家族の恐怖として再構成。" },
+
+    // David F. Sandberg
+    { year: 2016, type: 'sandberg', title: "ライト／オフ", context: "明かりを消すと現れる怪異に追われる姉弟を描き、自作短編を長編化した監督デビュー作。" },
+    { year: 2017, type: 'sandberg', title: "アナベル 死霊人形の誕生", context: "人形職人の家で暮らし始めた少女たちを通して、呪いの人形の起源を描くホラー。" },
+    { year: 2019, type: 'sandberg', title: "シャザム!", context: "魔法の言葉で大人のヒーローに変身する少年を描いた、家族と成長をめぐるDC映画。" },
+    { year: 2023, type: 'sandberg', title: "シャザム!～神々の怒り～", context: "神々の娘たちに立ち向かう少年たちの、家族の絆とヒーローとしての成長を描く続編。" },
+    { year: 2025, type: 'sandberg', title: "アンティル・ドーン", context: "死ぬたびに夜の始まりへ戻る若者たちが、変わり続ける恐怖からの脱出を目指すゲーム原作ホラー。" },
+
     // Stanley Kubrick
     { year: 1953, type: 'kubrick', title: "非情の罠", context: "敵地に墜落した4人の兵士を描いたデビュー作。" },
     { year: 1955, type: 'kubrick', title: "非情の標的", context: "引退を決意したボクサーが事件に巻き込まれるノワール映画。" },

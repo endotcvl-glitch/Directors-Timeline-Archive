@@ -6,15 +6,15 @@
     </url>
     <url>
         <loc>https://directors-timeline-archive.com/directors.html</loc>
-        <lastmod>2026-11-15</lastmod>
+        <lastmod>2026-11-19</lastmod>
     </url>
     <url>
         <loc>https://directors-timeline-archive.com/timeline.html</loc>
-        <lastmod>2026-11-15</lastmod>
+        <lastmod>2026-11-19</lastmod>
     </url>
     <url>
         <loc>https://directors-timeline-archive.com/years.html</loc>
-        <lastmod>2026-11-09</lastmod>
+        <lastmod>2026-11-19</lastmod>
     </url>
     <url>
         <loc>https://directors-timeline-archive.com/today.html</loc>
@@ -339,5 +339,13 @@
     <url>
         <loc>https://directors-timeline-archive.com/timeline.html?d1=snyder</loc>
         <lastmod>2026-11-13</lastmod>
+    </url>
+    <url>
+        <loc>https://directors-timeline-archive.com/timeline.html?d1=whannell</loc>
+        <lastmod>2026-11-19</lastmod>
+    </url>
+    <url>
+        <loc>https://directors-timeline-archive.com/timeline.html?d1=sandberg</loc>
+        <lastmod>2026-11-19</lastmod>
     </url>
 </urlset>
