@@ -1593,6 +1593,14 @@ function renderTimeline() {
     setTimelineSeo(params);
     updateHeaderLabels(d1, d2, hasExplicitDirector);
 
+    const intro = document.getElementById('timeline-intro');
+    const showIntro = hasExplicitDirector && d1 === 'gunn' && !d2;
+    intro.textContent = showIntro
+        ? '『スリザー』から『ガーディアンズ・オブ・ギャラクシー』シリーズ、2025年の『スーパーマン』まで、ジェームズ・ガンの監督作品を公開年順にたどれます。'
+        : '';
+    intro.hidden = !showIntro;
+    document.body.classList.toggle('timeline-has-intro', showIntro);
+
     const container = document.getElementById('timeline-container');
     const labels = document.querySelector('.director-labels');
     container.innerHTML = '';

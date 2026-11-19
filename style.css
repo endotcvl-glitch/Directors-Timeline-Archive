@@ -5404,8 +5404,17 @@ body.index-page .site-footer p {
 }
 
 /* Timeline director card layout */
+body.timeline-featured-comparison {
+    --timeline-title-top: 84px;
+    --timeline-intro-space: 0px;
+}
+
+body.timeline-has-intro {
+    --timeline-intro-space: 48px;
+}
+
 body.timeline-featured-comparison .timeline-page-title {
-    top: 84px;
+    top: var(--timeline-title-top);
     max-width: min(calc(100% - 3rem), 1100px);
     padding: 0;
     border-radius: 0;
@@ -5419,9 +5428,24 @@ body.timeline-featured-comparison .timeline-page-title span {
     display: block;
 }
 
+.timeline-intro {
+    position: absolute;
+    top: calc(var(--timeline-title-top) + 60px);
+    left: 50%;
+    z-index: 3;
+    width: min(calc(100% - 2rem), 680px);
+    margin: 0;
+    transform: translateX(-50%);
+    color: var(--secondary-text);
+    font-family: var(--font-interface);
+    font-size: var(--text-body-s);
+    line-height: var(--text-line-height);
+    text-align: center;
+}
+
 body.timeline-featured-comparison .director-labels {
     position: absolute;
-    top: 152px;
+    top: calc(152px + var(--timeline-intro-space));
     align-items: start;
     padding: 0 clamp(1.5rem, 4vw, 4rem);
     background: transparent;
@@ -5437,11 +5461,11 @@ body.timeline-featured-comparison .jump-nav {
 }
 
 body.timeline-featured-comparison .timeline-container {
-    padding-top: 420px;
+    padding-top: calc(420px + var(--timeline-intro-space));
 }
 
 body.timeline-featured-comparison .timeline-container::before {
-    top: 420px;
+    top: calc(420px + var(--timeline-intro-space));
 }
 
 .timeline-head-card {
@@ -5521,14 +5545,17 @@ body.timeline-featured-comparison .timeline-row .episode-label {
 }
 
 @media (min-width: 900px) {
+    body.timeline-featured-comparison {
+        --timeline-title-top: 164px;
+    }
+
     body.timeline-featured-comparison .timeline-page-title {
-        top: 164px;
         width: 720px;
         max-width: 720px;
     }
 
     body.timeline-featured-comparison .director-labels {
-        top: 232px;
+        top: calc(232px + var(--timeline-intro-space));
         left: 50%;
         width: 720px;
         grid-template-columns: 290px 140px 290px;
@@ -5548,11 +5575,11 @@ body.timeline-featured-comparison .timeline-row .episode-label {
     }
 
     body.timeline-featured-comparison .timeline-container.single-mode {
-        padding-top: 360px;
+        padding-top: calc(360px + var(--timeline-intro-space));
     }
 
     body.timeline-featured-comparison .timeline-container::before {
-        top: 120px;
+        top: calc(120px + var(--timeline-intro-space));
     }
 
     body.timeline-featured-comparison .timeline-row {
@@ -5586,20 +5613,24 @@ body.timeline-featured-comparison .timeline-row .episode-label {
 }
 
 @media (max-width: 899px) {
-    body.timeline-featured-comparison .timeline-page-title {
-        top: 118px;
+    body.timeline-featured-comparison {
+        --timeline-title-top: 118px;
+    }
+
+    body.timeline-has-intro {
+        --timeline-intro-space: 64px;
     }
 
     body.timeline-featured-comparison .director-labels {
-        top: 170px;
+        top: calc(170px + var(--timeline-intro-space));
     }
 
     body.timeline-featured-comparison .timeline-container {
-        padding-top: 390px;
+        padding-top: calc(390px + var(--timeline-intro-space));
     }
 
     body.timeline-featured-comparison .timeline-container::before {
-        top: 390px;
+        top: calc(390px + var(--timeline-intro-space));
     }
 
     body.timeline-featured-comparison .timeline-row .year-label,
@@ -5613,14 +5644,17 @@ body.timeline-featured-comparison .timeline-row .episode-label {
 }
 
 @media (max-width: 599px) {
+    body.timeline-featured-comparison {
+        --timeline-title-top: 94px;
+    }
+
     body.timeline-featured-comparison .timeline-page-title {
-        top: 94px;
         width: calc(100% - 24px);
         max-width: none;
     }
 
     body.timeline-featured-comparison .director-labels {
-        top: 190px;
+        top: calc(190px + var(--timeline-intro-space));
         grid-template-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
         min-height: 0;
         padding: 0 12px;
@@ -5629,11 +5663,11 @@ body.timeline-featured-comparison .timeline-row .episode-label {
     }
 
     body.timeline-featured-comparison .timeline-container {
-        padding-top: 335px;
+        padding-top: calc(335px + var(--timeline-intro-space));
     }
 
     body.timeline-featured-comparison .timeline-container::before {
-        top: 335px;
+        top: calc(335px + var(--timeline-intro-space));
     }
 
     .timeline-head-card {
