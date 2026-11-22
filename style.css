@@ -1216,6 +1216,13 @@ body.index-page .theme-card-action {
     --director-gradient-stops: var(--director-gradient-start), #333e4c, #54616e, #788793, var(--director-gradient-end);
 }
 
+.theme-director--alvarez,
+.timeline-head-card--alvarez {
+    --director-gradient-start: #24171a;
+    --director-gradient-end: #b33a2f;
+    --director-gradient-stops: var(--director-gradient-start), #452126, #69282b, #8e302e, var(--director-gradient-end);
+}
+
 @media (max-width: 1140px) and (min-width: 821px) {
     body.index-page .theme-list {
         grid-template-columns: repeat(2, minmax(0, 540px));

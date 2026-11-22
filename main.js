@@ -3,6 +3,7 @@ const directorsInfo = {
     'krasinski': { fullNameEn: 'JOHN KRASINSKI', nameJa: 'ジョン・クラシンスキー', surname: 'KRASINSKI' },
     'whannell': { fullNameEn: 'LEIGH WHANNELL', nameJa: 'リー・ワネル', surname: 'WHANNELL' },
     'sandberg': { fullNameEn: 'DAVID F. SANDBERG', nameJa: 'デヴィッド・F・サンドバーグ', surname: 'SANDBERG' },
+    'alvarez': { fullNameEn: 'FEDE ÁLVAREZ', nameJa: 'フェデ・アルバレス', surname: 'ÁLVAREZ' },
     'kubrick': { fullNameEn: 'STANLEY KUBRICK', nameJa: 'スタンリー・キューブリック', surname: 'KUBRICK' },
     'lucas': { fullNameEn: 'GEORGE LUCAS', nameJa: 'ジョージ・ルーカス', surname: 'LUCAS' },
     'spielberg': { fullNameEn: 'STEVEN SPIELBERG', nameJa: 'スティーヴン・スピルバーグ', surname: 'SPIELBERG' },
@@ -98,6 +99,12 @@ const filmsData = [
     { year: 2019, type: 'sandberg', title: "シャザム!", context: "魔法の言葉で大人のヒーローに変身する少年を描いた、家族と成長をめぐるDC映画。" },
     { year: 2023, type: 'sandberg', title: "シャザム!～神々の怒り～", context: "神々の娘たちに立ち向かう少年たちの、家族の絆とヒーローとしての成長を描く続編。" },
     { year: 2025, type: 'sandberg', title: "アンティル・ドーン", context: "死ぬたびに夜の始まりへ戻る若者たちが、変わり続ける恐怖からの脱出を目指すゲーム原作ホラー。" },
+
+    // Fede Álvarez
+    { year: 2013, type: 'alvarez', title: "死霊のはらわた", context: "山小屋で禁断の書を開いた若者たちが、悪霊の残酷な襲撃にさらされる。サム・ライミの1981年作を再構築した長編監督デビュー作。" },
+    { year: 2016, type: 'alvarez', title: "ドント・ブリーズ", context: "盲目の老人宅へ侵入した若者たちが、暗闇の中で想像を超える反撃に追い詰められる密室スリラー。" },
+    { year: 2018, type: 'alvarez', title: "蜘蛛の巣を払う女", context: "ハッカーのリスベット・サランデルが、世界を揺るがすサイバー兵器をめぐる陰謀に巻き込まれるサスペンス。" },
+    { year: 2024, type: 'alvarez', title: "エイリアン：ロムルス", context: "廃墟化した宇宙ステーションを探索する若者たちが、宇宙最恐の生命体と遭遇するSFホラー。" },
 
     // Stanley Kubrick
     { year: 1953, type: 'kubrick', title: "非情の罠", context: "敵地に墜落した4人の兵士を描いたデビュー作。" },

@@ -1,5 +1,5 @@
 (function () {
-    const EVENTS_URL = 'data/events.json?v=reeves-villeneuve-wachowskis-20261116';
+    const EVENTS_URL = 'data/events.json?v=wan-derrickson-chazelle-green-20261122';
     const TYPE_LABELS = {
         movie_release: '公開日',
         director_birthday: '誕生日',
