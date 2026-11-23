@@ -816,6 +816,13 @@ body.index-page .theme-card-action {
     --director-gradient-stops: var(--director-gradient-start), #67625b, #7a7066, #8e7f72, var(--director-gradient-end);
 }
 
+.theme-director--currybarker,
+.timeline-head-card--currybarker {
+    --director-gradient-start: #1e2638;
+    --director-gradient-end: #bd737b;
+    --director-gradient-stops: var(--director-gradient-start), #403953, #694a68, #955d75, var(--director-gradient-end);
+}
+
 .theme-director--scott,
 .timeline-head-card--scott {
     --director-gradient-start: #343c40;

@@ -77,6 +77,7 @@ const directorsInfo = {
     'verhoeven': { fullNameEn: 'PAUL VERHOEVEN', nameJa: 'ポール・バーホーベン', surname: 'VERHOEVEN' },
     'mctiernan': { fullNameEn: 'JOHN MCTIERNAN', nameJa: 'ジョン・マクティアナン', surname: 'MCTIERNAN' },
     'davidgordongreen': { fullNameEn: 'DAVID GORDON GREEN', nameJa: 'デヴィッド・ゴードン・グリーン', surname: 'GREEN' },
+    'currybarker': { fullNameEn: 'CURRY BARKER', nameJa: 'カリー・バーカー', surname: 'BARKER' },
 };
 
 const filmsData = [
@@ -816,6 +817,10 @@ const filmsData = [
     { year: 2021, type: 'okuno', title: "V/H/S/94「Storm Drain」", context: "地下水路を取材するテレビクルーが異形の存在へ近づいていく、ファウンド・フッテージ形式の一編。" },
     { year: 2022, type: 'okuno', title: "ウォッチャー/視線", context: "見知らぬ土地で向かいの窓から監視されていると感じる女性の孤独と恐怖を、抑制された演出で描いた長編監督デビュー作。" },
     { year: 2024, type: 'okuno', title: "Teacup", context: "孤立した農場で未知の脅威に直面する人々を描いたホラーシリーズ。", medium: "Series" },
+
+    // Curry Barker
+    { year: 2024, type: 'currybarker', title: "Milk & Serial", context: "誕生日の悪ふざけを発端に、二人の動画配信者の関係が取り返しのつかない方向へ進むファウンド・フッテージ・ホラー。" },
+    { year: 2026, type: 'currybarker', title: "オブセッション 災愛", context: "片思いを成就させる願いが歪んだ執着へ変わっていく過程を、ブラックユーモアと超常的な恐怖で描いたホラー。" },
 
     // Rose Glass
     { year: 2019, type: 'roseglass', title: "セイント・モード／狂信", context: "患者の魂を救う使命に取り憑かれた看護師を通じ、信仰と孤独が狂気へ変わる瞬間を描いた長編監督デビュー作。" },

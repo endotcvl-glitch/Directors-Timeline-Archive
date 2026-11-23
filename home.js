@@ -90,7 +90,8 @@ const directors = [
     ]},
     { category: '2020 -', items: [
         { id: 'fennell', surname: 'FENNELL', surnameJa: 'フェネル', nameJa: 'エメラルド・フェネル', nameEn: 'EMERALD FENNELL', keywords: '復讐と欲望 / ブラックユーモア / 階級と視線' },
-        { id: 'okuno', surname: 'OKUNO', surnameJa: 'オクノ', nameJa: 'クロエ・オクノ', nameEn: 'CHLOE OKUNO', keywords: '心理的な恐怖 / 視線と孤独 / 静かな緊張' }
+        { id: 'okuno', surname: 'OKUNO', surnameJa: 'オクノ', nameJa: 'クロエ・オクノ', nameEn: 'CHLOE OKUNO', keywords: '心理的な恐怖 / 視線と孤独 / 静かな緊張' },
+        { id: 'currybarker', surname: 'BARKER', surnameJa: 'バーカー', nameJa: 'カリー・バーカー', nameEn: 'CURRY BARKER', keywords: 'DIYホラー / 日常に潜む狂気 / YouTube発の映像表現' }
     ]}
 ];
 
