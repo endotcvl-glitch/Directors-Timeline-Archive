@@ -93,7 +93,8 @@ const directors = [
     { category: '2020 -', items: [
         { id: 'fennell', surname: 'FENNELL', surnameJa: 'フェネル', nameJa: 'エメラルド・フェネル', nameEn: 'EMERALD FENNELL', keywords: '復讐と欲望 / ブラックユーモア / 階級と視線' },
         { id: 'okuno', surname: 'OKUNO', surnameJa: 'オクノ', nameJa: 'クロエ・オクノ', nameEn: 'CHLOE OKUNO', keywords: '心理的な恐怖 / 視線と孤独 / 静かな緊張' },
-        { id: 'currybarker', surname: 'BARKER', surnameJa: 'バーカー', nameJa: 'カリー・バーカー', nameEn: 'CURRY BARKER', keywords: 'DIYホラー / 日常に潜む狂気 / YouTube発の映像表現' }
+        { id: 'currybarker', surname: 'BARKER', surnameJa: 'バーカー', nameJa: 'カリー・バーカー', nameEn: 'CURRY BARKER', keywords: 'DIYホラー / 日常に潜む狂気 / YouTube発の映像表現' },
+        { id: 'philippou', surname: 'PHILIPPOU', surnameJa: 'フィリッポウ', nameJa: 'ダニー＆マイケル・フィリッポウ', nameEn: 'DANNY & MICHAEL PHILIPPOU', keywords: '双子の映像作家 / 儀式と憑依 / 身体的な恐怖' }
     ]}
 ];
 
@@ -132,6 +133,16 @@ const comparisonThemes = [
         title: '新時代のホラー牽引者',
         description: 'ホラー以後の作品選びを比べます',
         directorIds: ['wan', 'aster']
+    },
+    {
+        title: '身近に忍び寄る恐怖',
+        description: '視線と孤独、喪失と憑依。それぞれの長編デビュー作から、恐怖の描き方をたどります。',
+        directorIds: ['okuno', 'philippou']
+    },
+    {
+        title: 'YouTubeから映画へ',
+        description: 'ネットで磨いた映像表現が、長編ホラーへ広がる歩みを比べます。',
+        directorIds: ['currybarker', 'philippou']
     },
     {
         title: '身体をめぐる欲望と恐怖',

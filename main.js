@@ -80,6 +80,7 @@ const directorsInfo = {
     'currybarker': { fullNameEn: 'CURRY BARKER', nameJa: 'カリー・バーカー', surname: 'BARKER' },
     'tiwest': { fullNameEn: 'TI WEST', nameJa: 'タイ・ウェスト', surname: 'WEST' },
     'kirillsokolov': { fullNameEn: 'KIRILL SOKOLOV', nameJa: 'キリル・ソコロフ', surname: 'SOKOLOV' },
+    'philippou': { fullNameEn: 'DANNY & MICHAEL PHILIPPOU', nameJa: 'ダニー＆マイケル・フィリッポウ', surname: 'PHILIPPOU' },
 };
 
 const filmsData = [
@@ -843,6 +844,10 @@ const filmsData = [
     { year: 2018, type: 'kirillsokolov', title: "とっととくたばれ", context: "恋人の父親を殺そうとする青年と悪徳刑事の対決を、血みどろの暴力とブラックユーモアで加速させる長編監督デビュー作。" },
     { year: 2021, type: 'kirillsokolov', title: "No Looking Back", context: "刑務所を出た母親と娘、祖母の追跡劇を通して、家族の愛憎を過激なアクションと乾いた笑いで描いた犯罪コメディ。" },
     { year: 2026, type: 'kirillsokolov', title: "ゼイ・ウィル・キル・ユー", context: "悪魔崇拝の一団が潜む高層ビルで、生贄に選ばれた女性が反撃へ転じるホラー・アクション・コメディ。" },
+
+    // Danny & Michael Philippou
+    { year: 2022, type: 'philippou', title: "TALK TO ME／トーク・トゥ・ミー", context: "謎の手を握って死者を憑依させる遊びにのめり込む若者たちを描き、喪失と依存を身体的な恐怖へ変えた長編監督デビュー作。" },
+    { year: 2025, type: 'philippou', title: "ブリング・ハー・バック", context: "里親に引き取られた兄妹が、家に隠された不気味な儀式と恐るべき願いに巻き込まれていくホラー。" },
 
     // Rose Glass
     { year: 2019, type: 'roseglass', title: "セイント・モード／狂信", context: "患者の魂を救う使命に取り憑かれた看護師を通じ、信仰と孤独が狂気へ変わる瞬間を描いた長編監督デビュー作。" },
