@@ -823,6 +823,20 @@ body.index-page .theme-card-action {
     --director-gradient-stops: var(--director-gradient-start), #403953, #694a68, #955d75, var(--director-gradient-end);
 }
 
+.theme-director--tiwest,
+.timeline-head-card--tiwest {
+    --director-gradient-start: #8e182b;
+    --director-gradient-end: #f3d6a3;
+    --director-gradient-stops: var(--director-gradient-start), #ab4e3b, #c47c55, #dca978, var(--director-gradient-end);
+}
+
+.theme-director--kirillsokolov,
+.timeline-head-card--kirillsokolov {
+    --director-gradient-start: #243b2d;
+    --director-gradient-end: #cfca62;
+    --director-gradient-stops: var(--director-gradient-start), #3f5e3f, #65834c, #95a757, var(--director-gradient-end);
+}
+
 .theme-director--scott,
 .timeline-head-card--scott {
     --director-gradient-start: #343c40;

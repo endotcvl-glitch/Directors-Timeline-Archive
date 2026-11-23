@@ -78,6 +78,8 @@ const directorsInfo = {
     'mctiernan': { fullNameEn: 'JOHN MCTIERNAN', nameJa: 'ジョン・マクティアナン', surname: 'MCTIERNAN' },
     'davidgordongreen': { fullNameEn: 'DAVID GORDON GREEN', nameJa: 'デヴィッド・ゴードン・グリーン', surname: 'GREEN' },
     'currybarker': { fullNameEn: 'CURRY BARKER', nameJa: 'カリー・バーカー', surname: 'BARKER' },
+    'tiwest': { fullNameEn: 'TI WEST', nameJa: 'タイ・ウェスト', surname: 'WEST' },
+    'kirillsokolov': { fullNameEn: 'KIRILL SOKOLOV', nameJa: 'キリル・ソコロフ', surname: 'SOKOLOV' },
 };
 
 const filmsData = [
@@ -821,6 +823,26 @@ const filmsData = [
     // Curry Barker
     { year: 2024, type: 'currybarker', title: "Milk & Serial", context: "誕生日の悪ふざけを発端に、二人の動画配信者の関係が取り返しのつかない方向へ進むファウンド・フッテージ・ホラー。" },
     { year: 2026, type: 'currybarker', title: "オブセッション 災愛", context: "片思いを成就させる願いが歪んだ執着へ変わっていく過程を、ブラックユーモアと超常的な恐怖で描いたホラー。" },
+
+    // Ti West
+    { year: 2005, type: 'tiwest', title: "The Roost", context: "旅の途中で古びた農場へ迷い込んだ若者たちを、低予算映画の質感とじわじわ高まる恐怖で描いた長編監督デビュー作。" },
+    { year: 2007, type: 'tiwest', title: "Trigger Man", context: "森へ狩りに出た若者たちが正体不明の狙撃手に追われる状況を、抑制された演出で描いたサバイバルスリラー。" },
+    { year: 2009, type: 'tiwest', title: "キャビン・フィーバー2", context: "感染が高校のプロムへ広がっていく惨劇を、残酷描写とブラックユーモアを交えて描いたホラー続編。" },
+    { year: 2009, type: 'tiwest', title: "ハウス・オブ・ザ・デビル", context: "奇妙な屋敷で留守番を引き受けた学生の一夜を、1980年代ホラーを思わせる緩やかな緊張と画面設計で描いた作品。" },
+    { year: 2011, type: 'tiwest', title: "インキーパーズ", context: "閉館間近のホテルで働く二人が怪異を調べ始める姿を、静かなユーモアと不穏な空気で描いた幽霊譚。" },
+    { year: 2012, type: 'tiwest', title: "V/H/S シンドローム", context: "複数の映像作家によるファウンド・フッテージ・アンソロジーで、ホテルを舞台にした一編を監督。" },
+    { year: 2012, type: 'tiwest', title: "ABC・オブ・デス", context: "アルファベットを題材にしたホラーアンソロジーで、短編「M is for Miscarriage」を監督。" },
+    { year: 2013, type: 'tiwest', title: "サクラメント 死の楽園", context: "宗教共同体を取材する映像クルーの視点から、信仰と集団心理が惨劇へ変わる過程を描いたファウンド・フッテージ作品。" },
+    { year: 2016, type: 'tiwest', title: "バレー・オブ・バイオレンス", context: "小さな町へ立ち寄った流れ者の復讐を、古典的な構図と乾いたユーモアで描いた西部劇。" },
+    { year: 2022, type: 'tiwest', title: "X エックス", context: "1970年代の農場で映画を撮影する若者たちを通して、若さへの欲望と老いの恐怖を描いたスラッシャー。" },
+    { year: 2022, type: 'tiwest', title: "Pearl パール", context: "スターを夢見る若い女性の抑圧と狂気を、鮮やかな色彩と古典映画の様式で描いた『X エックス』の前日譚。" },
+    { year: 2024, type: 'tiwest', title: "MaXXXine マキシーン", context: "1980年代のハリウッドで成功を目指すマキシーンを、連続殺人事件と映画産業の欲望に重ねた三部作の完結編。" },
+    { year: 2026, type: 'tiwest', title: "クリスマス・キャロル 3人のゴーストたち", context: "チャールズ・ディケンズの古典を、亡霊と贖罪の物語としてタイ・ウェストが再構築した作品。" },
+
+    // Kirill Sokolov
+    { year: 2018, type: 'kirillsokolov', title: "とっととくたばれ", context: "恋人の父親を殺そうとする青年と悪徳刑事の対決を、血みどろの暴力とブラックユーモアで加速させる長編監督デビュー作。" },
+    { year: 2021, type: 'kirillsokolov', title: "No Looking Back", context: "刑務所を出た母親と娘、祖母の追跡劇を通して、家族の愛憎を過激なアクションと乾いた笑いで描いた犯罪コメディ。" },
+    { year: 2026, type: 'kirillsokolov', title: "ゼイ・ウィル・キル・ユー", context: "悪魔崇拝の一団が潜む高層ビルで、生贄に選ばれた女性が反撃へ転じるホラー・アクション・コメディ。" },
 
     // Rose Glass
     { year: 2019, type: 'roseglass', title: "セイント・モード／狂信", context: "患者の魂を救う使命に取り憑かれた看護師を通じ、信仰と孤独が狂気へ変わる瞬間を描いた長編監督デビュー作。" },

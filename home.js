@@ -65,7 +65,8 @@ const directors = [
         { id: 'wan', surname: 'WAN', surnameJa: 'ワン', nameJa: 'ジェームズ・ワン', nameEn: 'JAMES WAN', keywords: 'ホラーの新帝王 / 恐怖の視覚化 / スリラーの極致' },
         { id: 'derrickson', surname: 'DERRICKSON', surnameJa: 'デリクソン', nameJa: 'スコット・デリクソン', nameEn: 'SCOTT DERRICKSON', keywords: '超常ホラー / 信仰と恐怖 / ジャンル横断' },
         { id: 'chazelle', surname: 'CHAZELLE', surnameJa: 'チャゼル', nameJa: 'デイミアン・チャゼル', nameEn: 'DAMIEN CHAZELLE', keywords: '音楽と情熱 / 完璧なリズム / 夢と現実の交差' },
-        { id: 'davidgordongreen', surname: 'GREEN', surnameJa: 'グリーン', nameJa: 'デヴィッド・ゴードン・グリーン', nameEn: 'DAVID GORDON GREEN', keywords: '南部の風景 / コメディと哀感 / ホラー再構築' }
+        { id: 'davidgordongreen', surname: 'GREEN', surnameJa: 'グリーン', nameJa: 'デヴィッド・ゴードン・グリーン', nameEn: 'DAVID GORDON GREEN', keywords: '南部の風景 / コメディと哀感 / ホラー再構築' },
+        { id: 'tiwest', surname: 'WEST', surnameJa: 'ウェスト', nameJa: 'タイ・ウェスト', nameEn: 'TI WEST', keywords: 'スローバーンホラー / 映画史への眼差し / 欲望と名声' }
     ]},
     { category: '2010 -', items: [
         { id: 'whannell', surname: 'WHANNELL', surnameJa: 'ワネル', nameJa: 'リー・ワネル', nameEn: 'LEIGH WHANNELL', keywords: 'SFホラー / 身体とテクノロジー / 古典モンスターの再解釈' },
@@ -86,7 +87,8 @@ const directors = [
         { id: 'flanagan', surname: 'FLANAGAN', surnameJa: 'フラナガン', nameJa: 'マイク・フラナガン', nameEn: 'MIKE FLANAGAN', keywords: '情感あるホラー / 喪失と信仰 / スティーヴン・キング翻案' },
         { id: 'muschietti', surname: 'MUSCHIETTI', surnameJa: 'ムスキエティ', nameJa: 'アンディ・ムスキエティ', nameEn: 'ANDY MUSCHIETTI', keywords: '少年期の恐怖 / 怪異の視覚化 / 大作ホラー' },
         { id: 'cretton', surname: 'CRETTON', surnameJa: 'クレットン', nameJa: 'デスティン・ダニエル・クレットン', nameEn: 'DESTIN DANIEL CRETTON', keywords: '親密な人物描写 / 家族と共同体 / ヒーロー映画' },
-        { id: 'trachtenberg', surname: 'TRACHTENBERG', surnameJa: 'トラクテンバーグ', nameJa: 'ダン・トラクテンバーグ', nameEn: 'DAN TRACHTENBERG', keywords: 'ロジカルアクション演出 / サバイバルSF / シリーズ再解釈' }
+        { id: 'trachtenberg', surname: 'TRACHTENBERG', surnameJa: 'トラクテンバーグ', nameJa: 'ダン・トラクテンバーグ', nameEn: 'DAN TRACHTENBERG', keywords: 'ロジカルアクション演出 / サバイバルSF / シリーズ再解釈' },
+        { id: 'kirillsokolov', surname: 'SOKOLOV', surnameJa: 'ソコロフ', nameJa: 'キリル・ソコロフ', nameEn: 'KIRILL SOKOLOV', keywords: '過激な暴力表現 / ブラックユーモア / ハイテンションなアクション' }
     ]},
     { category: '2020 -', items: [
         { id: 'fennell', surname: 'FENNELL', surnameJa: 'フェネル', nameJa: 'エメラルド・フェネル', nameEn: 'EMERALD FENNELL', keywords: '復讐と欲望 / ブラックユーモア / 階級と視線' },
