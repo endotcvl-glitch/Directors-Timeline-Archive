@@ -32,7 +32,7 @@
     --text-heading-xxxl: 56px;
     --text-heading-xxl: 44px;
     --text-heading-xl: 32px;
-    --text-heading-l: 28px;
+    --text-heading-l: 24px;
     --text-heading-m: 20px;
     --text-heading-s: 18px;
     --text-heading-xs: 16px;
@@ -464,7 +464,7 @@ body.index-page .explore-path-copy {
 }
 
 body.index-page .explore-path-title {
-    font-size: 1.5rem;
+    font-size: var(--text-heading-l);
     letter-spacing: 0;
     line-height: 1.35;
 }
@@ -503,8 +503,8 @@ body.index-page .comparison-themes .section-heading {
 body.index-page .comparison-themes .section-heading h2 {
     grid-column: 2;
     color: var(--text-color-1);
-    font-size: var(--text-heading-m);
-    font-weight: 500;
+    font-size: var(--text-heading-l);
+    font-weight: 700;
     letter-spacing: 0.04em;
     line-height: var(--text-line-height);
 }
@@ -1475,7 +1475,7 @@ body.index-page .footer-nav {
     }
 
     body.index-page .explore-path-title {
-        font-size: 1.15rem;
+        font-size: var(--text-heading-s);
     }
 
     body.index-page .comparison-themes {
@@ -1492,7 +1492,7 @@ body.index-page .footer-nav {
     body.index-page .comparison-themes .section-heading h2 {
         grid-column: 1;
         justify-self: start;
-        font-size: 1.45rem;
+        font-size: var(--text-heading-s);
     }
 
     body.index-page .comparison-all-link {
