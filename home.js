@@ -136,12 +136,12 @@ const comparisonThemes = [
     },
     {
         title: '身近に忍び寄る恐怖',
-        description: '視線と孤独、喪失と憑依。それぞれの長編デビュー作から、恐怖の描き方をたどります。',
+        description: '長編デビュー作の恐怖表現を比べます',
         directorIds: ['okuno', 'philippou']
     },
     {
         title: 'YouTubeから映画へ',
-        description: 'ネットで磨いた映像表現が、長編ホラーへ広がる歩みを比べます。',
+        description: 'ネット発のホラー表現を比べます',
         directorIds: ['currybarker', 'philippou']
     },
     {
