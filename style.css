@@ -221,7 +221,6 @@ body.index-page .header-nav {
     align-items: center;
     gap: clamp(1.4rem, 3.1vw, 4.5rem);
     padding: 0 0 0 88px;
-    font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: var(--text-letter-spacing);
 }
@@ -3974,7 +3973,6 @@ header {
         display: grid;
         margin: 0.65rem -1rem 0;
         padding-top: 0.55rem;
-        border-top: 1px solid rgba(255,255,255,0.16);
         font-size: 0.82rem;
     }
 
@@ -3984,7 +3982,6 @@ header {
         border-bottom: none;
         color: rgba(255,255,255,0.72);
         font-size: 0.82rem;
-        font-weight: 600;
         letter-spacing: 0.06em;
     }
 
@@ -5187,7 +5184,7 @@ header {
         padding: 15px 0;
         border-bottom: 1px solid rgba(255,255,255,0.1);
         color: rgba(255,255,255,0.9);
-        font-size: 0.9rem;
+        font-size: var(--text-body-s);
         opacity: 0;
         transform: translateY(-3px);
         white-space: normal;
@@ -5203,7 +5200,6 @@ header {
         display: grid;
         margin: 10px 0 0;
         padding: 0;
-        border-top: 1px solid rgba(255,255,255,0.16);
     }
 
     .nav-toggle {
