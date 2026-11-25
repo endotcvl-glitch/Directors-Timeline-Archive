@@ -37,6 +37,7 @@ const directors = [
         { id: 'mctiernan', surname: 'MCTIERNAN', surnameJa: 'マクティアナン', nameJa: 'ジョン・マクティアナン', nameEn: 'JOHN MCTIERNAN', keywords: '空間設計 / 緊迫のアクション / 肉体と知略' }
     ]},
     { category: '1990 -', items: [
+        { id: 'nakata', surname: 'NAKATA', surnameJa: 'ナカタ', nameJa: '中田秀夫', nameEn: 'HIDEO NAKATA', keywords: 'Jホラー / 幽霊譚 / 日常に潜む怪異' },
         { id: 'fincher', surname: 'FINCHER', surnameJa: 'フィンチャー', nameJa: 'デイヴィッド・フィンチャー', nameEn: 'DAVID FINCHER', keywords: '精密演出 / 執着と狂気 / 冷徹な世界観' },
         { id: 'mendes', surname: 'MENDES', surnameJa: 'メンデス', nameJa: 'サム・メンデス', nameEn: 'SAM MENDES', keywords: '舞台的構成 / 英国的ドラマ / 大作と親密さ' },
         { id: 'shyamalan', surname: 'SHYAMALAN', surnameJa: 'シャマラン', nameJa: 'M・ナイト・シャマラン', nameEn: 'M. NIGHT SHYAMALAN', keywords: '不穏な日常 / ツイスト / 信仰と恐怖' },

@@ -81,9 +81,46 @@ const directorsInfo = {
     'tiwest': { fullNameEn: 'TI WEST', nameJa: 'タイ・ウェスト', surname: 'WEST' },
     'kirillsokolov': { fullNameEn: 'KIRILL SOKOLOV', nameJa: 'キリル・ソコロフ', surname: 'SOKOLOV' },
     'philippou': { fullNameEn: 'DANNY & MICHAEL PHILIPPOU', nameJa: 'ダニー＆マイケル・フィリッポウ', surname: 'PHILIPPOU' },
+    'nakata': { fullNameEn: 'HIDEO NAKATA', nameJa: '中田秀夫', surname: 'NAKATA' },
 };
 
 const filmsData = [
+    // Hideo Nakata
+    { year: 1988, type: 'nakata', title: "邪願霊" },
+    { year: 1992, type: 'nakata', title: "本当にあった怖い話", medium: "Series" },
+    { year: 1998, type: 'nakata', title: "ジョセフ・ロージー 四つの名を持つ男" },
+    { year: 1999, type: 'nakata', title: "リング2" },
+    { year: 2000, type: 'nakata', title: "カオス" },
+    { year: 2000, type: 'nakata', title: "ガラスの脳" },
+    { year: 2002, type: 'nakata', title: "ラストシーン" },
+    { year: 2005, type: 'nakata', title: "ザ・リング2" },
+    { year: 2007, type: 'nakata', title: "怪談" },
+    { year: 2008, type: 'nakata', title: "L change the WorLd" },
+    { year: 2008, type: 'nakata', title: "ハリウッド監督学入門" },
+    { year: 2010, type: 'nakata', title: "インシテミル 7日間のデス・ゲーム" },
+    { year: 2010, type: 'nakata', title: "Chatroom チャットルーム" },
+    { year: 2012, type: 'nakata', title: "3.11後を生きる" },
+    { year: 2013, type: 'nakata', title: "クロユリ団地" },
+    { year: 2014, type: 'nakata', title: "MONSTERZ モンスターズ" },
+    { year: 2014, type: 'nakata', title: "Words with Gods「四苦八苦」" },
+    { year: 2015, type: 'nakata', title: "劇場霊" },
+    { year: 2015, type: 'nakata', title: "劇場霊からの招待状", medium: "Series" },
+    { year: 2016, type: 'nakata', title: "ホワイトリリー" },
+    { year: 2018, type: 'nakata', title: "終わった人" },
+    { year: 2018, type: 'nakata', title: "スマホを落としただけなのに" },
+    { year: 2019, type: 'nakata', title: "殺人鬼を飼う女" },
+    { year: 2019, type: 'nakata', title: "貞子" },
+    { year: 2020, type: 'nakata', title: "スマホを落としただけなのに 囚われの殺人鬼" },
+    { year: 2020, type: 'nakata', title: "事故物件 恐い間取り" },
+    { year: 2022, type: 'nakata', title: "嘘喰い" },
+    { year: 2022, type: 'nakata', title: "“それ”がいる森" },
+    { year: 2023, type: 'nakata', title: "禁じられた遊び" },
+    { year: 2024, type: 'nakata', title: "スマホを落としただけなのに ～最終章～ ファイナル ハッキング ゲーム" },
+    { year: 2025, type: 'nakata', title: "事故物件ゾク 恐い間取り" },
+    { year: 1996, type: 'nakata', title: "女優霊", context: "撮影中のフィルムに映り込む謎の女を描いた劇場映画監督デビュー作。" },
+    { year: 1998, type: 'nakata', title: "リング", context: "呪いのビデオをめぐる怪異を描き、Jホラーブームの火付け役となった作品。" },
+    { year: 2002, type: 'nakata', title: "仄暗い水の底から", context: "古い集合住宅に越した母娘が、水漏れをきっかけに怪異に直面する。" },
+
     // John Krasinski
     { year: 2009, type: 'krasinski', title: "Brief Interviews with Hideous Men", context: "デヴィッド・フォスター・ウォレスの短編集をもとに、男性たちへのインタビューを通して人間関係を描いた長編監督デビュー作。" },
     { year: 2016, type: 'krasinski', title: "最高の家族の見つけかた", context: "母の病気をきっかけに故郷へ戻った男性が、家族との関係や自分の将来に向き合うコメディドラマ。" },
@@ -1514,7 +1551,7 @@ function renderWorkCard(work, directorId) {
                         ${work.title}
                     </a>
                 </h2>
-                <p class="film-context">${work.context}</p>
+                ${work.context ? `<p class="film-context">${work.context}</p>` : ''}
             </div>
         </div>
     `;

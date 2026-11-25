@@ -843,6 +843,13 @@ body.index-page .theme-card-action {
     --director-gradient-stops: var(--director-gradient-start), #26545e, #437781, #609ba5, var(--director-gradient-end);
 }
 
+.theme-director--nakata,
+.timeline-head-card--nakata {
+    --director-gradient-start: #202e28;
+    --director-gradient-end: #b9b89a;
+    --director-gradient-stops: var(--director-gradient-start), #3f4e43, #63705f, #8c947b, var(--director-gradient-end);
+}
+
 .theme-director--scott,
 .timeline-head-card--scott {
     --director-gradient-start: #343c40;
