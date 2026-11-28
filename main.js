@@ -1662,6 +1662,11 @@ function setupYearFilmsSheet() {
     });
 }
 
+const timelineIntroductions = {
+    gunn: '『スリザー』から『ガーディアンズ・オブ・ギャラクシー』シリーズ、2025年の『スーパーマン』まで、ジェームズ・ガンの監督作品を公開年順にたどれます。',
+    spielberg: '『ジョーズ』『E.T.』を経て、1993年には『ジュラシック・パーク』と『シンドラーのリスト』を発表。スピルバーグの監督作品を公開年順にたどれます。'
+};
+
 function renderTimeline() {
     const params = getUrlParams();
     const { d1, d2 } = params;
@@ -1670,10 +1675,11 @@ function renderTimeline() {
     updateHeaderLabels(d1, d2, hasExplicitDirector);
 
     const intro = document.getElementById('timeline-intro');
-    const showIntro = hasExplicitDirector && d1 === 'gunn' && !d2;
-    intro.textContent = showIntro
-        ? '『スリザー』から『ガーディアンズ・オブ・ギャラクシー』シリーズ、2025年の『スーパーマン』まで、ジェームズ・ガンの監督作品を公開年順にたどれます。'
+    const introText = hasExplicitDirector && !d2
+        ? timelineIntroductions[d1] ?? ''
         : '';
+    const showIntro = Boolean(introText);
+    intro.textContent = introText;
     intro.hidden = !showIntro;
     document.body.classList.toggle('timeline-has-intro', showIntro);
 
